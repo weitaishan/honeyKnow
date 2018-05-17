@@ -10,25 +10,22 @@
 #define EnumApi_h
 
 /**
- *  账户类型
+ *  主播列表类型
  */
-typedef NS_ENUM(NSUInteger, UserType) {
+typedef NS_ENUM(NSUInteger, ActorListType) {
     /**
-     *  员工
+     *  关注
      */
-    UserTypeStaff = 0,
+    ActorListTypeFocus = 0,
     /**
-     *  项目经理
+     *  推荐
      */
-    UserTypeProjectManager,
+    ActorListTypeRecommend,
     /**
-     *  工人
+     *  星级
      */
-    UserTypeWorker,
-    /**
-     *  供应商
-     */
-    UserTypeSuppliers
+    ActorListTypeStar,
+
 };
 
 /**

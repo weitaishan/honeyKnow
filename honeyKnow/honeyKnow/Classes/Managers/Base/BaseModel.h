@@ -21,18 +21,13 @@
 
 @property (nonatomic, assign) BOOL isSel;
 
-@property (nonatomic, copy) NSString* name;
-@property (nonatomic, copy) NSString *telephone;
-
-@property (nonatomic, copy) NSString *showTelephone;
 
 @end
 
 @interface BaseData : NSObject<YYModel>
 
 @property (nonatomic, assign) BOOL isSel;
-@property (nonatomic, copy) NSString *telephone;
-@property (nonatomic, copy) NSString *showTelephone;
+
 
 @end
 

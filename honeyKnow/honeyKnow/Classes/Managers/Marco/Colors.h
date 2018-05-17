@@ -18,7 +18,7 @@
 #define TabBarTintColor [UIColor colorFromHexString:@"#f7f7f7"]
 
 /** 主要颜色颜色*/
-#define kMainColor [UIColor colorFromHexString:@"#c10020"]
+#define kMainColor [UIColor colorFromHexString:@"#ED625E"]
 #define kOrangeColor [UIColor colorFromHexString:@"#e9994c"]
 #define kPinkColor [UIColor colorFromHexString:@"#fa878c"]
 

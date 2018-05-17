@@ -43,18 +43,28 @@
     NSArray* selectedImgArray = @[@"tab_home_highlighted",@"tab_find_highlighted",@"tab_news_highlighted",@"tab_info_highlighted"];//,@"tabbar_tool_select"
     NSMutableArray * navArray = @[].mutableCopy;
     
+    CGFloat offset = 5.0;
+
     [controllerArray enumerateObjectsUsingBlock:^(UIViewController* obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:obj];
         UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:nil image:[[UIImage imageNamed:normalImgArray[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  selectedImage:[[UIImage imageNamed:selectedImgArray[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 //        obj.title = titleArray[idx];
         obj.tabBarItem = item;
+        obj.tabBarItem .imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
+
         [navArray addObject:navVC];
         
     }];
     
+    // 矫正TabBar图片位置，使之垂直居中显示
+//    for (UITabBarItem *item in self.tabBar.items) {
+//        item.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
+//    }
+//    
     self.viewControllers = navArray;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

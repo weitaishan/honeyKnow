@@ -6,15 +6,16 @@ target 'honeyKnow' do
    use_frameworks!
 
   # Pods for honeyKnow
+ pod 'AFNetworking'
+ pod 'Masonry'
+ pod 'SDWebImage'
+ pod 'MJRefresh'
+ pod 'YYModel'
+ pod 'MBProgressHUD'
+ pod 'Toast'
+ pod 'IQKeyboardManager'
+# pod 'ReactiveObjC'
+ pod 'TZImagePickerController'
 
-pod 'AFNetworking'
-pod 'Masonry'
-pod 'SDWebImage'
-pod 'MJRefresh'
-pod 'YYModel'
-pod 'MBProgressHUD'
-pod 'Toast'
-pod 'ReactiveCocoa', '~> 7.0'
-pod 'IQKeyboardManager'
-
+ pod 'ZJScrollPageView'
 end

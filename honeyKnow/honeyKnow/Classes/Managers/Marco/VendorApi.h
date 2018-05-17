@@ -18,4 +18,5 @@
 #import <MJRefresh/MJRefresh.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/UIView+Toast.h>
+#import <TZImagePickerController/TZImagePickerController.h>
 #endif /* VendorApi_h */

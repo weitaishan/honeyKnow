@@ -117,11 +117,17 @@ static id _instance = nil;
     [self addHeaderParams:manager];
     manager.requestSerializer.timeoutInterval = 30.f;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain",@"text/html",@"charset=utf-8",nil];
+    NSString* token = [NSUSERDEFAULTS objectForKey:USER_TOKEN];
     
     switch (methodType) {
         case RequestMethodTypeGet:
         {
             
+            if (token.length > 0){
+                
+               url = [NSString stringWithFormat:@"%@&token=%@",url,token];
+                
+            }
             //GET请求
             [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [MBProgressHUD hideHUDForView:GET_WINDOW animated:YES];
@@ -157,6 +163,11 @@ static id _instance = nil;
             
         case RequestMethodTypePost:
         {
+            if (token.length > 0){
+                
+                [params setValue:[NSUSERDEFAULTS objectForKey:USER_TOKEN] forKey:@"token"];
+                
+            }
             //POST请求
             NSLog(@"params = %@,url = %@",params,url);
             [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -249,7 +260,7 @@ static id _instance = nil;
                   failure:(FailBlock)failure{
     
     NSDictionary *params = @{@"type" : [NSString stringWithFormat:@"%lu",type]};
-    NSString *url = [NSString stringWithFormat:@"%@%@",URL_UPLOAD_API,URL_FILE];//放上传图片的网址
+    NSString *url = [NSString stringWithFormat:@"%@",URL_UPLOAD_API];//放上传图片的网址
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//初始化请求对象
 //    manager.responseSerializer = [AFHTTPResponseSerializer serializer];//设置服务器允许的请求格式内容
     [self addHeaderParams:manager];
@@ -300,8 +311,8 @@ static id _instance = nil;
         return;
     }
     
-    NSDictionary *params = @{@"type" : type};
-    NSString *url = [NSString stringWithFormat:@"%@%@",URL_UPLOAD_API,URL_IMAGE];//放上传图片的网址
+//    NSDictionary *params = @{@"type" : type};
+    NSString *url = [NSString stringWithFormat:@"%@",URL_UPLOAD_API];//放上传图片的网址
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//初始化请求对象
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//设置服务器允许的请求格式内容
     [self addHeaderParams:manager];
@@ -310,7 +321,7 @@ static id _instance = nil;
 
     
     //上传图片/文字，只能同POST
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id  _Nonnull formData) {
+    [manager POST:url parameters:nil constructingBodyWithBlock:^(id  _Nonnull formData) {
         //对于图片进行压缩
         
         CGFloat scale = 1.f;
@@ -329,7 +340,7 @@ static id _instance = nil;
         }
         NSData *data = UIImageJPEGRepresentation(image, scale);
         //第一个代表文件转换后data数据，第二个代表图片的名字，第三个代表图片放入文件夹的名字，第四个代表文件的类型
-        [formData appendPartWithFileData:data name:@"fileData" fileName:picFileName mimeType:@"image/jpg"];
+        [formData appendPartWithFileData:data name:@"file" fileName:picFileName mimeType:@"image/jpg"];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -370,7 +381,7 @@ static id _instance = nil;
     
     
     NSDictionary *params = @{@"type" : [NSString stringWithFormat:@"%ld",type]};
-    NSString *url = [NSString stringWithFormat:@"%@%@",URL_UPLOAD_API,URL_IMAGE];//放上传图片的网址
+    NSString *url = [NSString stringWithFormat:@"%@",URL_UPLOAD_API];//放上传图片的网址
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//初始化请求对象
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//设置服务器允许的请求格式内容
     [self addHeaderParams:manager];

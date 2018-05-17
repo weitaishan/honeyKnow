@@ -52,6 +52,7 @@
 //        if ([version isEqualToString:saveVersion]) { // 不是第一次使用这个版本
 //
 //    NSLog(@"相等");
+    
     NSString* userToken = [NSUSERDEFAULTS objectForKey:USER_TOKEN];
     
     if (userToken.length > 0) {
