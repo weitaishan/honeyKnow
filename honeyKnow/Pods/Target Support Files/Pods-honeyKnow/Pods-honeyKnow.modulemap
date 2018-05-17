@@ -1,0 +1,6 @@
+framework module Pods_honeyKnow {
+  umbrella header "Pods-honeyKnow-umbrella.h"
+
+  export *
+  module * { export * }
+}
