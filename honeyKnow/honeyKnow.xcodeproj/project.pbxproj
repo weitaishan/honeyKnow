@@ -22,7 +22,6 @@
 		090085F520AD3B01003BF4A7 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085F120AD3B01003BF4A7 /* NullSafe.m */; };
 		090085F620AD3B01003BF4A7 /* NSDate+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085F220AD3B01003BF4A7 /* NSDate+Util.m */; };
 		090085F920AD4284003BF4A7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085F820AD4284003BF4A7 /* HomeViewController.m */; };
-		090085FC20AD428E003BF4A7 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085FB20AD428E003BF4A7 /* DiscoverViewController.m */; };
 		090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085FE20AD42A1003BF4A7 /* MessageViewController.m */; };
 		0900860220AD42AD003BF4A7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900860120AD42AD003BF4A7 /* MineViewController.m */; };
 		0900862E20AD4AD7003BF4A7 /* LoginSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900862D20AD4AD7003BF4A7 /* LoginSelectViewController.m */; };
@@ -45,6 +44,11 @@
 		FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEA220AEBADD001E902D /* HomeListSearchViewController.m */; };
 		FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEA520AEC085001E902D /* HomeListSerachCell.m */; };
 		FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FEA620AEC085001E902D /* HomeListSerachCell.xib */; };
+		FDF0FEAE20AED039001E902D /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEAD20AED039001E902D /* DiscoverViewController.m */; };
+		FDF0FEB120AED04F001E902D /* DiscoverListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEB020AED04F001E902D /* DiscoverListModel.m */; };
+		FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEB320AED392001E902D /* DiscoverListCell.m */; };
+		FDF0FEB620AED392001E902D /* DiscoverListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FEB420AED392001E902D /* DiscoverListCell.xib */; };
+		FDF0FEB920AED8B6001E902D /* DiscoverListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +90,6 @@
 		090085F220AD3B01003BF4A7 /* NSDate+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Util.m"; sourceTree = "<group>"; };
 		090085F720AD4284003BF4A7 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		090085F820AD4284003BF4A7 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		090085FA20AD428E003BF4A7 /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
-		090085FB20AD428E003BF4A7 /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		090085FD20AD42A1003BF4A7 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		090085FE20AD42A1003BF4A7 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		0900860020AD42AD003BF4A7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
@@ -129,6 +131,15 @@
 		FDF0FEA420AEC085001E902D /* HomeListSerachCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListSerachCell.h; sourceTree = "<group>"; };
 		FDF0FEA520AEC085001E902D /* HomeListSerachCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListSerachCell.m; sourceTree = "<group>"; };
 		FDF0FEA620AEC085001E902D /* HomeListSerachCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListSerachCell.xib; sourceTree = "<group>"; };
+		FDF0FEAC20AED039001E902D /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		FDF0FEAD20AED039001E902D /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		FDF0FEAF20AED04F001E902D /* DiscoverListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverListModel.h; sourceTree = "<group>"; };
+		FDF0FEB020AED04F001E902D /* DiscoverListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverListModel.m; sourceTree = "<group>"; };
+		FDF0FEB220AED392001E902D /* DiscoverListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverListCell.h; sourceTree = "<group>"; };
+		FDF0FEB320AED392001E902D /* DiscoverListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverListCell.m; sourceTree = "<group>"; };
+		FDF0FEB420AED392001E902D /* DiscoverListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverListCell.xib; sourceTree = "<group>"; };
+		FDF0FEB720AED8B6001E902D /* DiscoverListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverListViewController.h; sourceTree = "<group>"; };
+		FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,8 +210,9 @@
 		090085AA20AD36CF003BF4A7 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				090085FA20AD428E003BF4A7 /* DiscoverViewController.h */,
-				090085FB20AD428E003BF4A7 /* DiscoverViewController.m */,
+				FDF0FEAB20AED039001E902D /* Controllers */,
+				FDF0FEAA20AED039001E902D /* Models */,
+				FDF0FEA920AED039001E902D /* Views */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -510,6 +522,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FDF0FEA920AED039001E902D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF0FEB220AED392001E902D /* DiscoverListCell.h */,
+				FDF0FEB320AED392001E902D /* DiscoverListCell.m */,
+				FDF0FEB420AED392001E902D /* DiscoverListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDF0FEAA20AED039001E902D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDF0FEAF20AED04F001E902D /* DiscoverListModel.h */,
+				FDF0FEB020AED04F001E902D /* DiscoverListModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF0FEAB20AED039001E902D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDF0FEAC20AED039001E902D /* DiscoverViewController.h */,
+				FDF0FEAD20AED039001E902D /* DiscoverViewController.m */,
+				FDF0FEB720AED8B6001E902D /* DiscoverListViewController.h */,
+				FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FEF1F326D0D5617DB9FE0C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +625,7 @@
 				FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */,
 				FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */,
 				FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */,
+				FDF0FEB620AED392001E902D /* DiscoverListCell.xib in Resources */,
 				FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,17 +718,20 @@
 				090085F420AD3B01003BF4A7 /* CALayer+LayerColor.m in Sources */,
 				090085E020AD3822003BF4A7 /* BaseNavigationViewController.m in Sources */,
 				090085F920AD4284003BF4A7 /* HomeViewController.m in Sources */,
+				FDF0FEB920AED8B6001E902D /* DiscoverListViewController.m in Sources */,
 				090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */,
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
 				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
 				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
-				090085FC20AD428E003BF4A7 /* DiscoverViewController.m in Sources */,
 				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
+				FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */,
+				FDF0FEB120AED04F001E902D /* DiscoverListModel.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
 				090085F320AD3B01003BF4A7 /* UIScrollView+EmptyDataSet.m in Sources */,
 				090085E220AD3822003BF4A7 /* BaseTabBarController.m in Sources */,
+				FDF0FEAE20AED039001E902D /* DiscoverViewController.m in Sources */,
 				09A405CB20AD5A51009585B2 /* MainButton.m in Sources */,
 				FDF0FE5220AC20E5001E902D /* AppDelegate.m in Sources */,
 				0979D40920ADD700009E4745 /* HomeListModel.m in Sources */,

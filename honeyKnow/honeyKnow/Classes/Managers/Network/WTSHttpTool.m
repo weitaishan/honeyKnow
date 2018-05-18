@@ -125,7 +125,15 @@ static id _instance = nil;
             
             if (token.length > 0){
                 
-               url = [NSString stringWithFormat:@"%@&token=%@",url,token];
+                if ([url containsString:@"?"] && [url containsString:@"="]) {
+
+                    url = [NSString stringWithFormat:@"%@&token=%@",url,token];
+
+                }else{
+                    
+                    url = [NSString stringWithFormat:@"%@?token=%@",url,token];
+
+                }
                 
             }
             NSLog(@"params = %@,url = %@",params,url);

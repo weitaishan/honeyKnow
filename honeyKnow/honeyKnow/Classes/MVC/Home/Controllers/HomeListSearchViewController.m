@@ -60,7 +60,7 @@ static NSString * const homeListSerachCellId = @"homeListSerachCellId";
 - (void)getListSearchActorNameData{
     
     WeakSelf;
-    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:[NSString stringWithFormat:@"%@?nickName=",URL_HOME_SEARCH_ACTOR_BY_NICKNAME,self.keyWord] params:nil success:^(id response) {
+    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:[NSString stringWithFormat:@"%@?nickName=%@",URL_HOME_SEARCH_ACTOR_BY_NICKNAME,self.keyWord] params:nil success:^(id response) {
 
         if ([response[@"success"] integerValue]){
 

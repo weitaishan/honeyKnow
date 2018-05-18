@@ -28,6 +28,29 @@ typedef NS_ENUM(NSUInteger, ActorListType) {
 
 };
 
+
+/**
+ *  发现列表类型
+ */
+typedef NS_ENUM(NSUInteger, DiscoverListType) {
+    /**
+     *  热门
+     */
+    DiscoverListTypeHot = 0,
+    /**
+     *  最新
+     */
+    DiscoverListTypeNew,
+    /**
+     *  关注
+     */
+    DiscoverListTypeFocus,
+    
+};
+
+
+
+
 /**
  *  定义状态值
  */

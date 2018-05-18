@@ -46,5 +46,14 @@ static NSString * const URL_HOME_ACTOR_STAR_LIST = @"actor/star/list";
 /** 通过昵称查找主播*/
 static NSString * const URL_HOME_SEARCH_ACTOR_BY_NICKNAME = @"actor/find";
 
+//==========================发现=============================
+/** 关注视屏列表*/
+static NSString * const URL_VIDEO_FOCUS_LIST = @"video/focus/list";
+
+/** 最新视屏列表*/
+static NSString * const URL_VIDEO_NEW_LIST = @"video/new/list";
+
+/** 热门视屏列表*/
+static NSString * const URL_VIDEO_HOT_LIST = @"video/hot/list";
 
 #endif /* Urls_h */
