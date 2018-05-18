@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSArray<HomeList *> *list;
 
 @end
-@interface HomeList : BaseData
+@interface HomeList : BaseModel
 
 @property (nonatomic, assign) NSInteger Id;
 /** 标签*/

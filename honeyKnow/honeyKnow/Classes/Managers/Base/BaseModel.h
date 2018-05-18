@@ -11,13 +11,13 @@
 @class BaseData;
 @interface BaseModel : NSObject<YYModel>
 
-@property (nonatomic, assign) NSInteger status;
-
-@property (nonatomic, assign) NSInteger code;
+//@property (nonatomic, assign) NSInteger status;
+//
+//@property (nonatomic, assign) NSInteger code;
 
 //@property (nonatomic, strong) BaseData *data;
 
-@property (nonatomic, copy) NSString *msg;
+//@property (nonatomic, copy) NSString *msg;
 
 @property (nonatomic, assign) BOOL isSel;
 

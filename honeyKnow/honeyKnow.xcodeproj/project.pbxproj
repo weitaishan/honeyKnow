@@ -38,6 +38,8 @@
 		FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE5920AC20E5001E902D /* Assets.xcassets */; };
 		FDF0FE5D20AC20E5001E902D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE5B20AC20E5001E902D /* LaunchScreen.storyboard */; };
 		FDF0FE6020AC20E5001E902D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE5F20AC20E5001E902D /* main.m */; };
+		FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE7A20AE76AB001E902D /* HomeListCell.m */; };
+		FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,9 @@
 		FDF0FE5C20AC20E5001E902D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDF0FE5E20AC20E5001E902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF0FE5F20AC20E5001E902D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDF0FE7920AE76AB001E902D /* HomeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListCell.h; sourceTree = "<group>"; };
+		FDF0FE7A20AE76AB001E902D /* HomeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListCell.m; sourceTree = "<group>"; };
+		FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,21 +132,14 @@
 		090085A520AD36CF003BF4A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				090085A620AD36CF003BF4A7 /* 3third */,
+				FDF0FE7720AE7634001E902D /* 3third */,
+				FDF0FE7620AE7634001E902D /* Tools */,
 				090085A720AD36CF003BF4A7 /* Categroies */,
 				090085A820AD36CF003BF4A7 /* Managers */,
 				090085A920AD36CF003BF4A7 /* MVC */,
-				090085BE20AD36CF003BF4A7 /* Tools */,
 				090085BF20AD36CF003BF4A7 /* Utils */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		090085A620AD36CF003BF4A7 /* 3third */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 3third;
 			sourceTree = "<group>";
 		};
 		090085A720AD36CF003BF4A7 /* Categroies */ = {
@@ -219,8 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				090085AF20AD36CF003BF4A7 /* Controllers */,
+				FDF0FE7820AE767F001E902D /* Views */,
 				090085B020AD36CF003BF4A7 /* Models */,
-				090085B120AD36CF003BF4A7 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -243,13 +241,6 @@
 				0979D40720ADD700009E4745 /* HomeListModel.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		090085B120AD36CF003BF4A7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		090085B220AD36CF003BF4A7 /* Login */ = {
@@ -359,13 +350,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		090085BE20AD36CF003BF4A7 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		090085BF20AD36CF003BF4A7 /* Utils */ = {
@@ -503,6 +487,30 @@
 			name = "Supporiting Files";
 			sourceTree = "<group>";
 		};
+		FDF0FE7620AE7634001E902D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		FDF0FE7720AE7634001E902D /* 3third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3third;
+			sourceTree = "<group>";
+		};
+		FDF0FE7820AE767F001E902D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF0FE7920AE76AB001E902D /* HomeListCell.h */,
+				FDF0FE7A20AE76AB001E902D /* HomeListCell.m */,
+				FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FEF1F326D0D5617DB9FE0C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +531,7 @@
 				FDF0FE4A20AC20E5001E902D /* Frameworks */,
 				FDF0FE4B20AC20E5001E902D /* Resources */,
 				F6BCD1687CD1029B5BB9BEC4 /* [CP] Embed Pods Frameworks */,
+				798571163874F3FFB3DAF83E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -573,6 +582,7 @@
 			files = (
 				FDF0FE5D20AC20E5001E902D /* LaunchScreen.storyboard in Resources */,
 				FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */,
+				FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */,
 				FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +590,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		798571163874F3FFB3DAF83E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D35629FAD5B6F22B1ECFF519 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,6 +635,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
@@ -623,6 +649,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
@@ -651,6 +678,7 @@
 				090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */,
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
 				090085FC20AD428E003BF4A7 /* DiscoverViewController.m in Sources */,
+				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
 				090085F320AD3B01003BF4A7 /* UIScrollView+EmptyDataSet.m in Sources */,
