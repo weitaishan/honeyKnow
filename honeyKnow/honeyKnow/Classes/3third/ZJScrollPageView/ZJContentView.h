@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "ZJScrollPageViewDelegate.h"
-@class ZJScrollSegmentView;
-@class ZJContentView;
+#import "ZJCollectionView.h"
+#import "ZJScrollSegmentView.h"
+#import "UIViewController+ZJScrollPageController.h"
+
+
 
 @interface ZJContentView : UIView
 
 /** 必须设置代理和实现相关的方法*/
 @property(weak, nonatomic)id<ZJScrollPageViewDelegate> delegate;
-@property (strong, nonatomic, readonly) UIScrollView *scrollView;
+@property (strong, nonatomic, readonly) ZJCollectionView *collectionView;
+// 当前控制器
+@property (strong, nonatomic, readonly) UIViewController<ZJScrollPageViewChildVcDelegate> *currentChildVc;
 
 /**初始化方法
  *
@@ -26,4 +31,6 @@
 - (void)setContentOffSet:(CGPoint)offset animated:(BOOL)animated;
 /** 给外界 重新加载内容的方法 */
 - (void)reload;
+
+
 @end

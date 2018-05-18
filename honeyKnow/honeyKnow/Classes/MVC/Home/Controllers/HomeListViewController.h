@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface HomeListViewController : BaseViewController
+@interface HomeListViewController : BaseViewController<ZJScrollPageViewChildVcDelegate>
 @property (nonatomic, assign) ActorListType type;
 @property (nonatomic, assign) NSInteger star;
 

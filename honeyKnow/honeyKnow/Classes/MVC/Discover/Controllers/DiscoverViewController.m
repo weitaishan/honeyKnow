@@ -7,7 +7,6 @@
 //
 
 #import "DiscoverViewController.h"
-#import <ZJScrollPageView/ZJScrollPageView.h>
 #import "DiscoverListViewController.h"
 @interface DiscoverViewController ()<ZJScrollPageViewDelegate,ZJScrollPageViewChildVcDelegate>
 
@@ -128,7 +127,7 @@
     return self.titles.count;// 传入页面的总数, 推荐使用titles.count
 }
 
-- (DiscoverListViewController *)childViewController:(DiscoverListViewController *)reuseViewController forIndex:(NSInteger)index {
+- (DiscoverListViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(DiscoverListViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
     
     DiscoverListViewController *childVc = reuseViewController;
     // 这里一定要判断传过来的是否是nil, 如果为nil直接使用并返回

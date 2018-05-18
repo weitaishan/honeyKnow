@@ -16,5 +16,4 @@ target 'honeyKnow' do
  pod 'IQKeyboardManager'
  pod 'ReactiveObjC'
  pod 'TZImagePickerController'
- pod 'ZJScrollPageView'
 end

@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface DiscoverListViewController : BaseViewController
+@interface DiscoverListViewController : BaseViewController<ZJScrollPageViewChildVcDelegate>
 @property (nonatomic, assign) DiscoverListType type;
 
 @end

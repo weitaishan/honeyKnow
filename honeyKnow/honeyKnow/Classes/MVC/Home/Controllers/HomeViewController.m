@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import <ZJScrollPageView/ZJScrollPageView.h>
 #import "HomeListViewController.h"
 #import "HomeListSearchViewController.h"
 @interface HomeViewController ()<ZJScrollPageViewDelegate,ZJScrollPageViewChildVcDelegate>
@@ -148,7 +147,7 @@
     return self.titles.count;// 传入页面的总数, 推荐使用titles.count
 }
 
-- (HomeListViewController *)childViewController:(HomeListViewController *)reuseViewController forIndex:(NSInteger)index {
+- (HomeListViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(HomeListViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
     
     HomeListViewController *childVc = reuseViewController;
     // 这里一定要判断传过来的是否是nil, 如果为nil直接使用并返回

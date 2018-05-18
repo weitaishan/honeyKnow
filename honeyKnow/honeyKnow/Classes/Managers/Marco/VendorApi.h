@@ -20,4 +20,6 @@
 #import <Toast/UIView+Toast.h>
 #import <TZImagePickerController/TZImagePickerController.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "ZJScrollPageView.h"
+
 #endif /* VendorApi_h */

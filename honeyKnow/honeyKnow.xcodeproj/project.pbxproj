@@ -49,6 +49,14 @@
 		FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEB320AED392001E902D /* DiscoverListCell.m */; };
 		FDF0FEB620AED392001E902D /* DiscoverListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FEB420AED392001E902D /* DiscoverListCell.xib */; };
 		FDF0FEB920AED8B6001E902D /* DiscoverListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */; };
+		FDF0FEE320AEDFBE001E902D /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FED320AEDFBE001E902D /* UIView+ZJFrame.m */; };
+		FDF0FEE420AEDFBE001E902D /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FED520AEDFBE001E902D /* UIViewController+ZJScrollPageController.m */; };
+		FDF0FEE520AEDFBE001E902D /* ZJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FED720AEDFBE001E902D /* ZJCollectionView.m */; };
+		FDF0FEE620AEDFBE001E902D /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FED920AEDFBE001E902D /* ZJContentView.m */; };
+		FDF0FEE720AEDFBE001E902D /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEDB20AEDFBE001E902D /* ZJScrollPageView.m */; };
+		FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEDE20AEDFBE001E902D /* ZJScrollSegmentView.m */; };
+		FDF0FEE920AEDFBE001E902D /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEE020AEDFBE001E902D /* ZJSegmentStyle.m */; };
+		FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEE220AEDFBE001E902D /* ZJTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +148,23 @@
 		FDF0FEB420AED392001E902D /* DiscoverListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverListCell.xib; sourceTree = "<group>"; };
 		FDF0FEB720AED8B6001E902D /* DiscoverListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverListViewController.h; sourceTree = "<group>"; };
 		FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverListViewController.m; sourceTree = "<group>"; };
+		FDF0FED220AEDFBE001E902D /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		FDF0FED320AEDFBE001E902D /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		FDF0FED420AEDFBE001E902D /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		FDF0FED520AEDFBE001E902D /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		FDF0FED620AEDFBE001E902D /* ZJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionView.h; sourceTree = "<group>"; };
+		FDF0FED720AEDFBE001E902D /* ZJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionView.m; sourceTree = "<group>"; };
+		FDF0FED820AEDFBE001E902D /* ZJContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentView.h; sourceTree = "<group>"; };
+		FDF0FED920AEDFBE001E902D /* ZJContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentView.m; sourceTree = "<group>"; };
+		FDF0FEDA20AEDFBE001E902D /* ZJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageView.h; sourceTree = "<group>"; };
+		FDF0FEDB20AEDFBE001E902D /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
+		FDF0FEDC20AEDFBE001E902D /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		FDF0FEDD20AEDFBE001E902D /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		FDF0FEDE20AEDFBE001E902D /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		FDF0FEDF20AEDFBE001E902D /* ZJSegmentStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSegmentStyle.h; sourceTree = "<group>"; };
+		FDF0FEE020AEDFBE001E902D /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
+		FDF0FEE120AEDFBE001E902D /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
+		FDF0FEE220AEDFBE001E902D /* ZJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,6 +530,7 @@
 		FDF0FE7720AE7634001E902D /* 3third */ = {
 			isa = PBXGroup;
 			children = (
+				FDF0FED120AEDFBE001E902D /* ZJScrollPageView */,
 			);
 			path = 3third;
 			sourceTree = "<group>";
@@ -550,6 +576,30 @@
 				FDF0FEB820AED8B6001E902D /* DiscoverListViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDF0FED120AEDFBE001E902D /* ZJScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				FDF0FED220AEDFBE001E902D /* UIView+ZJFrame.h */,
+				FDF0FED320AEDFBE001E902D /* UIView+ZJFrame.m */,
+				FDF0FED420AEDFBE001E902D /* UIViewController+ZJScrollPageController.h */,
+				FDF0FED520AEDFBE001E902D /* UIViewController+ZJScrollPageController.m */,
+				FDF0FED620AEDFBE001E902D /* ZJCollectionView.h */,
+				FDF0FED720AEDFBE001E902D /* ZJCollectionView.m */,
+				FDF0FED820AEDFBE001E902D /* ZJContentView.h */,
+				FDF0FED920AEDFBE001E902D /* ZJContentView.m */,
+				FDF0FEDA20AEDFBE001E902D /* ZJScrollPageView.h */,
+				FDF0FEDB20AEDFBE001E902D /* ZJScrollPageView.m */,
+				FDF0FEDC20AEDFBE001E902D /* ZJScrollPageViewDelegate.h */,
+				FDF0FEDD20AEDFBE001E902D /* ZJScrollSegmentView.h */,
+				FDF0FEDE20AEDFBE001E902D /* ZJScrollSegmentView.m */,
+				FDF0FEDF20AEDFBE001E902D /* ZJSegmentStyle.h */,
+				FDF0FEE020AEDFBE001E902D /* ZJSegmentStyle.m */,
+				FDF0FEE120AEDFBE001E902D /* ZJTitleView.h */,
+				FDF0FEE220AEDFBE001E902D /* ZJTitleView.m */,
+			);
+			path = ZJScrollPageView;
 			sourceTree = "<group>";
 		};
 		FEF1F326D0D5617DB9FE0C2C /* Frameworks */ = {
@@ -683,7 +733,6 @@
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
-				"${BUILT_PRODUCTS_DIR}/ZJScrollPageView/ZJScrollPageView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -697,7 +746,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZJScrollPageView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -713,10 +761,13 @@
 			files = (
 				090085DF20AD3822003BF4A7 /* BaseModel.m in Sources */,
 				0979D40620ADCEFF009E4745 /* HomeListViewController.m in Sources */,
+				FDF0FEE320AEDFBE001E902D /* UIView+ZJFrame.m in Sources */,
 				090085E320AD3822003BF4A7 /* BaseViewController.m in Sources */,
 				0900862E20AD4AD7003BF4A7 /* LoginSelectViewController.m in Sources */,
 				090085F420AD3B01003BF4A7 /* CALayer+LayerColor.m in Sources */,
+				FDF0FEE620AEDFBE001E902D /* ZJContentView.m in Sources */,
 				090085E020AD3822003BF4A7 /* BaseNavigationViewController.m in Sources */,
+				FDF0FEE720AEDFBE001E902D /* ZJScrollPageView.m in Sources */,
 				090085F920AD4284003BF4A7 /* HomeViewController.m in Sources */,
 				FDF0FEB920AED8B6001E902D /* DiscoverListViewController.m in Sources */,
 				090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */,
@@ -724,12 +775,15 @@
 				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
 				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
 				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
+				FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */,
+				FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */,
 				FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */,
 				FDF0FEB120AED04F001E902D /* DiscoverListModel.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
 				090085F320AD3B01003BF4A7 /* UIScrollView+EmptyDataSet.m in Sources */,
+				FDF0FEE920AEDFBE001E902D /* ZJSegmentStyle.m in Sources */,
 				090085E220AD3822003BF4A7 /* BaseTabBarController.m in Sources */,
 				FDF0FEAE20AED039001E902D /* DiscoverViewController.m in Sources */,
 				09A405CB20AD5A51009585B2 /* MainButton.m in Sources */,
@@ -740,7 +794,9 @@
 				090085E120AD3822003BF4A7 /* BaseSearchViewController.m in Sources */,
 				0900860220AD42AD003BF4A7 /* MineViewController.m in Sources */,
 				090085C220AD3740003BF4A7 /* SplashViewController.m in Sources */,
+				FDF0FEE420AEDFBE001E902D /* UIViewController+ZJScrollPageController.m in Sources */,
 				090085F620AD3B01003BF4A7 /* NSDate+Util.m in Sources */,
+				FDF0FEE520AEDFBE001E902D /* ZJCollectionView.m in Sources */,
 				09A405CE20AD6569009585B2 /* EditProfileViewController.m in Sources */,
 				090085E420AD3822003BF4A7 /* WTSHttpTool.m in Sources */,
 				090085C520AD3763003BF4A7 /* LoginViewController.m in Sources */,
