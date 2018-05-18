@@ -40,6 +40,7 @@
 		FDF0FE6020AC20E5001E902D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE5F20AC20E5001E902D /* main.m */; };
 		FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE7A20AE76AB001E902D /* HomeListCell.m */; };
 		FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */; };
+		FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE7F20AE7FFF001E902D /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		FDF0FE7920AE76AB001E902D /* HomeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListCell.h; sourceTree = "<group>"; };
 		FDF0FE7A20AE76AB001E902D /* HomeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListCell.m; sourceTree = "<group>"; };
 		FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
+		FDF0FE7E20AE7FFF001E902D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		FDF0FE7F20AE7FFF001E902D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 		090085A720AD36CF003BF4A7 /* Categroies */ = {
 			isa = PBXGroup;
 			children = (
+				FDF0FE7E20AE7FFF001E902D /* UIView+Extension.h */,
+				FDF0FE7F20AE7FFF001E902D /* UIView+Extension.m */,
 				090085EC20AD3B01003BF4A7 /* CALayer+LayerColor.h */,
 				090085F020AD3B01003BF4A7 /* CALayer+LayerColor.m */,
 				090085ED20AD3B01003BF4A7 /* NSDate+Util.h */,
@@ -677,6 +682,7 @@
 				090085F920AD4284003BF4A7 /* HomeViewController.m in Sources */,
 				090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */,
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
+				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
 				090085FC20AD428E003BF4A7 /* DiscoverViewController.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,

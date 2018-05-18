@@ -128,6 +128,8 @@ static id _instance = nil;
                url = [NSString stringWithFormat:@"%@&token=%@",url,token];
                 
             }
+            NSLog(@"params = %@,url = %@",params,url);
+
             //GET请求
             [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [MBProgressHUD hideHUDForView:GET_WINDOW animated:YES];

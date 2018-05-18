@@ -144,11 +144,18 @@
     if (index >= 2){
         
         childVc.type = 2;
+        if (index == 2) {
+            
+            childVc.star = 1;
+        }else{
+            
+            childVc.star = index;
+        }
         
     } else{
         
         childVc.type = index;
-
+        
     }
     
     return childVc;

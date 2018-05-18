@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HomeList;
 @interface HomeListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImgView;
+@property (weak, nonatomic) IBOutlet UILabel *lbStatus;
+@property (weak, nonatomic) IBOutlet UILabel *lbIntroduce;
+@property (weak, nonatomic) IBOutlet UILabel *lbPrice;
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UIImageView *starImgView;
 
+@property (nonatomic, strong) HomeList* model;
 @end

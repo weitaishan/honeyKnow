@@ -10,4 +10,6 @@
 
 @interface HomeListViewController : BaseViewController
 @property (nonatomic, assign) ActorListType type;
+@property (nonatomic, assign) NSInteger star;
+
 @end
