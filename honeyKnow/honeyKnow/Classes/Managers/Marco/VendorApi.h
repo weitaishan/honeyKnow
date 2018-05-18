@@ -19,4 +19,5 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/UIView+Toast.h>
 #import <TZImagePickerController/TZImagePickerController.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #endif /* VendorApi_h */

@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import <ZJScrollPageView/ZJScrollPageView.h>
 #import "HomeListViewController.h"
+#import "HomeListSearchViewController.h"
 @interface HomeViewController ()<ZJScrollPageViewDelegate,ZJScrollPageViewChildVcDelegate>
 
 @property (nonatomic, strong) NSMutableArray* titles;
@@ -68,6 +69,12 @@
         make.size.mas_equalTo(CGSizeMake(22, 22));
      }];
     
+    [[self.searchBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+       
+        HomeListSearchViewController* vc = [[HomeListSearchViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     //必要的设置, 如果没有设置可能导致内容显示不正常
     self.automaticallyAdjustsScrollViewInsets = NO;
 
@@ -87,12 +94,19 @@
     ZJSegmentStyle *style = [[ZJSegmentStyle alloc] init];
     
     //显示遮盖
-    style.showCover = YES;
-    style.segmentViewBounces = NO;
-    // 颜色渐变
-    style.gradualChangeTitleColor = YES;
-    // 显示附加的按钮
-    style.showExtraButton = NO;
+//    style.showCover = YES;
+//    style.segmentViewBounces = NO;
+//    // 颜色渐变
+//    style.gradualChangeTitleColor = YES;
+//    // 显示附加的按钮
+//    style.showExtraButton = NO;
+    
+    style.titleFont = [UIFont systemFontOfSize:15];
+    style.titleMargin = 23;
+    style.normalTitleColor = [UIColor colorFromHexString:@"#878787"];
+    style.selectedTitleColor = [UIColor colorFromHexString:@"#ff776e"];
+    style.scrollLineColor = [UIColor colorFromHexString:@"#ff776e"];
+    style.showLine = YES;
     
     self.titles = @[@"关注",
                     @"推荐",
@@ -112,8 +126,8 @@
         
     }];
     // 自定义标题的样式
-    segment.layer.cornerRadius = 14.0;
-    segment.backgroundColor = [UIColor redColor];
+//    segment.layer.cornerRadius = 14.0;
+    segment.backgroundColor = [UIColor whiteColor];
     // 当然推荐直接设置背景图片的方式
     //    segment.backgroundImage = [UIImage imageNamed:@"extraBtnBackgroundImage"];
     

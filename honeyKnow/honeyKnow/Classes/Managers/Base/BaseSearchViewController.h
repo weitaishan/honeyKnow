@@ -7,15 +7,15 @@
 //
 
 #import "BaseViewController.h"
-//#import "SearchTextField.h"
+#import "SearchTextField.h"
 
 @interface BaseSearchViewController : BaseViewController
 
-//@property (nonatomic, strong) SearchTextField * searchText;
+@property (nonatomic, strong) SearchTextField * searchText;
 
-//@property (nonatomic, strong) UIButton* searchBtn;
+@property (nonatomic, strong) UIButton* searchBtn;
 
-//@property (nonatomic, copy) NSString* keyWord;
+@property (nonatomic, copy) NSString* keyWord;
 
 
 @end

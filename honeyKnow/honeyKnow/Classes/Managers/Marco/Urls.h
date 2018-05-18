@@ -43,7 +43,8 @@ static NSString * const URL_HOME_ACTOR_RECOMMEND_LIST = @"actor/list";
 /** 按照星级获取主播列表*/
 static NSString * const URL_HOME_ACTOR_STAR_LIST = @"actor/star/list";
 
-
+/** 通过昵称查找主播*/
+static NSString * const URL_HOME_SEARCH_ACTOR_BY_NICKNAME = @"actor/find";
 
 
 #endif /* Urls_h */

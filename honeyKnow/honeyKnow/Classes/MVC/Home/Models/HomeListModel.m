@@ -6,7 +6,9 @@
 @implementation HomeListModel
 
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"list" : [HomeList class]};
+    return @{@"list" : [HomeList class],
+             @"data" : [HomeList class]
+             };
 }
 
 

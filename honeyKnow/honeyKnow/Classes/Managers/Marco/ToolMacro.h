@@ -114,7 +114,7 @@ tmp;\
 #define  TabbarHeight 49.f
 
 /** 状态栏高度 + 导航栏高度*/
-#define  StatusBarAndNavigationBarHeight (20.f + 44.f)
+#define  StatusBarAndNavigationBarHeight (NewStatusBarHeight + NavigationBarHeight)
 
 // ===================== 字体相关 =====================
 /** 系统字体*/

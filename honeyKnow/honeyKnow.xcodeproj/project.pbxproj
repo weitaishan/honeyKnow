@@ -41,6 +41,10 @@
 		FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE7A20AE76AB001E902D /* HomeListCell.m */; };
 		FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */; };
 		FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE7F20AE7FFF001E902D /* UIView+Extension.m */; };
+		FDF0FE8320AEA8C9001E902D /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE8220AEA8C8001E902D /* SearchTextField.m */; };
+		FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEA220AEBADD001E902D /* HomeListSearchViewController.m */; };
+		FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEA520AEC085001E902D /* HomeListSerachCell.m */; };
+		FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FEA620AEC085001E902D /* HomeListSerachCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,13 @@
 		FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
 		FDF0FE7E20AE7FFF001E902D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		FDF0FE7F20AE7FFF001E902D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		FDF0FE8120AEA8C8001E902D /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
+		FDF0FE8220AEA8C8001E902D /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
+		FDF0FEA120AEBADD001E902D /* HomeListSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListSearchViewController.h; sourceTree = "<group>"; };
+		FDF0FEA220AEBADD001E902D /* HomeListSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListSearchViewController.m; sourceTree = "<group>"; };
+		FDF0FEA420AEC085001E902D /* HomeListSerachCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListSerachCell.h; sourceTree = "<group>"; };
+		FDF0FEA520AEC085001E902D /* HomeListSerachCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListSerachCell.m; sourceTree = "<group>"; };
+		FDF0FEA620AEC085001E902D /* HomeListSerachCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListSerachCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,34 +199,10 @@
 		090085AA20AD36CF003BF4A7 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				090085AB20AD36CF003BF4A7 /* Controllers */,
-				090085AC20AD36CF003BF4A7 /* Models */,
-				090085AD20AD36CF003BF4A7 /* Views */,
 				090085FA20AD428E003BF4A7 /* DiscoverViewController.h */,
 				090085FB20AD428E003BF4A7 /* DiscoverViewController.m */,
 			);
 			path = Discover;
-			sourceTree = "<group>";
-		};
-		090085AB20AD36CF003BF4A7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		090085AC20AD36CF003BF4A7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		090085AD20AD36CF003BF4A7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		090085AE20AD36CF003BF4A7 /* Home */ = {
@@ -235,6 +222,8 @@
 				090085F820AD4284003BF4A7 /* HomeViewController.m */,
 				0979D40420ADCEFF009E4745 /* HomeListViewController.h */,
 				0979D40520ADCEFF009E4745 /* HomeListViewController.m */,
+				FDF0FEA120AEBADD001E902D /* HomeListSearchViewController.h */,
+				FDF0FEA220AEBADD001E902D /* HomeListSearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +231,8 @@
 		090085B020AD36CF003BF4A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDF0FE8120AEA8C8001E902D /* SearchTextField.h */,
+				FDF0FE8220AEA8C8001E902D /* SearchTextField.m */,
 				0979D40820ADD700009E4745 /* HomeListModel.h */,
 				0979D40720ADD700009E4745 /* HomeListModel.m */,
 			);
@@ -512,6 +503,9 @@
 				FDF0FE7920AE76AB001E902D /* HomeListCell.h */,
 				FDF0FE7A20AE76AB001E902D /* HomeListCell.m */,
 				FDF0FE7B20AE76AB001E902D /* HomeListCell.xib */,
+				FDF0FEA420AEC085001E902D /* HomeListSerachCell.h */,
+				FDF0FEA520AEC085001E902D /* HomeListSerachCell.m */,
+				FDF0FEA620AEC085001E902D /* HomeListSerachCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -589,6 +583,7 @@
 				FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */,
 				FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */,
 				FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */,
+				FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +678,9 @@
 				090085FF20AD42A1003BF4A7 /* MessageViewController.m in Sources */,
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
 				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
+				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
 				090085FC20AD428E003BF4A7 /* DiscoverViewController.m in Sources */,
+				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
@@ -692,6 +689,7 @@
 				09A405CB20AD5A51009585B2 /* MainButton.m in Sources */,
 				FDF0FE5220AC20E5001E902D /* AppDelegate.m in Sources */,
 				0979D40920ADD700009E4745 /* HomeListModel.m in Sources */,
+				FDF0FE8320AEA8C9001E902D /* SearchTextField.m in Sources */,
 				090085E820AD39B2003BF4A7 /* WTSLog.m in Sources */,
 				090085E120AD3822003BF4A7 /* BaseSearchViewController.m in Sources */,
 				0900860220AD42AD003BF4A7 /* MineViewController.m in Sources */,

@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) NSArray<HomeList *> *list;
 
+@property (nonatomic, strong) NSArray<HomeList *> *data;
+
+
 @end
 @interface HomeList : BaseModel
 
