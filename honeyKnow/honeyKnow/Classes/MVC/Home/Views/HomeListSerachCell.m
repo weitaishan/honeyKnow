@@ -30,6 +30,6 @@
     _model = model;
     [self.iconImgView sd_setImageWithURL:[NSURL URLWithString:model.avator] placeholderImage:[UIImage imageNamed:@"pic_avatar"]];
     self.lbName.text = model.nickName ? model.nickName : @"";
-    self.lbIntroduce.text = model.introduce ? model.introduce : @"";
+    self.lbIntroduce.text = model.introduce ? model.introduce : @"自我介绍";
 }
 @end

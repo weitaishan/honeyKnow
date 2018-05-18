@@ -1,0 +1,12 @@
+{
+  "code" : "99",
+  "data" : {
+    "identifier" : "9",
+    "new" : false,
+    "nickName" : null,
+    "token" : "56456551399861001675211511531045",
+    "userSig" : "eJxlj8FOg0AQQO98BeGqMbuzsohJD3RLTJtSpdVYToSwCywqILu0WOO-22ITMc71vTeT*TRM07Qel5urJE3rrtKx-miEZd6aFrIuf2HTSB4nOiYt-wdF38hWxEmmRTtAbNs2IDR2JBeVlpk8G*4IKf4SD-t-2utjeOPCn1rJfICBH7K530GkZkU-jaLFYXa-WdYBFMC4*9CXsArunsp5yLotzpO9Jz3neeekU0qpkyy2kGMW*mvM0sNrUO75*v1CNX5BVlngVd5kMjqp5Zs4PwMUKKEEj*hOtErW1SAAwjYGgk5jGV-GN6jbWmA_"
+  },
+  "msg" : "业务调用成功",
+  "success" : true
+}

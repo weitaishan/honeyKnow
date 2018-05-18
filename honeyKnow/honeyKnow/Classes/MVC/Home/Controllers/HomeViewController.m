@@ -152,7 +152,11 @@
     HomeListViewController *childVc = reuseViewController;
     // 这里一定要判断传过来的是否是nil, 如果为nil直接使用并返回
     // 如果不为nil 就创建
-    childVc = [[HomeListViewController alloc] init];
+    if (childVc == nil) {
+
+        childVc = [[HomeListViewController alloc] init];
+
+    }
 
     if (index >= 2){
         
@@ -172,5 +176,10 @@
     }
     
     return childVc;
+}
+
+-(BOOL)shouldAutomaticallyForwardAppearanceMethods{
+    
+    return NO;
 }
 @end

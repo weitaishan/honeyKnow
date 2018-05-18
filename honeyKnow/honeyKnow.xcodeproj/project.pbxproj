@@ -31,6 +31,9 @@
 		0979D40920ADD700009E4745 /* HomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0979D40720ADD700009E4745 /* HomeListModel.m */; };
 		09A405CB20AD5A51009585B2 /* MainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A405CA20AD5A51009585B2 /* MainButton.m */; };
 		09A405CE20AD6569009585B2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A405CD20AD6569009585B2 /* EditProfileViewController.m */; };
+		09FD890220AF0E4500641996 /* MessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890020AF0E4500641996 /* MessageListCell.m */; };
+		09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890120AF0E4500641996 /* MessageListCell.xib */; };
+		09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890520AF0F7D00641996 /* MessageListModel.m */; };
 		1BCE9C52B12E31BD804F0AE6 /* Pods_honeyKnow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F621B042D24B55498194C1 /* Pods_honeyKnow.framework */; };
 		FDF0FE5220AC20E5001E902D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE5120AC20E5001E902D /* AppDelegate.m */; };
 		FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE5620AC20E5001E902D /* Main.storyboard */; };
@@ -116,6 +119,11 @@
 		09A405CA20AD5A51009585B2 /* MainButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainButton.m; sourceTree = "<group>"; };
 		09A405CC20AD6569009585B2 /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		09A405CD20AD6569009585B2 /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		09FD88FF20AF0E4500641996 /* MessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListCell.h; sourceTree = "<group>"; };
+		09FD890020AF0E4500641996 /* MessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListCell.m; sourceTree = "<group>"; };
+		09FD890120AF0E4500641996 /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
+		09FD890420AF0F7D00641996 /* MessageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListModel.h; sourceTree = "<group>"; };
+		09FD890520AF0F7D00641996 /* MessageListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListModel.m; sourceTree = "<group>"; };
 		68F621B042D24B55498194C1 /* Pods_honeyKnow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_honeyKnow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7210AB59C2DC271D0170D56D /* Pods-honeyKnow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.release.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.release.xcconfig"; sourceTree = "<group>"; };
 		A13A149F0A5CF96AF3456D28 /* Pods-honeyKnow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +347,8 @@
 		090085B820AD36CF003BF4A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09FD890420AF0F7D00641996 /* MessageListModel.h */,
+				09FD890520AF0F7D00641996 /* MessageListModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +356,9 @@
 		090085B920AD36CF003BF4A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09FD88FF20AF0E4500641996 /* MessageListCell.h */,
+				09FD890020AF0E4500641996 /* MessageListCell.m */,
+				09FD890120AF0E4500641996 /* MessageListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -675,6 +688,7 @@
 				FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */,
 				FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */,
 				FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */,
+				09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */,
 				FDF0FEB620AED392001E902D /* DiscoverListCell.xib in Resources */,
 				FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */,
 			);
@@ -774,12 +788,14 @@
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
 				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
 				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
+				09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */,
 				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
 				FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */,
 				FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */,
 				FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */,
 				FDF0FEB120AED04F001E902D /* DiscoverListModel.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
+				09FD890220AF0E4500641996 /* MessageListCell.m in Sources */,
 				090085EB20AD3A86003BF4A7 /* Colours.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
 				090085F320AD3B01003BF4A7 /* UIScrollView+EmptyDataSet.m in Sources */,

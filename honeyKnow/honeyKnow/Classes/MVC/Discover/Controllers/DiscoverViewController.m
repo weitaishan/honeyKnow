@@ -74,7 +74,7 @@
     //    // 显示附加的按钮
     //    style.showExtraButton = NO;
     
-    style.titleFont = [UIFont systemFontOfSize:15];
+    style.titleFont = [UIFont systemFontOfSize:17];
     style.titleMargin = 23;
     style.normalTitleColor = [UIColor colorFromHexString:@"#878787"];
     style.selectedTitleColor = [UIColor colorFromHexString:@"#ff776e"];
@@ -132,12 +132,20 @@
     DiscoverListViewController *childVc = reuseViewController;
     // 这里一定要判断传过来的是否是nil, 如果为nil直接使用并返回
     // 如果不为nil 就创建
-    childVc = [[DiscoverListViewController alloc] init];
+    if (childVc == nil) {
+        childVc = [[DiscoverListViewController alloc] init];
+
+    }
 
         
     childVc.type = index;
         
     
     return childVc;
+}
+
+-(BOOL)shouldAutomaticallyForwardAppearanceMethods{
+    
+    return NO;
 }
 @end

@@ -1,0 +1,26 @@
+{
+  "code": "99",
+  "msg": "业务调用成功",
+  "success": true,
+  "data": {
+    "total": 1,
+    "list": [
+      {
+        "birthday": "1993-06-01",
+        "signName": "帅",
+        "gender": "1",
+        "star": "1",
+        "nickName": "胖虎",
+        "introduce": "自我介绍",
+        "weight": "120",
+        "price": "9999.99",
+        "avator": "http://p33egoddp.bkt.clouddn.com/20161209022912211.jpg",
+        "location": "杭州",
+        "id": 3,
+        "tall": "180",
+        "status": "1"
+      }
+    ],
+    "pageNum": 1
+  }
+}

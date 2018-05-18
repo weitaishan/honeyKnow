@@ -29,7 +29,6 @@ static NSString* discoverListCellId = @"discoverListCellId";
     
     
     [self setBaseInfo];
-    [self getDiscoverInfoData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,10 +60,11 @@ static NSString* discoverListCellId = @"discoverListCellId";
 
     }
     
-    
     WeakSelf;
     [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:self.url params:nil success:^(id response) {
         
+        [weakSelf.collectionView.mj_header endRefreshing];
+
         if ([response[@"success"] integerValue]){
             
             
@@ -79,7 +79,8 @@ static NSString* discoverListCellId = @"discoverListCellId";
         
     } failure:^(NSError *error) {
         
-        
+        [weakSelf.collectionView.mj_header endRefreshing];
+
     }];
     
 }
@@ -93,7 +94,7 @@ static NSString* discoverListCellId = @"discoverListCellId";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
     //    flowLayout.headerReferenceSize = CGSizeMake(0,  10);
-    flowLayout.minimumInteritemSpacing = 1;//列距
+    flowLayout.minimumInteritemSpacing = 0;//列距
     flowLayout.minimumLineSpacing = 1;
     
     
@@ -109,6 +110,15 @@ static NSString* discoverListCellId = @"discoverListCellId";
     
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([DiscoverListCell class]) bundle:nil] forCellWithReuseIdentifier:discoverListCellId];
     
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self getDiscoverInfoData];
+        // 禁用footer
+        self.collectionView.mj_footer.hidden = YES;
+    }];
+    
+    // 马上进入刷新状态
+    [self.collectionView.mj_header beginRefreshing];
     
 }
 
@@ -128,14 +138,14 @@ static NSString* discoverListCellId = @"discoverListCellId";
 //元素大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    CGFloat width = (SCREEN_WIDTH - 1) / 2.f;
+    CGFloat width = SCREEN_WIDTH / 2.f - 1;
     
-    return CGSizeMake( width,  276.f / 187 * width);
+    return CGSizeMake( width,  276.f / 187 * ((SCREEN_WIDTH - 1) / 2.f));
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-    return UIEdgeInsetsMake(0, 1, 1, 1);
+    return UIEdgeInsetsMake(1, 0, 0, 0);
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
