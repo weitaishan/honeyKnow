@@ -32,7 +32,7 @@
 /** 背景颜色*/
 #define kBtnBgColor [UIColor colorFromHexString:@"#F2F4F7"]
 /** 分割线颜色*/
-#define kLineColor [UIColor colorFromHexString:@"#dbdbdb"]
+#define kLineColor [UIColor colorFromHexString:@"#dadada"]
 
 /** 底部分割线颜色*/
 #define kBottomLineColor [UIColor colorFromHexString:@"#d8d8d8"]

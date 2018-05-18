@@ -34,6 +34,13 @@
 		09FD890220AF0E4500641996 /* MessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890020AF0E4500641996 /* MessageListCell.m */; };
 		09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890120AF0E4500641996 /* MessageListCell.xib */; };
 		09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890520AF0F7D00641996 /* MessageListModel.m */; };
+		09FD890A20AF183000641996 /* MinePersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890820AF183000641996 /* MinePersonInfoCell.m */; };
+		09FD890B20AF183000641996 /* MinePersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890920AF183000641996 /* MinePersonInfoCell.xib */; };
+		09FD890E20AF184500641996 /* MineListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890D20AF184500641996 /* MineListCell.m */; };
+		09FD891020AF1A1600641996 /* mineList.json in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890F20AF1A1500641996 /* mineList.json */; };
+		09FD891320AF1A2A00641996 /* MineListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD891220AF1A2A00641996 /* MineListModel.m */; };
+		09FD891620AF1A9700641996 /* MineItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD891520AF1A9700641996 /* MineItemView.m */; };
+		09FD891920AF1ACA00641996 /* MinePersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD891820AF1ACA00641996 /* MinePersonInfoModel.m */; };
 		1BCE9C52B12E31BD804F0AE6 /* Pods_honeyKnow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F621B042D24B55498194C1 /* Pods_honeyKnow.framework */; };
 		FDF0FE5220AC20E5001E902D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FE5120AC20E5001E902D /* AppDelegate.m */; };
 		FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF0FE5620AC20E5001E902D /* Main.storyboard */; };
@@ -124,6 +131,18 @@
 		09FD890120AF0E4500641996 /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
 		09FD890420AF0F7D00641996 /* MessageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListModel.h; sourceTree = "<group>"; };
 		09FD890520AF0F7D00641996 /* MessageListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListModel.m; sourceTree = "<group>"; };
+		09FD890720AF183000641996 /* MinePersonInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePersonInfoCell.h; sourceTree = "<group>"; };
+		09FD890820AF183000641996 /* MinePersonInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePersonInfoCell.m; sourceTree = "<group>"; };
+		09FD890920AF183000641996 /* MinePersonInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinePersonInfoCell.xib; sourceTree = "<group>"; };
+		09FD890C20AF184500641996 /* MineListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineListCell.h; sourceTree = "<group>"; };
+		09FD890D20AF184500641996 /* MineListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineListCell.m; sourceTree = "<group>"; };
+		09FD890F20AF1A1500641996 /* mineList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mineList.json; sourceTree = "<group>"; };
+		09FD891120AF1A2A00641996 /* MineListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineListModel.h; sourceTree = "<group>"; };
+		09FD891220AF1A2A00641996 /* MineListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineListModel.m; sourceTree = "<group>"; };
+		09FD891420AF1A9700641996 /* MineItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineItemView.h; sourceTree = "<group>"; };
+		09FD891520AF1A9700641996 /* MineItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineItemView.m; sourceTree = "<group>"; };
+		09FD891720AF1ACA00641996 /* MinePersonInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePersonInfoModel.h; sourceTree = "<group>"; };
+		09FD891820AF1ACA00641996 /* MinePersonInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePersonInfoModel.m; sourceTree = "<group>"; };
 		68F621B042D24B55498194C1 /* Pods_honeyKnow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_honeyKnow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7210AB59C2DC271D0170D56D /* Pods-honeyKnow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.release.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.release.xcconfig"; sourceTree = "<group>"; };
 		A13A149F0A5CF96AF3456D28 /* Pods-honeyKnow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +406,11 @@
 		090085BC20AD36CF003BF4A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09FD890F20AF1A1500641996 /* mineList.json */,
+				09FD891120AF1A2A00641996 /* MineListModel.h */,
+				09FD891220AF1A2A00641996 /* MineListModel.m */,
+				09FD891720AF1ACA00641996 /* MinePersonInfoModel.h */,
+				09FD891820AF1ACA00641996 /* MinePersonInfoModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +418,13 @@
 		090085BD20AD36CF003BF4A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09FD890720AF183000641996 /* MinePersonInfoCell.h */,
+				09FD890820AF183000641996 /* MinePersonInfoCell.m */,
+				09FD890920AF183000641996 /* MinePersonInfoCell.xib */,
+				09FD890C20AF184500641996 /* MineListCell.h */,
+				09FD890D20AF184500641996 /* MineListCell.m */,
+				09FD891420AF1A9700641996 /* MineItemView.h */,
+				09FD891520AF1A9700641996 /* MineItemView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -687,10 +718,12 @@
 				FDF0FE5D20AC20E5001E902D /* LaunchScreen.storyboard in Resources */,
 				FDF0FE5A20AC20E5001E902D /* Assets.xcassets in Resources */,
 				FDF0FE7D20AE76AB001E902D /* HomeListCell.xib in Resources */,
+				09FD890B20AF183000641996 /* MinePersonInfoCell.xib in Resources */,
 				FDF0FE5820AC20E5001E902D /* Main.storyboard in Resources */,
 				09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */,
 				FDF0FEB620AED392001E902D /* DiscoverListCell.xib in Resources */,
 				FDF0FEA820AEC085001E902D /* HomeListSerachCell.xib in Resources */,
+				09FD891020AF1A1600641996 /* mineList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +811,7 @@
 				FDF0FEE320AEDFBE001E902D /* UIView+ZJFrame.m in Sources */,
 				090085E320AD3822003BF4A7 /* BaseViewController.m in Sources */,
 				0900862E20AD4AD7003BF4A7 /* LoginSelectViewController.m in Sources */,
+				09FD890A20AF183000641996 /* MinePersonInfoCell.m in Sources */,
 				090085F420AD3B01003BF4A7 /* CALayer+LayerColor.m in Sources */,
 				FDF0FEE620AEDFBE001E902D /* ZJContentView.m in Sources */,
 				090085E020AD3822003BF4A7 /* BaseNavigationViewController.m in Sources */,
@@ -788,10 +822,12 @@
 				0900863120AD553C003BF4A7 /* LoginTextField.m in Sources */,
 				FDF0FE8020AE7FFF001E902D /* UIView+Extension.m in Sources */,
 				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
+				09FD891320AF1A2A00641996 /* MineListModel.m in Sources */,
 				09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */,
 				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
 				FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */,
 				FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */,
+				09FD890E20AF184500641996 /* MineListCell.m in Sources */,
 				FDF0FEB520AED392001E902D /* DiscoverListCell.m in Sources */,
 				FDF0FEB120AED04F001E902D /* DiscoverListModel.m in Sources */,
 				FDF0FE7C20AE76AB001E902D /* HomeListCell.m in Sources */,
@@ -810,12 +846,14 @@
 				090085E120AD3822003BF4A7 /* BaseSearchViewController.m in Sources */,
 				0900860220AD42AD003BF4A7 /* MineViewController.m in Sources */,
 				090085C220AD3740003BF4A7 /* SplashViewController.m in Sources */,
+				09FD891620AF1A9700641996 /* MineItemView.m in Sources */,
 				FDF0FEE420AEDFBE001E902D /* UIViewController+ZJScrollPageController.m in Sources */,
 				090085F620AD3B01003BF4A7 /* NSDate+Util.m in Sources */,
 				FDF0FEE520AEDFBE001E902D /* ZJCollectionView.m in Sources */,
 				09A405CE20AD6569009585B2 /* EditProfileViewController.m in Sources */,
 				090085E420AD3822003BF4A7 /* WTSHttpTool.m in Sources */,
 				090085C520AD3763003BF4A7 /* LoginViewController.m in Sources */,
+				09FD891920AF1ACA00641996 /* MinePersonInfoModel.m in Sources */,
 				090085F520AD3B01003BF4A7 /* NullSafe.m in Sources */,
 				0979D3DA20AD875D009E4745 /* LoginModel.m in Sources */,
 			);

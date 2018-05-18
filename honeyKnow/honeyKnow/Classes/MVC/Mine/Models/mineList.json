@@ -1,0 +1,48 @@
+[
+ {
+    "imgName" : "btn_wallet",
+    "title" : "钱包",
+    "type" : 0
+  },
+  {
+    "imgName" : "btn_promotion",
+    "title" : "我要推广",
+    "type" : 0
+  },
+  {
+    "imgName" : "btn_certified",
+    "title" : "认证赚钱",
+    "type" : 0
+  },
+  {
+    "imgName" : "mine_btn_video",
+    "title" : "视频夹",
+    "type" : 0
+  },
+  {
+    "imgName" : "btn_customerservice",
+    "title" : "在线客服",
+    "type" : 0
+  },
+  {
+    "imgName" : "btn_help",
+    "title" : "帮助中心",
+    "type" : 0
+  },
+  {
+    "imgName" : "btn_wurao",
+    "title" : "勿扰",
+    "type" : 1
+  },
+  {
+    "imgName" : "btn_clear",
+    "title" : "清除缓存",
+    "type" : 0
+  },
+ 
+  {
+    "imgName" : "btn_quit",
+    "title" : "安全退出",
+    "type" : 0
+  }
+]
