@@ -32,6 +32,13 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
+    //获取版本号
+    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
+    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
+    NSLog(@"IMSDK version:%@",[[TIMManager sharedInstance] GetVersion]);
+    // 初始化SDK
+    [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
+    
     
 }
 
@@ -57,11 +64,13 @@
     
     if (userToken.length > 0) {
         
+        [[SystemService shareInstance] ILiveLogin];
+
         //创建标签栏控制器
         BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
         
         self.window.rootViewController = tabBarController;
-        
+                
     }else{
         
         //创建标签栏控制器
@@ -113,5 +122,33 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
+}
 
 @end

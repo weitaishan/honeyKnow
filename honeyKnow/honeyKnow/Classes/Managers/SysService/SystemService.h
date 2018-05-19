@@ -1,0 +1,62 @@
+//
+//  SystemService.h
+//  JaadeeRn
+//
+//  Created by AlbertWei on 2018/3/30.
+//  Copyright © 2018年 Facebook. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+
+typedef NS_OPTIONS(NSUInteger, WTSPermissionType) {
+  /** 相册*/
+  WTSPermissionTypePhoto = 0x01,
+  /** 相机*/
+  WTSPermissionTypeCamera = 0x02,
+  /** 麦克风*/
+  WTSPermissionTypeMicrophone = 0x04
+
+};
+
+/**
+ *  账户类型
+ */
+typedef NS_ENUM(NSUInteger, WTSPermissionStatus) {
+  /**
+   *  无权限
+   */
+  WTSPermissionStatusNo = 0,
+  /**
+   *  有权限
+   */
+  WTSPermissionStatusYes,
+
+};
+
+@interface SystemService : NSObject
+
++(instancetype) shareInstance;
+
+-(id)toArrayOrNSDictionary:(NSString *)json;
+- (NSString*)DataTOjsonString:(id)object;
+/**
+ 权限判断
+
+ @param type       权限类型  多个用 |  如:WTSPermissionTypePhoto | WTSPermissionTypeCamera | WTSPermissionTypeMicrophone
+ @param vc         传入当前控制器，如果有，则会弹出去开启权限弹窗
+ @param completion 是否有权限回调
+ */
+- (void)wtsAccessPermissionJudgeWithType:(WTSPermissionType)type
+                          viewController:(UIViewController *)vc
+                              completion:(void(^)(WTSPermissionStatus status))completion;
+
+/**
+ 登录腾讯云 音视频
+ */
+- (void)ILiveLogin;
+/**
+ *  退出登录
+ */
+- (void)exitLoginWithTitle:(NSString *)title message:(NSString *)message;
+@end

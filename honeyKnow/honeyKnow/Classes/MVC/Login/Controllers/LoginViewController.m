@@ -186,10 +186,13 @@
                     
                 }else{
 
+                    [[SystemService shareInstance] ILiveLogin];
+
                     //创建标签栏控制器
                     BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
 
                     self.view.window.rootViewController = tabBarController;
+                    
                 }
 
             }else{

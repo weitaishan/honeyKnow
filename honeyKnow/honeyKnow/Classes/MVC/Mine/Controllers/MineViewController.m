@@ -12,8 +12,7 @@
 #import "MinePersonInfoModel.h"
 #import "MineListModel.h"
 #import "EditProfileViewController.h"
-#import "LoginSelectViewController.h"
-#import "BaseNavigationViewController.h"
+
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -240,7 +239,8 @@ static NSString * const mineListCellId = @"mineListCellId";
     
     if ([title isEqualToString:@"安全退出"]) {
         
-        [self exitLogin];
+        [[SystemService shareInstance] exitLoginWithTitle:@"退出登录" message:@"是否确认退出登录!"];
+
         
     }else if ([title isEqualToString:@"清除缓存"]){
         
@@ -293,31 +293,5 @@ static NSString * const mineListCellId = @"mineListCellId";
     
 }
 
-/**
- *  退出登录
- */
-- (void)exitLogin{
 
-    [[WTSAlertViewTools shareInstance] showAlert:@"退出登录" message:@"是否确定登录" cancelTitle:@"取消" titleArray:@[@"确定"] viewController:self confirm:^(NSInteger buttonTag){
-        
-        if (buttonTag == cancelIndex) {
-            
-        }else{
-            
-            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
-            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
-            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
-            
-            
-            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
-            
-            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
-            self.view.window.rootViewController = navVC;
-            
-        }
-        
-    }];
-    
-   
-}
 @end

@@ -10,11 +10,12 @@
 #import "DiscoverViewController.h"
 #import "DiscoverListCell.h"
 #import "DiscoverListModel.h"
+#import "VideoViewController.h"
 @interface DiscoverListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView * collectionView;
 
-@property (nonatomic, strong) NSMutableArray* listArray;
+@property (nonatomic, strong) NSMutableArray<DiscoverList *>* listArray;
 @property (nonatomic, copy) NSString* url;
 
 @end
@@ -159,7 +160,11 @@ static NSString* discoverListCellId = @"discoverListCellId";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    VideoViewController*  vc = [[VideoViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.listArray = self.listArray;
+    vc.index = indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

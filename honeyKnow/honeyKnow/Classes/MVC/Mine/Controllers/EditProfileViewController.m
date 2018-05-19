@@ -127,6 +127,8 @@
                             
                         }else{
                             
+                            [[SystemService shareInstance] ILiveLogin];
+
                             BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
                             self.view.window.rootViewController = tabBarController;                
                                 

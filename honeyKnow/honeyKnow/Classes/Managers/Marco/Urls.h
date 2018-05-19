@@ -8,6 +8,12 @@
 
 #ifndef Urls_h
 #define Urls_h
+
+// 定义SDKAppId和AccountType
+static  const int kSDKAppID = 1400089200;
+static  const int kAccountType = 26272;
+
+
 /** 网络请求*/
 
 static NSString * const  BASE_URL = @"http://miliao.xiangchaopai.com/";//120.27.134.116
