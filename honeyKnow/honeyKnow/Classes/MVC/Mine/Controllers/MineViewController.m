@@ -11,6 +11,9 @@
 #import "MinePersonInfoCell.h"
 #import "MinePersonInfoModel.h"
 #import "MineListModel.h"
+#import "EditProfileViewController.h"
+#import "LoginSelectViewController.h"
+#import "BaseNavigationViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -38,12 +41,39 @@ static NSString * const mineListCellId = @"mineListCellId";
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
-    
+    [self getUserInfoData];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getUserInfoData{
+    
+    
+    WeakSelf;
+    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_USER_GET params:nil success:^(id response) {
+        
+        [weakSelf.tableView.mj_header endRefreshing];
+        
+        if ([response[@"success"] integerValue]){
+            
+            
+            self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
+           
+            [self.tableView reloadData];
+            
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        [weakSelf.tableView.mj_header endRefreshing];
+        
+    }];
+    
 }
 
 - (void)setBaseInfo{
@@ -56,9 +86,27 @@ static NSString * const mineListCellId = @"mineListCellId";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MinePersonInfoCell class]) bundle:nil] forCellReuseIdentifier:minePersonInfoCellId];
 
     
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self getUserInfoData];
+        // 禁用footer
+        self.tableView.mj_footer.hidden = YES;
+    }];
+    
+    
 }
 
+- (void)pushEditViewController{
+    
+    EditProfileViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"editProfileViewController"];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.type = 1;
+    vc.icoImgUrl = self.infoModel.avator;
+    vc.nickName = self.infoModel.nickName;
 
+    [self.navigationController pushViewController:vc animated:YES];
+}
 #pragma mark - UITableViewDelegate/dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -77,6 +125,23 @@ static NSString * const mineListCellId = @"mineListCellId";
         
         MinePersonInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:minePersonInfoCellId forIndexPath:indexPath];
         cell.infoModel = self.infoModel;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        
+        [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+            
+            //手势触发调用
+            [self pushEditViewController];
+
+        }];
+        [cell.iconImgView addGestureRecognizer:tap];
+   
+    
+        [[[cell.editBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            [self pushEditViewController];
+
+        }];
         return cell;
         
         
@@ -84,6 +149,11 @@ static NSString * const mineListCellId = @"mineListCellId";
         
         MineListCell * cell = [tableView dequeueReusableCellWithIdentifier:mineListCellId forIndexPath:indexPath];
         cell.listArray = self.listArray;
+        WeakSelf;
+        cell.resultBlock = ^(NSInteger index) {
+          
+            [weakSelf clickItemListWithIndex:index];
+        };
         return cell;
     }
     
@@ -159,5 +229,95 @@ static NSString * const mineListCellId = @"mineListCellId";
     
     return _listArray;
     
+}
+
+/**
+ 处理button点击事件
+ */
+- (void)clickItemListWithIndex:(NSInteger)index{
+    
+    NSString* title = self.listArray[index].title;
+    
+    if ([title isEqualToString:@"安全退出"]) {
+        
+        [self exitLogin];
+        
+    }else if ([title isEqualToString:@"清除缓存"]){
+        
+        [self cleanCache];
+    }
+    
+}
+/**清除缓存和cookie*/
+- (void)cleanCacheAndCookie{
+    //清除cookies
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]){
+        [storage deleteCookie:cookie];
+    }
+    //清除UIWebView的缓存
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    NSURLCache * cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    [cache setDiskCapacity:0];
+    [cache setMemoryCapacity:0];
+}
+/**
+ *  清楚缓存
+ */
+- (void)cleanCache{
+    
+    [[WTSAlertViewTools shareInstance] showAlert:@"清除缓存" message:@"清除本地聊天记录与缓存图片" cancelTitle:@"返回" titleArray:@[@"确定"] viewController:self confirm:^(NSInteger buttonTag){
+        
+        if (buttonTag == cancelIndex) {
+            
+        }else{
+            
+            [self cleanCacheAndCookie];
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [self addToast:@"清除缓存成功"];
+                        // 设置文字
+                    });
+                });
+            }];
+        }
+        
+    }];
+    
+   
+    
+}
+
+/**
+ *  退出登录
+ */
+- (void)exitLogin{
+
+    [[WTSAlertViewTools shareInstance] showAlert:@"退出登录" message:@"是否确定登录" cancelTitle:@"取消" titleArray:@[@"确定"] viewController:self confirm:^(NSInteger buttonTag){
+        
+        if (buttonTag == cancelIndex) {
+            
+        }else{
+            
+            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+            
+            
+            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+            
+            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+            self.view.window.rootViewController = navVC;
+            
+        }
+        
+    }];
+    
+   
 }
 @end

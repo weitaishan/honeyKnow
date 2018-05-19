@@ -72,7 +72,7 @@
     if (!_lbTitle) {
         
         _lbTitle = [[UILabel alloc] init];
-        _lbTitle.font = [UIFont boldSystemFontOfSize:13];
+        _lbTitle.font = [UIFont systemFontOfSize:13];
         
         _lbTitle.textAlignment = NSTextAlignmentCenter;
         
@@ -116,7 +116,6 @@
        
         make.bottom.left.right.equalTo(weakSelf);
         make.height.mas_equalTo(1);
-        make.size.mas_equalTo(CGSizeMake(35, 35));
 
     }];
     
@@ -142,10 +141,13 @@
         }];
         
     }else{
+        
         [_iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
             
             make.bottom.equalTo(weakSelf.lbTitle.mas_top).offset(-8);
             make.centerX.mas_equalTo(weakSelf);
+            make.size.mas_equalTo(CGSizeMake(35, 35));
+
         }];
     }
 

@@ -41,6 +41,20 @@
         itemView.iconImgView.image = [UIImage imageNamed:listArray[i].imgName];
         itemView.lbTitle.text = listArray[i].title;
         
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        
+        itemView.tag = i;
+        [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+            
+            //手势触发调用
+            if (self.resultBlock) {
+                
+                self.resultBlock(itemView.tag);
+            }
+            
+        }];
+        [itemView addGestureRecognizer:tap];
+        
         [self.contentView addSubview:itemView];
         [itemView mas_makeConstraints:^(MASConstraintMaker *make) {
            

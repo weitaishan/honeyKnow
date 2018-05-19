@@ -174,5 +174,16 @@ static NSString* discoverListCellId = @"discoverListCellId";
     
     return _listArray;
 }
+
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"暂无视频哦~";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: FontTextTwo,
+                                 NSForegroundColorAttributeName: kNormalTextTwoColor};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
 @end
 

@@ -21,11 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
-    self.navigationItem.hidesBackButton = YES;
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.navigationBarHidden = NO;
+
+    if (!_type) {
+        self.navigationItem.leftBarButtonItem = nil;
+
+        self.navigationItem.hidesBackButton = YES;
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+        }
+    }else{
+        
+        self.navigationItem.hidesBackButton = NO;
+        //    返回按钮
+        UIBarButtonItem* leftItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+        self.navigationItem.leftBarButtonItem = leftItem;
+        [self.iconBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:self.icoImgUrl] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"pic_avatar"]];
+        self.nickNameTF.text = self.nickName ? self.nickName  : @"昵称";
     }
+    
     
     
     [self initBaseInfo];
@@ -34,9 +48,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.navigationBarHidden = NO;
+
+    if (!_type) {
+
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+        }
     }
 }
 
@@ -44,8 +62,12 @@
     
     [super viewDidAppear:animated];
     
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    if (!_type) {
+
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+        }
+        
     }
 }
 //-(void)viewWillDisappear:(BOOL)animated{
@@ -99,10 +121,18 @@
                     
                     if ([response[@"success"] integerValue]){
 
-                        BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
-                         self.view.window.rootViewController = tabBarController;                    }else{
+                        if (self.type) {
+                            
+                            [self.navigationController popViewControllerAnimated:YES];
+                            
+                        }else{
+                            
+                            BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
+                            self.view.window.rootViewController = tabBarController;                
+                                
+                                [self addToast:@"更新用户信息失败"];
+                        }
                         
-                        [self addToast:@"更新用户信息失败"];
                         
                     }
                     
@@ -135,7 +165,6 @@
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
         
         if(photos.count > 0){
-            
            [self.iconBtn setBackgroundImage:photos.firstObject forState:UIControlStateNormal] ;
         }
         
@@ -153,7 +182,8 @@
 
 -(void)back{
     
-    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 @end

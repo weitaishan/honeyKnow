@@ -17,6 +17,7 @@
 
     self.iconImgView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.iconImgView.layer.borderWidth = 2;
+    self.iconImgView.userInteractionEnabled = YES ;
 
 }
 
@@ -26,4 +27,13 @@
     // Configure the view for the selected state
 }
 
+-(void)setInfoModel:(MinePersonInfoModel *)infoModel{
+    
+    _infoModel = infoModel;
+    [self.iconImgView sd_setImageWithURL:[NSURL URLWithString:infoModel.avator] placeholderImage:[UIImage imageNamed:@"pic_avatar"]];
+    self.lbName.text = infoModel.nickName ?infoModel.nickName  : @"昵称";
+    self.lbFocusNum.text = IntStr(infoModel.focusNum);
+    self.lbHCoinNum.text = infoModel.balance ?infoModel.balance  : @"0";;
+    
+}
 @end

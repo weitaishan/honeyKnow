@@ -56,4 +56,8 @@ static NSString * const URL_VIDEO_NEW_LIST = @"video/new/list";
 /** 热门视屏列表*/
 static NSString * const URL_VIDEO_HOT_LIST = @"video/hot/list";
 
+//==========================我的=============================
+/** 获取用户信息*/
+static NSString * const URL_USER_GET = @"user/get";
+
 #endif /* Urls_h */

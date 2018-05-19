@@ -22,4 +22,5 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import "LoginTextField.h"
 #import "MainButton.h"
+#import "WTSAlertViewTools.h"
 #endif /* MacroApi_h */

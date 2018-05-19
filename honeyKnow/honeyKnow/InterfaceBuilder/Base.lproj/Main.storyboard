@@ -98,7 +98,7 @@
         <!--Login View Controller-->
         <scene sceneID="Saz-lg-vgL">
             <objects>
-                <viewController id="f4B-2o-Vhl" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="f4B-2o-Vhl" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edi-a3-TvP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,7 +367,7 @@
     <resources>
         <image name="btn_phone" width="65" height="65"/>
         <image name="icon_logo" width="110" height="110"/>
-        <image name="pic_avatar" width="85" height="85"/>
+        <image name="pic_avatar" width="36" height="36"/>
         <image name="pic_bg" width="375" height="667"/>
     </resources>
 </document>

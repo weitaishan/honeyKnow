@@ -67,6 +67,7 @@
 		FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEDE20AEDFBE001E902D /* ZJScrollSegmentView.m */; };
 		FDF0FEE920AEDFBE001E902D /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEE020AEDFBE001E902D /* ZJSegmentStyle.m */; };
 		FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEE220AEDFBE001E902D /* ZJTitleView.m */; };
+		FDF0FEED20AFF7F1001E902D /* WTSAlertViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF0FEEC20AFF7F1001E902D /* WTSAlertViewTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,8 @@
 		FDF0FEE020AEDFBE001E902D /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
 		FDF0FEE120AEDFBE001E902D /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
 		FDF0FEE220AEDFBE001E902D /* ZJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTitleView.m; sourceTree = "<group>"; };
+		FDF0FEEB20AFF7F1001E902D /* WTSAlertViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSAlertViewTools.h; sourceTree = "<group>"; };
+		FDF0FEEC20AFF7F1001E902D /* WTSAlertViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSAlertViewTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +435,8 @@
 		090085BF20AD36CF003BF4A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FDF0FEEB20AFF7F1001E902D /* WTSAlertViewTools.h */,
+				FDF0FEEC20AFF7F1001E902D /* WTSAlertViewTools.m */,
 				090085E920AD3A85003BF4A7 /* Colours.h */,
 				090085EA20AD3A86003BF4A7 /* Colours.m */,
 				090085E620AD39B2003BF4A7 /* WTSLog.h */,
@@ -824,6 +829,7 @@
 				FDF0FEA720AEC085001E902D /* HomeListSerachCell.m in Sources */,
 				09FD891320AF1A2A00641996 /* MineListModel.m in Sources */,
 				09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */,
+				FDF0FEED20AFF7F1001E902D /* WTSAlertViewTools.m in Sources */,
 				FDF0FEA320AEBADD001E902D /* HomeListSearchViewController.m in Sources */,
 				FDF0FEEA20AEDFBE001E902D /* ZJTitleView.m in Sources */,
 				FDF0FEE820AEDFBE001E902D /* ZJScrollSegmentView.m in Sources */,
