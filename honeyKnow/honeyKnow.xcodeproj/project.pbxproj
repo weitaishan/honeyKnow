@@ -31,6 +31,9 @@
 		0979D40920ADD700009E4745 /* HomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0979D40720ADD700009E4745 /* HomeListModel.m */; };
 		09A405CB20AD5A51009585B2 /* MainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A405CA20AD5A51009585B2 /* MainButton.m */; };
 		09A405CE20AD6569009585B2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A405CD20AD6569009585B2 /* EditProfileViewController.m */; };
+		09B62C1520B1867C000C30B8 /* MyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B62C1420B1867C000C30B8 /* MyWalletViewController.m */; };
+		09B62C1920B18706000C30B8 /* MyWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B62C1720B18706000C30B8 /* MyWalletCell.m */; };
+		09B62C1A20B18706000C30B8 /* MyWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B62C1820B18706000C30B8 /* MyWalletCell.xib */; };
 		09FD890220AF0E4500641996 /* MessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890020AF0E4500641996 /* MessageListCell.m */; };
 		09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890120AF0E4500641996 /* MessageListCell.xib */; };
 		09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890520AF0F7D00641996 /* MessageListModel.m */; };
@@ -252,6 +255,11 @@
 		09A405CA20AD5A51009585B2 /* MainButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainButton.m; sourceTree = "<group>"; };
 		09A405CC20AD6569009585B2 /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		09A405CD20AD6569009585B2 /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		09B62C1320B1867C000C30B8 /* MyWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWalletViewController.h; sourceTree = "<group>"; };
+		09B62C1420B1867C000C30B8 /* MyWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalletViewController.m; sourceTree = "<group>"; };
+		09B62C1620B18706000C30B8 /* MyWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWalletCell.h; sourceTree = "<group>"; };
+		09B62C1720B18706000C30B8 /* MyWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalletCell.m; sourceTree = "<group>"; };
+		09B62C1820B18706000C30B8 /* MyWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWalletCell.xib; sourceTree = "<group>"; };
 		09FD88FF20AF0E4500641996 /* MessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListCell.h; sourceTree = "<group>"; };
 		09FD890020AF0E4500641996 /* MessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListCell.m; sourceTree = "<group>"; };
 		09FD890120AF0E4500641996 /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
@@ -700,6 +708,8 @@
 				0900860120AD42AD003BF4A7 /* MineViewController.m */,
 				09A405CC20AD6569009585B2 /* EditProfileViewController.h */,
 				09A405CD20AD6569009585B2 /* EditProfileViewController.m */,
+				09B62C1320B1867C000C30B8 /* MyWalletViewController.h */,
+				09B62C1420B1867C000C30B8 /* MyWalletViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -726,6 +736,9 @@
 				09FD890D20AF184500641996 /* MineListCell.m */,
 				09FD891420AF1A9700641996 /* MineItemView.h */,
 				09FD891520AF1A9700641996 /* MineItemView.m */,
+				09B62C1620B18706000C30B8 /* MyWalletCell.h */,
+				09B62C1720B18706000C30B8 /* MyWalletCell.m */,
+				09B62C1820B18706000C30B8 /* MyWalletCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1336,6 +1349,7 @@
 				FDF0FFD320B00243001E902D /* tooth_4.png in Resources */,
 				FDF0FFD420B00243001E902D /* tooth_5.png in Resources */,
 				FDF0FFF320B00243001E902D /* youtubeauty.bundle in Resources */,
+				09B62C1A20B18706000C30B8 /* MyWalletCell.xib in Resources */,
 				FDF0FFE720B00243001E902D /* rixi.png in Resources */,
 				FDF0FFD520B00243001E902D /* tooth_6.png in Resources */,
 				FDF0FFA920B00243001E902D /* ear_21.png in Resources */,
@@ -1520,6 +1534,7 @@
 				FDF0FFFE20B010DC001E902D /* SystemService.m in Sources */,
 				FDF0FE6020AC20E5001E902D /* main.m in Sources */,
 				090085F320AD3B01003BF4A7 /* UIScrollView+EmptyDataSet.m in Sources */,
+				09B62C1520B1867C000C30B8 /* MyWalletViewController.m in Sources */,
 				FDF0FEE920AEDFBE001E902D /* ZJSegmentStyle.m in Sources */,
 				090085E220AD3822003BF4A7 /* BaseTabBarController.m in Sources */,
 				FDF0FEAE20AED039001E902D /* DiscoverViewController.m in Sources */,
@@ -1537,6 +1552,7 @@
 				FDF0FEE520AEDFBE001E902D /* ZJCollectionView.m in Sources */,
 				FDF0000120B02483001E902D /* VideoViewController.m in Sources */,
 				09A405CE20AD6569009585B2 /* EditProfileViewController.m in Sources */,
+				09B62C1920B18706000C30B8 /* MyWalletCell.m in Sources */,
 				090085E420AD3822003BF4A7 /* WTSHttpTool.m in Sources */,
 				090085C520AD3763003BF4A7 /* LoginViewController.m in Sources */,
 				09FD891920AF1ACA00641996 /* MinePersonInfoModel.m in Sources */,

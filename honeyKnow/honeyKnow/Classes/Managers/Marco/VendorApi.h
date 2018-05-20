@@ -22,5 +22,5 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "ZJScrollPageView.h"
 //导入头文件
-#import <ILiveSDK/ILiveCoreHeader.h>
+
 #endif /* VendorApi_h */

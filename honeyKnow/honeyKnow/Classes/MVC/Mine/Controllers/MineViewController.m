@@ -12,7 +12,7 @@
 #import "MinePersonInfoModel.h"
 #import "MineListModel.h"
 #import "EditProfileViewController.h"
-
+#import "MyWalletViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -245,6 +245,12 @@ static NSString * const mineListCellId = @"mineListCellId";
     }else if ([title isEqualToString:@"清除缓存"]){
         
         [self cleanCache];
+    }else if ([title isEqualToString:@"钱包"]){
+        
+        MyWalletViewController* vc = [[MyWalletViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }
     
 }

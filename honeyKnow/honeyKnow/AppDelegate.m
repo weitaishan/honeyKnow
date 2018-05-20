@@ -10,7 +10,9 @@
 #import "SplashViewController.h"
 #import "LoginSelectViewController.h"
 #import "BaseTabBarController.h"
-@interface AppDelegate ()
+#import <ILiveSDK/ILiveCoreHeader.h>
+#import <ImSDK/ImSDK.h>
+@interface AppDelegate ()<TIMMessageListener>
 
 @end
 
@@ -39,6 +41,9 @@
     // 初始化SDK
     [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
     
+    [[TIMManager sharedInstance] initSdk:kSDKAppID accountType:IntStr(kAccountType)];
+    
+    [[TIMManager sharedInstance]  addMessageListener:self];
     
 }
 
@@ -95,6 +100,15 @@
 
     
     [self.window makeKeyAndVisible];
+}
+/**
+ *  新消息回调通知
+ *
+ *  @param msgs 新消息列表，TIMMessage 类型数组
+ */
+- (void)onNewMessage:(NSArray *)msgs{
+    
+    
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
