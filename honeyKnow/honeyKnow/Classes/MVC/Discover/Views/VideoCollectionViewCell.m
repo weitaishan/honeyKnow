@@ -68,20 +68,22 @@
        
         x.selected = !x.selected;
         _lbLikeNum.text = IntStr(_lbLikeNum.text.integerValue + ( x.isSelected ? 1 : -1));
-//        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_LIKE_UPDATE params:@{@"videoId" : IntStr(weakSelf.listModel.Id)} success:^(id response) {
-//
-//            if ([response[@"success"] integerValue]){
-//
-//
-//
-//            }
-//
-//
-//        } failure:^(NSError *error) {
-//
-//
-//        }];
-//
+        
+        
+        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_LIKE_UPDATE params:@{@"videoId" : IntStr(weakSelf.listModel.Id)}.mutableCopy success:^(id response) {
+
+            if ([response[@"success"] integerValue]){
+
+
+
+            }
+
+
+        } failure:^(NSError *error) {
+
+
+        }];
+
     }];
     
 }
