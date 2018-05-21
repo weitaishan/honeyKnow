@@ -67,23 +67,23 @@
     [[_likeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
        
         x.selected = !x.selected;
-        _lbLikeNum.text = IntStr(listModel.loveNum + ( x.isSelected ? 1 : -1));
-        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_LIKE_UPDATE params:@{@"videoId" : IntStr(weakSelf.listModel.Id)} success:^(id response) {
-            
-            if ([response[@"success"] integerValue]){
-                
-                
-                
-            }
-            
-            
-        } failure:^(NSError *error) {
-            
-            
-        }];
-        
+        _lbLikeNum.text = IntStr(_lbLikeNum.text.integerValue + ( x.isSelected ? 1 : -1));
+//        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_LIKE_UPDATE params:@{@"videoId" : IntStr(weakSelf.listModel.Id)} success:^(id response) {
+//
+//            if ([response[@"success"] integerValue]){
+//
+//
+//
+//            }
+//
+//
+//        } failure:^(NSError *error) {
+//
+//
+//        }];
+//
     }];
-                       
+    
 }
 
 - (void)playWithUrl:(NSString *)urlString{

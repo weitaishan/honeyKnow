@@ -43,6 +43,8 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
 
 - (void)setBaseInfo{
     
+    
+    
     self.navigationController.navigationBarHidden = YES;
     
     //    self.view.backgroundColor = [UIColor whiteColor];
@@ -64,7 +66,7 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
 
     
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NewStatusBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT - NewStatusBarHeight) collectionViewLayout:flowLayout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.delegate = self;
@@ -75,6 +77,38 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     [self.view addSubview:_collectionView];
     
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([VideoCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:videoCollectionViewCellId];
+    
+    UIButton* backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [backBtn setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+    
+    [self.view addSubview:backBtn];
+    
+    [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self.view).offset(14 + NewStatusBarHeight);
+
+        make.left.equalTo(self.view).offset(19);
+    }];
+    
+    [[backBtn rac_signalForControlEvents:UIControlEventTouchUpInside ]subscribeNext:^(__kindof UIControl * _Nullable x) {
+       
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    UIButton* moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [moreBtn setImage:[UIImage imageNamed:@"nav_more"] forState:UIControlStateNormal];
+    
+    [self.view addSubview:moreBtn];
+    
+    [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(backBtn);
+        
+        make.right.equalTo(self.view).offset(-19);
+    }];
+    
     
 }
 
