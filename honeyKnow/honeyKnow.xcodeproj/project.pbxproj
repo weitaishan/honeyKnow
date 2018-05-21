@@ -13,7 +13,6 @@
 		090085E020AD3822003BF4A7 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085CB20AD3822003BF4A7 /* BaseNavigationViewController.m */; };
 		090085E120AD3822003BF4A7 /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085CD20AD3822003BF4A7 /* BaseSearchViewController.m */; };
 		090085E220AD3822003BF4A7 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085CF20AD3822003BF4A7 /* BaseTabBarController.m */; };
-		090085E320AD3822003BF4A7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085D120AD3822003BF4A7 /* BaseViewController.m */; };
 		090085E420AD3822003BF4A7 /* WTSHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085D420AD3822003BF4A7 /* WTSHttpTool.m */; };
 		090085E820AD39B2003BF4A7 /* WTSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085E720AD39B2003BF4A7 /* WTSLog.m */; };
 		090085EB20AD3A86003BF4A7 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 090085EA20AD3A86003BF4A7 /* Colours.m */; };
@@ -34,6 +33,7 @@
 		09B62C1520B1867C000C30B8 /* MyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B62C1420B1867C000C30B8 /* MyWalletViewController.m */; };
 		09B62C1920B18706000C30B8 /* MyWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B62C1720B18706000C30B8 /* MyWalletCell.m */; };
 		09B62C1A20B18706000C30B8 /* MyWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B62C1820B18706000C30B8 /* MyWalletCell.xib */; };
+		09B62C1D20B31820000C30B8 /* WTSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B62C1C20B31820000C30B8 /* WTSBaseViewController.m */; };
 		09FD890220AF0E4500641996 /* MessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890020AF0E4500641996 /* MessageListCell.m */; };
 		09FD890320AF0E4500641996 /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD890120AF0E4500641996 /* MessageListCell.xib */; };
 		09FD890620AF0F7D00641996 /* MessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FD890520AF0F7D00641996 /* MessageListModel.m */; };
@@ -230,8 +230,6 @@
 		090085CD20AD3822003BF4A7 /* BaseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchViewController.m; sourceTree = "<group>"; };
 		090085CE20AD3822003BF4A7 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		090085CF20AD3822003BF4A7 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
-		090085D020AD3822003BF4A7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		090085D120AD3822003BF4A7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		090085D320AD3822003BF4A7 /* WTSHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSHttpTool.h; sourceTree = "<group>"; };
 		090085D420AD3822003BF4A7 /* WTSHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSHttpTool.m; sourceTree = "<group>"; };
 		090085D620AD3822003BF4A7 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
@@ -279,6 +277,8 @@
 		09B62C1620B18706000C30B8 /* MyWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWalletCell.h; sourceTree = "<group>"; };
 		09B62C1720B18706000C30B8 /* MyWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalletCell.m; sourceTree = "<group>"; };
 		09B62C1820B18706000C30B8 /* MyWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWalletCell.xib; sourceTree = "<group>"; };
+		09B62C1B20B31820000C30B8 /* WTSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSBaseViewController.h; sourceTree = "<group>"; };
+		09B62C1C20B31820000C30B8 /* WTSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSBaseViewController.m; sourceTree = "<group>"; };
 		09FD88FF20AF0E4500641996 /* MessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListCell.h; sourceTree = "<group>"; };
 		09FD890020AF0E4500641996 /* MessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListCell.m; sourceTree = "<group>"; };
 		09FD890120AF0E4500641996 /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
@@ -792,6 +792,8 @@
 		090085C720AD3822003BF4A7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				09B62C1B20B31820000C30B8 /* WTSBaseViewController.h */,
+				09B62C1C20B31820000C30B8 /* WTSBaseViewController.m */,
 				090085C820AD3822003BF4A7 /* BaseModel.h */,
 				090085C920AD3822003BF4A7 /* BaseModel.m */,
 				090085CA20AD3822003BF4A7 /* BaseNavigationViewController.h */,
@@ -800,8 +802,6 @@
 				090085CD20AD3822003BF4A7 /* BaseSearchViewController.m */,
 				090085CE20AD3822003BF4A7 /* BaseTabBarController.h */,
 				090085CF20AD3822003BF4A7 /* BaseTabBarController.m */,
-				090085D020AD3822003BF4A7 /* BaseViewController.h */,
-				090085D120AD3822003BF4A7 /* BaseViewController.m */,
 				09A405C920AD5A51009585B2 /* MainButton.h */,
 				09A405CA20AD5A51009585B2 /* MainButton.m */,
 			);
@@ -1550,7 +1550,6 @@
 				FDF0000920B02629001E902D /* VideoModel.m in Sources */,
 				0979D40620ADCEFF009E4745 /* HomeListViewController.m in Sources */,
 				FDF0FEE320AEDFBE001E902D /* UIView+ZJFrame.m in Sources */,
-				090085E320AD3822003BF4A7 /* BaseViewController.m in Sources */,
 				0900862E20AD4AD7003BF4A7 /* LoginSelectViewController.m in Sources */,
 				09FD890A20AF183000641996 /* MinePersonInfoCell.m in Sources */,
 				090085F420AD3B01003BF4A7 /* CALayer+LayerColor.m in Sources */,
@@ -1582,6 +1581,7 @@
 				09B62C1520B1867C000C30B8 /* MyWalletViewController.m in Sources */,
 				FDF0FEE920AEDFBE001E902D /* ZJSegmentStyle.m in Sources */,
 				090085E220AD3822003BF4A7 /* BaseTabBarController.m in Sources */,
+				09B62C1D20B31820000C30B8 /* WTSBaseViewController.m in Sources */,
 				FDF0FEAE20AED039001E902D /* DiscoverViewController.m in Sources */,
 				09A405CB20AD5A51009585B2 /* MainButton.m in Sources */,
 				FDF0FE5220AC20E5001E902D /* AppDelegate.m in Sources */,

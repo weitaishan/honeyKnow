@@ -1,18 +1,18 @@
 //
-//  BaseViewController.m
+//  WTSBaseViewController.m
 //  DeviseHome
 //
 //  Created by 魏太山 on 16/12/6.
 //  Copyright © 2016年 weitaishan. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 #import "BaseNavigationViewController.h"
-@interface BaseViewController ()
+@interface WTSBaseViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation WTSBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

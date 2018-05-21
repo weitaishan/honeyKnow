@@ -6,9 +6,9 @@
 //  Copyright © 2018年 AlbertWei. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 @class DiscoverList;
-@interface VideoViewController : BaseViewController
+@interface VideoViewController : WTSBaseViewController
 @property (nonatomic, strong) NSMutableArray<DiscoverList *>* listArray;
 @property (nonatomic, assign) NSInteger index;
 

@@ -7,7 +7,7 @@
 //>
 
 
-#import "BaseViewController.h"
-@interface LoginViewController : BaseViewController
+#import "WTSBaseViewController.h"
+@interface LoginViewController : WTSBaseViewController
 
 @end

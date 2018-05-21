@@ -6,9 +6,9 @@
 //  Copyright © 2018年 AlbertWei. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 
-@interface HomeListViewController : BaseViewController<ZJScrollPageViewChildVcDelegate>
+@interface HomeListViewController : WTSBaseViewController<ZJScrollPageViewChildVcDelegate>
 @property (nonatomic, assign) ActorListType type;
 @property (nonatomic, assign) NSInteger star;
 

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 AlbertWei. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 
-@interface LoginSelectViewController : BaseViewController
+@interface LoginSelectViewController : WTSBaseViewController
 
 @end

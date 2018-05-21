@@ -6,9 +6,9 @@
 //  Copyright © 2018年 AlbertWei. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 
-@interface DiscoverListViewController : BaseViewController<ZJScrollPageViewChildVcDelegate>
+@interface DiscoverListViewController : WTSBaseViewController<ZJScrollPageViewChildVcDelegate>
 @property (nonatomic, assign) DiscoverListType type;
 
 @end

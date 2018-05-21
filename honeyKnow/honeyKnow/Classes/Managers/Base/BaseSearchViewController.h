@@ -6,10 +6,10 @@
 //  Copyright © 2017年 SmallNail. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WTSBaseViewController.h"
 #import "SearchTextField.h"
 
-@interface BaseSearchViewController : BaseViewController
+@interface BaseSearchViewController : WTSBaseViewController
 
 @property (nonatomic, strong) SearchTextField * searchText;
 

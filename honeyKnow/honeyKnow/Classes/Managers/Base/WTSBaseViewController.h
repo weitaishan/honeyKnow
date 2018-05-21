@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  WTSBaseViewController.h
 //  DeviseHome
 //
 //  Created by 魏太山 on 16/12/6.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>{
+@interface WTSBaseViewController : UIViewController<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>{
     
     UITapGestureRecognizer *resetBottomTapGesture;
 }
