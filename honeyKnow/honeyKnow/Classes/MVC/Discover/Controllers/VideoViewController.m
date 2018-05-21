@@ -53,6 +53,16 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     flowLayout.minimumInteritemSpacing = 0;//列距
     flowLayout.minimumLineSpacing = 0;
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
+    
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:flowLayout];
     _collectionView.backgroundColor = [UIColor whiteColor];
@@ -95,7 +105,7 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     
     VideoCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:videoCollectionViewCellId forIndexPath:indexPath];
     
-//    cell.model = self.listArray[indexPath.row];
+    cell.listModel = self.listArray[indexPath.row];
     
     return cell;
 }
@@ -118,7 +128,13 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     
     return _listArray;
 }
-
+/**
+ *  修改状态栏为白色
+ */
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//
+//    return UIStatusBarStyleLightContent;
+//}
 @end
 
 

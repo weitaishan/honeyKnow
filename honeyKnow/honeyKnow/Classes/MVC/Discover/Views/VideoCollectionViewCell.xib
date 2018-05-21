@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmL-PC-bNs">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-9r-EEj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_anchor" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-9r-EEj">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
                             </imageView>
                         </subviews>
@@ -96,9 +96,16 @@
                                 <rect key="frame" x="315" y="283.5" width="45" height="45"/>
                                 <state key="normal" backgroundImage="btn_Watching"/>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5x-Oi-agE">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5x-Oi-agE">
                                 <rect key="frame" x="315" y="200" width="45" height="45"/>
-                                <state key="normal" backgroundImage="btn_like"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="U1q-nz-scF"/>
+                                    <constraint firstAttribute="height" constant="45" id="tjE-kv-kYz"/>
+                                </constraints>
+                                <state key="normal" image="btn_like"/>
+                                <state key="selected" image="btn_like_highlighted">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytj-pk-8uz">
                                 <rect key="frame" x="324.5" y="337.5" width="27" height="13.5"/>
@@ -121,6 +128,12 @@
                                             <constraint firstAttribute="width" constant="48" id="0io-Zc-Xkr"/>
                                             <constraint firstAttribute="height" constant="48" id="6tb-En-3vl"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,9 +224,11 @@
         <image name="btn_follow" width="25" height="25"/>
         <image name="btn_forwarding" width="45" height="45"/>
         <image name="btn_like" width="45" height="45"/>
+        <image name="btn_like_highlighted" width="85" height="85"/>
         <image name="btn_vedio" width="131" height="49"/>
         <image name="icon_rest" width="46" height="21"/>
         <image name="icon_vedio" width="35" height="35"/>
-        <image name="pic_avatar" width="65" height="65"/>
+        <image name="pic_anchor" width="187" height="276"/>
+        <image name="pic_avatar" width="95" height="95"/>
     </resources>
 </document>

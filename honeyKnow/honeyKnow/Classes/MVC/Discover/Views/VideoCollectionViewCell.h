@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VideoModel;
+@class DiscoverList;
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
 @interface VideoCollectionViewCell : UICollectionViewCell
+
+@property (strong, nonatomic)AVPlayer *myPlayer;//播放器
+@property (strong, nonatomic)AVPlayerItem *item;//播放单元
+@property (strong, nonatomic)AVPlayerLayer *playerLayer;//播放界面（layer）
+
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
 @property (weak, nonatomic) IBOutlet UILabel *lbSignName;
@@ -22,5 +31,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbLikeNum;
 @property (weak, nonatomic) IBOutlet UIView *addFirendView;
 @property (weak, nonatomic) IBOutlet UIImageView *acatarImgView;
+
+@property (nonatomic, strong) VideoModel* videoModel;
+
+@property (nonatomic, strong) DiscoverList* listModel;
 
 @end

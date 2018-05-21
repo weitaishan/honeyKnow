@@ -21,6 +21,5 @@
 #import <TZImagePickerController/TZImagePickerController.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "ZJScrollPageView.h"
-//导入头文件
 
 #endif /* VendorApi_h */

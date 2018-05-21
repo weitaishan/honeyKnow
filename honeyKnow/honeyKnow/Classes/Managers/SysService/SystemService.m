@@ -11,6 +11,9 @@
 #import <Photos/Photos.h>
 #import "LoginSelectViewController.h"
 #import "BaseNavigationViewController.h"
+#import <ILiveSDK/ILiveSDK.h>
+#import <ILiveSDK/ILiveCoreHeader.h>
+
 @implementation SystemService
 static SystemService* _instance = nil;
 

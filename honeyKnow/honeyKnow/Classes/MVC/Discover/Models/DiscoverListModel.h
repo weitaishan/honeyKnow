@@ -16,7 +16,7 @@
 @interface DiscoverList : BaseModel
 
 @property (nonatomic, assign) NSInteger Id;
-/** 视频地址*/
+/** 视频地址  获取视频地址,结果码5001时需要进行付费*/
 @property (nonatomic, copy) NSString *vedioUrl;
 /** 用户id*/
 @property (nonatomic, assign) NSInteger userId;
