@@ -399,14 +399,12 @@
     //        function (item) { return item.indexOf(id) < 0; })[0]; // that are not similar to the parent
     //}
 
-<<<<<<< local
-=======
+
     var _getButtonShapeId = function(id) {
         var obj = $obj(id);
         return obj.type == 'treeNodeObject' ? $ax.getElementIdFromPath([obj.buttonShapeId], { relativeTo: id }) : id;
     };
 
->>>>>>> other
     var _getButtonShape = function(id) {
         var obj = $obj(id);
 
@@ -526,23 +524,16 @@
         }
 
         var isHyperlink = Boolean(parentId);
-<<<<<<< local
         var currState = state;
         while(state) {
-=======
-        var currState = NORMAL;
-        while(currState) {
->>>>>>> other
+
             if(isHyperlink && (currState == MOUSE_DOWN || currState == MOUSE_OVER)) {
                 var key = currState == MOUSE_OVER ? 'hyperlinkMouseOver' : 'hyperlinkMouseDown';
                 $.extend(computedStyle, $ax.document.stylesheet.defaultStyles[key]);
             }
             $.extend(computedStyle, _computeStateStyleForViewChain(diagramObject, currState, viewIdChain, true));
-<<<<<<< local
             state = _progessState(state);
-=======
             currState = _unprogressState(currState, state);
->>>>>>> other
         }
 
         return _removeUnsupportedProperties(computedStyle, diagramObject.type);
@@ -812,11 +803,8 @@
         _adaptiveStyledWidgets[$ax.repeater.getScriptIdFromElementId(shapeId)] = style;
 
         var textId = $ax.style.GetTextIdFromShape(shapeId);
-<<<<<<< local
         _applyTextStyle(textId, style);
-=======
         if(textId) _applyTextStyle(textId, style);
->>>>>>> other
 
         // removing this for now
         //        if(style.location) {

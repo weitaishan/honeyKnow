@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDF0FE4C20AC20E5001E902D"
+               BlueprintIdentifier = "92A6D38C1C5B506A00065EB3"
                BuildableName = "honeyKnow.app"
                BlueprintName = "honeyKnow"
                ReferencedContainer = "container:honeyKnow.xcodeproj">
@@ -33,7 +33,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDF0FE4C20AC20E5001E902D"
+            BlueprintIdentifier = "92A6D38C1C5B506A00065EB3"
             BuildableName = "honeyKnow.app"
             BlueprintName = "honeyKnow"
             ReferencedContainer = "container:honeyKnow.xcodeproj">
@@ -57,7 +57,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDF0FE4C20AC20E5001E902D"
+            BlueprintIdentifier = "92A6D38C1C5B506A00065EB3"
             BuildableName = "honeyKnow.app"
             BlueprintName = "honeyKnow"
             ReferencedContainer = "container:honeyKnow.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDF0FE4C20AC20E5001E902D"
+            BlueprintIdentifier = "92A6D38C1C5B506A00065EB3"
             BuildableName = "honeyKnow.app"
             BlueprintName = "honeyKnow"
             ReferencedContainer = "container:honeyKnow.xcodeproj">

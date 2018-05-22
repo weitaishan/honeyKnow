@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84cb4a8f-d7f9-43cf-b4da-d39087ec2e81" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Discover/Controllers/VideoViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Discover/Controllers/VideoViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Discover/Views/VideoCollectionViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Discover/Views/VideoCollectionViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Home/Controllers/HomeViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Home/Controllers/HomeViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Login/Controllers/LoginViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Login/Controllers/LoginViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Mine/Controllers/MineViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Mine/Controllers/MineViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Mine/Views/MineListCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/MVC/Mine/Views/MineListCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/Managers/Base/BaseSearchViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/Managers/Base/BaseSearchViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/Classes/Managers/SysService/SystemService.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/Classes/Managers/SysService/SystemService.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/TIMAdapter/IMAUI/IMALoginViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/TIMAdapter/IMAUI/IMALoginViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/TIMAdapter/IMAUI/IMALoginViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/TIMAdapter/IMAUI/IMALoginViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/TIMAdapter/Playform/IMAPlatformConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/TIMAdapter/Playform/IMAPlatformConfig.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/TIMAdapter/TIMAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/TIMAdapter/TIMAdapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeyKnow/honeyKnow.xcworkspace/xcuserdata/albertwei.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/honeyKnow/honeyKnow.xcworkspace/xcuserdata/albertwei.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/style.js.orig" beforeDir="false" afterPath="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/style.js.orig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/viewer.js.orig" beforeDir="false" afterPath="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/viewer.js.orig" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="style.js.orig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/style.js.orig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1871">
+              <caret line="805" selection-start-line="805" selection-end-line="805" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewer.js.orig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/viewer.js.orig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="53" column="3" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&lt;&lt;&lt;</find>
+      <find>_getButtonShapeId</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/style.js.orig" />
+        <option value="$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/viewer.js.orig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="241" />
+    <option name="y" value="23" />
+    <option name="width" value="1386" />
+    <option name="height" value="976" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="honeyKnow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="honeyKnow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="honeyKnow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="honeyKnow" type="462c0819:PsiDirectoryNode" />
+              <item name="honeyKnow" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84cb4a8f-d7f9-43cf-b4da-d39087ec2e81" name="Default" comment="" />
+      <created>1526959655186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526959655186</updated>
+      <workItem from="1526959656568" duration="1172000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1526959679159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526959679159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1172000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="241" y="23" width="1386" height="976" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981685" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.32992035" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/style.js.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1871">
+          <caret line="805" selection-start-line="805" selection-end-line="805" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/资料/蜜识文件/切图部分/补充页面/resources/scripts/axure/viewer.js.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="53" column="3" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

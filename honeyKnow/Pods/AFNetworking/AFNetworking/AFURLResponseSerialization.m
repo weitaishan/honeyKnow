@@ -28,7 +28,7 @@
 #elif TARGET_OS_WATCH
 #import <WatchKit/WatchKit.h>
 #elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
-#import <UIKit/UIKit.h>  
+#import <Cocoa/Cocoa.h>
 #endif
 
 NSString * const AFURLResponseSerializationErrorDomain = @"com.alamofire.error.serialization.response";

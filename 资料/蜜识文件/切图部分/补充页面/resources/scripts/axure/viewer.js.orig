@@ -36,7 +36,6 @@ $axure.internal(function ($ax) {
                         if (obj.interactionMap[userTriggeredEventNames[index]]) return true;
                     }
                 }
-<<<<<<< local
                 return false;
             }).$();
 
@@ -48,10 +47,7 @@ $axure.internal(function ($ax) {
                 $matchingElements.addClass(pulsateClassName);
             } else if (!enableHighlight && isHighlighted) {
                 $matchingElements.removeClass(pulsateClassName);
-=======
-            } else if (obj.type == 'flowShape' && obj.referencePageUrl) {
-                return true;
->>>>>>> other
+
             }
         }
     });
