@@ -235,8 +235,25 @@ static SystemService* _instance = nil;
     
     NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
     
+    [[[IMALoginViewController alloc] init]loging];
+//    TIMLoginParam * login_param = [[TIMLoginParam alloc ]init];
     
-    [[[IMALoginViewController alloc] init] loging];
+    // accountType 和 sdkAppId 通讯云管理平台分配
+    // identifier为用户名，userSig 为用户登录凭证
+    // appidAt3rd 在私有帐号情况下，填写与sdkAppId 一样
+//    login_param.accountType = IntStr(kAccountType);
+//    login_param.identifier = identifier;
+//    login_param.userSig = userSig;
+//    login_param.appidAt3rd = IntStr(kSDKAppID);
+//    login_param.sdkAppId = kSDKAppID;
+//    
+//    [[TIMManager sharedInstance] login: login_param succ:^(){
+//        NSLog(@"Login Succ");
+//    } fail:^(int code, NSString * err) {
+//        NSLog(@"Login Failed: %d->%@", code, err);
+//    }];
+
+    
 
     
 //    //登录sdk

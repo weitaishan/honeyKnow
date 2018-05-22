@@ -57,31 +57,42 @@
  */
 - (void)loging{
     
-    BOOL isAutoLogin = [IMAPlatform isAutoLogin];
-    if (isAutoLogin)
-    {
-        _loginParam = [IMALoginParam loadFromLocal];
-    }
-    else
-    {
+//    BOOL isAutoLogin = [IMAPlatform isAutoLogin];
+//    if (isAutoLogin)
+//    {
+//        _loginParam = [IMALoginParam loadFromLocal];
+//    }
+//    else
+//    {
         _loginParam = [[IMALoginParam alloc] init];
-    }
+//    }
     
     [IMAPlatform configWith:_loginParam.config];
+    NSString* identifier = [NSUSERDEFAULTS objectForKey:USER_IDENTIFIER];
     
-    if (isAutoLogin && [_loginParam isVailed])
-    {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self autoLogin];
-        });
-    }
-    else
-    {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self pullLoginUI];
-        });
-        
-    }
+    NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
+    
+    _loginParam.identifier = identifier;
+    _loginParam.userSig = userSig;
+    _loginParam.tokenTime = [[NSDate date] timeIntervalSince1970];
+    
+    [self loginIMSDK];
+
+    
+    
+//    if (isAutoLogin && [_loginParam isVailed])
+//    {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self autoLogin];
+//        });
+//    }
+//    else
+//    {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self pullLoginUI];
+//        });
+//
+//    }
 }
 /**
  *  自动登录

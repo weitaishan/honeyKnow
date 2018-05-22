@@ -10,12 +10,20 @@
 
 #import "ConversationListTableViewCell.h"
 
+#import "MessageListModel.h"
+#import "MessageListCell.h"
+
 @interface ConversationListViewController ()
 {
     
 }
 
+@property (nonatomic, strong) NSMutableArray<MessageListModel *>* listArray;
+
 @end
+
+
+static NSString * const messageListCellId = @"messageListCellId";
 
 @implementation ConversationListViewController
 
@@ -45,7 +53,8 @@
     _tableView.frame = self.view.bounds;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.backgroundColor = kClearColor;
+    _tableView.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
+
     _tableView.scrollsToTop = YES;
     [self.view addSubview:_tableView];
     
@@ -54,15 +63,29 @@
     
     _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.refreshScrollView = _tableView;
+    
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationController.navigationBarHidden = NO;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MessageListCell class]) bundle:nil] forCellReuseIdentifier:messageListCellId];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"会话";
+    self.navigationItem.title = @"消息";
     [self pinHeaderView];
 }
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    
+}
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -187,19 +210,47 @@
 
 
 
+#pragma mark - UITableViewDelegate/dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 2;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0) {
+        
+        return 74;
+
+    }
     id<IMAConversationShowAble> conv = [_conversationList objectAtIndex:indexPath.row];
     return [conv showHeight];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    if (section == 0) {
+        
+        return self.listArray.count;
+
+    }
     return [_conversationList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.section == 0) {
+        
+        MessageListCell * cell = [tableView dequeueReusableCellWithIdentifier:messageListCellId forIndexPath:indexPath];
+        MessageListModel* model = self.listArray[indexPath.row];
+        cell.model = model;
+        return cell;
+        
+    }
+    
+    
     id<IMAConversationShowAble> conv = [_conversationList objectAtIndex:indexPath.row];
     NSString *reuseidentifier = [conv showReuseIndentifier];
     [conv attributedDraft];
@@ -216,17 +267,54 @@
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return YES;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0) {
+        return;
+    }
     IMAConversation *conv = [_conversationList objectAtIndex:indexPath.row];
     [[IMAPlatform sharedInstance].conversationMgr deleteConversation:conv needUIRefresh:YES];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    
+    return CGFLOAT_MIN;
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    if (section == 0) {
+
+        return 16;
+    }
+    return CGFLOAT_MIN;
+    
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        UIView* view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
+        
+        
+        return view;;
+    }
+    return nil;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.section == 0) {
+        return;
+    }
+    
     id<IMAConversationShowAble> convable = [_conversationList objectAtIndex:indexPath.row];
     ConversationListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     IMAConversation *conv = (IMAConversation *)convable;
@@ -302,5 +390,27 @@
     
 }
 
-
+#pragma mark - 懒加载
+-(NSMutableArray<MessageListModel *> *)listArray{
+    
+    if (!_listArray) {
+        
+        _listArray = @[].mutableCopy;
+        NSArray<NSString *>* titleArr = @[@"通话记录",@"H币记录",@"预约0个"];
+        NSArray<UIImage *>* imgArr = @[[UIImage imageNamed:@"icon_callrecords"],
+                                       [UIImage imageNamed:@"icon_goldrecord"],
+                                       [UIImage imageNamed:@"icon_reservation"]];
+        
+        for (int i = 0; i < titleArr.count; i++) {
+            
+            MessageListModel* model = [[MessageListModel alloc] init];
+            model.image = imgArr[i];
+            model.title = titleArr[i];
+            [_listArray addObject:model];
+        }
+    }
+    
+    return _listArray;
+    
+}
 @end

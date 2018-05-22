@@ -12,6 +12,7 @@
 #import "BaseNavigationViewController.h"
 #import "MineViewController.h"
 #import "MessageViewController.h"
+#import "ConversationListViewController.h"
 @interface BaseTabBarController ()
 
 @end
@@ -34,9 +35,9 @@
     
     HomeViewController* homeVC = [[HomeViewController alloc]init];
     DiscoverViewController* discoverVC = [[DiscoverViewController alloc] init];
-    MessageViewController* messageVC = [[MessageViewController alloc] init];
+//    MessageViewController* messageVC = [[MessageViewController alloc] init];
     MineViewController* mineVC = [[MineViewController alloc] init];
-    
+    ConversationListViewController* messageVC = [[ConversationListViewController alloc] init];
     NSArray* controllerArray = @[homeVC,discoverVC,messageVC,mineVC];
 
     NSArray* normalImgArray = @[@"tab_home_normal",@"tab_find_normal",@"tab_news_normal",@"tab_info_normal"];//,@"tabbar_tool_normal"
