@@ -121,6 +121,22 @@
                     
                     if ([response[@"success"] integerValue]){
 
+                        [[IMAPlatform sharedInstance].host asyncSetNickname:self.nickNameTF.text succ:^{
+                          
+                            NSLog(@"IM设置昵称成功");
+
+                            
+                        } fail:nil];
+                        
+                        [[TIMFriendshipManager sharedInstance] SetFaceURL:url succ:^{
+                   
+                            NSLog(@"IM设置头像成功");
+
+                        } fail:^(int code, NSString *msg) {
+                          
+                        }];
+                        
+                        
                         if (self.type) {
                             
                             [self.navigationController popViewControllerAnimated:YES];
@@ -132,10 +148,13 @@
                             BaseTabBarController* tabBarController=[[BaseTabBarController alloc]init];
                             self.view.window.rootViewController = tabBarController;                
                                 
-                                [self addToast:@"更新用户信息失败"];
+                            
                         }
                         
                         
+                    }else{
+                        
+                          [self addToast:@"更新用户信息失败"];
                     }
                     
                 } failure:^(NSError *error) {

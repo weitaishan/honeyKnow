@@ -43,11 +43,11 @@
                                                            NSFontAttributeName:kCommonLargeTextFont
                                                            }];
     
-    [[UILabel appearance] setBackgroundColor:kClearColor];
-    [[UILabel appearance] setTextColor:kMainTextColor];
-    
-    
-    [[UIButton appearance] setTitleColor:kMainTextColor forState:UIControlStateNormal];
+//    [[UILabel appearance] setBackgroundColor:kClearColor];
+//    [[UILabel appearance] setTextColor:kMainTextColor];
+//
+//
+//    [[UIButton appearance] setTitleColor:kMainTextColor forState:UIControlStateNormal];
     
     //    [[UITableViewCell appearance] setBackgroundColor:kClearColor];
     //

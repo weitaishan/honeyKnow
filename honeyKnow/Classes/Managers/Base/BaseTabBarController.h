@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTabBarController : UITabBarController
+- (void)pushToChatViewControllerWith:(IMAUser *)user;
 
 @end

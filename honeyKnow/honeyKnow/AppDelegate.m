@@ -12,6 +12,8 @@
 
 #import "WXApi.h"
 
+#import "BaseTabBarController.h"
+
 
 
 @interface AppDelegate ()
@@ -43,7 +45,7 @@
 - (void)pushToChatViewControllerWith:(IMAUser *)user
 {
     
-    TIMTabBarController *tab = (TIMTabBarController *)self.window.rootViewController;
+    BaseTabBarController *tab = (BaseTabBarController *)self.window.rootViewController;
     [tab pushToChatViewControllerWith:user];
 }
 
