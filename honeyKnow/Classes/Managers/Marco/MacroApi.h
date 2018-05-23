@@ -24,4 +24,5 @@
 #import "MainButton.h"
 #import "WTSAlertViewTools.h"
 #import "SystemService.h"
+#import "MJPayApi.h"
 #endif /* MacroApi_h */

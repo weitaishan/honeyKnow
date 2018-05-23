@@ -10,6 +10,8 @@
 
 #import "IMALoginViewController.h"
 
+#import <AlipaySDK/AlipaySDK.h>
+#import "WXApi.h"
 @implementation IMAAppDelegate
 
 void uncaughtExceptionHandler(NSException*exception){
@@ -89,12 +91,21 @@ void uncaughtExceptionHandler(NSException*exception){
     }
     else if([url.scheme compare:WX_APP_ID] == NSOrderedSame)
     {
-        if ([self.window.rootViewController conformsToProtocol:@protocol(WXApiDelegate)])
-        {
-            id<WXApiDelegate> lgv = (id<WXApiDelegate>)self.window.rootViewController;
-            [WXApi handleOpenURL:url delegate:lgv];
-            
-        }
+//        if ([self.window.rootViewController conformsToProtocol:@protocol(WXApiDelegate)])
+//        {
+//            id<WXApiDelegate> lgv = (id<WXApiDelegate>)self.window.rootViewController;
+//            [WXApi handleOpenURL:url delegate:lgv];
+//
+//        }
+        
+        return [WXApi handleOpenURL:url delegate:[MJPayApi sharedApi]];
+
+    }
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
     }
     
     return YES;
@@ -108,13 +119,35 @@ void uncaughtExceptionHandler(NSException*exception){
     }
     else if([url.scheme compare:WX_APP_ID] == NSOrderedSame)
     {
-        if ([self.window.rootViewController conformsToProtocol:@protocol(WXApiDelegate)])
-        {
-            id<WXApiDelegate> lgv = (id<WXApiDelegate>)self.window.rootViewController;
-            [WXApi handleOpenURL:url delegate:lgv];
-        }
+        
+        return  [WXApi handleOpenURL:url delegate:[MJPayApi sharedApi]];
+
+//        if ([self.window.rootViewController conformsToProtocol:@protocol(WXApiDelegate)])
+//        {
+//            id<WXApiDelegate> lgv = (id<WXApiDelegate>)self.window.rootViewController;
+//            [WXApi handleOpenURL:url delegate:lgv];
+//        }
     }
     
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    
+    return YES;
+}
+
+// NOTE: 9.0以后使用新API接口
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
     return YES;
 }
 

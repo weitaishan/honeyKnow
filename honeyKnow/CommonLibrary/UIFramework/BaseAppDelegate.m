@@ -14,6 +14,8 @@
 #import "NavigationViewController.h"
 #import "BaseTabBarController.h"
 #import "LoginSelectViewController.h"
+#import "WXApi.h"
+
 @implementation BaseAppDelegate
 
 + (instancetype)sharedAppDelegate
@@ -112,6 +114,8 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
+    [WXApi registerApp:@"wxb4ba3c02aa476ea1" enableMTA:YES];
+
     //获取版本号
 //    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
 //    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
