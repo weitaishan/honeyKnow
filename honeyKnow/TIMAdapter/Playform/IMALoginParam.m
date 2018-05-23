@@ -33,6 +33,13 @@
         self.appidAt3rd = kSdkAppId;
         self.sdkAppId = [kSdkAppId intValue];
         self.accountType = kSdkAccountType;
+        NSString* identifier = [NSUSERDEFAULTS objectForKey:USER_IDENTIFIER];
+        
+        NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
+        
+        self.identifier = identifier;
+        self.userSig = userSig;
+        self.tokenTime = [[NSDate date] timeIntervalSince1970];
         self.config = [[IMAPlatformConfig alloc] init];
     }
     return self;

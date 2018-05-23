@@ -24,7 +24,7 @@
         [array addObject:[u userId]];
     }
     
-    [[TIMGroupManager sharedInstance] InviteGroupMember:self.userId members:array userData:nil succ:succ fail:^(int code, NSString *err) {
+    [[TIMGroupManager sharedInstance] InviteGroupMember:self.userId members:array succ:succ fail:^(int code, NSString *err) {
         DebugLog(@"获取群成员失败.code=%d,err=%@",code,err);
         [[HUDHelper sharedInstance] tipMessage:IMALocalizedError(code, err)];
         if (fail)

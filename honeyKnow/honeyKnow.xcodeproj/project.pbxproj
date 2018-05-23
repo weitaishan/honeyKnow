@@ -91,14 +91,9 @@
 		09B631DB20B32101000C30B8 /* RevealServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09B631DF20B32298000C30B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B631DD20B32297000C30B8 /* Main.storyboard */; };
 		09B631E020B32298000C30B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B631DE20B32298000C30B8 /* LaunchScreen.storyboard */; };
-		09B631F120B44666000C30B8 /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E220B44666000C30B8 /* IMCore.framework */; };
-		09B631F220B44666000C30B8 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E320B44666000C30B8 /* ImSDK.framework */; };
-		09B631F320B44666000C30B8 /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E420B44666000C30B8 /* IMSDKBugly.framework */; };
-		09B631F420B44666000C30B8 /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E520B44666000C30B8 /* QALSDK.framework */; };
 		09B631F520B44666000C30B8 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 09B631E620B44666000C30B8 /* readme */; };
 		09B631F620B44666000C30B8 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E720B44666000C30B8 /* TencentOpenAPI.framework */; };
 		09B631F720B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		09B631F820B44666000C30B8 /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631E920B44666000C30B8 /* TLSSDK.framework */; };
 		09B631F920B44666000C30B8 /* TLSUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09B631EA20B44666000C30B8 /* TLSUI.bundle */; };
 		09B631FA20B44666000C30B8 /* TLSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631EB20B44666000C30B8 /* TLSUI.framework */; };
 		09B631FB20B44666000C30B8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631F020B44666000C30B8 /* libWeChatSDK.a */; };
@@ -410,6 +405,26 @@
 		9B8D314D1CAA8643003EFCAE /* AddGroupProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D314C1CAA8643003EFCAE /* AddGroupProfileViewController.m */; };
 		9BBA0F001CAD08D2002D34BA /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA0EFF1CAD08D2002D34BA /* BlackListViewController.m */; };
 		9BBB1A981D1A41B200A33439 /* CustomElemCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB1A971D1A41B200A33439 /* CustomElemCmd.m */; };
+		FD1BA36B20B50EAD0060ABDC /* QAVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA35E20B50EA90060ABDC /* QAVSDK.framework */; };
+		FD1BA36C20B50EAD0060ABDC /* ILiveLogReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36020B50EAA0060ABDC /* ILiveLogReport.framework */; };
+		FD1BA36D20B50EAD0060ABDC /* ILiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36120B50EAA0060ABDC /* ILiveSDK.framework */; };
+		FD1BA36E20B50EAD0060ABDC /* TILLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36220B50EAA0060ABDC /* TILLiveSDK.framework */; };
+		FD1BA36F20B50EAD0060ABDC /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36420B50EAD0060ABDC /* IMCore.framework */; };
+		FD1BA37020B50EAD0060ABDC /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36520B50EAD0060ABDC /* ImSDK.framework */; };
+		FD1BA37120B50EAD0060ABDC /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */; };
+		FD1BA37220B50EAD0060ABDC /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36720B50EAD0060ABDC /* QALSDK.framework */; };
+		FD1BA37320B50EAD0060ABDC /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */; };
+		FD1BA37420B50EAD0060ABDC /* TILCallSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36A20B50EAD0060ABDC /* TILCallSDK.framework */; };
+		FD1BA37620B510190060ABDC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37520B510190060ABDC /* libbz2.tbd */; };
+		FD1BA37820B510280060ABDC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37720B510280060ABDC /* libresolv.tbd */; };
+		FD1BA37A20B510440060ABDC /* libprotobuf.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37920B510440060ABDC /* libprotobuf.tbd */; };
+		FD1BA37C20B510560060ABDC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37B20B510560060ABDC /* CoreVideo.framework */; };
+		FD1BA37E20B510640060ABDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37D20B510640060ABDC /* CoreGraphics.framework */; };
+		FD1BA38020B510730060ABDC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37F20B510730060ABDC /* CoreMedia.framework */; };
+		FD1BA38220B510880060ABDC /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38120B510880060ABDC /* VideoToolbox.framework */; };
+		FD1BA38420B510A40060ABDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38320B510A40060ABDC /* Accelerate.framework */; };
+		FD1BA38620B510D20060ABDC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38520B510D20060ABDC /* OpenAL.framework */; };
+		FD1BA38820B5117B0060ABDC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38720B5117B0060ABDC /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -567,14 +582,9 @@
 		09B6313620B31C95000C30B8 /* WTSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSLog.m; sourceTree = "<group>"; };
 		09B631DD20B32297000C30B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		09B631DE20B32298000C30B8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		09B631E220B44666000C30B8 /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
-		09B631E320B44666000C30B8 /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
-		09B631E420B44666000C30B8 /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
-		09B631E520B44666000C30B8 /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
 		09B631E620B44666000C30B8 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		09B631E720B44666000C30B8 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		09B631E920B44666000C30B8 /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
 		09B631EA20B44666000C30B8 /* TLSUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TLSUI.bundle; sourceTree = "<group>"; };
 		09B631EB20B44666000C30B8 /* TLSUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSUI.framework; sourceTree = "<group>"; };
 		09B631EE20B44666000C30B8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1235,6 +1245,26 @@
 		9BBB1A961D1A41B200A33439 /* CustomElemCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomElemCmd.h; sourceTree = "<group>"; };
 		9BBB1A971D1A41B200A33439 /* CustomElemCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomElemCmd.m; sourceTree = "<group>"; };
 		EBC9F7E3EC697AB826A39458 /* Pods-honeyKnow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.debug.xcconfig"; sourceTree = "<group>"; };
+		FD1BA35E20B50EA90060ABDC /* QAVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QAVSDK.framework; sourceTree = "<group>"; };
+		FD1BA36020B50EAA0060ABDC /* ILiveLogReport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveLogReport.framework; sourceTree = "<group>"; };
+		FD1BA36120B50EAA0060ABDC /* ILiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveSDK.framework; sourceTree = "<group>"; };
+		FD1BA36220B50EAA0060ABDC /* TILLiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TILLiveSDK.framework; sourceTree = "<group>"; };
+		FD1BA36420B50EAD0060ABDC /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
+		FD1BA36520B50EAD0060ABDC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
+		FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
+		FD1BA36720B50EAD0060ABDC /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
+		FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
+		FD1BA36A20B50EAD0060ABDC /* TILCallSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TILCallSDK.framework; sourceTree = "<group>"; };
+		FD1BA37520B510190060ABDC /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		FD1BA37720B510280060ABDC /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		FD1BA37920B510440060ABDC /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		FD1BA37B20B510560060ABDC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		FD1BA37D20B510640060ABDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FD1BA37F20B510730060ABDC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FD1BA38120B510880060ABDC /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		FD1BA38320B510A40060ABDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FD1BA38520B510D20060ABDC /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		FD1BA38720B5117B0060ABDC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1242,14 +1272,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926623CA1C80409B005D26CF /* ImageIO.framework in Frameworks */,
+				FD1BA38820B5117B0060ABDC /* AssetsLibrary.framework in Frameworks */,
+				FD1BA38620B510D20060ABDC /* OpenAL.framework in Frameworks */,
+				FD1BA38420B510A40060ABDC /* Accelerate.framework in Frameworks */,
+				FD1BA38220B510880060ABDC /* VideoToolbox.framework in Frameworks */,
+				FD1BA38020B510730060ABDC /* CoreMedia.framework in Frameworks */,
+				FD1BA37E20B510640060ABDC /* CoreGraphics.framework in Frameworks */,
+				FD1BA37C20B510560060ABDC /* CoreVideo.framework in Frameworks */,
+				FD1BA37A20B510440060ABDC /* libprotobuf.tbd in Frameworks */,
+				FD1BA37820B510280060ABDC /* libresolv.tbd in Frameworks */,
+				FD1BA37620B510190060ABDC /* libbz2.tbd in Frameworks */,
 				926623D21C8040BA005D26CF /* libsqlite3.tbd in Frameworks */,
-				09B631F120B44666000C30B8 /* IMCore.framework in Frameworks */,
 				09B631DA20B32101000C30B8 /* RevealServer.framework in Frameworks */,
 				92E69AD21CA3806C0011D1F0 /* libBlocksKit.a in Frameworks */,
 				926623D01C8040AE005D26CF /* Foundation.framework in Frameworks */,
 				926623CE1C8040A8005D26CF /* UIKit.framework in Frameworks */,
+				FD1BA36B20B50EAD0060ABDC /* QAVSDK.framework in Frameworks */,
 				926623CC1C8040A0005D26CF /* Security.framework in Frameworks */,
-				926623CA1C80409B005D26CF /* ImageIO.framework in Frameworks */,
+				FD1BA37220B50EAD0060ABDC /* QALSDK.framework in Frameworks */,
+				FD1BA36D20B50EAD0060ABDC /* ILiveSDK.framework in Frameworks */,
 				926623C81C804095005D26CF /* QuartzCore.framework in Frameworks */,
 				09B631FB20B44666000C30B8 /* libWeChatSDK.a in Frameworks */,
 				09B631D720B31C95000C30B8 /* TencentOpenAPI.framework in Frameworks */,
@@ -1257,18 +1299,21 @@
 				926623C41C80408A005D26CF /* SystemConfiguration.framework in Frameworks */,
 				09B631FA20B44666000C30B8 /* TLSUI.framework in Frameworks */,
 				926623C21C804083005D26CF /* libc++.tbd in Frameworks */,
-				09B631F420B44666000C30B8 /* QALSDK.framework in Frameworks */,
 				926623C01C804078005D26CF /* libiconv.tbd in Frameworks */,
 				926623BE1C80406E005D26CF /* AudioToolbox.framework in Frameworks */,
-				09B631F220B44666000C30B8 /* ImSDK.framework in Frameworks */,
+				FD1BA36E20B50EAD0060ABDC /* TILLiveSDK.framework in Frameworks */,
 				09B631F620B44666000C30B8 /* TencentOpenAPI.framework in Frameworks */,
 				926623BC1C804067005D26CF /* libstdc++.6.tbd in Frameworks */,
+				FD1BA37020B50EAD0060ABDC /* ImSDK.framework in Frameworks */,
 				926623BA1C80405F005D26CF /* libz.tbd in Frameworks */,
+				FD1BA37320B50EAD0060ABDC /* TLSSDK.framework in Frameworks */,
+				FD1BA36C20B50EAD0060ABDC /* ILiveLogReport.framework in Frameworks */,
 				09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */,
-				09B631F320B44666000C30B8 /* IMSDKBugly.framework in Frameworks */,
+				FD1BA37420B50EAD0060ABDC /* TILCallSDK.framework in Frameworks */,
 				926623B71C804057005D26CF /* CoreTelephony.framework in Frameworks */,
+				FD1BA36F20B50EAD0060ABDC /* IMCore.framework in Frameworks */,
+				FD1BA37120B50EAD0060ABDC /* IMSDKBugly.framework in Frameworks */,
 				926623B81C804057005D26CF /* CoreText.framework in Frameworks */,
-				09B631F820B44666000C30B8 /* TLSSDK.framework in Frameworks */,
 				926623B41C80404F005D26CF /* MobileCoreServices.framework in Frameworks */,
 				3D87A65B251D1917267EF03C /* Pods_honeyKnow.framework in Frameworks */,
 			);
@@ -1719,14 +1764,13 @@
 		09B631E120B44666000C30B8 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				09B631E220B44666000C30B8 /* IMCore.framework */,
-				09B631E320B44666000C30B8 /* ImSDK.framework */,
-				09B631E420B44666000C30B8 /* IMSDKBugly.framework */,
-				09B631E520B44666000C30B8 /* QALSDK.framework */,
+				FD1BA35D20B50EA90060ABDC /* AVSDK */,
+				FD1BA35F20B50EAA0060ABDC /* ILiveSDK */,
+				FD1BA36320B50EAD0060ABDC /* IMSDK */,
+				FD1BA36920B50EAD0060ABDC /* TILCallSDK */,
 				09B631E620B44666000C30B8 /* readme */,
 				09B631E720B44666000C30B8 /* TencentOpenAPI.framework */,
 				09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */,
-				09B631E920B44666000C30B8 /* TLSSDK.framework */,
 				09B631EA20B44666000C30B8 /* TLSUI.bundle */,
 				09B631EB20B44666000C30B8 /* TLSUI.framework */,
 				09B631EC20B44666000C30B8 /* WXApi */,
@@ -2924,9 +2968,57 @@
 		B5CF207C6C58CDC732A3F9EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD1BA38720B5117B0060ABDC /* AssetsLibrary.framework */,
+				FD1BA38520B510D20060ABDC /* OpenAL.framework */,
+				FD1BA38320B510A40060ABDC /* Accelerate.framework */,
+				FD1BA38120B510880060ABDC /* VideoToolbox.framework */,
+				FD1BA37F20B510730060ABDC /* CoreMedia.framework */,
+				FD1BA37D20B510640060ABDC /* CoreGraphics.framework */,
+				FD1BA37B20B510560060ABDC /* CoreVideo.framework */,
+				FD1BA37920B510440060ABDC /* libprotobuf.tbd */,
+				FD1BA37720B510280060ABDC /* libresolv.tbd */,
+				FD1BA37520B510190060ABDC /* libbz2.tbd */,
 				6D7169EA7945E8C161F6B6F2 /* Pods_honeyKnow.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD1BA35D20B50EA90060ABDC /* AVSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BA35E20B50EA90060ABDC /* QAVSDK.framework */,
+			);
+			path = AVSDK;
+			sourceTree = "<group>";
+		};
+		FD1BA35F20B50EAA0060ABDC /* ILiveSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BA36020B50EAA0060ABDC /* ILiveLogReport.framework */,
+				FD1BA36120B50EAA0060ABDC /* ILiveSDK.framework */,
+				FD1BA36220B50EAA0060ABDC /* TILLiveSDK.framework */,
+			);
+			path = ILiveSDK;
+			sourceTree = "<group>";
+		};
+		FD1BA36320B50EAD0060ABDC /* IMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BA36420B50EAD0060ABDC /* IMCore.framework */,
+				FD1BA36520B50EAD0060ABDC /* ImSDK.framework */,
+				FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */,
+				FD1BA36720B50EAD0060ABDC /* QALSDK.framework */,
+				FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */,
+			);
+			path = IMSDK;
+			sourceTree = "<group>";
+		};
+		FD1BA36920B50EAD0060ABDC /* TILCallSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BA36A20B50EAD0060ABDC /* TILCallSDK.framework */,
+			);
+			path = TILCallSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3571,12 +3663,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/AVSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/ILiveSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/IMSDK",
 					"$(PROJECT_DIR)/Classes/3third",
-					"$(PROJECT_DIR)/Classes/Utils/TIMAdapter/Framework",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/AVSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/ILiveSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/IMSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/TILCallSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
@@ -3588,29 +3679,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework/WXApi",
 					"$(PROJECT_DIR)/CommonLibrary/BlocksKit",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"ReactiveObjC\"",
-					"-framework",
-					"\"TZImagePickerController\"",
-					"-framework",
-					"\"Toast\"",
-					"-framework",
-					"\"YYModel\"",
 					"-ObjC",
-					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = honey.honeyKnow.com;
@@ -3637,12 +3709,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/AVSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/ILiveSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/IMSDK",
 					"$(PROJECT_DIR)/Classes/3third",
-					"$(PROJECT_DIR)/Classes/Utils/TIMAdapter/Framework",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/AVSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/ILiveSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/IMSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/TILCallSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
@@ -3654,29 +3725,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework/WXApi",
 					"$(PROJECT_DIR)/CommonLibrary/BlocksKit",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"ReactiveObjC\"",
-					"-framework",
-					"\"TZImagePickerController\"",
-					"-framework",
-					"\"Toast\"",
-					"-framework",
-					"\"YYModel\"",
 					"-ObjC",
-					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = honey.honeyKnow.com;
@@ -3762,12 +3814,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/AVSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/ILiveSDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/IMSDK",
 					"$(PROJECT_DIR)/Classes/3third",
-					"$(PROJECT_DIR)/Classes/Utils/TIMAdapter/Framework",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/AVSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/ILiveSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/IMSDK",
+					"$(PROJECT_DIR)/TIMAdapter/Framework/TILCallSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
@@ -3779,29 +3830,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TIMAdapter/Framework/WXApi",
 					"$(PROJECT_DIR)/CommonLibrary/BlocksKit",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK",
-					"$(PROJECT_DIR)/Classes/3third/ILiveSDK/BeautySDK/Pitu",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"ReactiveObjC\"",
-					"-framework",
-					"\"TZImagePickerController\"",
-					"-framework",
-					"\"Toast\"",
-					"-framework",
-					"\"YYModel\"",
 					"-ObjC",
-					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = honey.honeyKnow.com;
