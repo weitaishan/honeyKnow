@@ -409,11 +409,6 @@
 		FD1BA36C20B50EAD0060ABDC /* ILiveLogReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36020B50EAA0060ABDC /* ILiveLogReport.framework */; };
 		FD1BA36D20B50EAD0060ABDC /* ILiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36120B50EAA0060ABDC /* ILiveSDK.framework */; };
 		FD1BA36E20B50EAD0060ABDC /* TILLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36220B50EAA0060ABDC /* TILLiveSDK.framework */; };
-		FD1BA36F20B50EAD0060ABDC /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36420B50EAD0060ABDC /* IMCore.framework */; };
-		FD1BA37020B50EAD0060ABDC /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36520B50EAD0060ABDC /* ImSDK.framework */; };
-		FD1BA37120B50EAD0060ABDC /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */; };
-		FD1BA37220B50EAD0060ABDC /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36720B50EAD0060ABDC /* QALSDK.framework */; };
-		FD1BA37320B50EAD0060ABDC /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */; };
 		FD1BA37420B50EAD0060ABDC /* TILCallSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA36A20B50EAD0060ABDC /* TILCallSDK.framework */; };
 		FD1BA37620B510190060ABDC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37520B510190060ABDC /* libbz2.tbd */; };
 		FD1BA37820B510280060ABDC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA37720B510280060ABDC /* libresolv.tbd */; };
@@ -425,6 +420,11 @@
 		FD1BA38420B510A40060ABDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38320B510A40060ABDC /* Accelerate.framework */; };
 		FD1BA38620B510D20060ABDC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38520B510D20060ABDC /* OpenAL.framework */; };
 		FD1BA38820B5117B0060ABDC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA38720B5117B0060ABDC /* AssetsLibrary.framework */; };
+		FD1BA47B20B53C5C0060ABDC /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA47620B53C5A0060ABDC /* TLSSDK.framework */; };
+		FD1BA47C20B53C5C0060ABDC /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA47720B53C5B0060ABDC /* QALSDK.framework */; };
+		FD1BA47D20B53C5C0060ABDC /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA47820B53C5B0060ABDC /* IMSDKBugly.framework */; };
+		FD1BA47E20B53C5C0060ABDC /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA47920B53C5B0060ABDC /* ImSDK.framework */; };
+		FD1BA47F20B53C5C0060ABDC /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA47A20B53C5C0060ABDC /* IMCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1249,11 +1249,6 @@
 		FD1BA36020B50EAA0060ABDC /* ILiveLogReport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveLogReport.framework; sourceTree = "<group>"; };
 		FD1BA36120B50EAA0060ABDC /* ILiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveSDK.framework; sourceTree = "<group>"; };
 		FD1BA36220B50EAA0060ABDC /* TILLiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TILLiveSDK.framework; sourceTree = "<group>"; };
-		FD1BA36420B50EAD0060ABDC /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
-		FD1BA36520B50EAD0060ABDC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
-		FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
-		FD1BA36720B50EAD0060ABDC /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
-		FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
 		FD1BA36A20B50EAD0060ABDC /* TILCallSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TILCallSDK.framework; sourceTree = "<group>"; };
 		FD1BA37520B510190060ABDC /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		FD1BA37720B510280060ABDC /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -1265,6 +1260,11 @@
 		FD1BA38320B510A40060ABDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		FD1BA38520B510D20060ABDC /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		FD1BA38720B5117B0060ABDC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FD1BA47620B53C5A0060ABDC /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
+		FD1BA47720B53C5B0060ABDC /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
+		FD1BA47820B53C5B0060ABDC /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
+		FD1BA47920B53C5B0060ABDC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
+		FD1BA47A20B53C5C0060ABDC /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1290,11 +1290,12 @@
 				926623CE1C8040A8005D26CF /* UIKit.framework in Frameworks */,
 				FD1BA36B20B50EAD0060ABDC /* QAVSDK.framework in Frameworks */,
 				926623CC1C8040A0005D26CF /* Security.framework in Frameworks */,
-				FD1BA37220B50EAD0060ABDC /* QALSDK.framework in Frameworks */,
 				FD1BA36D20B50EAD0060ABDC /* ILiveSDK.framework in Frameworks */,
+				FD1BA47D20B53C5C0060ABDC /* IMSDKBugly.framework in Frameworks */,
 				926623C81C804095005D26CF /* QuartzCore.framework in Frameworks */,
 				09B631FB20B44666000C30B8 /* libWeChatSDK.a in Frameworks */,
 				09B631D720B31C95000C30B8 /* TencentOpenAPI.framework in Frameworks */,
+				FD1BA47F20B53C5C0060ABDC /* IMCore.framework in Frameworks */,
 				926623C61C80408E005D26CF /* AVFoundation.framework in Frameworks */,
 				926623C41C80408A005D26CF /* SystemConfiguration.framework in Frameworks */,
 				09B631FA20B44666000C30B8 /* TLSUI.framework in Frameworks */,
@@ -1304,18 +1305,17 @@
 				FD1BA36E20B50EAD0060ABDC /* TILLiveSDK.framework in Frameworks */,
 				09B631F620B44666000C30B8 /* TencentOpenAPI.framework in Frameworks */,
 				926623BC1C804067005D26CF /* libstdc++.6.tbd in Frameworks */,
-				FD1BA37020B50EAD0060ABDC /* ImSDK.framework in Frameworks */,
 				926623BA1C80405F005D26CF /* libz.tbd in Frameworks */,
-				FD1BA37320B50EAD0060ABDC /* TLSSDK.framework in Frameworks */,
 				FD1BA36C20B50EAD0060ABDC /* ILiveLogReport.framework in Frameworks */,
+				FD1BA47B20B53C5C0060ABDC /* TLSSDK.framework in Frameworks */,
 				09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */,
 				FD1BA37420B50EAD0060ABDC /* TILCallSDK.framework in Frameworks */,
+				FD1BA47E20B53C5C0060ABDC /* ImSDK.framework in Frameworks */,
 				926623B71C804057005D26CF /* CoreTelephony.framework in Frameworks */,
-				FD1BA36F20B50EAD0060ABDC /* IMCore.framework in Frameworks */,
-				FD1BA37120B50EAD0060ABDC /* IMSDKBugly.framework in Frameworks */,
 				926623B81C804057005D26CF /* CoreText.framework in Frameworks */,
 				926623B41C80404F005D26CF /* MobileCoreServices.framework in Frameworks */,
 				3D87A65B251D1917267EF03C /* Pods_honeyKnow.framework in Frameworks */,
+				FD1BA47C20B53C5C0060ABDC /* QALSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3004,11 +3004,11 @@
 		FD1BA36320B50EAD0060ABDC /* IMSDK */ = {
 			isa = PBXGroup;
 			children = (
-				FD1BA36420B50EAD0060ABDC /* IMCore.framework */,
-				FD1BA36520B50EAD0060ABDC /* ImSDK.framework */,
-				FD1BA36620B50EAD0060ABDC /* IMSDKBugly.framework */,
-				FD1BA36720B50EAD0060ABDC /* QALSDK.framework */,
-				FD1BA36820B50EAD0060ABDC /* TLSSDK.framework */,
+				FD1BA47A20B53C5C0060ABDC /* IMCore.framework */,
+				FD1BA47920B53C5B0060ABDC /* ImSDK.framework */,
+				FD1BA47820B53C5B0060ABDC /* IMSDKBugly.framework */,
+				FD1BA47720B53C5B0060ABDC /* QALSDK.framework */,
+				FD1BA47620B53C5A0060ABDC /* TLSSDK.framework */,
 			);
 			path = IMSDK;
 			sourceTree = "<group>";

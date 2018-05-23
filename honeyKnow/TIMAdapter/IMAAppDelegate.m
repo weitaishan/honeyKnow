@@ -65,7 +65,7 @@ void uncaughtExceptionHandler(NSException*exception){
     // 处理推送消息
     DebugLog(@"userinfo:%@",userInfo);
     DebugLog(@"收到推送消息:%@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
-//    [[TIMManager sharedInstance] reportAPNSEvent:userInfo];
+    [[TIMManager sharedInstance] reportAPNSEvent:userInfo];
 }
 
 
