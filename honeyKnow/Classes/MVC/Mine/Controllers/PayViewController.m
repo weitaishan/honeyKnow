@@ -1,4 +1,4 @@
-//
+    //
 //  PayViewController.m
 //  honeyKnow
 //
@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray * listArray;
 
+//是否是微信支付
+@property (nonatomic, assign) BOOL isWeixin;
 
 @end
 
@@ -25,16 +27,15 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.leftBarButtonItem = nil;
-    self.navigationController.navigationBarHidden = YES;
+
+    self.navigationController.navigationBarHidden = NO;
     [self setBaseInfo];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = NO;
 //    [self getUserInfoData];
     
 }
@@ -47,32 +48,13 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 - (void)getUserInfoData{
     
     
-    WeakSelf;
-//    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_USER_GET params:nil success:^(id response) {
-//        
-//        [weakSelf.tableView.mj_header endRefreshing];
-//        
-//        if ([response[@"success"] integerValue]){
-//            
-//            
-//            self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
-//            
-//            [self.tableView reloadData];
-//            
-//            
-//        }
-//        
-//    } failure:^(NSError *error) {
-//        
-//        [weakSelf.tableView.mj_header endRefreshing];
-//        
-//    }];
-//    
+
 }
 
 - (void)setBaseInfo{
     
-    [self addTableViewWithFrame:CGRectMake(0, - NewStatusBarHeight, SCREEN_WIDTH,SCREEN_HEIGHT)];
+    self.navigationItem.title = @"充值";
+    [self addTableViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,SCREEN_HEIGHT - NewStatusBarHeight)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -92,6 +74,10 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    if (section == 1) {
+        
+        return self.listArray.count;
+    }
     return 1;
     
 }
@@ -101,15 +87,47 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
     
     if (indexPath.section == 0) {
         
-        PayStyleCell * cell = [tableView dequeueReusableCellWithIdentifier:payMoneyCellId forIndexPath:indexPath];
+        PayStyleCell * cell = [tableView dequeueReusableCellWithIdentifier:payStyleCellId forIndexPath:indexPath];
     
+        _isWeixin = cell.wxBtn.isSelected;
+        cell.aliBtn.selected = !cell.wxBtn.selected;
+
+        
+        [[[cell.wxBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            cell.wxBtn.selected = !cell.wxBtn.selected;
+            cell.aliBtn.selected = !cell.wxBtn.selected;
+            _isWeixin = cell.wxBtn.isSelected;
+
+        }];
+        
+        [[[cell.aliBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            cell.aliBtn.selected = !cell.aliBtn.selected;
+            cell.wxBtn.selected = !cell.aliBtn.selected;
+            _isWeixin = cell.wxBtn.isSelected;
+
+        }];
+        
+        
         return cell;
         
         
     }else{
         
         PayMoneyCell * cell = [tableView dequeueReusableCellWithIdentifier:payMoneyCellId forIndexPath:indexPath];
+        cell.lbMoney.text = self.listArray[indexPath.row];
+        cell.lbConfirmMoney.text = self.listArray[indexPath.row];
 
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+        
+        [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+            
+            [self payActionWithCell:cell];
+            
+        }];
+        [cell.payView addGestureRecognizer:tap];
+        
         return cell;
     }
     
@@ -119,34 +137,23 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    return 57;
+    if (indexPath.section == 0) {
+
+        return 257;
+    }
+    return 67;
 
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
-    if (section == 0) {
-        return 10.f;
-        
-    }
+
     return CGFLOAT_MIN;
     
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    
-    if (section == 0) {
-        
-        UIView* view = [[UIView alloc] init];
-        view.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
-        
-        return view;
-    }
-    
-    return nil;
-    
-}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     
@@ -160,25 +167,58 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 }
 
 #pragma mark - 懒加载
-//-(NSMutableArray<MineListModel *> *)listArray{
-//
-//    if (!_listArray) {
-//
-//        _listArray = @[].mutableCopy;
-//
-//        NSData *JSONData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"mineList" ofType:@"json"]];
-//
-//        NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:nil];
-//
-//        for (int i = 0; i < dataArray.count; i++) {
-//
-//            MineListModel* model = [MineListModel yy_modelWithDictionary:dataArray[i]];
-//            [_listArray addObject:model];
-//        }
-//    }
-//
-//    return _listArray;
-//
-//}
+-(NSMutableArray *)listArray{
 
+    if (!_listArray) {
+
+        _listArray = @[@"100",@"200",@"500",@"1000",@"2000"].mutableCopy;
+
+    }
+
+    return _listArray;
+
+}
+
+- (void)payActionWithCell:(PayMoneyCell *)cell{
+    
+    NSLog(@"是%@支付",_isWeixin ? @"微信" : @"支付宝");
+
+    WeakSelf;
+    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"channel" : _isWeixin ? @"02" : @"01",
+                    @"amount" : cell.lbMoney.text}.mutableCopy success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+            
+            if (_isWeixin) {
+
+                [[MJPayApi sharedApi]wxPayWithPayParam:response[@"data"] success:^(PayCode code)
+                 {
+
+                 } failure:^(PayCode code) {
+
+
+                 }];
+
+            }else{
+
+                [[MJPayApi sharedApi]aliPayWithPayParam:response[@"data"] success:^(PayCode code)
+                 {
+                 } failure:^(PayCode code) {
+                 }];
+
+            }
+            
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"支付宝失败");
+    }];
+    
+    
+   
+}
 @end

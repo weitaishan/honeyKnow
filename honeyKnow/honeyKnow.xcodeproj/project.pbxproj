@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930BFDD20B59C88007AD501 /* libWeChatSDK.a */; };
 		09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
 		09B6319A20B31C95000C30B8 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */; };
 		09B6319B20B31C95000C30B8 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309720B31C95000C30B8 /* UIViewController+ZJScrollPageController.m */; };
@@ -427,7 +428,6 @@
 		FD1BA48320B5596F0060ABDC /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA48120B5596D0060ABDC /* AlipaySDK.bundle */; };
 		FD1BA48420B5596F0060ABDC /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA48220B5596E0060ABDC /* AlipaySDK.framework */; };
 		FD1BA48620B5599E0060ABDC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA48520B5599D0060ABDC /* CoreMotion.framework */; };
-		FD1BA48B20B55D150060ABDC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA48A20B55D150060ABDC /* libWeChatSDK.a */; };
 		FD1BA48E20B55ED90060ABDC /* MJPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA48D20B55ED90060ABDC /* MJPayApi.m */; };
 		FD1BA49120B570C00060ABDC /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49020B570C00060ABDC /* PayViewController.m */; };
 		FD1BA49520B571730060ABDC /* PayStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49320B571730060ABDC /* PayStyleCell.m */; };
@@ -461,6 +461,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0930BFDD20B59C88007AD501 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		0930BFDF20B59C88007AD501 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		0930BFE020B59C88007AD501 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		09B6309220B31C95000C30B8 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 		09B6309420B31C95000C30B8 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
 		09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
@@ -1274,10 +1278,6 @@
 		FD1BA48120B5596D0060ABDC /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		FD1BA48220B5596E0060ABDC /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		FD1BA48520B5599D0060ABDC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		FD1BA48720B55D140060ABDC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		FD1BA48820B55D140060ABDC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		FD1BA48920B55D150060ABDC /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		FD1BA48A20B55D150060ABDC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		FD1BA48C20B55ED80060ABDC /* MJPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPayApi.h; sourceTree = "<group>"; };
 		FD1BA48D20B55ED90060ABDC /* MJPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPayApi.m; sourceTree = "<group>"; };
 		FD1BA48F20B570C00060ABDC /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
@@ -1301,7 +1301,7 @@
 				FD1BA38620B510D20060ABDC /* OpenAL.framework in Frameworks */,
 				FD1BA38420B510A40060ABDC /* Accelerate.framework in Frameworks */,
 				FD1BA38220B510880060ABDC /* VideoToolbox.framework in Frameworks */,
-				FD1BA48B20B55D150060ABDC /* libWeChatSDK.a in Frameworks */,
+				0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */,
 				FD1BA38020B510730060ABDC /* CoreMedia.framework in Frameworks */,
 				FD1BA37E20B510640060ABDC /* CoreGraphics.framework in Frameworks */,
 				FD1BA37C20B510560060ABDC /* CoreVideo.framework in Frameworks */,
@@ -1347,6 +1347,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0930BFDC20B59C88007AD501 /* WXApi */ = {
+			isa = PBXGroup;
+			children = (
+				0930BFDD20B59C88007AD501 /* libWeChatSDK.a */,
+				0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */,
+				0930BFDF20B59C88007AD501 /* WXApi.h */,
+				0930BFE020B59C88007AD501 /* WXApiObject.h */,
+			);
+			path = WXApi;
+			sourceTree = "<group>";
+		};
 		09B6301420B31C94000C30B8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1800,6 +1811,7 @@
 		09B631E120B44666000C30B8 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				0930BFDC20B59C88007AD501 /* WXApi */,
 				FD1BA35D20B50EA90060ABDC /* AVSDK */,
 				FD1BA35F20B50EAA0060ABDC /* ILiveSDK */,
 				FD1BA36320B50EAD0060ABDC /* IMSDK */,
@@ -1809,20 +1821,8 @@
 				09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */,
 				09B631EA20B44666000C30B8 /* TLSUI.bundle */,
 				09B631EB20B44666000C30B8 /* TLSUI.framework */,
-				09B631EC20B44666000C30B8 /* WXApi */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		09B631EC20B44666000C30B8 /* WXApi */ = {
-			isa = PBXGroup;
-			children = (
-				FD1BA48A20B55D150060ABDC /* libWeChatSDK.a */,
-				FD1BA48920B55D150060ABDC /* WechatAuthSDK.h */,
-				FD1BA48820B55D140060ABDC /* WXApi.h */,
-				FD1BA48720B55D140060ABDC /* WXApiObject.h */,
-			);
-			path = WXApi;
 			sourceTree = "<group>";
 		};
 		922B239C1C8464CE00C350C2 /* CustomUI */ = {

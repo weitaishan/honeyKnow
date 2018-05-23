@@ -7,7 +7,8 @@
 //
 
 #import "IMAPlatform+Login.h"
-
+#import "LoginSelectViewController.h"
+#import "BaseNavigationViewController.h"
 @implementation IMAPlatform (Login)
 
 //互踢下线错误码
@@ -72,26 +73,38 @@
 - (void)offlineKicked:(TIMLoginParam *)param succ:(TIMLoginSucc)succ fail:(TIMFail)fail
 {
     __weak typeof(self) ws = self;
-    UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"下线通知" message:@"您的帐号于另一台手机上登录。" cancelButtonTitle:@"退出" otherButtonTitles:@[@"重新登录"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        if (buttonIndex == 0)
-        {
+    UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"下线通知" message:@"您的帐号于另一台手机上登录。" cancelButtonTitle:nil otherButtonTitles:@[@"重新登录"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
+//        if (buttonIndex == 0)
+//        {
             // 退出
-            [self logout:^{
-                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-            } fail:^(int code, NSString *msg) {
-                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-            }];
-        }
-        else
-        {
+//            [self logout:^{
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//            } fail:^(int code, NSString *msg) {
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//            }];
+        [self offlineLogin];
+
+            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+            
+            
+            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+            
+            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+            APP_DELEGATE().window.rootViewController = navVC;
+            
+//        }
+//        else
+//        {
             [self offlineLogin];
-            // 重新登录
-            [self login:param succ:^{
-                [ws registNotification];
-                succ ? succ() : nil;
-                
-            } fail:fail];
-        }
+//            // 重新登录
+//            [self login:param succ:^{
+//                [ws registNotification];
+//                succ ? succ() : nil;
+//
+//            } fail:fail];
+//        }
     }];
     [alert show];
 }

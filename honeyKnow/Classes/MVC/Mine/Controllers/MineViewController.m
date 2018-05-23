@@ -13,6 +13,7 @@
 #import "MineListModel.h"
 #import "EditProfileViewController.h"
 #import "MyWalletViewController.h"
+#import "PayViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -134,6 +135,21 @@ static NSString * const mineListCellId = @"mineListCellId";
 
         }];
         [cell.iconImgView addGestureRecognizer:tap];
+        
+        
+        UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] init];
+        
+        [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+            
+            //手势触发调用
+            PayViewController* vc = [[PayViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }];
+        [cell.coinView addGestureRecognizer:tap2];
+        
+        
    
 //
         [[[cell.editBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {

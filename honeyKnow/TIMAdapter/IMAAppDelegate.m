@@ -101,7 +101,7 @@ void uncaughtExceptionHandler(NSException*exception){
         return [WXApi handleOpenURL:url delegate:[MJPayApi sharedApi]];
 
     }
-    if ([url.host isEqualToString:@"safepay"]) {
+    if ([url.scheme isEqualToString:ALI_PAY]) {
         //跳转支付宝钱包进行支付，处理支付结果
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"result = %@",resultDic);
@@ -129,7 +129,7 @@ void uncaughtExceptionHandler(NSException*exception){
 //        }
     }
     
-    if ([url.host isEqualToString:@"safepay"]) {
+    if ([url.scheme isEqualToString:ALI_PAY]) {
         //跳转支付宝钱包进行支付，处理支付结果
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"result = %@",resultDic);
@@ -142,7 +142,7 @@ void uncaughtExceptionHandler(NSException*exception){
 // NOTE: 9.0以后使用新API接口
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 {
-    if ([url.host isEqualToString:@"safepay"]) {
+    if ([url.scheme isEqualToString:ALI_PAY]) {
         //跳转支付宝钱包进行支付，处理支付结果
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"result = %@",resultDic);

@@ -45,7 +45,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>ali</string>
+				<string>aliPay</string>
 			</array>
 		</dict>
 	</array>

@@ -71,4 +71,7 @@ static NSString * const URL_VIDEO_LIKE_UPDATE = @"video/like/update";
 /** 获取用户信息*/
 static NSString * const URL_USER_GET = @"user/get";
 
+/** 支付*/
+static NSString * const URL_PAYMENT_PAY = @"payment/pay";
+
 #endif /* Urls_h */

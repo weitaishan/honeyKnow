@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbFocusNum;
 @property (weak, nonatomic) IBOutlet UILabel *lbHCoinNum;
+@property (weak, nonatomic) IBOutlet UIView *coinView;
 @end

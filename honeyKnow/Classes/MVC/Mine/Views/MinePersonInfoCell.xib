@@ -92,8 +92,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCw-RV-boB">
+                        <rect key="frame" x="198" y="231" width="61" height="49"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="VS1-RE-MJz"/>
+                            <constraint firstAttribute="width" constant="61" id="zdB-bt-hmS"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sCw-RV-boB" secondAttribute="bottom" constant="3.5" id="1YU-Wb-yZk"/>
                     <constraint firstItem="3va-Q6-DCQ" firstAttribute="top" secondItem="XQt-pZ-3jq" secondAttribute="bottom" constant="16" id="4G8-6g-5di"/>
                     <constraint firstAttribute="trailing" secondItem="pFc-g3-7CQ" secondAttribute="trailing" constant="80" id="6ua-aR-Om9"/>
                     <constraint firstAttribute="bottom" secondItem="Ych-3i-lMR" secondAttribute="bottom" constant="8" id="JM9-pk-Inc"/>
@@ -110,6 +119,7 @@
                     <constraint firstItem="Se2-qR-raa" firstAttribute="centerY" secondItem="SRS-HA-hpa" secondAttribute="centerY" id="n7W-67-JDo"/>
                     <constraint firstItem="SRS-HA-hpa" firstAttribute="centerX" secondItem="Ych-3i-lMR" secondAttribute="centerX" id="rWH-65-a7I"/>
                     <constraint firstItem="Ych-3i-lMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="uBR-87-dHR"/>
+                    <constraint firstAttribute="trailing" secondItem="sCw-RV-boB" secondAttribute="trailing" constant="61" id="uTt-pZ-2hw"/>
                     <constraint firstAttribute="trailing" secondItem="PXU-xA-aJA" secondAttribute="trailing" id="wxM-Ma-taz"/>
                     <constraint firstItem="Se2-qR-raa" firstAttribute="centerX" secondItem="pFc-g3-7CQ" secondAttribute="centerX" id="xR9-bg-4qE"/>
                     <constraint firstItem="pFc-g3-7CQ" firstAttribute="centerY" secondItem="Ych-3i-lMR" secondAttribute="centerY" id="zvc-bZ-6Rz"/>
@@ -117,6 +127,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="coinView" destination="sCw-RV-boB" id="CTB-ls-1Sc"/>
                 <outlet property="editBtn" destination="Nqp-YB-8fM" id="8aw-j8-ui8"/>
                 <outlet property="iconImgView" destination="XQt-pZ-3jq" id="8f3-Iy-knp"/>
                 <outlet property="lbFocusNum" destination="SRS-HA-hpa" id="47i-yt-EMf"/>
@@ -129,6 +140,6 @@
     </objects>
     <resources>
         <image name="btn_edit_normal" width="35" height="35"/>
-        <image name="pic_avatar" width="65" height="65"/>
+        <image name="pic_avatar" width="30" height="30"/>
     </resources>
 </document>

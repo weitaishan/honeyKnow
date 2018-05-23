@@ -164,24 +164,25 @@ static id _instance;
 {
     self.PaySuccess = successBlock;
     self.PayError = failBlock;
-    NSString * appScheme =  @"APP Scheme";
+    NSString * appScheme =  @"aliPay";
     
     //注：若公司服务器返回的json串可以直接使用，就不用下面的json解析了
-    NSData *jsonData = [pay_param dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
-    if(err) {
-        NSLog(@"json解析失败：%@",err);
-    }
+//    NSData *jsonData = [pay_param dataUsingEncoding:NSUTF8StringEncoding];
+//    NSError *err;
+//    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+//    if(err) {
+//        NSLog(@"json解析失败：%@",err);
+//    }
     
-    NSString * orderSS = [NSString stringWithFormat:@"app_id=%@&biz_content=%@&charset=%@&method=%@&sign_type=%@&timestamp=%@&version=%@&format=%@&notify_url=%@",dic[@"app_id"],dic[@"biz_content"],dic[@"charset"],dic[@"method"],dic[@"sign_type"],dic[@"timestamp"],dic[@"version"],dic[@"format"],dic[@"notify_url"]];
-    
-    NSString * signedStr = [self urlEncodedString:dic[@"sign"]];
-    NSString * orderString = [NSString stringWithFormat:@"%@&sign=%@",orderSS, signedStr];
+//    NSString * orderSS = [NSString stringWithFormat:@"app_id=%@&biz_content=%@&charset=%@&method=%@&sign_type=%@&timestamp=%@&version=%@&format=%@&notify_url=%@",dic[@"app_id"],dic[@"biz_content"],dic[@"charset"],dic[@"method"],dic[@"sign_type"],dic[@"timestamp"],dic[@"version"],dic[@"format"],dic[@"notify_url"]];
+//
+//    NSString * signedStr = [self urlEncodedString:dic[@"sign"]];
+//    NSString * orderString = [NSString stringWithFormat:@"%@&sign=%@",orderSS, signedStr];
 //    NSLog(@"===%@",orderSS);
     
-    [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-        NSLog(@"----- %@",resultDic);
+    [[AlipaySDK defaultService] payOrder:pay_param fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+        NSLog(@"reslut = %@",resultDic);
+        
         NSInteger resultCode = [resultDic[@"resultStatus"] integerValue];
         switch (resultCode) {
             case 9000:     //支付成功
@@ -197,6 +198,8 @@ static id _instance;
                 break;
         }
     }];
+    
+ 
 }
 
 //url 加密

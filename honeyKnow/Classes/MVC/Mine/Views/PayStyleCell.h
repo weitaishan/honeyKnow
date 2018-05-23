@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PayStyleCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lbHCoin;
+@property (weak, nonatomic) IBOutlet UIButton *wxBtn;
+@property (weak, nonatomic) IBOutlet UIButton *aliBtn;
 
 @end

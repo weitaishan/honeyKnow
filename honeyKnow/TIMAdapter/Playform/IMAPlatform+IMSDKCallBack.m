@@ -7,7 +7,8 @@
 //
 
 #import "IMAPlatform+IMSDKCallBack.h"
-
+#import "LoginSelectViewController.h"
+#import "BaseNavigationViewController.h"
 // 所有回调中的核心逻辑最终都放入到主线程中执行
 
 @implementation IMAPlatform (IMSDKCallBack)
@@ -139,32 +140,46 @@ static BOOL kIsAlertingForceOffline = NO;
     
     __weak typeof(self) ws = self;
     UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"下线通知" message:@"断线重连失败。" cancelButtonTitle:@"退出" otherButtonTitles:@[@"重新登录"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        if (buttonIndex == 0)
-        {
-            // 退出
-//            [[IMAPlatform sharedInstance] logout:^{
-//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//        if (buttonIndex == 0)
+//        {
+//            // 退出
+////            [[IMAPlatform sharedInstance] logout:^{
+////                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+////            } fail:^(int code, NSString *msg) {
+////                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+////            }];
+//        }
+//        else
+//        {
+//            [self offlineLogin];
+//            // 重新登录
+//            [self login:self.host.loginParm succ:^{
+//
+////                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
+//
+//                IMALoginParam *wp = [IMALoginParam loadFromLocal];
+//                [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
+//
+//                [ws registNotification];
+//
 //            } fail:^(int code, NSString *msg) {
-//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+////                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
 //            }];
-        }
-        else
-        {
-            [self offlineLogin];
-            // 重新登录
-            [self login:self.host.loginParm succ:^{
-                
-//                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
-                
-                IMALoginParam *wp = [IMALoginParam loadFromLocal];
-                [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
-                
-                [ws registNotification];
-                
-            } fail:^(int code, NSString *msg) {
-//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-            }];
-        }
+//        }
+        
+        [self offlineLogin];
+        
+        [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+        [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+        [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+        
+        
+        LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+        
+        BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+        APP_DELEGATE().window.rootViewController = navVC;
+        
+        
         
         kIsAlertingForceOffline = NO;
         

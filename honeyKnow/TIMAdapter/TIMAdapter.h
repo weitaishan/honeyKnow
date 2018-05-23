@@ -53,6 +53,8 @@ typedef NS_ENUM(NSInteger, IMAConType)
 #define WX_APP_ID @"wx65f71c2ea2b122da"
 #define WX_OPEN_KEY @"69aed8b3fd41ed72efcfbdbca1e99a27"
 
+#define ALI_PAY @"alipay"
+
 
 // 最大昵称UTF8字符串长度
 #define kNicknameMaxLength  64
