@@ -100,8 +100,8 @@
 
 - (void)pushToChatViewControllerWith:(IMAUser *)user
 {
-    NavigationViewController *curNav = (NavigationViewController *)[[self viewControllers] objectAtIndex:self.selectedIndex];
-    if (self.selectedIndex == 0)
+    BaseNavigationViewController *curNav = (BaseNavigationViewController *)[[self viewControllers] objectAtIndex:self.selectedIndex];
+    if (self.selectedIndex == 2)
     {
         // 选的中会话tab
         // 先检查当前栈中是否聊天界面
@@ -135,11 +135,12 @@
         }
         
         vc.hidesBottomBarWhenPushed = YES;
-        [curNav pushViewController:vc withBackTitle:@"返回" animated:YES];
+        [curNav pushViewController:vc animated:YES];
+//        [curNav pushViewController:vc withBackTitle:@"返回" animated:YES];
     }
     else
     {
-        NavigationViewController *chatNav = (NavigationViewController *)[[self viewControllers] objectAtIndex:0];
+        BaseNavigationViewController *chatNav = (BaseNavigationViewController *)[[self viewControllers] objectAtIndex:2];
         
 #if kTestChatAttachment
         // 无则重新创建
@@ -148,9 +149,12 @@
         ChatViewController *vc = [[IMAChatViewController alloc] initWith:user];
 #endif
         vc.hidesBottomBarWhenPushed = YES;
-        [chatNav pushViewController:vc withBackTitle:@"返回" animated:YES];
         
-        [self setSelectedIndex:0];
+        [chatNav pushViewController:vc animated:YES];
+
+//        [chatNav pushViewController:vc withBackTitle:@"返回" animated:YES];
+        
+        [self setSelectedIndex:2];
         
         if (curNav.viewControllers.count != 0)
         {

@@ -73,8 +73,8 @@ void uncaughtExceptionHandler(NSException*exception){
 // 用户可重写
 - (void)enterLoginUI
 {
-    IMALoginViewController *vc = [[IMALoginViewController alloc] init];
-    self.window.rootViewController = vc;
+//    IMALoginViewController *vc = [[IMALoginViewController alloc] init];
+//    self.window.rootViewController = vc;
     
 }
 

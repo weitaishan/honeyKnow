@@ -25,7 +25,7 @@
         [self configOwnViews];
         
         self.KVOController = [FBKVOController controllerWithObserver:self];
-        self.backgroundColor = kClearColor;
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -45,7 +45,7 @@
     _lastMsgTime = [[UILabel alloc] init];
     _lastMsgTime.font = kAppSmallTextFont;
     _lastMsgTime.textAlignment = NSTextAlignmentRight;
-    _lastMsgTime.textColor = kLightGrayColor;
+    _lastMsgTime.textColor = kGrayColor;
     _lastMsgTime.adjustsFontSizeToFitWidth = YES;
     [self.contentView addSubview:_lastMsgTime];
     

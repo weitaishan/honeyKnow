@@ -283,16 +283,15 @@ static NSString * const messageListCellId = @"messageListCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
     
+    if (section == 0) {
+        
+        return 16;
+    }
     return CGFLOAT_MIN;
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    if (section == 0) {
-
-        return 16;
-    }
     return CGFLOAT_MIN;
     
 }

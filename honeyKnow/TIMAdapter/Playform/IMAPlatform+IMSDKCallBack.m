@@ -142,11 +142,11 @@ static BOOL kIsAlertingForceOffline = NO;
         if (buttonIndex == 0)
         {
             // 退出
-            [[IMAPlatform sharedInstance] logout:^{
-                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-            } fail:^(int code, NSString *msg) {
-                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-            }];
+//            [[IMAPlatform sharedInstance] logout:^{
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//            } fail:^(int code, NSString *msg) {
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//            }];
         }
         else
         {
@@ -154,7 +154,7 @@ static BOOL kIsAlertingForceOffline = NO;
             // 重新登录
             [self login:self.host.loginParm succ:^{
                 
-                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
+//                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
                 
                 IMALoginParam *wp = [IMALoginParam loadFromLocal];
                 [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
@@ -162,7 +162,7 @@ static BOOL kIsAlertingForceOffline = NO;
                 [ws registNotification];
                 
             } fail:^(int code, NSString *msg) {
-                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
             }];
         }
         

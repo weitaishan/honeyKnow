@@ -28,6 +28,14 @@
         ,NSFontAttributeName:[UIFont systemFontOfSize:17]};
    
     
+    UIBarButtonItem* leftItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:nil];
+
+    self.navigationItem.leftBarButtonItem = leftItem;
+
+    self.navigationItem.backBarButtonItem = leftItem;
+
+    
+    
     WeakSelf;
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
     {

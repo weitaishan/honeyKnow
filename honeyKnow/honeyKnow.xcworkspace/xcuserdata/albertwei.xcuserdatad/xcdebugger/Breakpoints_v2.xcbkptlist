@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TIMAdapter/IMAAppDelegate.m"
-            timestampString = "548748562.278236"
+            timestampString = "548752876.856784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-enterLoginUI"
             landmarkType = "7">
          </BreakpointContent>

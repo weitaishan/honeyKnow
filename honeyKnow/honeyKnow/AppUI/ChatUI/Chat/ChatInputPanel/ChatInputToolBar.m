@@ -45,9 +45,9 @@
 - (void)addOwnViews
 {
     _audio = [[UIButton alloc] init];
-    [_audio setImage:[UIImage imageNamed:@"chat_toolbar_voice_nor"] forState:UIControlStateNormal];
-    [_audio setImage:[UIImage imageNamed:@"chat_toolbar_voice_press"] forState:UIControlStateHighlighted];
-    [_audio setImage:[UIImage imageNamed:@"chat_toolbar_keyboard_nor"] forState:UIControlStateSelected];
+    [_audio setImage:[UIImage imageNamed:@"btn_video"] forState:UIControlStateNormal];
+//    [_audio setImage:[UIImage imageNamed:@"chat_toolbar_voice_press"] forState:UIControlStateHighlighted];
+//    [_audio setImage:[UIImage imageNamed:@"chat_toolbar_keyboard_nor"] forState:UIControlStateSelected];
     [_audio addTarget:self action:@selector(onClickAudio:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_audio];
     
@@ -94,17 +94,18 @@
     
     
     _emoj = [[UIButton alloc] init];
-    [_emoj setImage:[UIImage imageNamed:@"chat_toolbar_smile_nor"] forState:UIControlStateNormal];
-    [_emoj setImage:[UIImage imageNamed:@"chat_toolbar_smile_press"] forState:UIControlStateHighlighted];
+    [_emoj setImage:[UIImage imageNamed:@"btn_biaoqing"] forState:UIControlStateNormal];
+//    [_emoj setImage:[UIImage imageNamed:@"chat_toolbar_smile_press"] forState:UIControlStateHighlighted];
     [_emoj addTarget:self action:@selector(onClikEmoj:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_emoj];
     
     
-    _more = [[UIButton alloc] init];
-    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_nor"] forState:UIControlStateNormal];
-    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_press"] forState:UIControlStateHighlighted];
-    [_more addTarget:self action:@selector(onClickMore:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_more];
+//    _more = [[UIButton alloc] init];
+//    [_more setTitle:@"发送" forState:UIControlStateNormal];
+//    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_nor"] forState:UIControlStateNormal];
+//    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_press"] forState:UIControlStateHighlighted];
+//    [_more addTarget:self action:@selector(onClickMore:) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:_more];
 }
 
 - (void)setChatDelegate:(id<ChatInputAbleViewDelegate>)delegate
@@ -171,11 +172,14 @@
     [_audio alignParentLeftWithMargin:kDefaultMargin];
     
     
-    [_more sameWith:_audio];
-    [_more alignParentRightWithMargin:kDefaultMargin];
+//    [_more sameWith:_audio];
+//    [_more alignParentRightWithMargin:kDefaultMargin];
     
-    [_emoj sameWith:_more];
-    [_emoj layoutToLeftOf:_more margin:kDefaultMargin/2];
+    
+    [_emoj sameWith:_audio];
+    [_emoj alignParentRightWithMargin:kDefaultMargin];
+//    [_emoj sameWith:_more];
+//    [_emoj layoutToLeftOf:_more margin:kDefaultMargin/2];
     
     [_audioPressed sameWith:_audio];
     [_audioPressed layoutToRightOf:_audio margin:kDefaultMargin/2];
@@ -199,18 +203,19 @@
 
 - (void)onClickMore:(UIButton *)button
 {
-    if ([_textView isFirstResponder])
-    {
-        [_textView resignFirstResponder];
-    }
-    
-    _emoj.selected = NO;
-    
-    button.selected = !button.selected;
-    if ([_toolBarDelegate respondsToSelector:@selector(onToolBarClickMore:show:)])
-    {
-        [_toolBarDelegate onToolBarClickMore:self show:button.selected];
-    }
+    //改为发送
+//    if ([_textView isFirstResponder])
+//    {
+//        [_textView resignFirstResponder];
+//    }
+//
+//    _emoj.selected = NO;
+//
+//    button.selected = !button.selected;
+//    if ([_toolBarDelegate respondsToSelector:@selector(onToolBarClickMore:show:)])
+//    {
+//        [_toolBarDelegate onToolBarClickMore:self show:button.selected];
+//    }
 }
 
 - (void)onClikEmoj:(UIButton *)button
@@ -238,32 +243,35 @@
 
 - (void)onClickAudio:(UIButton *)button
 {
-    _audio.selected = !_audio.selected;
-    _audioPressed.hidden = !_audio.selected;
-    _textView.hidden = _audio.selected;
     
-    _audioPressed.selected = NO;
-    [_audioPressed setTitle:@"按住 说话" forState:UIControlStateNormal];
-    [_audioPressed setTitle:@"松开 结束" forState:UIControlStateSelected];
-    
-    if (!_audioPressed.hidden)
-    {
-        if ([_textView isFirstResponder])
-        {
-            [_textView resignFirstResponder];
-        }
-        // 语音模式
-        NSInteger toh = kButtonSize + 2 * kVerMargin;
-        if (toh != _contentHeight)
-        {
-            self.contentHeight = toh;
-        }
-    }
-    else
-    {
-        // 文字模式
-        [self willShowInputTextViewToHeight:[self getTextViewContentH:_textView]];
-    }
+#warning 视频聊天
+    //视频
+//    _audio.selected = !_audio.selected;
+//    _audioPressed.hidden = !_audio.selected;
+//    _textView.hidden = _audio.selected;
+//
+//    _audioPressed.selected = NO;
+//    [_audioPressed setTitle:@"按住 说话" forState:UIControlStateNormal];
+//    [_audioPressed setTitle:@"松开 结束" forState:UIControlStateSelected];
+//
+//    if (!_audioPressed.hidden)
+//    {
+//        if ([_textView isFirstResponder])
+//        {
+//            [_textView resignFirstResponder];
+//        }
+//        // 语音模式
+//        NSInteger toh = kButtonSize + 2 * kVerMargin;
+//        if (toh != _contentHeight)
+//        {
+//            self.contentHeight = toh;
+//        }
+//    }
+//    else
+//    {
+//        // 文字模式
+//        [self willShowInputTextViewToHeight:[self getTextViewContentH:_textView]];
+//    }
 }
 
 
