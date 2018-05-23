@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oac-3O-eRa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oac-3O-eRa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login Select View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -363,11 +368,76 @@
             </objects>
             <point key="canvasLocation" x="-553" y="34"/>
         </scene>
+        <!--Authen Make Money View Controller-->
+        <scene sceneID="OF1-uK-Nx3">
+            <objects>
+                <viewController storyboardIdentifier="authenMakeMoneyViewController" id="RqH-Mf-ezL" customClass="AuthenMakeMoneyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5to-qq-hRF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_money" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-cw-dUh">
+                                <rect key="frame" x="112.5" y="108.5" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="认证赚钱" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npw-Ru-CF2">
+                                <rect key="frame" x="148" y="278.5" width="80" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="让你的时间为你和他人创造更多价值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuv-QY-yNy">
+                                <rect key="frame" x="82.5" y="317.5" width="212.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-ek-uMw" customClass="MainButton">
+                                <rect key="frame" x="89" y="423.5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AYN-WM-Cg7"/>
+                                    <constraint firstAttribute="height" constant="40" id="PPO-a4-2MS"/>
+                                </constraints>
+                                <state key="normal" title="开始认证">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitAction:" destination="oaA-UD-svI" eventType="touchUpInside" id="bsD-kS-k9Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qll-cw-dUh" firstAttribute="centerY" secondItem="5to-qq-hRF" secondAttribute="centerY" constant="-150" id="N6M-6w-0dz"/>
+                            <constraint firstItem="Wuv-QY-yNy" firstAttribute="centerX" secondItem="Npw-Ru-CF2" secondAttribute="centerX" id="O6m-29-6Yz"/>
+                            <constraint firstItem="Npw-Ru-CF2" firstAttribute="top" secondItem="Qll-cw-dUh" secondAttribute="bottom" constant="20" id="XBg-hy-Ho4"/>
+                            <constraint firstItem="gXu-ek-uMw" firstAttribute="top" secondItem="Wuv-QY-yNy" secondAttribute="bottom" constant="90" id="aaY-4D-kER"/>
+                            <constraint firstItem="Qll-cw-dUh" firstAttribute="centerX" secondItem="5to-qq-hRF" secondAttribute="centerX" id="tMh-tc-ewQ"/>
+                            <constraint firstItem="Npw-Ru-CF2" firstAttribute="centerX" secondItem="Qll-cw-dUh" secondAttribute="centerX" id="wSi-ET-arE"/>
+                            <constraint firstItem="gXu-ek-uMw" firstAttribute="centerX" secondItem="Wuv-QY-yNy" secondAttribute="centerX" id="y5F-cR-WXG"/>
+                            <constraint firstItem="Wuv-QY-yNy" firstAttribute="top" secondItem="Npw-Ru-CF2" secondAttribute="bottom" constant="15" id="zwa-qt-L14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xXC-jo-v3N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F0O-wa-FXd"/>
+                    <connections>
+                        <outlet property="startBtn" destination="gXu-ek-uMw" id="fj5-Wb-Ue0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTV-5b-AUc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554" y="719"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_phone" width="65" height="65"/>
         <image name="icon_logo" width="110" height="110"/>
-        <image name="pic_avatar" width="36" height="36"/>
+        <image name="pic_avatar" width="30" height="30"/>
         <image name="pic_bg" width="375" height="667"/>
+        <image name="pic_money" width="150" height="150"/>
     </resources>
 </document>

@@ -14,6 +14,7 @@
 #import "EditProfileViewController.h"
 #import "MyWalletViewController.h"
 #import "PayViewController.h"
+#import "AuthenMakeMoneyViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -267,6 +268,13 @@ static NSString * const mineListCellId = @"mineListCellId";
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
         
+    }else if ([title isEqualToString:@"认证赚钱"]) {
+        
+        
+        AuthenMakeMoneyViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"authenMakeMoneyViewController"];
+        vc.hidesBottomBarWhenPushed = YES;
+        
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }

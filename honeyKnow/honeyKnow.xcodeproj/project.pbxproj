@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0914A89A20B5C8040085DF55 /* AuthenMakeMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */; };
 		0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930BFDD20B59C88007AD501 /* libWeChatSDK.a */; };
 		09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
 		09B6319A20B31C95000C30B8 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */; };
@@ -461,6 +462,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenMakeMoneyViewController.h; sourceTree = "<group>"; };
+		0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenMakeMoneyViewController.m; sourceTree = "<group>"; };
 		0930BFDD20B59C88007AD501 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		0930BFDF20B59C88007AD501 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1700,6 +1703,8 @@
 				09B6311620B31C95000C30B8 /* MyWalletViewController.m */,
 				FD1BA48F20B570C00060ABDC /* PayViewController.h */,
 				FD1BA49020B570C00060ABDC /* PayViewController.m */,
+				0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */,
+				0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3561,6 +3566,7 @@
 				926623381C803EEB005D26CF /* UIViewController+ADScaleTransition.m in Sources */,
 				9B0D732B1D2107C900F8C822 /* ChatSystemFacePageView.m in Sources */,
 				9266238F1C803EEB005D26CF /* RefreshView.m in Sources */,
+				0914A89A20B5C8040085DF55 /* AuthenMakeMoneyViewController.m in Sources */,
 				92121D8A1C89279100DECBD2 /* FriendProfileViewController.m in Sources */,
 				926623771C803EEB005D26CF /* SDWebImageDownloaderOperation.m in Sources */,
 				09B631B020B31C95000C30B8 /* DiscoverViewController.m in Sources */,
