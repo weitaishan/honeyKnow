@@ -73,7 +73,7 @@
 @property (nonatomic, copy) NSString* tall;
 
 /**
- 是否是老师
+ isteacher=1是主播，=5认证中
  */
 @property (nonatomic, assign) NSInteger isTeacher;
 /**
@@ -81,4 +81,19 @@
  */
 @property (nonatomic, assign) NSInteger status;
 
+/*   /spread/get  获取邀请信息，返回5002的时候引导用户进行推广员认证
+点击认证，没认证过跳转开始认证，-> 然后编辑资料
+ 如果认证通过了-> 跳转编辑资料页面，可以编辑信息
+ 
+ 
+ 收入明细页面：http://miliao.xiangchaopai.com/income_detail.html?token=
+ 支出明细页面：http://miliao.xiangchaopai.com/pay_detail.html?token=
+ 提现明细：http://miliao.xiangchaopai.com/fundout_detail.html?token=
+ 通话记录：http://miliao.xiangchaopai.com/video_detail.html?token=
+ H币明细：http://miliao.xiangchaopai.com/balance_seq.html?token=
+ 亲密榜:http://miliao.xiangchaopai.com/order_rank.html?actorId=
+ 帮助页面：http://miliao.xiangchaopai.com/help.html
+ 
+ 0571-28120452 在线客服
+*/
 @end
