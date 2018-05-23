@@ -429,6 +429,11 @@
 		FD1BA48620B5599E0060ABDC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA48520B5599D0060ABDC /* CoreMotion.framework */; };
 		FD1BA48B20B55D150060ABDC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1BA48A20B55D150060ABDC /* libWeChatSDK.a */; };
 		FD1BA48E20B55ED90060ABDC /* MJPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA48D20B55ED90060ABDC /* MJPayApi.m */; };
+		FD1BA49120B570C00060ABDC /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49020B570C00060ABDC /* PayViewController.m */; };
+		FD1BA49520B571730060ABDC /* PayStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49320B571730060ABDC /* PayStyleCell.m */; };
+		FD1BA49620B571730060ABDC /* PayStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49420B571730060ABDC /* PayStyleCell.xib */; };
+		FD1BA49A20B571970060ABDC /* PayMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49820B571970060ABDC /* PayMoneyCell.m */; };
+		FD1BA49B20B571970060ABDC /* PayMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49920B571970060ABDC /* PayMoneyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1275,6 +1280,14 @@
 		FD1BA48A20B55D150060ABDC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		FD1BA48C20B55ED80060ABDC /* MJPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPayApi.h; sourceTree = "<group>"; };
 		FD1BA48D20B55ED90060ABDC /* MJPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPayApi.m; sourceTree = "<group>"; };
+		FD1BA48F20B570C00060ABDC /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		FD1BA49020B570C00060ABDC /* PayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		FD1BA49220B571730060ABDC /* PayStyleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayStyleCell.h; sourceTree = "<group>"; };
+		FD1BA49320B571730060ABDC /* PayStyleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayStyleCell.m; sourceTree = "<group>"; };
+		FD1BA49420B571730060ABDC /* PayStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayStyleCell.xib; sourceTree = "<group>"; };
+		FD1BA49720B571970060ABDC /* PayMoneyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayMoneyCell.h; sourceTree = "<group>"; };
+		FD1BA49820B571970060ABDC /* PayMoneyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayMoneyCell.m; sourceTree = "<group>"; };
+		FD1BA49920B571970060ABDC /* PayMoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayMoneyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1674,6 +1687,8 @@
 				09B6311420B31C95000C30B8 /* MineViewController.m */,
 				09B6311520B31C95000C30B8 /* MyWalletViewController.h */,
 				09B6311620B31C95000C30B8 /* MyWalletViewController.m */,
+				FD1BA48F20B570C00060ABDC /* PayViewController.h */,
+				FD1BA49020B570C00060ABDC /* PayViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1703,6 +1718,12 @@
 				09B6312520B31C95000C30B8 /* MyWalletCell.h */,
 				09B6312620B31C95000C30B8 /* MyWalletCell.m */,
 				09B6312720B31C95000C30B8 /* MyWalletCell.xib */,
+				FD1BA49220B571730060ABDC /* PayStyleCell.h */,
+				FD1BA49320B571730060ABDC /* PayStyleCell.m */,
+				FD1BA49420B571730060ABDC /* PayStyleCell.xib */,
+				FD1BA49720B571970060ABDC /* PayMoneyCell.h */,
+				FD1BA49820B571970060ABDC /* PayMoneyCell.m */,
+				FD1BA49920B571970060ABDC /* PayMoneyCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3115,6 +3136,7 @@
 				9B0D73461D2107C900F8C822 /* 3.gif in Resources */,
 				9B0D73411D2107C900F8C822 /* 25.gif in Resources */,
 				9B0D733C1D2107C900F8C822 /* 20.gif in Resources */,
+				FD1BA49620B571730060ABDC /* PayStyleCell.xib in Resources */,
 				9B0D733D1D2107C900F8C822 /* 21.gif in Resources */,
 				9B0D73361D2107C900F8C822 /* 15.gif in Resources */,
 				9B0D734F1D2107C900F8C822 /* 7.gif in Resources */,
@@ -3169,6 +3191,7 @@
 				09B631DF20B32298000C30B8 /* Main.storyboard in Resources */,
 				9B0D734B1D2107C900F8C822 /* 34.gif in Resources */,
 				9B0D73511D2107C900F8C822 /* 9.gif in Resources */,
+				FD1BA49B20B571970060ABDC /* PayMoneyCell.xib in Resources */,
 				9B0D735C1D2107C900F8C822 /* Assets.xcassets in Resources */,
 				92A6D39D1C5B506A00065EB3 /* Assets.xcassets in Resources */,
 			);
@@ -3262,6 +3285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1BA49520B571730060ABDC /* PayStyleCell.m in Sources */,
 				926623811C803EEB005D26CF /* HUDHelper.m in Sources */,
 				92868D9F1CAA5C9900B4351B /* JSCustomBadge.m in Sources */,
 				926623991C803EEB005D26CF /* UILabel+InitMethod.m in Sources */,
@@ -3424,6 +3448,7 @@
 				9266233C1C803EEB005D26CF /* FTUtils+NSObject.m in Sources */,
 				92B5063D1C8831850026089D /* UserProfileViewController.m in Sources */,
 				928DEEE11C86909C00786C39 /* TextViewTableViewCell.m in Sources */,
+				FD1BA49120B570C00060ABDC /* PayViewController.m in Sources */,
 				92B40D9A1CA0DD34007E9B39 /* IMAContactManager+User.m in Sources */,
 				09B631C220B31C95000C30B8 /* LoginViewController.m in Sources */,
 				926624241C804EF9005D26CF /* IMAPlatform+AppConfig.m in Sources */,
@@ -3471,6 +3496,7 @@
 				926623891C803EEB005D26CF /* MenuItem.m in Sources */,
 				09B631D620B31C95000C30B8 /* Colours.m in Sources */,
 				9266233E1C803EEB005D26CF /* GTMBase64.m in Sources */,
+				FD1BA49A20B571970060ABDC /* PayMoneyCell.m in Sources */,
 				9266234A1C803EEB005D26CF /* UIImage+TintColor.m in Sources */,
 				9B0D73581D2107C900F8C822 /* TIMElemBaseTableViewCell.m in Sources */,
 				926623711C803EEB005D26CF /* MKAnnotationView+WebCache.m in Sources */,
