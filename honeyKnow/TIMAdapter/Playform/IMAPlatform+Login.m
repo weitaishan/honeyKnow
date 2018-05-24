@@ -82,28 +82,28 @@
 //            } fail:^(int code, NSString *msg) {
 //                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
 //            }];
-        [self offlineLogin];
+//        [self offlineLogin];
 
-            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
-            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
-            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
-            
-            
-            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
-            
-            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
-            APP_DELEGATE().window.rootViewController = navVC;
-            
+//            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+//            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+//            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+//
+//
+//            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+//
+//            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+//            APP_DELEGATE().window.rootViewController = navVC;
+        
 //        }
 //        else
 //        {
             [self offlineLogin];
 //            // 重新登录
-//            [self login:param succ:^{
-//                [ws registNotification];
-//                succ ? succ() : nil;
-//
-//            } fail:fail];
+            [self login:param succ:^{
+                [ws registNotification];
+                succ ? succ() : nil;
+
+            } fail:fail];
 //        }
     }];
     [alert show];

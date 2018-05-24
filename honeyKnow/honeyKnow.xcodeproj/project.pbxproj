@@ -435,6 +435,14 @@
 		FD1BA49620B571730060ABDC /* PayStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49420B571730060ABDC /* PayStyleCell.xib */; };
 		FD1BA49A20B571970060ABDC /* PayMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49820B571970060ABDC /* PayMoneyCell.m */; };
 		FD1BA49B20B571970060ABDC /* PayMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49920B571970060ABDC /* PayMoneyCell.xib */; };
+		FD1BA49E20B651980060ABDC /* EditAuthenProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */; };
+		FD1BA4A020B66ADD0060ABDC /* EditAuthenInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */; };
+		FD1BA4A420B66D300060ABDC /* EditAuthenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */; };
+		FD1BA4A520B66D300060ABDC /* EditAuthenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */; };
+		FD1BA4A820B66D3F0060ABDC /* EditAuthenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */; };
+		FD1BA4AB20B66D620060ABDC /* EditAuthenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */; };
+		FD1BA4AF20B6934F0060ABDC /* EditAuthenImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */; };
+		FD1BA4B020B6934F0060ABDC /* EditAuthenImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1291,6 +1299,19 @@
 		FD1BA49720B571970060ABDC /* PayMoneyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayMoneyCell.h; sourceTree = "<group>"; };
 		FD1BA49820B571970060ABDC /* PayMoneyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayMoneyCell.m; sourceTree = "<group>"; };
 		FD1BA49920B571970060ABDC /* PayMoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayMoneyCell.xib; sourceTree = "<group>"; };
+		FD1BA49C20B651980060ABDC /* EditAuthenProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenProfileViewController.h; sourceTree = "<group>"; };
+		FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenProfileViewController.m; sourceTree = "<group>"; };
+		FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EditAuthenInfo.json; sourceTree = "<group>"; };
+		FD1BA4A120B66D300060ABDC /* EditAuthenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenCell.h; sourceTree = "<group>"; };
+		FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenCell.m; sourceTree = "<group>"; };
+		FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAuthenCell.xib; sourceTree = "<group>"; };
+		FD1BA4A620B66D3F0060ABDC /* EditAuthenHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenHeaderView.h; sourceTree = "<group>"; };
+		FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenHeaderView.m; sourceTree = "<group>"; };
+		FD1BA4A920B66D620060ABDC /* EditAuthenModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenModel.h; sourceTree = "<group>"; };
+		FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenModel.m; sourceTree = "<group>"; };
+		FD1BA4AC20B6934F0060ABDC /* EditAuthenImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenImageCell.h; sourceTree = "<group>"; };
+		FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenImageCell.m; sourceTree = "<group>"; };
+		FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAuthenImageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1705,6 +1726,8 @@
 				FD1BA49020B570C00060ABDC /* PayViewController.m */,
 				0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */,
 				0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */,
+				FD1BA49C20B651980060ABDC /* EditAuthenProfileViewController.h */,
+				FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1713,10 +1736,13 @@
 			isa = PBXGroup;
 			children = (
 				09B6311820B31C95000C30B8 /* mineList.json */,
+				FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */,
 				09B6311920B31C95000C30B8 /* MineListModel.h */,
 				09B6311A20B31C95000C30B8 /* MineListModel.m */,
 				09B6311B20B31C95000C30B8 /* MinePersonInfoModel.h */,
 				09B6311C20B31C95000C30B8 /* MinePersonInfoModel.m */,
+				FD1BA4A920B66D620060ABDC /* EditAuthenModel.h */,
+				FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1740,6 +1766,14 @@
 				FD1BA49720B571970060ABDC /* PayMoneyCell.h */,
 				FD1BA49820B571970060ABDC /* PayMoneyCell.m */,
 				FD1BA49920B571970060ABDC /* PayMoneyCell.xib */,
+				FD1BA4A120B66D300060ABDC /* EditAuthenCell.h */,
+				FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */,
+				FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */,
+				FD1BA4A620B66D3F0060ABDC /* EditAuthenHeaderView.h */,
+				FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */,
+				FD1BA4AC20B6934F0060ABDC /* EditAuthenImageCell.h */,
+				FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */,
+				FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3183,12 +3217,15 @@
 				09B631BE20B31C95000C30B8 /* HomeListCell.xib in Resources */,
 				9B0D73311D2107C900F8C822 /* 10.gif in Resources */,
 				09B631C920B31C95000C30B8 /* MessageListCell.xib in Resources */,
+				FD1BA4A520B66D300060ABDC /* EditAuthenCell.xib in Resources */,
 				09B631C020B31C95000C30B8 /* HomeListSerachCell.xib in Resources */,
 				9B0D73431D2107C900F8C822 /* 27.gif in Resources */,
 				09B631F920B44666000C30B8 /* TLSUI.bundle in Resources */,
 				9B0D732F1D2107C900F8C822 /* 0.gif in Resources */,
 				9B0D73321D2107C900F8C822 /* 11.gif in Resources */,
 				9B6204DE1CEDC72D005409F0 /* 11.caf in Resources */,
+				FD1BA4A020B66ADD0060ABDC /* EditAuthenInfo.json in Resources */,
+				FD1BA4B020B6934F0060ABDC /* EditAuthenImageCell.xib in Resources */,
 				9B0D733B1D2107C900F8C822 /* 2.gif in Resources */,
 				09B631D320B31C95000C30B8 /* MinePersonInfoCell.xib in Resources */,
 				9B617A8B1CAE739D0051C24D /* DailyBuild-Info.plist in Resources */,
@@ -3318,8 +3355,10 @@
 				9266236F1C803EEB005D26CF /* Reachability.m in Sources */,
 				928DEED81C868B9100786C39 /* SubGroupPickerViewController.m in Sources */,
 				92D9794F1CE05898005DBB7B /* IMAConversation+ShowAPIs.m in Sources */,
+				FD1BA4AB20B66D620060ABDC /* EditAuthenModel.m in Sources */,
 				9B0D736B1D2107C900F8C822 /* IMAChatViewController.m in Sources */,
 				926623371C803EEB005D26CF /* UITableViewController+ADScaleTransititon.m in Sources */,
+				FD1BA4AF20B6934F0060ABDC /* EditAuthenImageCell.m in Sources */,
 				09B631BA20B31C95000C30B8 /* HomeViewController.m in Sources */,
 				926623391C803EEB005D26CF /* UIViewController+ADTransition.m in Sources */,
 				9B0D735B1D2107C900F8C822 /* ChatViewController.m in Sources */,
@@ -3355,6 +3394,7 @@
 				9B0D73281D2107C900F8C822 /* ChatInputPanel.m in Sources */,
 				928910F71CA941B50072CD4C /* ConnectStatusTableViewCell.m in Sources */,
 				926623731C803EEB005D26CF /* SDImageCache.m in Sources */,
+				FD1BA49E20B651980060ABDC /* EditAuthenProfileViewController.m in Sources */,
 				9266237F1C803EEB005D26CF /* UIImageView+WebCache.m in Sources */,
 				92068EFD1C858EED00414FF4 /* IMSDK+ShowAble.m in Sources */,
 				926623721C803EEB005D26CF /* NSData+ImageContentType.m in Sources */,
@@ -3413,6 +3453,7 @@
 				9266236C1C803EEB005D26CF /* MKNetworkEngine.m in Sources */,
 				9228361A1CB4F6D700677E1C /* IMAConnectConversation.m in Sources */,
 				92B5064C1C8853780026089D /* RichItemTableViewController.m in Sources */,
+				FD1BA4A820B66D3F0060ABDC /* EditAuthenHeaderView.m in Sources */,
 				09B631C520B31C95000C30B8 /* LoginTextField.m in Sources */,
 				92E793DD1C756F4E00A03ADF /* ConversationListViewController.m in Sources */,
 				09B631AC20B31C95000C30B8 /* WTSBaseViewController.m in Sources */,
@@ -3457,6 +3498,7 @@
 				92B40D9A1CA0DD34007E9B39 /* IMAContactManager+User.m in Sources */,
 				09B631C220B31C95000C30B8 /* LoginViewController.m in Sources */,
 				926624241C804EF9005D26CF /* IMAPlatform+AppConfig.m in Sources */,
+				FD1BA4A420B66D300060ABDC /* EditAuthenCell.m in Sources */,
 				9266238C1C803EEB005D26CF /* PageMenuScrollView.m in Sources */,
 				9B0D73271D2107C900F8C822 /* ChatInputBaseView.m in Sources */,
 				926623401C803EEB005D26CF /* MKMapView+ZoomLevel.m in Sources */,
