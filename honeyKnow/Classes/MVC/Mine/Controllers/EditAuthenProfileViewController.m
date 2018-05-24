@@ -91,7 +91,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     
     
     self.navigationItem.title = @"编辑认证资料";
-    [self addTableViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - StatusBarAndNavigationBarHeight)];
+    [self addTableViewWithGroupFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - StatusBarAndNavigationBarHeight)];
     
     self.tableView.backgroundColor = [UIColor whiteColor];
     
