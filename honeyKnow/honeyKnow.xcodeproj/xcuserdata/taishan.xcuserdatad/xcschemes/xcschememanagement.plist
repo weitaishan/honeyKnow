@@ -12,12 +12,12 @@
 		<key>dailybuild.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>10</integer>
 		</dict>
 		<key>honeyKnow.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>9</integer>
 		</dict>
 	</dict>
 </dict>

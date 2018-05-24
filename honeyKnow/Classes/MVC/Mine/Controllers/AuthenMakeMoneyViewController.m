@@ -7,7 +7,7 @@
 //
 
 #import "AuthenMakeMoneyViewController.h"
-
+#import "EditAuthenProfileViewController.h"
 @interface AuthenMakeMoneyViewController ()
 @property (weak, nonatomic) IBOutlet MainButton *startBtn;
 
@@ -25,6 +25,9 @@
     self.navigationItem.title = @"认证赚钱";
     [[self.startBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
+        EditAuthenProfileViewController* vc = [[EditAuthenProfileViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
         
     }];
 }

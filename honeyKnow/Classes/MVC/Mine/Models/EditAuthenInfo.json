@@ -1,0 +1,78 @@
+[
+    {
+      "data" : "",
+      "dataType" : "input",
+      "field" : "nickName",
+      "isEdit" : true,
+      "placeholder" : "请输入昵称(必填)",
+      "title" : "昵称"
+    },
+	{
+      "data" : "",
+      "dataType" : "input",
+      "field" : "telphone",
+      "isEdit" : false,
+      "placeholder" : "请输入手机号(必填)",
+      "title" : "手机号码"
+    },
+	{
+      "data" : "",
+      "dataType" : "tall",
+      "field" : "tall",
+      "isEdit" : true,
+      "placeholder" : "请设置身高(必填)",
+      "title" : "身高"
+    },
+	{
+      "data" : "",
+      "dataType" : "weight",
+      "field" : "weight",
+      "isEdit" : true,
+      "placeholder" : "请设置体重(必填)",
+      "title" : "体重"
+    }
+      ,
+	{
+      "data" : "",
+      "dataType" : "constellation",
+      "field" : "constellation",
+      "isEdit" : true,
+      "placeholder" : "请设置星座(必填)",
+      "title" : "星座"
+    },
+	{
+      "data" : "",
+      "dataType" : "location",
+      "field" : "location",
+      "isEdit" : true,
+      "placeholder" : "请设置城市(必填)",
+      "title" : "所在城市"
+    },
+	{
+      "data" : "",
+      "dataType" : "input",
+      "field" : "introduce",
+      "isEdit" : true,
+      "placeholder" : "请输入个人介绍(必填)",
+      "title" : "个人介绍"
+    },
+	{
+      "data" : "",
+      "dataType" : "marker",
+      "field" : "marker",
+      "isEdit" : true,
+      "placeholder" : "请设置形象标签(必填)",
+      "title" : "形象标签"
+    },
+	{
+      "data" : "",
+      "dataType" : "input",
+      "field" : "signName",
+      "isEdit" : true,
+      "placeholder" : "请输入个性签名(必填)",
+      "title" : "个性签名"
+    }
+      
+      
+
+]

@@ -151,33 +151,33 @@ static BOOL kIsAlertingForceOffline = NO;
 //        }
 //        else
 //        {
-//            [self offlineLogin];
+            [self offlineLogin];
 //            // 重新登录
-//            [self login:self.host.loginParm succ:^{
-//
-////                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
-//
-//                IMALoginParam *wp = [IMALoginParam loadFromLocal];
-//                [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
-//
-//                [ws registNotification];
-//
-//            } fail:^(int code, NSString *msg) {
-////                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-//            }];
+            [self login:self.host.loginParm succ:^{
+
+//                [[IMAAppDelegate sharedAppDelegate] enterMainUI];
+
+                IMALoginParam *wp = [IMALoginParam loadFromLocal];
+                [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
+
+                [ws registNotification];
+
+            } fail:^(int code, NSString *msg) {
+//                [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+            }];
 //        }
-        
-        [self offlineLogin];
-        
-        [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
-        [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
-        [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
-        
-        
-        LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
-        
-        BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
-        APP_DELEGATE().window.rootViewController = navVC;
+//
+//        [self offlineLogin];
+//
+//        [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+//        [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+//        [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+//
+//
+//        LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+//
+//        BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+//        APP_DELEGATE().window.rootViewController = navVC;
         
         
         

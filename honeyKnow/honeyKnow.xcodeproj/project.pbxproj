@@ -435,6 +435,24 @@
 		FD1BA49620B571730060ABDC /* PayStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49420B571730060ABDC /* PayStyleCell.xib */; };
 		FD1BA49A20B571970060ABDC /* PayMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49820B571970060ABDC /* PayMoneyCell.m */; };
 		FD1BA49B20B571970060ABDC /* PayMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49920B571970060ABDC /* PayMoneyCell.xib */; };
+		FD1BA49E20B651980060ABDC /* EditAuthenProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */; };
+		FD1BA4A020B66ADD0060ABDC /* EditAuthenInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */; };
+		FD1BA4A420B66D300060ABDC /* EditAuthenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */; };
+		FD1BA4A520B66D300060ABDC /* EditAuthenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */; };
+		FD1BA4A820B66D3F0060ABDC /* EditAuthenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */; };
+		FD1BA4AB20B66D620060ABDC /* EditAuthenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */; };
+		FD1BA4AF20B6934F0060ABDC /* EditAuthenImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */; };
+		FD1BA4B020B6934F0060ABDC /* EditAuthenImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */; };
+		FD1BA4C320B6C9C70060ABDC /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4B220B6C9C70060ABDC /* CityData.plist */; };
+		FD1BA4C420B6C9C70060ABDC /* NicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4B420B6C9C70060ABDC /* NicknameViewController.m */; };
+		FD1BA4C520B6C9C70060ABDC /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4B620B6C9C70060ABDC /* SignatureViewController.m */; };
+		FD1BA4C620B6C9C70060ABDC /* WYBirthdayPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4B820B6C9C70060ABDC /* WYBirthdayPickerView.m */; };
+		FD1BA4C720B6C9C70060ABDC /* WYCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4BA20B6C9C70060ABDC /* WYCityPickerView.m */; };
+		FD1BA4C820B6C9C70060ABDC /* WYGenderPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4BC20B6C9C70060ABDC /* WYGenderPickerView.m */; };
+		FD1BA4C920B6C9C70060ABDC /* WYHeightPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4BE20B6C9C70060ABDC /* WYHeightPickerView.m */; };
+		FD1BA4CA20B6C9C70060ABDC /* WYLongTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4C020B6C9C70060ABDC /* WYLongTextInputView.m */; };
+		FD1BA4CB20B6C9C70060ABDC /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4C120B6C9C70060ABDC /* 返回@2x.png */; };
+		FD1BA4CC20B6C9C70060ABDC /* 返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1BA4C220B6C9C70060ABDC /* 返回@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1291,6 +1309,36 @@
 		FD1BA49720B571970060ABDC /* PayMoneyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayMoneyCell.h; sourceTree = "<group>"; };
 		FD1BA49820B571970060ABDC /* PayMoneyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayMoneyCell.m; sourceTree = "<group>"; };
 		FD1BA49920B571970060ABDC /* PayMoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayMoneyCell.xib; sourceTree = "<group>"; };
+		FD1BA49C20B651980060ABDC /* EditAuthenProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenProfileViewController.h; sourceTree = "<group>"; };
+		FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenProfileViewController.m; sourceTree = "<group>"; };
+		FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EditAuthenInfo.json; sourceTree = "<group>"; };
+		FD1BA4A120B66D300060ABDC /* EditAuthenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenCell.h; sourceTree = "<group>"; };
+		FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenCell.m; sourceTree = "<group>"; };
+		FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAuthenCell.xib; sourceTree = "<group>"; };
+		FD1BA4A620B66D3F0060ABDC /* EditAuthenHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenHeaderView.h; sourceTree = "<group>"; };
+		FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenHeaderView.m; sourceTree = "<group>"; };
+		FD1BA4A920B66D620060ABDC /* EditAuthenModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenModel.h; sourceTree = "<group>"; };
+		FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenModel.m; sourceTree = "<group>"; };
+		FD1BA4AC20B6934F0060ABDC /* EditAuthenImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAuthenImageCell.h; sourceTree = "<group>"; };
+		FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAuthenImageCell.m; sourceTree = "<group>"; };
+		FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAuthenImageCell.xib; sourceTree = "<group>"; };
+		FD1BA4B220B6C9C70060ABDC /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		FD1BA4B320B6C9C70060ABDC /* NicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NicknameViewController.h; sourceTree = "<group>"; };
+		FD1BA4B420B6C9C70060ABDC /* NicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NicknameViewController.m; sourceTree = "<group>"; };
+		FD1BA4B520B6C9C70060ABDC /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		FD1BA4B620B6C9C70060ABDC /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
+		FD1BA4B720B6C9C70060ABDC /* WYBirthdayPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBirthdayPickerView.h; sourceTree = "<group>"; };
+		FD1BA4B820B6C9C70060ABDC /* WYBirthdayPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBirthdayPickerView.m; sourceTree = "<group>"; };
+		FD1BA4B920B6C9C70060ABDC /* WYCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCityPickerView.h; sourceTree = "<group>"; };
+		FD1BA4BA20B6C9C70060ABDC /* WYCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYCityPickerView.m; sourceTree = "<group>"; };
+		FD1BA4BB20B6C9C70060ABDC /* WYGenderPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYGenderPickerView.h; sourceTree = "<group>"; };
+		FD1BA4BC20B6C9C70060ABDC /* WYGenderPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYGenderPickerView.m; sourceTree = "<group>"; };
+		FD1BA4BD20B6C9C70060ABDC /* WYHeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHeightPickerView.h; sourceTree = "<group>"; };
+		FD1BA4BE20B6C9C70060ABDC /* WYHeightPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHeightPickerView.m; sourceTree = "<group>"; };
+		FD1BA4BF20B6C9C70060ABDC /* WYLongTextInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYLongTextInputView.h; sourceTree = "<group>"; };
+		FD1BA4C020B6C9C70060ABDC /* WYLongTextInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYLongTextInputView.m; sourceTree = "<group>"; };
+		FD1BA4C120B6C9C70060ABDC /* 返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@2x.png"; sourceTree = "<group>"; };
+		FD1BA4C220B6C9C70060ABDC /* 返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1377,6 +1425,7 @@
 		09B6301520B31C94000C30B8 /* 3third */ = {
 			isa = PBXGroup;
 			children = (
+				FD1BA4B120B6C9C70060ABDC /* WYPickerViews */,
 				FD1BA48020B559590060ABDC /* AliPay */,
 				09B6309220B31C95000C30B8 /* RevealServer.framework */,
 				09B6309320B31C95000C30B8 /* ZJScrollPageView */,
@@ -1705,6 +1754,8 @@
 				FD1BA49020B570C00060ABDC /* PayViewController.m */,
 				0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */,
 				0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */,
+				FD1BA49C20B651980060ABDC /* EditAuthenProfileViewController.h */,
+				FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1713,10 +1764,13 @@
 			isa = PBXGroup;
 			children = (
 				09B6311820B31C95000C30B8 /* mineList.json */,
+				FD1BA49F20B66ADD0060ABDC /* EditAuthenInfo.json */,
 				09B6311920B31C95000C30B8 /* MineListModel.h */,
 				09B6311A20B31C95000C30B8 /* MineListModel.m */,
 				09B6311B20B31C95000C30B8 /* MinePersonInfoModel.h */,
 				09B6311C20B31C95000C30B8 /* MinePersonInfoModel.m */,
+				FD1BA4A920B66D620060ABDC /* EditAuthenModel.h */,
+				FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1740,6 +1794,14 @@
 				FD1BA49720B571970060ABDC /* PayMoneyCell.h */,
 				FD1BA49820B571970060ABDC /* PayMoneyCell.m */,
 				FD1BA49920B571970060ABDC /* PayMoneyCell.xib */,
+				FD1BA4A120B66D300060ABDC /* EditAuthenCell.h */,
+				FD1BA4A220B66D300060ABDC /* EditAuthenCell.m */,
+				FD1BA4A320B66D300060ABDC /* EditAuthenCell.xib */,
+				FD1BA4A620B66D3F0060ABDC /* EditAuthenHeaderView.h */,
+				FD1BA4A720B66D3F0060ABDC /* EditAuthenHeaderView.m */,
+				FD1BA4AC20B6934F0060ABDC /* EditAuthenImageCell.h */,
+				FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */,
+				FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3065,6 +3127,30 @@
 			path = AliPay;
 			sourceTree = "<group>";
 		};
+		FD1BA4B120B6C9C70060ABDC /* WYPickerViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BA4B220B6C9C70060ABDC /* CityData.plist */,
+				FD1BA4B320B6C9C70060ABDC /* NicknameViewController.h */,
+				FD1BA4B420B6C9C70060ABDC /* NicknameViewController.m */,
+				FD1BA4B520B6C9C70060ABDC /* SignatureViewController.h */,
+				FD1BA4B620B6C9C70060ABDC /* SignatureViewController.m */,
+				FD1BA4B720B6C9C70060ABDC /* WYBirthdayPickerView.h */,
+				FD1BA4B820B6C9C70060ABDC /* WYBirthdayPickerView.m */,
+				FD1BA4B920B6C9C70060ABDC /* WYCityPickerView.h */,
+				FD1BA4BA20B6C9C70060ABDC /* WYCityPickerView.m */,
+				FD1BA4BB20B6C9C70060ABDC /* WYGenderPickerView.h */,
+				FD1BA4BC20B6C9C70060ABDC /* WYGenderPickerView.m */,
+				FD1BA4BD20B6C9C70060ABDC /* WYHeightPickerView.h */,
+				FD1BA4BE20B6C9C70060ABDC /* WYHeightPickerView.m */,
+				FD1BA4BF20B6C9C70060ABDC /* WYLongTextInputView.h */,
+				FD1BA4C020B6C9C70060ABDC /* WYLongTextInputView.m */,
+				FD1BA4C120B6C9C70060ABDC /* 返回@2x.png */,
+				FD1BA4C220B6C9C70060ABDC /* 返回@3x.png */,
+			);
+			path = WYPickerViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3183,16 +3269,22 @@
 				09B631BE20B31C95000C30B8 /* HomeListCell.xib in Resources */,
 				9B0D73311D2107C900F8C822 /* 10.gif in Resources */,
 				09B631C920B31C95000C30B8 /* MessageListCell.xib in Resources */,
+				FD1BA4A520B66D300060ABDC /* EditAuthenCell.xib in Resources */,
+				FD1BA4CB20B6C9C70060ABDC /* 返回@2x.png in Resources */,
 				09B631C020B31C95000C30B8 /* HomeListSerachCell.xib in Resources */,
+				FD1BA4CC20B6C9C70060ABDC /* 返回@3x.png in Resources */,
 				9B0D73431D2107C900F8C822 /* 27.gif in Resources */,
 				09B631F920B44666000C30B8 /* TLSUI.bundle in Resources */,
 				9B0D732F1D2107C900F8C822 /* 0.gif in Resources */,
 				9B0D73321D2107C900F8C822 /* 11.gif in Resources */,
 				9B6204DE1CEDC72D005409F0 /* 11.caf in Resources */,
+				FD1BA4A020B66ADD0060ABDC /* EditAuthenInfo.json in Resources */,
+				FD1BA4B020B6934F0060ABDC /* EditAuthenImageCell.xib in Resources */,
 				9B0D733B1D2107C900F8C822 /* 2.gif in Resources */,
 				09B631D320B31C95000C30B8 /* MinePersonInfoCell.xib in Resources */,
 				9B617A8B1CAE739D0051C24D /* DailyBuild-Info.plist in Resources */,
 				9B0D73331D2107C900F8C822 /* 12.gif in Resources */,
+				FD1BA4C320B6C9C70060ABDC /* CityData.plist in Resources */,
 				09B631DF20B32298000C30B8 /* Main.storyboard in Resources */,
 				9B0D734B1D2107C900F8C822 /* 34.gif in Resources */,
 				9B0D73511D2107C900F8C822 /* 9.gif in Resources */,
@@ -3308,6 +3400,7 @@
 				09B631B220B31C95000C30B8 /* DiscoverListModel.m in Sources */,
 				09B631C420B31C95000C30B8 /* LoginModel.m in Sources */,
 				9B0D73251D2107C900F8C822 /* ChatEmojView.m in Sources */,
+				FD1BA4C720B6C9C70060ABDC /* WYCityPickerView.m in Sources */,
 				926623841C803EEB005D26CF /* BaseAppDelegate.m in Sources */,
 				9B0D73651D2107C900F8C822 /* MyPttRecordBtn.m in Sources */,
 				09B631B620B31C95000C30B8 /* VideoCollectionViewCell.m in Sources */,
@@ -3318,8 +3411,10 @@
 				9266236F1C803EEB005D26CF /* Reachability.m in Sources */,
 				928DEED81C868B9100786C39 /* SubGroupPickerViewController.m in Sources */,
 				92D9794F1CE05898005DBB7B /* IMAConversation+ShowAPIs.m in Sources */,
+				FD1BA4AB20B66D620060ABDC /* EditAuthenModel.m in Sources */,
 				9B0D736B1D2107C900F8C822 /* IMAChatViewController.m in Sources */,
 				926623371C803EEB005D26CF /* UITableViewController+ADScaleTransititon.m in Sources */,
+				FD1BA4AF20B6934F0060ABDC /* EditAuthenImageCell.m in Sources */,
 				09B631BA20B31C95000C30B8 /* HomeViewController.m in Sources */,
 				926623391C803EEB005D26CF /* UIViewController+ADTransition.m in Sources */,
 				9B0D735B1D2107C900F8C822 /* ChatViewController.m in Sources */,
@@ -3335,6 +3430,7 @@
 				928DEF1B1C8719D100786C39 /* IMAContactManager+SubGroup.m in Sources */,
 				9B0D73641D2107C900F8C822 /* MyMoreView.m in Sources */,
 				9BBA0F001CAD08D2002D34BA /* BlackListViewController.m in Sources */,
+				FD1BA4CA20B6C9C70060ABDC /* WYLongTextInputView.m in Sources */,
 				926623A91C803EEB005D26CF /* IMAConversation.m in Sources */,
 				92C83BC51C89752000718456 /* IMAGroupMember.m in Sources */,
 				09B631B320B31C95000C30B8 /* VideoModel.m in Sources */,
@@ -3355,6 +3451,7 @@
 				9B0D73281D2107C900F8C822 /* ChatInputPanel.m in Sources */,
 				928910F71CA941B50072CD4C /* ConnectStatusTableViewCell.m in Sources */,
 				926623731C803EEB005D26CF /* SDImageCache.m in Sources */,
+				FD1BA49E20B651980060ABDC /* EditAuthenProfileViewController.m in Sources */,
 				9266237F1C803EEB005D26CF /* UIImageView+WebCache.m in Sources */,
 				92068EFD1C858EED00414FF4 /* IMSDK+ShowAble.m in Sources */,
 				926623721C803EEB005D26CF /* NSData+ImageContentType.m in Sources */,
@@ -3367,6 +3464,7 @@
 				926623351C803EEB005D26CF /* ADScaleTransition.m in Sources */,
 				09B631A520B31C95000C30B8 /* UIScrollView+EmptyDataSet.m in Sources */,
 				926623511C803EEB005D26CF /* UIView+ModifyFrame.m in Sources */,
+				FD1BA4C820B6C9C70060ABDC /* WYGenderPickerView.m in Sources */,
 				09B6319E20B31C95000C30B8 /* ZJScrollPageView.m in Sources */,
 				9266235B1C803EEB005D26CF /* MoreTableView.m in Sources */,
 				92E69AD51CA3D87C0011D1F0 /* MyProfileViewController.m in Sources */,
@@ -3412,7 +3510,9 @@
 				926623F51C8042D1005D26CF /* LibraryViewController.m in Sources */,
 				9266236C1C803EEB005D26CF /* MKNetworkEngine.m in Sources */,
 				9228361A1CB4F6D700677E1C /* IMAConnectConversation.m in Sources */,
+				FD1BA4C520B6C9C70060ABDC /* SignatureViewController.m in Sources */,
 				92B5064C1C8853780026089D /* RichItemTableViewController.m in Sources */,
+				FD1BA4A820B66D3F0060ABDC /* EditAuthenHeaderView.m in Sources */,
 				09B631C520B31C95000C30B8 /* LoginTextField.m in Sources */,
 				92E793DD1C756F4E00A03ADF /* ConversationListViewController.m in Sources */,
 				09B631AC20B31C95000C30B8 /* WTSBaseViewController.m in Sources */,
@@ -3457,6 +3557,7 @@
 				92B40D9A1CA0DD34007E9B39 /* IMAContactManager+User.m in Sources */,
 				09B631C220B31C95000C30B8 /* LoginViewController.m in Sources */,
 				926624241C804EF9005D26CF /* IMAPlatform+AppConfig.m in Sources */,
+				FD1BA4A420B66D300060ABDC /* EditAuthenCell.m in Sources */,
 				9266238C1C803EEB005D26CF /* PageMenuScrollView.m in Sources */,
 				9B0D73271D2107C900F8C822 /* ChatInputBaseView.m in Sources */,
 				926623401C803EEB005D26CF /* MKMapView+ZoomLevel.m in Sources */,
@@ -3537,6 +3638,7 @@
 				9B8D314A1CAA70B5003EFCAE /* SearchGroupResultCell.m in Sources */,
 				926623531C803EEB005D26CF /* UIViewController+ChildViewController.m in Sources */,
 				9B0D73711D2107C900F8C822 /* RichChatTableViewCell.m in Sources */,
+				FD1BA4C420B6C9C70060ABDC /* NicknameViewController.m in Sources */,
 				920872FE1C8D1774006646B1 /* IMAPlatform+Friend.m in Sources */,
 				09B631D020B31C95000C30B8 /* MineItemView.m in Sources */,
 				926623411C803EEB005D26CF /* NSData+Common.m in Sources */,
@@ -3564,6 +3666,7 @@
 				9B0D73261D2107C900F8C822 /* ChatFunctionPanel.m in Sources */,
 				9266238B1C803EEB005D26CF /* NSObject+loadPadClass.m in Sources */,
 				926623381C803EEB005D26CF /* UIViewController+ADScaleTransition.m in Sources */,
+				FD1BA4C620B6C9C70060ABDC /* WYBirthdayPickerView.m in Sources */,
 				9B0D732B1D2107C900F8C822 /* ChatSystemFacePageView.m in Sources */,
 				9266238F1C803EEB005D26CF /* RefreshView.m in Sources */,
 				0914A89A20B5C8040085DF55 /* AuthenMakeMoneyViewController.m in Sources */,
@@ -3576,6 +3679,7 @@
 				926623651C803EEB005D26CF /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				09B631C120B31C95000C30B8 /* LoginSelectViewController.m in Sources */,
 				926623501C803EEB005D26CF /* UIView+Glow.m in Sources */,
+				FD1BA4C920B6C9C70060ABDC /* WYHeightPickerView.m in Sources */,
 				92B506551C8862FA0026089D /* UserActionButton.m in Sources */,
 				09B631CE20B31C95000C30B8 /* MineListModel.m in Sources */,
 				926623581C803EEB005D26CF /* KeyValueTableViewController.m in Sources */,
