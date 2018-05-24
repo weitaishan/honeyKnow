@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SetLabelItem;
 @interface SetLabelCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+@property (nonatomic, strong) SetLabelItem* model;
 @end

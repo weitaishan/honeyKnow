@@ -7,7 +7,7 @@
 //
 
 #import "SetLabelCell.h"
-
+#import "SetLabelModel.h"
 @implementation SetLabelCell
 
 - (void)awakeFromNib {
@@ -15,4 +15,10 @@
     // Initialization code
 }
 
+-(void)setModel:(SetLabelItem *)model{
+    
+    _model = model;
+    [_button setTitle:model.name forState:UIControlStateNormal];
+    
+}
 @end

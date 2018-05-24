@@ -7,7 +7,11 @@
 //
 
 #import "WTSBaseViewController.h"
+typedef void(^MarketBlock)(NSMutableArray* marketArr);
 
 @interface SetLabelViewController : WTSBaseViewController
 
+@property (nonatomic, copy) MarketBlock marketBlock;
+
+@property (nonatomic, strong) NSMutableArray* selectArray;
 @end

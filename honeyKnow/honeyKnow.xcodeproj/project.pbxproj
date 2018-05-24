@@ -23,6 +23,10 @@
 
 /* Begin PBXBuildFile section */
 		0914A89A20B5C8040085DF55 /* AuthenMakeMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */; };
+		0914A89D20B6F4FA0085DF55 /* SetLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89C20B6F4FA0085DF55 /* SetLabelViewController.m */; };
+		0914A8A120B6F60C0085DF55 /* SetLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89F20B6F60C0085DF55 /* SetLabelCell.m */; };
+		0914A8A220B6F60C0085DF55 /* SetLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0914A8A020B6F60C0085DF55 /* SetLabelCell.xib */; };
+		0914A8A520B6F7650085DF55 /* SetLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A8A420B6F7650085DF55 /* SetLabelModel.m */; };
 		0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930BFDD20B59C88007AD501 /* libWeChatSDK.a */; };
 		09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
 		09B6319A20B31C95000C30B8 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */; };
@@ -482,6 +486,13 @@
 /* Begin PBXFileReference section */
 		0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenMakeMoneyViewController.h; sourceTree = "<group>"; };
 		0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenMakeMoneyViewController.m; sourceTree = "<group>"; };
+		0914A89B20B6F4FA0085DF55 /* SetLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetLabelViewController.h; sourceTree = "<group>"; };
+		0914A89C20B6F4FA0085DF55 /* SetLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetLabelViewController.m; sourceTree = "<group>"; };
+		0914A89E20B6F60C0085DF55 /* SetLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetLabelCell.h; sourceTree = "<group>"; };
+		0914A89F20B6F60C0085DF55 /* SetLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetLabelCell.m; sourceTree = "<group>"; };
+		0914A8A020B6F60C0085DF55 /* SetLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetLabelCell.xib; sourceTree = "<group>"; };
+		0914A8A320B6F7650085DF55 /* SetLabelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetLabelModel.h; sourceTree = "<group>"; };
+		0914A8A420B6F7650085DF55 /* SetLabelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetLabelModel.m; sourceTree = "<group>"; };
 		0930BFDD20B59C88007AD501 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		0930BFDF20B59C88007AD501 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1756,6 +1767,8 @@
 				0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */,
 				FD1BA49C20B651980060ABDC /* EditAuthenProfileViewController.h */,
 				FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */,
+				0914A89B20B6F4FA0085DF55 /* SetLabelViewController.h */,
+				0914A89C20B6F4FA0085DF55 /* SetLabelViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1771,6 +1784,8 @@
 				09B6311C20B31C95000C30B8 /* MinePersonInfoModel.m */,
 				FD1BA4A920B66D620060ABDC /* EditAuthenModel.h */,
 				FD1BA4AA20B66D620060ABDC /* EditAuthenModel.m */,
+				0914A8A320B6F7650085DF55 /* SetLabelModel.h */,
+				0914A8A420B6F7650085DF55 /* SetLabelModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1802,6 +1817,9 @@
 				FD1BA4AC20B6934F0060ABDC /* EditAuthenImageCell.h */,
 				FD1BA4AD20B6934F0060ABDC /* EditAuthenImageCell.m */,
 				FD1BA4AE20B6934F0060ABDC /* EditAuthenImageCell.xib */,
+				0914A89E20B6F60C0085DF55 /* SetLabelCell.h */,
+				0914A89F20B6F60C0085DF55 /* SetLabelCell.m */,
+				0914A8A020B6F60C0085DF55 /* SetLabelCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3226,6 +3244,7 @@
 				9B0D734A1D2107C900F8C822 /* 33.gif in Resources */,
 				9B0D73461D2107C900F8C822 /* 3.gif in Resources */,
 				9B0D73411D2107C900F8C822 /* 25.gif in Resources */,
+				0914A8A220B6F60C0085DF55 /* SetLabelCell.xib in Resources */,
 				9B0D733C1D2107C900F8C822 /* 20.gif in Resources */,
 				FD1BA49620B571730060ABDC /* PayStyleCell.xib in Resources */,
 				9B0D733D1D2107C900F8C822 /* 21.gif in Resources */,
@@ -3514,6 +3533,7 @@
 				92B5064C1C8853780026089D /* RichItemTableViewController.m in Sources */,
 				FD1BA4A820B66D3F0060ABDC /* EditAuthenHeaderView.m in Sources */,
 				09B631C520B31C95000C30B8 /* LoginTextField.m in Sources */,
+				0914A8A520B6F7650085DF55 /* SetLabelModel.m in Sources */,
 				92E793DD1C756F4E00A03ADF /* ConversationListViewController.m in Sources */,
 				09B631AC20B31C95000C30B8 /* WTSBaseViewController.m in Sources */,
 				09B631AD20B31C95000C30B8 /* WTSHttpTool.m in Sources */,
@@ -3645,7 +3665,9 @@
 				9266237A1C803EEB005D26CF /* UIButton+WebCache.m in Sources */,
 				92D895A21C7C7CF200C7380B /* GroupProfileViewController.m in Sources */,
 				92B5064F1C88578C0026089D /* UserProfileHeaderView.m in Sources */,
+				0914A8A120B6F60C0085DF55 /* SetLabelCell.m in Sources */,
 				926623611C803EEB005D26CF /* IOSDeviceConfig.m in Sources */,
+				0914A89D20B6F4FA0085DF55 /* SetLabelViewController.m in Sources */,
 				926623821C803EEB005D26CF /* MBProgressHUD.m in Sources */,
 				9266234E1C803EEB005D26CF /* UIView+CustomAutoLayout.m in Sources */,
 				926623871C803EEB005D26CF /* CommonBaseViewController.m in Sources */,

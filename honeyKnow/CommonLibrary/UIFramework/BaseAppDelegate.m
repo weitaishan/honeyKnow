@@ -149,6 +149,7 @@
     
     NSString* userToken = [NSUSERDEFAULTS objectForKey:USER_TOKEN];
     userToken = @"12865228719696567037082488652515";
+    [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
     if (userToken.length > 0) {
         
         [[SystemService shareInstance] ILiveLogin];

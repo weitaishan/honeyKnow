@@ -74,4 +74,10 @@ static NSString * const URL_USER_GET = @"user/get";
 /** 支付*/
 static NSString * const URL_PAYMENT_PAY = @"payment/pay";
 
+/** 获取标签*/
+static NSString * const URL_GET_MARKET_LIST = @"marker/list";
+
+/** 更新用户个人标签*/
+static NSString * const URL_MARKET_UPDATE = @"user/marker/update";
+
 #endif /* Urls_h */

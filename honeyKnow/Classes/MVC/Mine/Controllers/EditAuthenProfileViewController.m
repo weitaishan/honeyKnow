@@ -10,10 +10,10 @@
 #import "EditAuthenCell.h"
 #import "EditAuthenHeaderView.h"
 #import "EditAuthenModel.h"
+#import "SetLabelViewController.h"
+#import "SetLabelModel.h"
 
 #define TEXTFIELD_TAG 500
-#define myDotNumbers     @"0123456789.\n"
-#define myNumbers        @"0123456789\n"
 
 @interface EditAuthenProfileViewController ()<UITextFieldDelegate>
 
@@ -28,6 +28,8 @@
 @property (nonatomic, strong) MainButton* submitBtn;
 
 @property (nonatomic, assign) BOOL isRac;
+
+@property (nonatomic, strong) NSMutableArray* selectArray;
 
 @end
 
@@ -151,9 +153,15 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 
     EditAuthenModel* model = self.listArray[textField.tag - TEXTFIELD_TAG];
     
+    
     model.data = textField.text;
     
+    if ([model.dataType isEqualToString:@"marker"]) {
+        
+        return;
+    }
     [self.jsonDic setObject:model.data ? model.data : @"" forKey:model.field ? model.field : @""];
+    
     
     
     if (_isRac) {
@@ -318,9 +326,9 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (self.imgArr.count > 4) {
-        return 200;
+        return 204;
     }
-    return 100;
+    return 106;
 }
 
 
@@ -373,9 +381,32 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     
     EditAuthenCell* cell = (EditAuthenCell *)textField.superview.superview;
     
-//    EditAuthenModel* cellModel = cell.model;
+    EditAuthenModel* cellModel = cell.model;
     
-    //    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
+    
+    if ([cellModel.dataType isEqualToString:@"input"]) {
+        
+        return YES;
+    }else if ([cellModel.dataType isEqualToString:@"marker"]){
+        
+        
+        SetLabelViewController* vc = [[SetLabelViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.marketBlock = ^(NSMutableArray *marketArr) {
+          
+            self.selectArray = marketArr;
+            NSMutableArray* markerNameArr = @[].mutableCopy;
+            
+            for (SetLabelItem* labelModel in marketArr) {
+                
+                [markerNameArr addObject:labelModel.name ? labelModel.name : @""];
+            }
+            textField.text = [markerNameArr componentsJoinedByString:@","];
+            cellModel.data = textField.text;
+        };
+        vc.selectArray = self.selectArray;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     
 //    if ([cellModel.dataType isEqualToString:@"address"]) {
 //
@@ -538,7 +569,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 //
 //    }
     
-    return YES;
+    return NO;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{

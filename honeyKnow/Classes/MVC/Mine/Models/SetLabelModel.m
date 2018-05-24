@@ -1,3 +1,4 @@
+
 //
 //  SetLabelModel.m
 //  honeyKnow
@@ -9,5 +10,17 @@
 #import "SetLabelModel.h"
 
 @implementation SetLabelModel
+
++ (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
+    return @{
+             @"data" : [SetLabelItem class]
+             };
+}
+
+
+@end
+
+@implementation SetLabelItem
+
 
 @end
