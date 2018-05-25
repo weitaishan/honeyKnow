@@ -178,6 +178,8 @@
                 [NSUSERDEFAULTS setValue:loginModel.identifier forKey:USER_IDENTIFIER];
                 [NSUSERDEFAULTS setValue:loginModel.token forKey:USER_TOKEN];
                 [NSUSERDEFAULTS setValue:loginModel.userSig forKey:USER_USERSIG];
+                [NSUSERDEFAULTS setValue:self.phoneTF.text forKey:USER_TELPHONE];
+
                 [NSUSERDEFAULTS synchronize];
                 
                 [[[IMALoginViewController alloc] init] loging];

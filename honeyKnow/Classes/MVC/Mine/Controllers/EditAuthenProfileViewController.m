@@ -13,6 +13,8 @@
 #import "SetLabelViewController.h"
 #import "SetLabelModel.h"
 
+#define HEDER_HEIGHT ((SCREEN_WIDTH - 20) / 4.f)
+
 #define TEXTFIELD_TAG 500
 
 @interface EditAuthenProfileViewController ()<UITextFieldDelegate>
@@ -326,9 +328,9 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (self.imgArr.count > 4) {
-        return 204;
+        return HEDER_HEIGHT + 3*9;
     }
-    return 106;
+    return HEDER_HEIGHT + 2*9;
 }
 
 
@@ -350,9 +352,16 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
         
         NSLog(@"编辑资料json = %@",path);
         
+        NSString* userTelPhone = [NSUSERDEFAULTS objectForKey:USER_TELPHONE];
+
         for (NSDictionary* dic in array) {
             
             EditAuthenModel* model = [EditAuthenModel yy_modelWithDictionary:dic];
+            
+            if ([model.field isEqualToString:@"telphone"]) {
+                
+                model.data = userTelPhone;
+            }
             [_listArray addObject:model];
 
         }
@@ -384,7 +393,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     EditAuthenModel* cellModel = cell.model;
     
     
-    if ([cellModel.dataType isEqualToString:@"input"]) {
+    if ([cellModel.dataType isEqualToString:@"input"] && cellModel.isEdit) {
         
         return YES;
     }else if ([cellModel.dataType isEqualToString:@"marker"]){
