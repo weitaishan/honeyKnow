@@ -9,6 +9,8 @@
 #import "MyWalletViewController.h"
 #import "MessageListModel.h"
 #import "MyWalletCell.h"
+#import "WithdrawAuthenViewController.h"
+
 @interface MyWalletViewController ()
 @property (nonatomic, strong) NSMutableArray<NSArray *>* listArray;
 
@@ -154,7 +156,70 @@ static NSString * const myWalletCellId = @"myWalletCellId";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    switch (indexPath.section) {
+        case 0:{
+            
+            
+            switch (indexPath.row) {
+                case 0:
+                {
+                    
+                    NSLog(@"充值");
+                    
+                }
+                    break;
+                case 1:
+                {
+                    NSLog(@"提现");
+                    WithdrawAuthenViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"withdrawAuthenViewController"];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    
+                    
+                    [self.navigationController pushViewController:vc animated:YES];
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            
+            break;
+            
+        case 1:{
+            
+            
+            switch (indexPath.row) {
+                case 0:
+                {
+                    
+                    NSLog(@"收入明细");
+                    
+                }
+                    break;
+                case 1:
+                {
+                    NSLog(@"支出明细");
+                    
+                    
+                }
+                    break;
+                    
+                case 2:
+                {
+                    
+                    NSLog(@"提现明细");
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - 懒加载

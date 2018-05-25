@@ -9,7 +9,6 @@
 #import "PayViewController.h"
 #import "PayStyleCell.h"
 #import "PayMoneyCell.h"
-
 @interface PayViewController ()
 
 @property (nonatomic, strong) NSMutableArray * listArray;

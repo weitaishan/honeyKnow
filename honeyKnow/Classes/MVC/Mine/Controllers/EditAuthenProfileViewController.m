@@ -33,6 +33,8 @@
 
 @property (nonatomic, strong) NSMutableArray* selectArray;
 
+@property (nonatomic, assign) BOOL isSubmit;
+
 @end
 
 static NSString * const editAuthenCellId = @"editAuthenCellId";
@@ -103,25 +105,13 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([EditAuthenCell class]) bundle:nil]  forCellReuseIdentifier:editAuthenCellId];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textValueChange:) name:UITextFieldTextDidChangeNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textValueChange:) name:UITextFieldTextDidChangeNotification object:nil];
     
     WeakSelf;
     [[self.submitBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
         NSLog(@"jsonDic = %@",weakSelf.jsonDic);
-//        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_USER_UPDATE params:weakSelf.jsonDic success:^(id response) {
-//
-//
-//            if ([response[@"success"] integerValue]){
-//
-//                [self.navigationController popViewControllerAnimated:YES];
-//
-//            }
-//
-//        } failure:^(NSError *error) {
-//
-//
-//        }];
+        [self submitAction];
         
     }];
     
@@ -130,106 +120,149 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 
 -(void)dealloc{
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)textValueChange:(NSNotification *)notif{
-    
-    NSLog(@"submit json = %@",self.jsonDic);
+//- (void)textValueChange:(NSNotification *)notif{
+//
+//    NSLog(@"submit json = %@",self.jsonDic);
+//
+//    UITextField* textField = notif.object;
+//
+//    if (@available(iOS 11.0, *)){
+//
+//        if (![textField.superview.superview.superview.superview isEqual:self.view]) {
+//            return;
+//        }
+//
+//    }else{
+//
+//        if (![textField.superview.superview.superview.superview.superview isEqual:self.view]) {
+//            return;
+//        }
+//    }
+//
+//    NSLog(@"textField text = %@, tag = %ld",textField.text,textField.tag);
+//
+//
+//    EditAuthenModel* model = self.listArray[textField.tag - TEXTFIELD_TAG];
+//
+//
+//    model.data = textField.text;
+//
+//
+//    [self.jsonDic setObject:model.data ? model.data : @"" forKey:model.field ? model.field : @""];
+//
+//
+//
+//    [self textChangeTextField:textField];
+//
+//
+//
+//
+//}
 
-    UITextField* textField = notif.object;
+- (void)textChangeTextField:(UITextField* )textField{
+
+    if (_isRac) {
+
+        _isRac = NO;
+        NSMutableArray<RACSignal *>* rac = @[].mutableCopy;
+        for (UIView* subViews in textField.superview.superview.superview.subviews) {
+
+            NSLog(@"textField subViews = %@",subViews);
+
+            if ([subViews isKindOfClass:[EditAuthenCell class]]) {
+
+                NSLog(@"textField EditAuthenCell = %@",subViews.subviews);
+
+                for (UIView* subTwo in subViews.subviews) {
+
+
+                    if ([subTwo isKindOfClass:NSClassFromString(@"UITableViewCellContentView")]) {
+
+                        NSLog(@"textField UITableViewCellContentView = %@",subTwo.subviews);
+
+                        for (UIView* subThree in subTwo.subviews) {
+
+                            if ([subThree isKindOfClass:NSClassFromString(@"UITextField")]) {
+
+                                UITextField* myTextField = (UITextField *)subThree;
+                                [myTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
+
+                                [rac addObject:[ myTextField rac_signalForControlEvents:UIControlEventEditingChanged]];
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
     
-    if (@available(iOS 11.0, *)){
         
-        if (![textField.superview.superview.superview.superview isEqual:self.view]) {
-            return;
-        }
         
-    }else{
-        
-        if (![textField.superview.superview.superview.superview.superview isEqual:self.view]) {
-            return;
-        }
+//        RAC(_submitBtn, userInteractionEnabled) = [RACSignal combineLatest:rac reduce:^id _Nullable(NSString * nickName,NSString * telphone,NSString * tall,NSString * weight,NSString * constellation,NSString * location,NSString * introduce,NSString * marker,NSString * signName){
+//
+//            NSNumber* num =  @(nickName.length && telphone.length && tall.length && weight.length && constellation.length && location.length && introduce.length && marker.length && signName.length);
+//
+//            if ([num isEqual: @1]) {
+//
+//                self.submitBtn.isBgImage = YES;
+//            }else{
+//
+//                self.submitBtn.isBgImage = NO;
+//
+//            }
+//            return num;
+//        }];
     }
+}
+- (void)textFieldChanged:(UITextField *)textField{
     
-    NSLog(@"textField text = %@, tag = %ld",textField.text,textField.tag);
-    
-
     EditAuthenModel* model = self.listArray[textField.tag - TEXTFIELD_TAG];
     
     
     model.data = textField.text;
     
-    if ([model.dataType isEqualToString:@"marker"]) {
-        
-        return;
-    }
-    [self.jsonDic setObject:model.data ? model.data : @"" forKey:model.field ? model.field : @""];
     
-    
-    
-    if (_isRac) {
-        
-        _isRac = NO;
-        NSMutableArray<RACSignal *>* rac = @[].mutableCopy;
-        for (UIView* subViews in textField.superview.superview.superview.subviews) {
-            
-            NSLog(@"textField subViews = %@",subViews);
-            
-            if ([subViews isKindOfClass:[EditAuthenCell class]]) {
-                
-                NSLog(@"textField EditAuthenCell = %@",subViews.subviews);
-                
-                for (UIView* subTwo in subViews.subviews) {
-                    
-                    
-                    if ([subTwo isKindOfClass:NSClassFromString(@"UITableViewCellContentView")]) {
-                        
-                        NSLog(@"textField UITableViewCellContentView = %@",subTwo.subviews);
-                        
-                        for (UIView* subThree in subTwo.subviews) {
-                            
-                            if ([subThree isKindOfClass:NSClassFromString(@"UITextField")]) {
-                                
-                                UITextField* myTextField = (UITextField *)subThree;
-                                
-                                [rac addObject: myTextField.rac_textSignal];
-                                
-                            }
-                            
-                        }
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        }
-        
-        
-        
-        RAC(_submitBtn, userInteractionEnabled) = [RACSignal combineLatest:rac reduce:^id _Nullable(NSString * nickName,NSString * telphone,NSString * tall,NSString * weight,NSString * constellation,NSString * location,NSString * introduce,NSString * marker,NSString * signName){
-            
-            NSNumber* num =  @(nickName.length && telphone.length && tall.length && weight.length && constellation.length && location.length && introduce.length && marker.length && signName.length);
-            
-            if ([num isEqual: @1]) {
-                
-                self.submitBtn.isBgImage = YES;
-            }else{
-                
-                self.submitBtn.isBgImage = NO;
+    if (model.data.length) {
+        [self.jsonDic setObject:model.data ? model.data : @"" forKey:model.field ? model.field : @""];
 
-            }
-            return num;
-        }];
+        
+    }else{
+        
+        [self.jsonDic removeObjectForKey:model.field ? model.field : @""];
+
     }
     
     
     
+//    [self textChangeTextField:textField];
     
+    [self submitBtnIsClick];
 }
 
+- (void)submitBtnIsClick{
+    
+    NSLog(@"submit json = %@",self.jsonDic);
+    
+    
+    if (self.jsonDic.count == self.listArray.count && self.imgArr.count) {
+        
+        self.submitBtn.isBgImage = YES;
+        self.submitBtn.userInteractionEnabled = YES;
+    }else{
+        
+        self.submitBtn.isBgImage = NO;
+        self.submitBtn.userInteractionEnabled = NO;
+        
+    }
+}
 #pragma mark - 代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
@@ -316,6 +349,8 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
       
         self.imgArr = imgArr;
         self.assets = assets;
+        [self submitBtnIsClick];
+
         [self.tableView reloadData];
         
     };
@@ -362,7 +397,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
             if ([model.field isEqualToString:@"telphone"]) {
                 
                 model.data = [NSUSERDEFAULTS objectForKey:USER_TELPHONE];
-
+                [self.jsonDic setObject:model.data ? model.data : @"" forKey:model.field];
             }
             [_listArray addObject:model];
 
@@ -390,6 +425,9 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     
+    
+    [self textChangeTextField:textField];
+    
     EditAuthenCell* cell = (EditAuthenCell *)textField.superview.superview;
     
     EditAuthenModel* cellModel = cell.model;
@@ -400,7 +438,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
         return YES;
     }else if ([cellModel.dataType isEqualToString:@"marker"]){
         
-        
+        [self.view endEditing:YES];
         SetLabelViewController* vc = [[SetLabelViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         vc.marketBlock = ^(NSMutableArray *marketArr) {
@@ -414,12 +452,15 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
             }
             textField.text = [markerNameArr componentsJoinedByString:@","];
             cellModel.data = textField.text;
+            [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+            [self submitBtnIsClick];
         };
-        vc.selectArray = self.selectArray;
+        vc.oldArray = self.selectArray;
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([cellModel.dataType isEqualToString:@"tall"]){
         
-        
+        [self.view endEditing:YES];
+
         WTSHeightPickerView *heightPickerView = [[WTSHeightPickerView alloc] initWithInitialHeight:textField.text];
         
         heightPickerView.confirmBlock = ^(NSString *selectedHeight) {
@@ -427,13 +468,16 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
             textField.text = selectedHeight;
             cellModel.data = textField.text;
             [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+            [self submitBtnIsClick];
+
         };
         [self.tableView addSubview:heightPickerView];
 
 
     }else if ([cellModel.dataType isEqualToString:@"weight"]){
         
-        
+        [self.view endEditing:YES];
+
         WTSWeightPickerView *weightPickerView = [[WTSWeightPickerView alloc] initWithInitialWeight:textField.text];
         
         weightPickerView.confirmBlock = ^(NSString *selectedWeight) {
@@ -441,13 +485,16 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
             textField.text = selectedWeight;
             cellModel.data = textField.text;
             [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+            [self submitBtnIsClick];
+
         };
         [self.tableView addSubview:weightPickerView];
         
         
     }else if ([cellModel.dataType isEqualToString:@"constellation"]){
         
-        
+        [self.view endEditing:YES];
+
         WTSConstellationPickerView *constellationPickerView = [[WTSConstellationPickerView alloc] initWithInitialConstellation:textField.text];
         
         constellationPickerView.confirmBlock = ^(NSString *selectedConstellation) {
@@ -455,13 +502,16 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
             textField.text = selectedConstellation;
             cellModel.data = textField.text;
             [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+            [self submitBtnIsClick];
+
         };
         [self.tableView addSubview:constellationPickerView];
         
         
     }else if ([cellModel.dataType isEqualToString:@"location"]){
         
-        
+        [self.view endEditing:YES];
+
         WTSCityPickerView *cityPickerView = [[WTSCityPickerView alloc] initWithInitialCity:textField.text];
         
         cityPickerView.confirmBlock = ^(NSString *selectedCity) {
@@ -475,6 +525,8 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
                 address = addressCodeArr.lastObject;
             }
             [self.jsonDic setObject:address.length ? address : @"杭州" forKey:cellModel.field];
+            [self submitBtnIsClick];
+
         };
         [self.tableView addSubview:cityPickerView];
         
@@ -490,7 +542,39 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     return YES;
 }
 
+- (void)submitAction{
+    
+    
+    self.submitBtn.userInteractionEnabled = NO;
+    
+    [MBProgressHUD showHUDAddedTo:GET_WINDOW animated:YES];
+    [WTSHttpTool uploadImagesWithType:UploadTypeAvatar picFileName:@"编辑资料图片" images:self.imgArr success:^(NSString * imageUrls) {
+        [MBProgressHUD hideHUDForView:GET_WINDOW animated:YES];
 
+        [self.jsonDic setObject:imageUrls ? imageUrls : @"" forKey:@"imgs"];
+        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_USER_UPDATE params:self.jsonDic success:^(id response) {
+            
+            if ([response[@"success"] integerValue]){
+                [self addToast:@"提交认证成功"];
+
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                
+            }
+            
+        } failure:^(NSError *error) {
+            
+            [self addToast:@"提交认证失败"];
+        }];
+        
+        
+    } failure:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:GET_WINDOW animated:YES];
+
+    }];
+    
+
+    
+}
 - (void)saveAddCustomerInfo{
     
     

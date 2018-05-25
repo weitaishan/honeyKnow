@@ -455,6 +455,7 @@
 		FD1BA4CA20B6C9C70060ABDC /* WTSLongTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4C020B6C9C70060ABDC /* WTSLongTextInputView.m */; };
 		FD1BA4D720B7B1910060ABDC /* WTSWeightPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4D320B7B1900060ABDC /* WTSWeightPickerView.m */; };
 		FD1BA4D820B7B1910060ABDC /* WTSConstellationPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4D420B7B1900060ABDC /* WTSConstellationPickerView.m */; };
+		FD1BA4DC20B7EBD70060ABDC /* WithdrawAuthenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4DB20B7EBD70060ABDC /* WithdrawAuthenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1347,6 +1348,8 @@
 		FD1BA4D520B7B1900060ABDC /* WTSWeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSWeightPickerView.h; sourceTree = "<group>"; };
 		FD1BA4D620B7B1900060ABDC /* WTSConstellationPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSConstellationPickerView.h; sourceTree = "<group>"; };
 		FD1BA4D920B7B4840060ABDC /* WTSPickerHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTSPickerHeaders.h; sourceTree = "<group>"; };
+		FD1BA4DA20B7EBD70060ABDC /* WithdrawAuthenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawAuthenViewController.h; sourceTree = "<group>"; };
+		FD1BA4DB20B7EBD70060ABDC /* WithdrawAuthenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawAuthenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1766,6 +1769,8 @@
 				FD1BA49D20B651980060ABDC /* EditAuthenProfileViewController.m */,
 				0914A89B20B6F4FA0085DF55 /* SetLabelViewController.h */,
 				0914A89C20B6F4FA0085DF55 /* SetLabelViewController.m */,
+				FD1BA4DA20B7EBD70060ABDC /* WithdrawAuthenViewController.h */,
+				FD1BA4DB20B7EBD70060ABDC /* WithdrawAuthenViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3626,6 +3631,7 @@
 				9B0D73541D2107C900F8C822 /* IMAMsg+UITableViewCell.m in Sources */,
 				926623551C803EEB005D26CF /* CheckButton.m in Sources */,
 				9B0D73751D2108A200F8C822 /* CustomChatUIViewController.m in Sources */,
+				FD1BA4DC20B7EBD70060ABDC /* WithdrawAuthenViewController.m in Sources */,
 				9B0D73681D2107C900F8C822 /* NSStringEx.m in Sources */,
 				9266234D1C803EEB005D26CF /* UIView+CaptureImage.m in Sources */,
 				9B8D31461CAA5FFB003EFCAE /* AddGroupViewController.m in Sources */,

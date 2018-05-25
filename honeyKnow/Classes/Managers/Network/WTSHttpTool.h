@@ -56,7 +56,7 @@ typedef void(^UploadFileTotalLenghtBlock)(double totalLength);
 +(void)uploadImagesWithType:(UploadType )type
                 picFileName:(NSString *)picFileName
                      images:(NSArray *)images
-                    success:(void (^)(NSArray *imageUrls,NSArray *idsArr))success
+                    success:(void (^)(NSString *))success
                     failure:(FailBlock)failure;
 
 /** 上传文件 */

@@ -371,7 +371,7 @@ static id _instance = nil;
 +(void)uploadImagesWithType:(UploadType )type
                 picFileName:(NSString *)picFileName
                      images:(NSArray *)images
-                    success:(void (^)(NSArray *imageUrls,NSArray *idsArr))success
+                    success:(void (^)(NSString *))success
                     failure:(FailBlock)failure{
     
     if (images.count == 0) {
@@ -390,7 +390,7 @@ static id _instance = nil;
     }
     
     
-    NSDictionary *params = @{@"type" : [NSString stringWithFormat:@"%ld",type]};
+//    NSDictionary *params = @{@"type" : [NSString stringWithFormat:@"%ld",type]};
     NSString *url = [NSString stringWithFormat:@"%@",URL_UPLOAD_API];//放上传图片的网址
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//初始化请求对象
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//设置服务器允许的请求格式内容
@@ -400,7 +400,7 @@ static id _instance = nil;
     
     
     //上传图片/文字，只能同POST
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id  _Nonnull formData) {
+    [manager POST:url parameters:nil constructingBodyWithBlock:^(id  _Nonnull formData) {
         
         NSInteger i = 1;
         for (UIImage* image in images) {
@@ -423,7 +423,7 @@ static id _instance = nil;
             }
             NSData *data = UIImageJPEGRepresentation(image, scale);
             //第一个代表文件转换后data数据，第二个代表图片的名字，第三个代表图片放入文件夹的名字，第四个代表文件的类型
-            [formData appendPartWithFileData:data name:@"fileData" fileName:fileName mimeType:@"image/jpg"];
+            [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:@"image/jpg"];
             i ++;
         }
         
@@ -436,12 +436,8 @@ static id _instance = nil;
         
         NSDictionary * responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSDictionary * data = responseDict[@"data"];
-        
-        NSArray * urlArr = [data[@"path"] componentsSeparatedByString:@","];
-        
-        NSArray * idsArr = [data[@"ids"] componentsSeparatedByString:@","];
 
-        success(urlArr,idsArr);
+        success(responseDict[@"data"]);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

@@ -19,6 +19,9 @@
 
 @property (nonatomic, strong) NSArray* bgColorArr;
 
+@property (nonatomic, strong) NSMutableArray* selectArray;
+
+
 @end
 
 static NSString * const setLabelCellId = @"setLabelCellId";
@@ -45,7 +48,7 @@ static NSString * const setLabelCellId = @"setLabelCellId";
         _submitBtn.layer.cornerRadius = 20;
         _submitBtn.backgroundColor = [UIColor colorFromHexString:@"#f3f3f3"];
         
-        _submitBtn.userInteractionEnabled = self.selectArray.count ? YES : NO;
+        _submitBtn.userInteractionEnabled = self.oldArray.count ? YES : NO;
         
     }
     return _submitBtn;
@@ -77,11 +80,12 @@ static NSString * const setLabelCellId = @"setLabelCellId";
 
             for (SetLabelItem* labelModel in self.listArray) {
                 
-                for (SetLabelItem* selModel in self.selectArray) {
+                for (SetLabelItem* selModel in self.oldArray) {
                     
                     if (selModel.Id == labelModel.Id && selModel.isSel) {
                         
                         labelModel.isSel = YES;
+                        [[self mutableArrayValueForKey:@"selectArray"] addObject:labelModel];
                         
                     }
                 }
@@ -129,7 +133,7 @@ static NSString * const setLabelCellId = @"setLabelCellId";
             
         }
         
-        return @(self.listArray.count > 0);
+        return @(self.selectArray.count > 0);
     }];
     
     
