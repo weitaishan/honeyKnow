@@ -1,19 +1,19 @@
 //
-//  WYGenderPickerView.m
-//  WYChangeInfoDemo
+//  WTSConstellationPickerView.m
+//  WTSEditInfoDemo
 //
-//  Created by 意一yiyi on 2017/3/6.
-//  Copyright © 2017年 意一yiyi. All rights reserved.
+//  Created by AlbertWei on 2018/5/25.
+//  Copyright © 2018年 意一yiyi. All rights reserved.
 //
 
-#import "WYGenderPickerView.h"
+#import "WTSConstellationPickerView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface WYGenderPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface WTSConstellationPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *genderArray;// 所有性别数据
+@property (strong, nonatomic) NSMutableArray *heightArray;// 所有身高数据
 
 @property (strong, nonatomic) UIPickerView *pickerView;
 
@@ -21,19 +21,19 @@
 @property (strong, nonatomic) UIButton *cancelButton;
 @property (strong, nonatomic) UIButton *confirmButton;
 
-@property (strong, nonatomic) NSString *initialGender;// 初始化显示性别
-@property (strong, nonatomic) NSString *selectedGender;// 选中性别
+@property (strong, nonatomic) NSString *initialConstellation;// 初始化显示身高
+@property (strong, nonatomic) NSString *selectedConstellation;// 选中身高
 
 @end
 
-@implementation WYGenderPickerView
+@implementation WTSConstellationPickerView
 
-- (instancetype)initWithInitialGender:(NSString *)initialGender {
-    
+
+- (instancetype)initWithInitialConstellation:(NSString *)initialConstellation{
     if ([super init]) {
         
-        self.initialGender = initialGender;
-        self.selectedGender = initialGender;
+        self.initialConstellation = initialConstellation;
+        self.selectedConstellation = initialConstellation;
         
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         self.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.618];
@@ -57,7 +57,18 @@
 
 - (void)initialize {
     
-    self.genderArray = [NSMutableArray array];
+    self.heightArray = @[@"白羊座",
+                         @"金牛座",
+                         @"双子座",
+                         @"巨蟹座",
+                         @"狮子座",
+                         @"处女座",
+                         @"天秤座",
+                         @"天蝎座",
+                         @"射手座",
+                         @"摩羯座",
+                         @"水瓶座",
+                         @"双鱼座"].mutableCopy;
 }
 
 
@@ -88,7 +99,7 @@
 
 - (void)confirmButtonAction:(UIButton *)button {
     
-    self.confirmBlock(self.selectedGender);
+    self.confirmBlock(self.selectedConstellation);
     
     self.bottomView.frame = CGRectMake(0, kScreenHeight - 216 - 44 - 64, kScreenWidth, 216 + 44);
     [UIView animateWithDuration:0.25 animations:^{
@@ -115,19 +126,19 @@
 // 行数
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return self.genderArray.count;
+    return self.heightArray.count;
 }
 
 // 显示什么
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    return self.genderArray[row];
+    return self.heightArray[row];
 }
 
 // 选中时
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    self.selectedGender = self.genderArray[row];
+    self.selectedConstellation = self.heightArray[row];
 }
 
 
@@ -193,16 +204,15 @@
         _pickerView.delegate = self;
         
         // 先设置数据源
-        [self.genderArray addObjectsFromArray:@[@"女", @"男"]];
-        
-        // _pickerView 初始化显示的性别
-        if (self.initialGender.length == 0) {// 默认显示女
+
+        // _pickerView 初始化显示的身高值
+        if (self.initialConstellation.length == 0) {// 默认显示 177cm
             
             [_pickerView selectRow:0 inComponent:0 animated:YES];
-            self.selectedGender = self.genderArray[0];
-        }else {// 否则获取要显示的性别下标, 显示相应性别
+            self.selectedConstellation = self.heightArray[0];
+        }else {// 否则获取要显示的身高值下标, 显示相应身高值
             
-            [_pickerView selectRow:[self.genderArray indexOfObject:self.initialGender] inComponent:0 animated:YES];
+            [_pickerView selectRow:[self.heightArray indexOfObject:self.initialConstellation] inComponent:0 animated:YES];
         }
     }
     

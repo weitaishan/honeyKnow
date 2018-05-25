@@ -30,4 +30,12 @@
 
 #import "VendorApi.h"
 #import "MacroApi.h"
+
+#import <ImSDK/ImSDK.h>
+#import <QAVSDK/QAVSDK.h>
+#import <QALSDK/QalSDKProxy.h>
+#import <TLSSDK/TLSHelper.h>
+#import <IMSDKBugly/IMSDKBugly.h>
+#import <ILiveSDK/ILiveCoreHeader.h>
+#import <TILCallSDK/TILCallSDK.h>
 #endif /* honeyKnow_Prefix_h */

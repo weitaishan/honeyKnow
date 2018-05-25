@@ -84,7 +84,7 @@
 /*   /spread/get  获取邀请信息，返回5002的时候引导用户进行推广员认证
 点击认证，没认证过跳转开始认证，-> 然后编辑资料
  如果认证通过了-> 跳转编辑资料页面，可以编辑信息
- 
+ 1跳转编辑，5提示认证中
  
  收入明细页面：http://miliao.xiangchaopai.com/income_detail.html?token=
  支出明细页面：http://miliao.xiangchaopai.com/pay_detail.html?token=
@@ -95,5 +95,10 @@
  帮助页面：http://miliao.xiangchaopai.com/help.html
  
  0571-28120452 在线客服
+ 
+ /video/connect请求视频之前  /video/connect请求视频之前 5001余额不足
+ 
+ /tm/chat/put 聊天接口
+ 
 */
 @end

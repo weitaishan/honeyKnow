@@ -1,6 +1,6 @@
 //
-//  WYLongTextInputView.h
-//  WYEditInfoDemo
+//  WTSLongTextInputView.h
+//  WTSEditInfoDemo
 //
 //  Created by 意一yiyi on 2017/3/7.
 //  Copyright © 2017年 意一yiyi. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^WYLongTextInputViewBlock)(NSString *longText);
+typedef void(^WTSLongTextInputViewBlock)(NSString *longText);
 
-@interface WYLongTextInputView : UITextView
+@interface WTSLongTextInputView : UITextView
 
-@property (strong, nonatomic) WYLongTextInputViewBlock block;
+@property (strong, nonatomic) WTSLongTextInputViewBlock block;
 
 /**
  初始化方法

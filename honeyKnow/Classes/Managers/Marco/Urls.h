@@ -80,4 +80,17 @@ static NSString * const URL_GET_MARKET_LIST = @"marker/list";
 /** 更新用户个人标签*/
 static NSString * const URL_MARKET_UPDATE = @"user/marker/update";
 
+/** 请求用户建立连接信息 请求视频之前  /video/connect请求视频之前 5001余额不足*/
+static NSString * const URL_VIDEO_CONNECT = @"video/connect";
+
+
+/** 发送消息 判断是否有钱  5001余额不足*/
+static NSString * const URL_TM_CHAT_PUT = @"tm/chat/put";
+
+/** 开始通话 计费*/
+static NSString * const URL_VIDEO_BILLING_START= @"video/start";
+
+/** 结束通话 计费结束*/
+static NSString * const URL_VIDEO_BILLING_STOP = @"video/stop";
+
 #endif /* Urls_h */

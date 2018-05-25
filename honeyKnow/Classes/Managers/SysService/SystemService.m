@@ -12,6 +12,8 @@
 #import "LoginSelectViewController.h"
 #import "BaseNavigationViewController.h"
 #import "IMALoginViewController.h"
+#import "CallRecvViewController.h"
+#import "PayViewController.h"
 //#import <ILiveSDK/ILiveSDK.h>
 //#import <ILiveSDK/ILiveCoreHeader.h>
 
@@ -234,38 +236,17 @@ static SystemService* _instance = nil;
     NSString* identifier = [NSUSERDEFAULTS objectForKey:USER_IDENTIFIER];
     
     NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
-    
-    [[[IMALoginViewController alloc] init]loging];
-//    TIMLoginParam * login_param = [[TIMLoginParam alloc ]init];
-    
-    // accountType 和 sdkAppId 通讯云管理平台分配
-    // identifier为用户名，userSig 为用户登录凭证
-    // appidAt3rd 在私有帐号情况下，填写与sdkAppId 一样
-//    login_param.accountType = IntStr(kAccountType);
-//    login_param.identifier = identifier;
-//    login_param.userSig = userSig;
-//    login_param.appidAt3rd = IntStr(kSDKAppID);
-//    login_param.sdkAppId = kSDKAppID;
-//    
-//    [[TIMManager sharedInstance] login: login_param succ:^(){
-//        NSLog(@"Login Succ");
-//    } fail:^(int code, NSString * err) {
-//        NSLog(@"Login Failed: %d->%@", code, err);
-//    }];
 
-    
-
-    
 //    //登录sdk
-//    [[ILiveLoginManager getInstance] iLiveLogin:identifier sig:userSig succ:^{
-//        NSLog(@"iLive 登录成功！");
-//    } failed:^(NSString *module, int errId, NSString *errMsg) {
-//        NSLog(@"errId:%d, errMsg:%@",errId, errMsg);
-//        if (errId == ERR_EXPIRE) {
-//            
-//            [self exitLoginWithTitle:@"登录信息过期" message:@"请重新登录"];
-//        }
-//    }];
+    [[ILiveLoginManager getInstance] iLiveLogin:identifier sig:userSig succ:^{
+        NSLog(@"iLive 登录成功！");
+    } failed:^(NSString *module, int errId, NSString *errMsg) {
+        NSLog(@"errId:%d, errMsg:%@",errId, errMsg);
+        if (errId == ERR_EXPIRE) {
+            
+            [self exitLoginWithTitle:@"登录信息过期" message:@"请重新登录"];
+        }
+    }];
 }
 
 /**
@@ -295,6 +276,53 @@ static SystemService* _instance = nil;
     
 }
 
-
+/**
+ 打视频电话
+ 
+ @param peerId userId
+ @param actorId 主播id
+ */
+- (void)callVideoTelePhoneWithPeerId:(NSString *)peerId{
+    
+    peerId = @"9";
+//    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"actorId" : peerId}.mutableCopy success:^(id response) {
+//
+//       if ([response[@"success"] integerValue]){
+//
+//           if ([response[@"code"] integerValue] == 5001){
+//
+//               NSLog(@"余额不足");
+//               [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发大V视频五分钟，无法视频聊天！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
+//
+//                   if (buttonTag == cancelIndex) {
+//
+//
+//                   }else{
+    
+//                       PayViewController* vc = [[PayViewController alloc] init];
+//                       vc.hidesBottomBarWhenPushed = YES;
+//                       [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
+//                   }
+//
+//               }];
+//
+//           }else if ([response[@"code"] integerValue] == 99){
+    
+               
+               CallRecvViewController *make = [MAIN_SB instantiateViewControllerWithIdentifier:@"callRecvViewController"];
+               make.peerId = peerId;
+               make.callType = WTSCallTypeSend;
+               [APP_DELEGATE().getCurrentVC presentViewController:make animated:YES completion:nil];
+//           }
+//       }
+//                                                                                          
+//    } failure:^(NSError *error) {
+//
+//        NSLog(@"请求用户建立连接信息失败");
+//    }];
+    
+   
+    
+}
 
 @end

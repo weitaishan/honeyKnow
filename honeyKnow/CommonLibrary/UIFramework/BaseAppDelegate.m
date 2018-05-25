@@ -15,7 +15,8 @@
 #import "BaseTabBarController.h"
 #import "LoginSelectViewController.h"
 #import "WXApi.h"
-
+#import <ILiveSDK/ILiveCoreHeader.h>
+#import "CallIncomingListener.h"
 @implementation BaseAppDelegate
 
 + (instancetype)sharedAppDelegate
@@ -117,15 +118,13 @@
     [WXApi registerApp:@"wxb4ba3c02aa476ea1" enableMTA:YES];
 
     //获取版本号
-//    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
-//    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
-//    NSLog(@"IMSDK version:%@",[[TIMManager sharedInstance] GetVersion]);
-//    // 初始化SDK
-//    [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
-//
-//    [[TIMManager sharedInstance] initSdk:kSDKAppID accountType:IntStr(kAccountType)];
-//
-//    [[TIMManager sharedInstance]  addMessageListener:self];
+    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
+    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
+    NSLog(@"IMSDK version:%@",[[TIMManager sharedInstance] GetVersion]);
+    // 初始化SDK
+    [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
+    [[TILCallManager sharedInstance] setIncomingCallListener:[[CallIncomingListener alloc] init]];
+
     
 }
 
@@ -150,12 +149,40 @@
     NSString* userToken = [NSUSERDEFAULTS objectForKey:USER_TOKEN];
 #if DEBUG
     
-    userToken = @"12865228719696567037082488652515";
-    [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
-    [NSUSERDEFAULTS setValue:@"15528798998" forKey:USER_TELPHONE];
+//#if TARGET_IPHONE_SIMULATOR //模拟器
+    
+        NSString* userSig = @"eJxlj8FOg0AQQO98BeGqMbuzsohJD3RLTJtSpdVYToSwCywqILu0WOO-22ITMc71vTeT*TRM07Qel5urJE3rrtKx-miEZd6aFrIuf2HTSB4nOiYt-wdF38hWxEmmRTtAbNs2IDR2JBeVlpk8G*4IKf4SD-t-2utjeOPCn1rJfICBH7K530GkZkU-jaLFYXa-WdYBFMC4*9CXsArunsp5yLotzpO9Jz3neeekU0qpkyy2kGMW*mvM0sNrUO75*v1CNX5BVlngVd5kMjqp5Zs4PwMUKKEEj*hOtErW1SAAwjYGgk5jGV-GN6jbWmA_";
+        NSString* identifier = @"9";
+        userToken = @"12865228719696567037082488652515";
+        [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
+        [NSUSERDEFAULTS setValue:@"15528798998" forKey:USER_TELPHONE];
+        [NSUSERDEFAULTS setValue:identifier forKey:USER_IDENTIFIER];
+        [NSUSERDEFAULTS setValue:userSig forKey:USER_USERSIG];
+        [NSUSERDEFAULTS synchronize];
+    
+//#elif TARGET_OS_IPHONE //真机
+//
+//    //lili
+//    NSString* userSig = @"eJxlz11PgzAYBeB7fkXTW422hVYw8QI3nJubhknVeUMq7UjH*AjUObbsv6tkRozv7XNOTt69BQCA0fTxTCRJ*V6Y2LSVguASQARPf7GqtIyFie1a-kO1rXStYrE0qu4QU0oJQv2Mlqoweql-Ek7PGpnF3cCRvpquR-7UG512OAv4YBwORtc7vsqLmyF6c3S4CcRJ9kReppift2xxcS9Wu0C*Rncs98NxOr-9mLQT7a7LyFmscea7D2HAUJOPmL*dcxINEZ0lzxn30qvepNG5On5DGGE280hPN6pudFl0AYIwxcRG3wetg-UJ0bpaQQ__";
+//    NSString* identifier = @"14";
+//    userToken = @"91178697925515953557673154789568";
+//    [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
+//    [NSUSERDEFAULTS setValue:@"13890396642" forKey:USER_TELPHONE];
+//    [NSUSERDEFAULTS setValue:identifier forKey:USER_IDENTIFIER];
+//    [NSUSERDEFAULTS setValue:userSig forKey:USER_USERSIG];
+//    [NSUSERDEFAULTS synchronize];
+//
+//#endif
+
+    
+    
+    
+    
+    
+    
     
 #endif
-   
+
 
     if (userToken.length > 0) {
         

@@ -17,6 +17,23 @@
     
   
 //    [self playWithUrl:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    
+    [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+        
+        if (self.listModel.Id > 0) {
+            
+            [[SystemService shareInstance] callVideoTelePhoneWithPeerId:IntStr(self.listModel.Id)];
+            
+        }else{
+            
+            
+        }
+        
+    }];
+    [self.videoImgView addGestureRecognizer:tap];
 
 }
 
@@ -74,7 +91,7 @@
 
             if ([response[@"success"] integerValue]){
 
-
+                
 
             }
 
@@ -85,6 +102,8 @@
         }];
 
     }];
+    
+    
     
 }
 

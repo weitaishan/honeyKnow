@@ -1,19 +1,19 @@
 //
-//  WYHeightPickerView.m
-//  WYChangeInfoDemo
+//  WTSGenderPickerView.m
+//  WTSChangeInfoDemo
 //
 //  Created by 意一yiyi on 2017/3/6.
 //  Copyright © 2017年 意一yiyi. All rights reserved.
 //
 
-#import "WYHeightPickerView.h"
+#import "WTSGenderPickerView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface WYHeightPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface WTSGenderPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *heightArray;// 所有身高数据
+@property (strong, nonatomic) NSMutableArray *genderArray;// 所有性别数据
 
 @property (strong, nonatomic) UIPickerView *pickerView;
 
@@ -21,19 +21,19 @@
 @property (strong, nonatomic) UIButton *cancelButton;
 @property (strong, nonatomic) UIButton *confirmButton;
 
-@property (strong, nonatomic) NSString *initialHeight;// 初始化显示身高
-@property (strong, nonatomic) NSString *selectedHeight;// 选中身高
+@property (strong, nonatomic) NSString *initialGender;// 初始化显示性别
+@property (strong, nonatomic) NSString *selectedGender;// 选中性别
 
 @end
 
-@implementation WYHeightPickerView
+@implementation WTSGenderPickerView
 
-- (instancetype)initWithInitialHeight:(NSString *)initialHeight {
+- (instancetype)initWithInitialGender:(NSString *)initialGender {
     
     if ([super init]) {
         
-        self.initialHeight = initialHeight;
-        self.selectedHeight = initialHeight;
+        self.initialGender = initialGender;
+        self.selectedGender = initialGender;
         
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         self.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.618];
@@ -57,7 +57,7 @@
 
 - (void)initialize {
     
-    self.heightArray = [NSMutableArray array];
+    self.genderArray = [NSMutableArray array];
 }
 
 
@@ -88,7 +88,7 @@
 
 - (void)confirmButtonAction:(UIButton *)button {
     
-    self.confirmBlock(self.selectedHeight);
+    self.confirmBlock(self.selectedGender);
     
     self.bottomView.frame = CGRectMake(0, kScreenHeight - 216 - 44 - 64, kScreenWidth, 216 + 44);
     [UIView animateWithDuration:0.25 animations:^{
@@ -115,19 +115,19 @@
 // 行数
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return self.heightArray.count;
+    return self.genderArray.count;
 }
 
 // 显示什么
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    return self.heightArray[row];
+    return self.genderArray[row];
 }
 
 // 选中时
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    self.selectedHeight = self.heightArray[row];
+    self.selectedGender = self.genderArray[row];
 }
 
 
@@ -193,19 +193,16 @@
         _pickerView.delegate = self;
         
         // 先设置数据源
-        for (NSInteger i = 100; i <= 250; i ++) {// 100cm ~ 250cm
-            
-            [self.heightArray addObject:[NSString stringWithFormat:@"%ldcm", i]];
-        }
+        [self.genderArray addObjectsFromArray:@[@"女", @"男"]];
         
-        // _pickerView 初始化显示的身高值
-        if (self.initialHeight.length == 0) {// 默认显示 177cm
+        // _pickerView 初始化显示的性别
+        if (self.initialGender.length == 0) {// 默认显示女
             
-            [_pickerView selectRow:77 inComponent:0 animated:YES];
-            self.selectedHeight = self.heightArray[77];
-        }else {// 否则获取要显示的身高值下标, 显示相应身高值
+            [_pickerView selectRow:0 inComponent:0 animated:YES];
+            self.selectedGender = self.genderArray[0];
+        }else {// 否则获取要显示的性别下标, 显示相应性别
             
-            [_pickerView selectRow:[self.heightArray indexOfObject:self.initialHeight] inComponent:0 animated:YES];
+            [_pickerView selectRow:[self.genderArray indexOfObject:self.initialGender] inComponent:0 animated:YES];
         }
     }
     

@@ -44,6 +44,10 @@
 }
 - (void)initBaseInfo{
     
+    NSString* userTelPhone = [NSUSERDEFAULTS objectForKey:USER_TELPHONE];
+
+    self.phoneTF.text = userTelPhone.length ? userTelPhone : @"";
+    
     //输入用户名
     UIImageView* userView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,21, 21)];
     userView.image = [UIImage imageNamed:@"icon_phone"];

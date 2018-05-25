@@ -1,17 +1,17 @@
 //
-//  WYLongTextInputView.m
-//  WYEditInfoDemo
+//  WTSLongTextInputView.m
+//  WTSEditInfoDemo
 //
 //  Created by 意一yiyi on 2017/3/7.
 //  Copyright © 2017年 意一yiyi. All rights reserved.
 //
 
-#import "WYLongTextInputView.h"
+#import "WTSLongTextInputView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface WYLongTextInputView ()<UITextViewDelegate>
+@interface WTSLongTextInputView ()<UITextViewDelegate>
 
 @property (strong, nonatomic) UILabel *characterNumLabel;
 @property (assign, nonatomic) int maxCharacterNum;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation WYLongTextInputView
+@implementation WTSLongTextInputView
 
 - (instancetype)initWithLongText:(NSString *)longText
                  MaxCharacterNum:(int)number
