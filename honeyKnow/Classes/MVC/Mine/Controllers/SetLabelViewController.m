@@ -44,7 +44,8 @@ static NSString * const setLabelCellId = @"setLabelCellId";
         _submitBtn.layer.masksToBounds = YES;
         _submitBtn.layer.cornerRadius = 20;
         _submitBtn.backgroundColor = [UIColor colorFromHexString:@"#f3f3f3"];
-        _submitBtn.userInteractionEnabled = NO;
+        
+        _submitBtn.userInteractionEnabled = self.selectArray.count ? YES : NO;
         
     }
     return _submitBtn;

@@ -1,41 +1,44 @@
 //
-//  WYBirthdayPickerView.m
-//  WYDatePickerViewDemo
+//  WTSHeightPickerView.m
+//  WTSChangeInfoDemo
 //
 //  Created by 意一yiyi on 2017/3/6.
 //  Copyright © 2017年 意一yiyi. All rights reserved.
 //
 
-#import "WYBirthdayPickerView.h"
+#import "WTSHeightPickerView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface WYBirthdayPickerView ()
+@interface WTSHeightPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) UIDatePicker *datePicker;
+@property (strong, nonatomic) NSMutableArray *heightArray;// 所有身高数据
+
+@property (strong, nonatomic) UIPickerView *pickerView;
 
 @property (strong, nonatomic) UIView *bottomView;
 @property (strong, nonatomic) UIButton *cancelButton;
 @property (strong, nonatomic) UIButton *confirmButton;
 
-@property (strong, nonatomic) NSString *initialDate;// 初始化显示日期
-@property (strong, nonatomic) NSString *selectedDate;// 选中日期
+@property (strong, nonatomic) NSString *initialHeight;// 初始化显示身高
+@property (strong, nonatomic) NSString *selectedHeight;// 选中身高
 
 @end
 
-@implementation WYBirthdayPickerView
+@implementation WTSHeightPickerView
 
-- (instancetype)initWithInitialDate:(NSString *)initialDate {
+- (instancetype)initWithInitialHeight:(NSString *)initialHeight {
     
     if ([super init]) {
         
-        self.initialDate = initialDate;
-        self.selectedDate = initialDate;
+        self.initialHeight = initialHeight;
+        self.selectedHeight = initialHeight;
         
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         self.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.618];
         
+        [self initialize];
         [self drawView];
         
         self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, 216 + 44);
@@ -47,6 +50,14 @@
     }
     
     return self;
+}
+
+
+#pragma mark - initialize
+
+- (void)initialize {
+    
+    self.heightArray = [NSMutableArray array];
 }
 
 
@@ -67,7 +78,7 @@
         
         self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, 216 + 44);
         [self.bottomView layoutIfNeeded];
-    
+        
         self.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0];
     } completion:^(BOOL finished) {
         
@@ -77,14 +88,14 @@
 
 - (void)confirmButtonAction:(UIButton *)button {
     
-    self.confirmBlock(self.selectedDate);
+    self.confirmBlock(self.selectedHeight);
     
     self.bottomView.frame = CGRectMake(0, kScreenHeight - 216 - 44 - 64, kScreenWidth, 216 + 44);
     [UIView animateWithDuration:0.25 animations:^{
         
         self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, 216 + 44);
         [self.bottomView layoutIfNeeded];
-    
+        
         self.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0];
     } completion:^(BOOL finished) {
         
@@ -92,13 +103,31 @@
     }];
 }
 
-- (void)datePickerDidChanged:(UIDatePicker *)datePicker {
+
+#pragma mark - pickerView 代理方法
+
+// 列数
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     
-    // 直接获取的时间, 时区不对, 经过格式转换后得到的一个字符串, 时间就对了
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    return 1;
+}
+
+// 行数
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    self.selectedDate = [dateFormatter stringFromDate:datePicker.date];
+    return self.heightArray.count;
+}
+
+// 显示什么
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    return self.heightArray[row];
+}
+
+// 选中时
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    self.selectedHeight = self.heightArray[row];
 }
 
 
@@ -113,7 +142,7 @@
         
         [_bottomView addSubview:self.cancelButton];
         [_bottomView addSubview:self.confirmButton];
-        [_bottomView addSubview:self.datePicker];
+        [_bottomView addSubview:self.pickerView];
     }
     
     return _bottomView;
@@ -153,53 +182,34 @@
     return _confirmButton;
 }
 
-- (UIDatePicker *)datePicker {
+- (UIPickerView *)pickerView {
     
-    if (!_datePicker) {
+    if (!_pickerView) {
         
-        _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 44, kScreenWidth, 216)];// 默认高度 216
-        _datePicker.backgroundColor = [UIColor clearColor];
+        _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 44, kScreenWidth, 216)];
+        _pickerView.backgroundColor = [UIColor clearColor];
         
+        _pickerView.dataSource = self;
+        _pickerView.delegate = self;
         
-        /**
-         datePicker 的显示模式
-         
-         UIDatePickerModeTime           显示时间
-         UIDatePickerModeDate           显示日期
-         UIDatePickerModeDateAndTime    显示日期和时间
-         */
-        _datePicker.datePickerMode = UIDatePickerModeDate;
-        
-        
-        /**
-         minimumDate 和 maximumDate
-         
-         这两个值控制的是用户可用的有效时间范围, 默认值都是nil, nil 意味着没有最小和最大使用的时间约束, 也就是说用户可以随便滚动滚轮选择时间
-         如果设置了 minimumDate 和 maximumDate 的值, 那么当用户滚动超出 minimumDate 时会自动回滚到 minimumDate, 当用户滚动超出 maximumDate 时会自动回滚到 maximumDate
-         实际开发中根据具体情况来设定这两个值即可, 此处为生日选择, 所以可以是过去的任意时间和当前日期
-         */
-        //        _datePicker.minimumDate = [NSDate dateWithTimeIntervalSince1970:0];
-        _datePicker.maximumDate = [NSDate date];
-        
-        // datePicker 当前显示的日期 : 默认显示的是 datePicker 创建时的日期
-        if (self.initialDate.length == 0) {
+        // 先设置数据源
+        for (NSInteger i = 100; i <= 250; i ++) {// 100cm ~ 250cm
             
-            _datePicker.date = [NSDate date];
-            
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"yyyy-MM-dd";
-            self.selectedDate = [dateFormatter stringFromDate:[NSDate date]];
-        }else {
-            
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"yyyy-MM-dd";
-            _datePicker.date = [dateFormatter dateFromString:self.initialDate];
+            [self.heightArray addObject:[NSString stringWithFormat:@"%ldcm", i]];
         }
-
-        [_datePicker addTarget:self action:@selector(datePickerDidChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        // _pickerView 初始化显示的身高值
+        if (self.initialHeight.length == 0) {// 默认显示 177cm
+            
+            [_pickerView selectRow:77 inComponent:0 animated:YES];
+            self.selectedHeight = self.heightArray[77];
+        }else {// 否则获取要显示的身高值下标, 显示相应身高值
+            
+            [_pickerView selectRow:[self.heightArray indexOfObject:self.initialHeight] inComponent:0 animated:YES];
+        }
     }
     
-    return _datePicker;
+    return _pickerView;
 }
 
 @end

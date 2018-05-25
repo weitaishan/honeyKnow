@@ -1,17 +1,17 @@
 //
-//  WYCityPickerView.m
-//  WYChangeInfoDemo
+//  WTSCityPickerView.m
+//  WTSChangeInfoDemo
 //
 //  Created by 意一yiyi on 2017/3/6.
 //  Copyright © 2017年 意一yiyi. All rights reserved.
 //
 
-#import "WYCityPickerView.h"
+#import "WTSCityPickerView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface WYCityPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface WTSCityPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *tempArray;
 @property (strong, nonatomic) NSMutableArray *provinceArray;// 所有省份数据
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation WYCityPickerView
+@implementation WTSCityPickerView
 
 - (instancetype)initWithInitialCity:(NSString *)initialCity {
     

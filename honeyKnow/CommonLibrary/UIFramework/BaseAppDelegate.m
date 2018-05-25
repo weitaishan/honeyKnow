@@ -148,8 +148,13 @@
     //    NSLog(@"相等");
     
     NSString* userToken = [NSUSERDEFAULTS objectForKey:USER_TOKEN];
+#if DEBUG
     userToken = @"12865228719696567037082488652515";
     [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
+    [NSUSERDEFAULTS setObject:@"15528798998" forKey:USER_TELPHONE];
+
+#endif
+    
     if (userToken.length > 0) {
         
         [[SystemService shareInstance] ILiveLogin];

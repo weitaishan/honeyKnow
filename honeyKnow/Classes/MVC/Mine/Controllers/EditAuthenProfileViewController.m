@@ -12,9 +12,11 @@
 #import "EditAuthenModel.h"
 #import "SetLabelViewController.h"
 #import "SetLabelModel.h"
+#import "WTSPickerHeaders.h"
 
 #define TEXTFIELD_TAG 500
 
+#define HEADER_HEIGHT ((SCREEN_WIDTH - 20) / 4.f)
 @interface EditAuthenProfileViewController ()<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray<EditAuthenModel *>* listArray;
@@ -133,6 +135,8 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 
 - (void)textValueChange:(NSNotification *)notif{
     
+    NSLog(@"submit json = %@",self.jsonDic);
+
     UITextField* textField = notif.object;
     
     if (@available(iOS 11.0, *)){
@@ -326,9 +330,10 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (self.imgArr.count > 4) {
-        return 204;
+        return HEADER_HEIGHT + 9 * 3;
+
     }
-    return 106;
+    return HEADER_HEIGHT + 9 * 2;
 }
 
 
@@ -353,6 +358,12 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
         for (NSDictionary* dic in array) {
             
             EditAuthenModel* model = [EditAuthenModel yy_modelWithDictionary:dic];
+            
+            if ([model.field isEqualToString:@"telphone"]) {
+                
+                model.data = [NSUSERDEFAULTS objectForKey:USER_TELPHONE];
+
+            }
             [_listArray addObject:model];
 
         }
@@ -384,7 +395,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
     EditAuthenModel* cellModel = cell.model;
     
     
-    if ([cellModel.dataType isEqualToString:@"input"]) {
+    if ([cellModel.dataType isEqualToString:@"input"] && cellModel.isEdit) {
         
         return YES;
     }else if ([cellModel.dataType isEqualToString:@"marker"]){
@@ -406,168 +417,69 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
         };
         vc.selectArray = self.selectArray;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([cellModel.dataType isEqualToString:@"tall"]){
+        
+        
+        WTSHeightPickerView *heightPickerView = [[WTSHeightPickerView alloc] initWithInitialHeight:textField.text];
+        
+        heightPickerView.confirmBlock = ^(NSString *selectedHeight) {
+            
+            textField.text = selectedHeight;
+            cellModel.data = textField.text;
+            [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+        };
+        [self.tableView addSubview:heightPickerView];
+
+
+    }else if ([cellModel.dataType isEqualToString:@"weight"]){
+        
+        
+        WTSWeightPickerView *weightPickerView = [[WTSWeightPickerView alloc] initWithInitialWeight:textField.text];
+        
+        weightPickerView.confirmBlock = ^(NSString *selectedWeight) {
+            
+            textField.text = selectedWeight;
+            cellModel.data = textField.text;
+            [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+        };
+        [self.tableView addSubview:weightPickerView];
+        
+        
+    }else if ([cellModel.dataType isEqualToString:@"constellation"]){
+        
+        
+        WTSConstellationPickerView *constellationPickerView = [[WTSConstellationPickerView alloc] initWithInitialConstellation:textField.text];
+        
+        constellationPickerView.confirmBlock = ^(NSString *selectedConstellation) {
+            
+            textField.text = selectedConstellation;
+            cellModel.data = textField.text;
+            [self.jsonDic setObject:cellModel.data forKey:cellModel.field];
+        };
+        [self.tableView addSubview:constellationPickerView];
+        
+        
+    }else if ([cellModel.dataType isEqualToString:@"location"]){
+        
+        
+        WTSCityPickerView *cityPickerView = [[WTSCityPickerView alloc] initWithInitialCity:textField.text];
+        
+        cityPickerView.confirmBlock = ^(NSString *selectedCity) {
+            
+            textField.text = selectedCity;
+            cellModel.data = textField.text;
+             NSArray *addressCodeArr = [selectedCity componentsSeparatedByString:@"-"];
+            NSString* address = @"";
+            if (addressCodeArr.count == 2) {
+                
+                address = addressCodeArr.lastObject;
+            }
+            [self.jsonDic setObject:address.length ? address : @"杭州" forKey:cellModel.field];
+        };
+        [self.tableView addSubview:cityPickerView];
+        
+        
     }
-    
-//    if ([cellModel.dataType isEqualToString:@"address"]) {
-//
-//        NSLog(@"选择地区");
-//        [self.view endEditing:YES];
-//
-//        [[MOFSPickerManager shareManger] showMOFSAddressPickerWithDefaultAddress:_address numberOfComponents:3 title:@"请选择城市" cancelTitle:@"取消" commitTitle:@"确定" commitBlock:^(NSString *address, NSString *zipcode) {
-//            textField.text = [address stringByReplacingOccurrencesOfString:@"-"withString:@" "];
-//
-//            NewAddCustomerElements* model = self.listArray[textField.tag - TEXTFIELD_TAG];
-//
-//            model.data = textField.text;
-//
-//            [self.jsonDic setObject:model.data forKey:@"location"];
-//
-//            NSArray *addressCodeArr = [zipcode componentsSeparatedByString:@"-"];
-//            NSString* province = zipcode.length ? addressCodeArr[0] : @"";
-//            NSString* city = zipcode.length ? addressCodeArr[1] : @"";
-//            NSString* county = zipcode.length ? addressCodeArr[2] : @"";
-//
-//            [self.jsonDic setObject:province forKey:@"province"];
-//            [self.jsonDic setObject:city forKey:@"city"];
-//            [self.jsonDic setObject:county forKey:@"county"];
-//
-//            //            _addressCode = zipcode;
-//            //            NSLog(@"%@",zipcode);
-//        } cancelBlock:^{
-//
-//
-//        }];
-//        return NO;
-//
-//    }else if ([cellModel.dataType isEqualToString:@"select"]) {
-//        [self.view endEditing:YES];
-//
-//        NewAddCustomerElements* model = self.listArray[textField.tag - TEXTFIELD_TAG];
-//
-//        __block NSString* contentTitle;
-//        __block NSString* valueStr;
-//        AddCustomerHouseTypeView* selectView = [[AddCustomerHouseTypeView alloc] initWithFrame:SCREEN_FRAME dataArr:model.dataList.mutableCopy type:SelectBoxTypeAddCustomer block:^(NSString * title, NSString * value) {
-//
-//
-//        }];
-//
-//        selectView.lbTitle.text = model.title;
-//
-//
-//
-//
-//        selectView.contentSelBlock = ^(NSString * title, NSString * value){
-//
-//            contentTitle = title;
-//            valueStr = value;
-//
-//            textField.text = contentTitle;
-//
-//            model.data = textField.text;
-//
-//            if (!valueStr) {
-//                return ;
-//            }
-//
-//            [self.jsonDic setObject:valueStr forKey:model.field];
-//
-//
-//        };
-//
-//
-//        [self.view.window addSubview:selectView];
-//
-//        return NO;
-//
-//    }else if ([cellModel.dataType isEqualToString:@"houseLayout"]) {
-//        [self.view endEditing:YES];
-//
-//        NewAddCustomerElements* model = self.listArray[textField.tag - TEXTFIELD_TAG];
-//
-//        __block NSString* contentTitle;
-//        __block NSString* valueStr;
-//
-//        AddCostomerTypeListView* selectView = [[AddCostomerTypeListView alloc] initWithFrame:SCREEN_FRAME dataArr:model.dataList.mutableCopy dic:self.houseLayoutDic lengthLimit:model.fieldLength.integerValue];
-//
-//        selectView.lbTitle.text = model.title;
-//
-//        [selectView.affirmBtn handleControlEvent:UIControlEventTouchUpInside withBlock:^{
-//
-//            [selectView removeFromSuperview];
-//
-//            NSLog(@"jsonDic = %@",selectView.jsonDic);
-//
-//            contentTitle = @"";
-//            [self.houseLayoutDic addEntriesFromDictionary:selectView.jsonDic];
-//            [self.houseLayoutDic enumerateKeysAndObjectsUsingBlock:^(NSString * key, NSString * obj, BOOL * _Nonnull stop) {
-//
-//                if (![obj isEqualToString:@"0"]  && ![obj isEqualToString:@""] && obj) {
-//
-//                    for (NewAddCustomerInfoDataList* listModel in model.dataList) {
-//
-//                        if ([listModel.field isEqualToString:key]) {
-//
-//                            contentTitle = [contentTitle stringByAppendingFormat:@"%@%@",obj,listModel.title];
-//                            listModel.value = obj;
-//                            break;
-//
-//                        }
-//
-//                    }
-//                }
-//
-//            }];
-//
-//            textField.text = contentTitle;
-//
-//            model.data = textField.text;
-//
-//            if (!contentTitle) {
-//                return ;
-//            }
-//
-//            [self.jsonDic setObject:contentTitle forKey:model.field];
-//
-//            [self.jsonDic addEntriesFromDictionary:self.houseLayoutDic];
-//
-//
-//        }];
-//
-//        [self.view.window addSubview:selectView];
-//
-//        return NO;
-//
-//    }
-//    else if ([cellModel.dataType isEqualToString:@"time"]) {
-//        [self.view endEditing:YES];
-//
-//        WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDay CompleteBlock:^(NSDate *startDate) {
-//
-//
-//
-//            NSString *date = [startDate stringWithFormat:@"yyyy.MM.dd"];
-//
-//            textField.text = date;
-//
-//            NSTimeInterval time = [NSDate cTimestampFromDate:startDate];
-//
-//            NewAddCustomerElements* model = self.listArray[textField.tag - TEXTFIELD_TAG];
-//
-//            model.data = IntStr(time);
-//
-//            [self.jsonDic setObject:IntStr(time) forKey:model.field];
-//
-//        }];
-//
-//        datepicker.doneButtonColor = kBlueColor;//确定按钮的颜色
-//        [datepicker show];
-//
-//
-//
-//        return NO;
-//
-//
-//    }
     
     return NO;
 }

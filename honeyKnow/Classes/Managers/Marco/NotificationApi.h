@@ -18,6 +18,7 @@
 #define USER_TOKEN @"userToken"
 #define USER_IDENTIFIER @"user_identifier"
 #define USER_USERSIG @"user_userSig"
+#define USER_TELPHONE @"user_TELPHONE"
 
 
 
