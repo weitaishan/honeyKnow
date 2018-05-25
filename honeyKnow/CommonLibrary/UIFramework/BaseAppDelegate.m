@@ -15,7 +15,8 @@
 #import "BaseTabBarController.h"
 #import "LoginSelectViewController.h"
 #import "WXApi.h"
-
+#import <ILiveSDK/ILiveCoreHeader.h>
+#import "CallIncomingListener.h"
 @implementation BaseAppDelegate
 
 + (instancetype)sharedAppDelegate
@@ -117,15 +118,13 @@
     [WXApi registerApp:@"wxb4ba3c02aa476ea1" enableMTA:YES];
 
     //获取版本号
-//    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
-//    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
-//    NSLog(@"IMSDK version:%@",[[TIMManager sharedInstance] GetVersion]);
-//    // 初始化SDK
-//    [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
-//
-//    [[TIMManager sharedInstance] initSdk:kSDKAppID accountType:IntStr(kAccountType)];
-//
-//    [[TIMManager sharedInstance]  addMessageListener:self];
+    NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
+    NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
+    NSLog(@"IMSDK version:%@",[[TIMManager sharedInstance] GetVersion]);
+    // 初始化SDK
+    [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
+    [[TILCallManager sharedInstance] setIncomingCallListener:[[CallIncomingListener alloc] init]];
+
     
 }
 

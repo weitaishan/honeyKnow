@@ -59,4 +59,15 @@ typedef NS_ENUM(NSUInteger, WTSPermissionStatus) {
  *  退出登录
  */
 - (void)exitLoginWithTitle:(NSString *)title message:(NSString *)message;
+
+
+/**
+ 打视频电话
+ 
+ @param peerId userId
+ @param actorId 主播id
+ */
+- (void)callVideoTelePhoneWithPeerId:(NSString *)peerId;
+
+//- (void)callVideoTelePhoneWithPeerId:(NSString *)peerId actorId:(NSString *)actorId complete:(void (^)(BOOL isCallSend ))complete
 @end

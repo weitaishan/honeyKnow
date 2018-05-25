@@ -456,6 +456,8 @@
 		FD1BA4D720B7B1910060ABDC /* WTSWeightPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4D320B7B1900060ABDC /* WTSWeightPickerView.m */; };
 		FD1BA4D820B7B1910060ABDC /* WTSConstellationPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4D420B7B1900060ABDC /* WTSConstellationPickerView.m */; };
 		FD1BA4DC20B7EBD70060ABDC /* WithdrawAuthenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4DB20B7EBD70060ABDC /* WithdrawAuthenViewController.m */; };
+		FD1BA4DF20B7FA200060ABDC /* CallIncomingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4DE20B7FA1F0060ABDC /* CallIncomingListener.m */; };
+		FD1BA4E220B7FA870060ABDC /* CallRecvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4E120B7FA870060ABDC /* CallRecvViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1350,6 +1352,10 @@
 		FD1BA4D920B7B4840060ABDC /* WTSPickerHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTSPickerHeaders.h; sourceTree = "<group>"; };
 		FD1BA4DA20B7EBD70060ABDC /* WithdrawAuthenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawAuthenViewController.h; sourceTree = "<group>"; };
 		FD1BA4DB20B7EBD70060ABDC /* WithdrawAuthenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawAuthenViewController.m; sourceTree = "<group>"; };
+		FD1BA4DD20B7FA1F0060ABDC /* CallIncomingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallIncomingListener.h; sourceTree = "<group>"; };
+		FD1BA4DE20B7FA1F0060ABDC /* CallIncomingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallIncomingListener.m; sourceTree = "<group>"; };
+		FD1BA4E020B7FA870060ABDC /* CallRecvViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallRecvViewController.h; sourceTree = "<group>"; };
+		FD1BA4E120B7FA870060ABDC /* CallRecvViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallRecvViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1676,12 +1682,16 @@
 		09B630F720B31C95000C30B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD1BA4DD20B7FA1F0060ABDC /* CallIncomingListener.h */,
+				FD1BA4DE20B7FA1F0060ABDC /* CallIncomingListener.m */,
 				09B630F820B31C95000C30B8 /* LoginSelectViewController.h */,
 				09B630F920B31C95000C30B8 /* LoginSelectViewController.m */,
 				09B630FA20B31C95000C30B8 /* LoginViewController.h */,
 				09B630FB20B31C95000C30B8 /* LoginViewController.m */,
 				09B630FC20B31C95000C30B8 /* SplashViewController.h */,
 				09B630FD20B31C95000C30B8 /* SplashViewController.m */,
+				FD1BA4E020B7FA870060ABDC /* CallRecvViewController.h */,
+				FD1BA4E120B7FA870060ABDC /* CallRecvViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3630,6 +3640,7 @@
 				9266233D1C803EEB005D26CF /* FTUtils+UIGestureRecognizer.m in Sources */,
 				9B0D73541D2107C900F8C822 /* IMAMsg+UITableViewCell.m in Sources */,
 				926623551C803EEB005D26CF /* CheckButton.m in Sources */,
+				FD1BA4DF20B7FA200060ABDC /* CallIncomingListener.m in Sources */,
 				9B0D73751D2108A200F8C822 /* CustomChatUIViewController.m in Sources */,
 				FD1BA4DC20B7EBD70060ABDC /* WithdrawAuthenViewController.m in Sources */,
 				9B0D73681D2107C900F8C822 /* NSStringEx.m in Sources */,
@@ -3639,6 +3650,7 @@
 				926623431C803EEB005D26CF /* NSObject+CommonBlock.m in Sources */,
 				92C83BC21C895DA700718456 /* ChatGroupProfileViewController.m in Sources */,
 				92D895A81C7C7D8D00C7380B /* SearchResultViewController.m in Sources */,
+				FD1BA4E220B7FA870060ABDC /* CallRecvViewController.m in Sources */,
 				926623671C803EEB005D26CF /* NSDate+RFC1123.m in Sources */,
 				9B0D73631D2107C900F8C822 /* MyEmojView.m in Sources */,
 				926623321C803EEB005D26CF /* UICollectionViewController+ADFlipTransition.m in Sources */,
