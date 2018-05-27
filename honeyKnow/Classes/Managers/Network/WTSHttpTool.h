@@ -81,3 +81,12 @@ typedef void(^UploadFileTotalLenghtBlock)(double totalLength);
  @param roomId 房间id
  */
 + (void)stopVideoBillingWithRoomId:(NSString *)roomId;
+
+
+/**
+ 发消息时 判断是否有钱
+
+ @param completion 
+ */
++ (void)startSendMessageJudegeIsMoneyWithCompletion:(void(^)(BOOL isSend))completion;
+

@@ -29,11 +29,7 @@
     "title" : "帮助中心",
     "type" : 0
   },
-  {
-    "imgName" : "btn_wurao",
-    "title" : "勿扰",
-    "type" : 1
-  },
+ 
   {
     "imgName" : "btn_clear",
     "title" : "清除缓存",

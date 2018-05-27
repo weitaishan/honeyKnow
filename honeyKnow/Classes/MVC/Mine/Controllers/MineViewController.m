@@ -35,6 +35,7 @@ static NSString * const mineListCellId = @"mineListCellId";
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationController.navigationBarHidden = YES;
+
     [self setBaseInfo];
 }
 
@@ -85,7 +86,11 @@ static NSString * const mineListCellId = @"mineListCellId";
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.tableView registerClass:[MineListCell class] forCellReuseIdentifier:mineListCellId];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MinePersonInfoCell class]) bundle:nil] forCellReuseIdentifier:minePersonInfoCellId];
-
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -275,6 +280,10 @@ static NSString * const mineListCellId = @"mineListCellId";
         vc.hidesBottomBarWhenPushed = YES;
         
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"在线客服"]){
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"sms://0571-28120452"]];
+
     }
     
 }
@@ -322,6 +331,7 @@ static NSString * const mineListCellId = @"mineListCellId";
    
     
 }
+
 
 
 @end

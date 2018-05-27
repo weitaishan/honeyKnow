@@ -14,18 +14,14 @@
 
 @implementation HomeDetailsViewController
 
--(void)viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = NO;
 
+    
+    
     UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     btn.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn];
@@ -69,6 +65,14 @@
        
 
     }];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {

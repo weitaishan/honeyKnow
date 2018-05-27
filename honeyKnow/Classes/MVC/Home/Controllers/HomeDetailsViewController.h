@@ -6,7 +6,6 @@
 //  Copyright © 2018年 AlexiChen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface HomeDetailsViewController : UIViewController
+#import "WTSBaseViewController.h"
+@interface HomeDetailsViewController : WTSBaseViewController
 @end

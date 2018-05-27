@@ -50,7 +50,7 @@ static NSString * const homeListCellId = @"homeListCellId";
 
 - (void)setBaseUI{
     
-    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBarHidden = YES;
     
     [self addTableViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT - NewStatusBarHeight - 44)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

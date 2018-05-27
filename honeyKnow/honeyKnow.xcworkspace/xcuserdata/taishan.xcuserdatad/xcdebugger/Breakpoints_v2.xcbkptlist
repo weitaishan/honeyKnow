@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Managers/Network/WTSHttpTool.m"
-            timestampString = "549131562.74839"
+            timestampString = "549133281.217924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "392"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/MVC/Login/Controllers/CallRecvViewController.m"
-            timestampString = "549131562.748467"
+            timestampString = "549133281.218001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/MVC/Login/Controllers/CallRecvViewController.m"
-            timestampString = "549131562.74894"
+            timestampString = "549133281.218074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
@@ -320,22 +320,6 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "-asyncSetNickname:succ:fail:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ChatUI/Chat/ChatMsgShow/TIMElemBaseTableViewCell.m"
-            timestampString = "549126366.998197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "361"
-            endingLineNumber = "361"
-            landmarkName = "-configWith:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

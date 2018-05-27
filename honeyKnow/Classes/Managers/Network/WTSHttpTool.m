@@ -7,7 +7,7 @@
 //
 
 #import "WTSHttpTool.h"
-
+#import "PayViewController.h"
 @implementation WTSHttpTool
 static id _instance = nil;
 + (instancetype)sharedInstance {
@@ -476,5 +476,67 @@ static id _instance = nil;
         
         
     }];
+}
+
+/**
+ 发消息时 判断是否有钱
+ 
+ @param completion
+ */
++ (void)startSendMessageJudegeIsMoneyWithCompletion:(void(^)(BOOL isSend))completion{
+    
+    if ([SystemService shareInstance].isTeacher == 1) {
+        
+        return;
+    }
+    
+    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_TM_CHAT_PUT params:@{}.mutableCopy success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+            if ([response[@"code"] integerValue] == 5001){
+                
+                NSLog(@"余额不足");
+                [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发送消息，无法发送消息！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
+                    
+                    if (buttonTag == cancelIndex) {
+                        
+                        
+                    }else{
+                        
+                        PayViewController* vc = [[PayViewController alloc] init];
+                        vc.hidesBottomBarWhenPushed = YES;
+                        [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
+                    }
+                    
+                }];
+                
+                completion(NO);
+                
+            }else if ([response[@"code"] integerValue] == 99){
+                
+                completion(YES);
+
+                
+            }else{
+                
+                completion(NO);
+
+            }
+        }else{
+            
+            completion(NO);
+
+        }
+        
+        
+        
+    } failure:^(NSError *error) {
+        
+        completion(NO);
+
+    }];
+    
 }
 @end

@@ -16,4 +16,12 @@
 
 //0为title 1为switch(勿扰)
 @property (nonatomic, assign) NSInteger type;
+
+/**
+ {
+ "imgName" : "btn_wurao",
+ "title" : "勿扰",
+ "type" : 1
+ },
+ */
 @end
