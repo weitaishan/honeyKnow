@@ -29,6 +29,7 @@
 		0914A8A520B6F7650085DF55 /* SetLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A8A420B6F7650085DF55 /* SetLabelModel.m */; };
 		0914A8A620B85F710085DF55 /* CallRecvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4E120B7FA870060ABDC /* CallRecvViewController.m */; };
 		0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930BFDD20B59C88007AD501 /* libWeChatSDK.a */; };
+		0977173C20BAE0E200BD7841 /* HomeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0977173B20BAE0E200BD7841 /* HomeDetailsViewController.m */; };
 		09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
 		09B6319A20B31C95000C30B8 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */; };
 		09B6319B20B31C95000C30B8 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309720B31C95000C30B8 /* UIViewController+ZJScrollPageController.m */; };
@@ -498,6 +499,8 @@
 		0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		0930BFDF20B59C88007AD501 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0930BFE020B59C88007AD501 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		0977173A20BAE0E200BD7841 /* HomeDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailsViewController.h; sourceTree = "<group>"; };
+		0977173B20BAE0E200BD7841 /* HomeDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailsViewController.m; sourceTree = "<group>"; };
 		09B6309220B31C95000C30B8 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 		09B6309420B31C95000C30B8 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
 		09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
@@ -1641,6 +1644,8 @@
 				09B630E720B31C95000C30B8 /* HomeListViewController.m */,
 				09B630E820B31C95000C30B8 /* HomeViewController.h */,
 				09B630E920B31C95000C30B8 /* HomeViewController.m */,
+				0977173A20BAE0E200BD7841 /* HomeDetailsViewController.h */,
+				0977173B20BAE0E200BD7841 /* HomeDetailsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3568,6 +3573,7 @@
 				09B631CA20B31C95000C30B8 /* EditProfileViewController.m in Sources */,
 				922B239F1C84650200C350C2 /* PopupMenu.m in Sources */,
 				9266233B1C803EEB005D26CF /* FTAnimationManager.m in Sources */,
+				0977173C20BAE0E200BD7841 /* HomeDetailsViewController.m in Sources */,
 				926623851C803EEB005D26CF /* BaseCollectionViewController.m in Sources */,
 				929CD23E1C9952B1006A8778 /* NSDate+Common.m in Sources */,
 				926623491C803EEB005D26CF /* UIImage+ImageEffect.m in Sources */,

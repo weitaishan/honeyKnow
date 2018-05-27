@@ -121,12 +121,16 @@
                     
                     if ([response[@"success"] integerValue]){
 
-                        [[IMAPlatform sharedInstance].host asyncSetNickname:self.nickNameTF.text succ:^{
-                          
+                 
+                        
+                        [[TIMFriendshipManager sharedInstance] SetNickname:self.nickNameTF.text succ:^{
                             NSLog(@"IM设置昵称成功");
 
-                            
-                        } fail:nil];
+                         
+                        } fail:^(int code, NSString *msg) {
+                         
+                        }];
+                        
                         
                         [[TIMFriendshipManager sharedInstance] SetFaceURL:url succ:^{
                    

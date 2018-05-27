@@ -66,3 +66,18 @@ typedef void(^UploadFileTotalLenghtBlock)(double totalLength);
                   success:(SuccessBlock)success
                   failure:(FailBlock)failure;
 
+#pragma mark - 视频
+
+/**
+ 开始计费
+
+ @param roomId 房间id
+ */
++ (void)startVideoBillingWithRoomId:(NSString *)roomId;
+
+/**
+ 结束计费
+
+ @param roomId 房间id
+ */
++ (void)stopVideoBillingWithRoomId:(NSString *)roomId;

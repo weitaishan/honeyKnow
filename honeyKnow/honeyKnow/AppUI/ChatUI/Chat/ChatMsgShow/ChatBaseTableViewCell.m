@@ -71,25 +71,25 @@
 
 - (void)onClickUserIcon
 {
-    IMAUser *sender = [[IMAUser alloc] initWith:[_msg.msg sender]];
-    [[IMAPlatform sharedInstance].contactMgr isContainUser:sender];
-    
-    if (sender)
-    {
-        // 不为空说明是好友
-        FriendProfileViewController *vc = [[FriendProfileViewController alloc] initWith:sender];
-        [[AppDelegate sharedAppDelegate] pushViewController:vc withBackTitle:@"返回"];
-    }
-    else
-    {
-        // 说明是陌生人
-        [[IMAPlatform sharedInstance] asyncGetStrangerInfo:[_msg.msg sender] succ:^(IMAUser *auser) {
-            StrangerProfileViewController *vc = [[StrangerProfileViewController alloc] initWith:auser];
-            [[AppDelegate sharedAppDelegate] pushViewController:vc withBackTitle:@"返回"];
-        } fail:^(int code, NSString *msg) {
-            DebugLog(@"Fail:--> code=%d,msg=%@,fun=%s", code, msg,__func__);
-            [[HUDHelper sharedInstance] tipMessage:IMALocalizedError(code, msg)];
-        }];
-    }
+//    IMAUser *sender = [[IMAUser alloc] initWith:[_msg.msg sender]];
+//    [[IMAPlatform sharedInstance].contactMgr isContainUser:sender];
+//
+//    if (sender)
+//    {
+//        // 不为空说明是好友
+//        FriendProfileViewController *vc = [[FriendProfileViewController alloc] initWith:sender];
+//        [[AppDelegate sharedAppDelegate] pushViewController:vc withBackTitle:@"返回"];
+//    }
+//    else
+//    {
+//        // 说明是陌生人
+//        [[IMAPlatform sharedInstance] asyncGetStrangerInfo:[_msg.msg sender] succ:^(IMAUser *auser) {
+//            StrangerProfileViewController *vc = [[StrangerProfileViewController alloc] initWith:auser];
+//            [[AppDelegate sharedAppDelegate] pushViewController:vc withBackTitle:@"返回"];
+//        } fail:^(int code, NSString *msg) {
+//            DebugLog(@"Fail:--> code=%d,msg=%@,fun=%s", code, msg,__func__);
+//            [[HUDHelper sharedInstance] tipMessage:IMALocalizedError(code, msg)];
+//        }];
+//    }
 }
 @end

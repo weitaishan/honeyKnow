@@ -149,14 +149,14 @@ static NSString * const messageListCellId = @"messageListCellId";
         case EIMAConversation_BecomeActiveTop:
         {
             [self.tableView beginUpdates];
-            [self.tableView moveRowAtIndexPath:[NSIndexPath indexPathForRow:item.index inSection:0] toIndexPath:[NSIndexPath indexPathForRow:item.toIndex inSection:0]];
+            [self.tableView moveRowAtIndexPath:[NSIndexPath indexPathForRow:item.index inSection:1] toIndexPath:[NSIndexPath indexPathForRow:item.toIndex inSection:1]];
             [self.tableView endUpdates];
         }
             break;
         case EIMAConversation_NewConversation:
         {
             [self.tableView beginUpdates];
-            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:0];
+            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:1];
             [self.tableView insertRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
             
             [self.tableView endUpdates];
@@ -165,7 +165,7 @@ static NSString * const messageListCellId = @"messageListCellId";
         case EIMAConversation_DeleteConversation:
         {
             [self.tableView beginUpdates];
-            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:0];
+            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:1];
             [self.tableView deleteRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView endUpdates];
         }
@@ -173,7 +173,7 @@ static NSString * const messageListCellId = @"messageListCellId";
         case EIMAConversation_Connected:
         {
             [self.tableView beginUpdates];
-            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:0];
+            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:1];
             [self.tableView deleteRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView endUpdates];
         }
@@ -181,7 +181,7 @@ static NSString * const messageListCellId = @"messageListCellId";
         case EIMAConversation_DisConnected:
         {
             [self.tableView beginUpdates];
-            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:0];
+            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:1];
             [self.tableView insertRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView endUpdates];
         }
@@ -189,7 +189,7 @@ static NSString * const messageListCellId = @"messageListCellId";
         case EIMAConversation_ConversationChanged:
         {
             [self.tableView beginUpdates];
-            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:0];
+            NSIndexPath *index = [NSIndexPath indexPathForRow:item.index inSection:1];
             [self.tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
             
             [self.tableView endUpdates];

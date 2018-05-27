@@ -153,6 +153,8 @@
     [[IMAPlatform sharedInstance] login:_loginParam succ:^{
 //        [[HUDHelper sharedInstance] syncStopLoadingMessage:@"登录成功"];
         [weakSelf registNotification];
+        [[IMAPlatform sharedInstance] configOnLoginSucc:_loginParam];
+
 //        [weakSelf enterMainUI];
     } fail:^(int code, NSString *msg) {
 //        [[HUDHelper sharedInstance] syncStopLoadingMessage:IMALocalizedError(code, msg) delay:2 completion:^{

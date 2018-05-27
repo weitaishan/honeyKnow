@@ -36,6 +36,11 @@ typedef NS_ENUM(NSUInteger, WTSPermissionStatus) {
 
 @interface SystemService : NSObject
 
+
+/**
+ 是否是主播 1是主播 5是认证 0不是
+ */
+@property (nonatomic, assign) NSInteger isTeacher;
 +(instancetype) shareInstance;
 
 -(id)toArrayOrNSDictionary:(NSString *)json;

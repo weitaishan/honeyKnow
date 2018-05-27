@@ -248,6 +248,11 @@
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index
 {
+
+    if (!_safeArray.count) {
+        return;
+    }
+    
     [self lock];
     
     NSUInteger idx = [_safeArray indexOfObject:anObject];

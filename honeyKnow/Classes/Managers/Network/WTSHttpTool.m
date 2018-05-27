@@ -334,7 +334,7 @@ static id _instance = nil;
     [manager POST:url parameters:nil constructingBodyWithBlock:^(id  _Nonnull formData) {
         //对于图片进行压缩
         
-        CGFloat scale = 1.f;
+        CGFloat scale = 0.5f;
         if (image.size.width > 800 || image.size.height > 800) {
 
             scale = 0.3f;
@@ -408,7 +408,7 @@ static id _instance = nil;
             
             NSString* fileName = [NSString stringWithFormat:@"%@%ld.png",picFileName,i];
             //对于图片进行压缩
-            CGFloat scale = 1.f;
+            CGFloat scale = 0.5f;
             if (image.size.width > 1000 || image.size.height > 1000) {
                 
                 scale = 0.8f;
@@ -446,5 +446,35 @@ static id _instance = nil;
         NSLog(@"error = %@",error);
     }];
     
+}
+
++ (void)startVideoBillingWithRoomId:(NSString *)roomId{
+    
+    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_BILLING_START params:@{@"roomId" : roomId}.mutableCopy success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+}
+
++ (void)stopVideoBillingWithRoomId:(NSString *)roomId{
+    
+    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_BILLING_STOP params:@{@"roomId" : roomId}.mutableCopy success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
 }
 @end

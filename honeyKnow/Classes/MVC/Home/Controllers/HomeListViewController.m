@@ -9,6 +9,7 @@
 #import "HomeListViewController.h"
 #import "HomeListModel.h"
 #import "HomeListCell.h"
+#import "HomeDetailsViewController.h"
 @interface HomeListViewController ()
 @property (nonatomic, assign) NSInteger currentPage;//记录当前页
 
@@ -272,7 +273,9 @@ static NSString * const homeListCellId = @"homeListCellId";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-
+    HomeDetailsViewController* vc = [[HomeDetailsViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 懒加载
