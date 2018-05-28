@@ -94,4 +94,25 @@ static NSString * const URL_VIDEO_BILLING_START= @"video/start";
 static NSString * const URL_VIDEO_BILLING_STOP = @"video/stop";
 
 
+
+//==========================H5页面=============================
+
+/** 收入明细页面：*/
+static NSString *  const URL_H5_INCOME_DETAILS = @"http://miliao.xiangchaopai.com/income_detail.html?token=";
+/** 支出明细页面：*/
+static NSString *  const URL_H5_PAY_DETAILS = @"http://miliao.xiangchaopai.com/pay_detail.html?token=";
+/** 提现明细页面*/
+static NSString * const URL_H5_FUNDOUT_DETAILS = @"http://miliao.xiangchaopai.com/fundout_detail.html?token=";
+/** 通话记录页面*/
+static NSString * const URL_H5_VIDEO_DETAILS = @"http://miliao.xiangchaopai.com/video_detail.html?token=";
+/** H币明细页：*/
+static NSString * const URL_H5_BALANCE_HCOIN = @"http://miliao.xiangchaopai.com/balance_seq.html?token=";
+/** 亲密榜页面*/
+static NSString * const URL_H5_ORDER_RANK = @"http://miliao.xiangchaopai.com/order_rank.html?actorId=";
+/** 帮助页面页面*/
+static NSString * const URL_H5_HELP = @"http://miliao.xiangchaopai.com/help.html";
+
+
+
+
 #endif /* Urls_h */

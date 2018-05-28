@@ -214,7 +214,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
         
     } failure:^(NSError *error) {
         
-        NSLog(@"支付宝失败");
+        NSLog(@"支付失败");
     }];
     
     

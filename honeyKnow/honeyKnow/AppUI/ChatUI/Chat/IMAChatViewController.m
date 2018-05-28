@@ -153,6 +153,7 @@
 
 - (void)onChatInput:(UIView<ChatInputAbleView> *)chatInput sendMsg:(IMAMsg *)text
 {
+    
     [self sendMsg:text];
     NSMutableArray *elems = [NSMutableArray array];
     for (int index =0 ; index<text.msg.elemCount; index++ )
@@ -160,6 +161,13 @@
         [elems addObject:[text.msg getElem:index]];
     }
     NSLog(@"%d",text.msg.elemCount);
+}
+
+- (void)callVideoInput:(UIView<ChatInputAbleView> *)chatInput{
+    
+    NSLog(@"视频通话=>%@",_receiver.userId);
+    [[SystemService shareInstance] callVideoTelePhoneWithPeerId:_receiver.userId];
+
 }
 
 - (void)onChatInput:(UIView<ChatInputAbleView> *)chatInput willSendMsg:(IMAMsg *)msg

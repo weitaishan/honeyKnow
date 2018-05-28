@@ -112,7 +112,7 @@
 - (void)addOwnViews
 {
     [super addOwnViews];
-    
+    self.backgroundColor = [UIColor whiteColor];
     _pageControl.hidden = NO;
     _pageControl.pageIndicatorTintColor = [UIColor flatGrayColor];
     _pageControl.currentPageIndicatorTintColor = [UIColor flatOrangeColor];

@@ -8,6 +8,8 @@
 
 #import "WTSHttpTool.h"
 #import "PayViewController.h"
+#import "BaseTabBarController.h"
+#import "BaseNavigationViewController.h"
 @implementation WTSHttpTool
 static id _instance = nil;
 + (instancetype)sharedInstance {
@@ -498,21 +500,36 @@ static id _instance = nil;
             if ([response[@"code"] integerValue] == 5001){
                 
                 NSLog(@"余额不足");
-                [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发送消息，无法发送消息！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
-                    
-                    if (buttonTag == cancelIndex) {
-                        
-                        
-                    }else{
-                        
-                        PayViewController* vc = [[PayViewController alloc] init];
-                        vc.hidesBottomBarWhenPushed = YES;
-                        [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
-                    }
-                    
-                }];
+//                [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发送消息，无法发送消息！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
+//                    
+//                    if (buttonTag == cancelIndex) {
+//                        
+//                        
+//                    }else{
+//                        
+//                        PayViewController* vc = [[PayViewController alloc] init];
+//                        vc.hidesBottomBarWhenPushed = YES;
+//                        if ([APP_DELEGATE().getCurrentVC isKindOfClass:[BaseTabBarController class]]) {
+//                            
+//                            
+//                            BaseTabBarController* tab = (BaseTabBarController *)APP_DELEGATE().getCurrentVC;
+//                            
+//                            
+//                            BaseNavigationViewController *curNav = (BaseNavigationViewController *)[[tab viewControllers] objectAtIndex:tab.selectedIndex];
+//
+//                            [curNav pushViewController:vc animated:YES];
+//
+//                            
+//                        }else{
+//                            
+//                            [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
+//
+//                        }
+//                    }
+//                    
+//                }];
                 
-                completion(NO);
+                completion(YES);
                 
             }else if ([response[@"code"] integerValue] == 99){
                 

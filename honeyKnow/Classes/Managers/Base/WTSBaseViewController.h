@@ -27,5 +27,10 @@
 -(void)textField:(UITextField *)textField maxLimitNumbs:(NSInteger)numbs;
 /** 添加提示*/
 -(void)addToast:(NSString *)toastStr;
-
+/**
+ 加载webView
+ 
+ @param url url
+ */
+- (void)loadingWebViewWithUrl:(NSString *)url;
 @end

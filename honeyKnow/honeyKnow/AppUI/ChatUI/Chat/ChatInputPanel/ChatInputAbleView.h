@@ -42,8 +42,8 @@
 
 // 取消即将发送的
 - (void)onChatInput:(UIView<ChatInputAbleView> *)chatInput cancelSendMsg:(IMAMsg *)msg;
-
-
+//打视频通话
+- (void)callVideoInput:(UIView<ChatInputAbleView> *)chatInput;
 @optional
 - (void)onChatInputSendImage:(UIView<ChatInputAbleView> *)chatInput;
 - (void)onChatInputTakePhoto:(UIView<ChatInputAbleView> *)chatInput;

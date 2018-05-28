@@ -15,6 +15,7 @@
 #import "MyWalletViewController.h"
 #import "PayViewController.h"
 #import "AuthenMakeMoneyViewController.h"
+#import "WebViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -282,7 +283,21 @@ static NSString * const mineListCellId = @"mineListCellId";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([title isEqualToString:@"在线客服"]){
         
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"sms://0571-28120452"]];
+        NSString *callPhone = @"telprompt://0571-28120452";
+        
+        /// 解决iOS10及其以上系统弹出拨号框延迟的问题
+        /// 方案一
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+            /// 10及其以上系统
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@{} completionHandler:nil];
+        } else {
+            /// 10以下系统
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
+        }
+        
+    }else if ([title isEqualToString:@"帮助中心"]){
+        
+        [self loadingWebViewWithUrl:URL_H5_HELP];
 
     }
     

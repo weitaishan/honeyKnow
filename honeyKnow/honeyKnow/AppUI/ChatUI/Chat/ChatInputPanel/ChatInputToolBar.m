@@ -100,12 +100,16 @@
     [self addSubview:_emoj];
     
     
-//    _more = [[UIButton alloc] init];
-//    [_more setTitle:@"发送" forState:UIControlStateNormal];
+    _more = [[UIButton alloc] init];
+    [_more setTitle:@"发送" forState:UIControlStateNormal];
+    _more.backgroundColor = [UIColor colorFromHexString:@"#007aff"];
+    _more.layer.masksToBounds = YES;
+    _more.layer.cornerRadius = 4.f;
+    _more.titleLabel.font = [UIFont systemFontOfSize:17];
 //    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_nor"] forState:UIControlStateNormal];
 //    [_more setImage:[UIImage imageNamed:@"chat_toolbar_more_press"] forState:UIControlStateHighlighted];
-//    [_more addTarget:self action:@selector(onClickMore:) forControlEvents:UIControlEventTouchUpInside];
-//    [self addSubview:_more];
+    [_more addTarget:self action:@selector(onClickMore:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_more];
 }
 
 - (void)setChatDelegate:(id<ChatInputAbleViewDelegate>)delegate
@@ -172,14 +176,14 @@
     [_audio alignParentLeftWithMargin:kDefaultMargin];
     
     
-//    [_more sameWith:_audio];
-//    [_more alignParentRightWithMargin:kDefaultMargin];
+    [_more sizeWith:CGSizeMake(45, 34)];
+    [_more alignParentRightWithMargin:kDefaultMargin];
+    _more.centerY = self.centerY;
     
-    
+//    [_emoj sameWith:_audio];
+//    [_emoj alignParentRightWithMargin:kDefaultMargin];
     [_emoj sameWith:_audio];
-    [_emoj alignParentRightWithMargin:kDefaultMargin];
-//    [_emoj sameWith:_more];
-//    [_emoj layoutToLeftOf:_more margin:kDefaultMargin/2];
+    [_emoj layoutToLeftOf:_more margin:kDefaultMargin/2];
     
     [_audioPressed sameWith:_audio];
     [_audioPressed layoutToRightOf:_audio margin:kDefaultMargin/2];
@@ -216,6 +220,25 @@
 //    {
 //        [_toolBarDelegate onToolBarClickMore:self show:button.selected];
 //    }
+    
+    [WTSHttpTool startSendMessageJudegeIsMoneyWithCompletion:^(BOOL isSend) {
+        
+        if (isSend) {
+            
+            if ([_chatDelegate respondsToSelector:@selector(onChatInput:sendMsg:)])
+            {
+                if (_textView.textStorage.length > 0)
+                {
+                    IMAMsg *msg = [(ChatInputTextView *)_textView getMultiMsg];
+                    [_chatDelegate onChatInput:self sendMsg:msg];
+                }
+                [(ChatInputTextView *)_textView clearAll];
+                [self willShowInputTextViewToHeight:[self getTextViewContentH:_textView]];
+            }
+        }
+    }];
+    
+    
 }
 
 - (void)onClikEmoj:(UIButton *)button
@@ -272,6 +295,14 @@
 //        // 文字模式
 //        [self willShowInputTextViewToHeight:[self getTextViewContentH:_textView]];
 //    }
+
+    //视频通话
+    if ([_chatDelegate respondsToSelector:@selector(callVideoInput:)])
+    {
+            [_chatDelegate callVideoInput:self];
+    }
+    
+    
 }
 
 
@@ -481,13 +512,22 @@
     {
         if ([_chatDelegate respondsToSelector:@selector(onChatInput:sendMsg:)])
         {
-            if (_textView.textStorage.length > 0)
-            {
-                IMAMsg *msg = [(ChatInputTextView *)_textView getMultiMsg];
-                [_chatDelegate onChatInput:self sendMsg:msg];
-            }
-            [(ChatInputTextView *)_textView clearAll];
-            [self willShowInputTextViewToHeight:[self getTextViewContentH:textView]];
+            [WTSHttpTool startSendMessageJudegeIsMoneyWithCompletion:^(BOOL isSend) {
+                //发送消息
+                if (isSend) {
+                    
+                    if ([_chatDelegate respondsToSelector:@selector(onChatInput:sendMsg:)])
+                    {
+                        if (_textView.textStorage.length > 0)
+                        {
+                            IMAMsg *msg = [(ChatInputTextView *)_textView getMultiMsg];
+                            [_chatDelegate onChatInput:self sendMsg:msg];
+                        }
+                        [(ChatInputTextView *)_textView clearAll];
+                        [self willShowInputTextViewToHeight:[self getTextViewContentH:textView]];
+                    }
+                }
+            }];
         }
         
         return NO;

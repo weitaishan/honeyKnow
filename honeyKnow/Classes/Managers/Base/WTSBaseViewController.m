@@ -8,6 +8,7 @@
 
 #import "WTSBaseViewController.h"
 #import "BaseNavigationViewController.h"
+#import "WebViewController.h"
 @interface WTSBaseViewController ()
 
 @end
@@ -236,5 +237,20 @@
     
     return UIInterfaceOrientationMaskPortrait;
     
+}
+
+/**
+ 加载webView
+
+ @param url url
+ */
+- (void)loadingWebViewWithUrl:(NSString *)url{
+    
+    
+    WebViewController* webVC = [[WebViewController alloc] init];
+    
+    webVC.urlStr = url;
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 @end

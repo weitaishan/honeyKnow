@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TIMAdapter/IMAAppDelegate.m"
-            timestampString = "548762383.040424"
+            filePath = "honeyKnow/AppUI/ChatUI/Chat/ChatInputPanel/ChatInputToolBar.m"
+            timestampString = "549185521.4869879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-enterLoginUI"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
+            landmarkName = "-textViewDidEndEditing:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CommonLibrary/UIView+InitMethod/UILabel+InitMethod.m"
-            timestampString = "548674022.938755"
+            filePath = "Pods/IQKeyboardManager/IQKeyboardManager/IQKeyboardReturnKeyHandler.m"
+            timestampString = "549181417.664005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "+labelWith:"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "-textFieldShouldReturn:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CommonLibrary/UIView+InitMethod/UILabel+InitMethod.m"
-            timestampString = "548674022.939225"
+            filePath = "honeyKnow/AppUI/ChatUI/Chat/ChatInputPanel/ChatInputToolBar.m"
+            timestampString = "549185521.487344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "+labelWith:textColor:"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
+            landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,29 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CommonLibrary/UIView+InitMethod/UILabel+InitMethod.m"
-            timestampString = "548674022.939465"
+            filePath = "honeyKnow/AppUI/ChatUI/Chat/ChatInputPanel/ChatInputToolBar.m"
+            timestampString = "549185521.487397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "+labelWith:textColor:backgroundColor:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CommonLibrary/UIView+InitMethod/UILabel+InitMethod.m"
-            timestampString = "548674022.9396859"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "+centerlabelWith:"
+            startingLineNumber = "524"
+            endingLineNumber = "524"
+            landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

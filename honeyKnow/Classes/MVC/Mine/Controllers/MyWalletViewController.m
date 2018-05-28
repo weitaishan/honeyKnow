@@ -10,7 +10,7 @@
 #import "MessageListModel.h"
 #import "MyWalletCell.h"
 #import "WithdrawAuthenViewController.h"
-
+#import "PayViewController.h"
 @interface MyWalletViewController ()
 @property (nonatomic, strong) NSMutableArray<NSArray *>* listArray;
 
@@ -165,6 +165,9 @@ static NSString * const myWalletCellId = @"myWalletCellId";
                 {
                     
                     NSLog(@"充值");
+                    PayViewController* vc = [[PayViewController alloc] init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
                     
                 }
                     break;
@@ -194,13 +197,15 @@ static NSString * const myWalletCellId = @"myWalletCellId";
                 {
                     
                     NSLog(@"收入明细");
-                    
+                    [self loadingWebViewWithUrl:URL_H5_INCOME_DETAILS];
+
                 }
                     break;
                 case 1:
                 {
                     NSLog(@"支出明细");
-                    
+                    [self loadingWebViewWithUrl:URL_H5_PAY_DETAILS];
+
                     
                 }
                     break;
@@ -209,6 +214,8 @@ static NSString * const myWalletCellId = @"myWalletCellId";
                 {
                     
                     NSLog(@"提现明细");
+                    [self loadingWebViewWithUrl:URL_H5_FUNDOUT_DETAILS];
+
                 }
                     break;
                 default:

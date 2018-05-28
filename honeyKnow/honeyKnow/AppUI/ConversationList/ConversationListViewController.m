@@ -12,7 +12,7 @@
 
 #import "MessageListModel.h"
 #import "MessageListCell.h"
-
+#import "WebViewController.h"
 @interface ConversationListViewController ()
 {
     
@@ -311,6 +311,37 @@ static NSString * const messageListCellId = @"messageListCellId";
 {
     
     if (indexPath.section == 0) {
+        
+        
+        switch (indexPath.row) {
+            case 0:
+                {
+                    NSLog(@"通话记录");
+                    [self loadingWebViewWithUrl:URL_H5_VIDEO_DETAILS];
+
+                    
+                }
+                break;
+            case 1:
+            {
+                NSLog(@"H币记录");
+                [self loadingWebViewWithUrl:URL_H5_BALANCE_HCOIN];
+                
+                
+            }
+                break;
+            case 2:
+            {
+      
+                
+                
+            }
+                break;
+            default:
+                break;
+        }
+        
+        
         return;
     }
     
@@ -411,5 +442,20 @@ static NSString * const messageListCellId = @"messageListCellId";
     
     return _listArray;
     
+}
+
+/**
+ 加载webView
+ 
+ @param url url
+ */
+- (void)loadingWebViewWithUrl:(NSString *)url{
+    
+    
+    WebViewController* webVC = [[WebViewController alloc] init];
+    
+    webVC.urlStr = url;
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 @end
