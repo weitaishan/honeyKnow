@@ -125,9 +125,30 @@
 
 - (void)updateCellOnNewMessage
 {
-    [_conversationIcon sd_setBackgroundImageWithURL:[_showItem showIconUrl] forState:UIControlStateNormal placeholderImage:[_showItem defaultShowImage]];
+//    [_conversationIcon sd_setBackgroundImageWithURL:[_showItem showIconUrl] forState:UIControlStateNormal placeholderImage:[_showItem defaultShowImage]];
+//    
+//    _conversationName.text = [_showItem showTitle];
+
+    
+    [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[[_showItem userId]] succ:^(NSArray *data) {
         
-    _conversationName.text = [_showItem showTitle];
+        
+        for (TIMUserProfile * userProfile in data) {
+            if ([userProfile.identifier isEqualToString:[_showItem userId]]) {
+                
+                IMAUser *user2 = [[IMAUser alloc] initWithUserInfo:userProfile];
+                _conversationName.text = user2.nickName;
+                [_conversationIcon sd_setBackgroundImageWithURL:[NSURL URLWithString:user2.icon] forState:UIControlStateNormal placeholderImage:[_showItem defaultShowImage]];
+
+                
+                
+            }
+        }
+        
+    } fail:^(int code, NSString *err) {
+        
+    }];
+    
     
     _lastMsgTime.text = [_showItem lastMsgTime];
     

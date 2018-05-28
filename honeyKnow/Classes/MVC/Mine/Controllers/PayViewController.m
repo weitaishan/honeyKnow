@@ -9,7 +9,10 @@
 #import "PayViewController.h"
 #import "PayStyleCell.h"
 #import "PayMoneyCell.h"
+#import "MinePersonInfoModel.h"
+
 @interface PayViewController ()
+@property (nonatomic, strong) MinePersonInfoModel* infoModel;
 
 @property (nonatomic, strong) NSMutableArray * listArray;
 
@@ -35,7 +38,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
-//    [self getUserInfoData];
+    [self getUserInfoData];
     
 }
 
@@ -47,7 +50,22 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 - (void)getUserInfoData{
     
     
-
+    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_USER_GET params:nil success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+            
+            self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
+                        
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+    
 }
 
 - (void)setBaseInfo{
@@ -87,7 +105,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
     if (indexPath.section == 0) {
         
         PayStyleCell * cell = [tableView dequeueReusableCellWithIdentifier:payStyleCellId forIndexPath:indexPath];
-    
+        cell.lbHCoin.text = self.infoModel.balance.length ? self.infoModel.balance : @"0";
         _isWeixin = cell.wxBtn.isSelected;
         cell.aliBtn.selected = !cell.wxBtn.selected;
 

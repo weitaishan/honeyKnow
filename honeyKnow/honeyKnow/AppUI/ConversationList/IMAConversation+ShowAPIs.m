@@ -33,9 +33,10 @@
 {
     NSString *recerive = [_conversation getReceiver];
     TIMConversationType type = self.type;
-    IMAUser *user = nil;
+    __block IMAUser *user = nil;
     if (type == TIM_C2C)
     {
+        
         user = [[IMAPlatform sharedInstance].contactMgr getUserByUserId:recerive];
     }
     else if (type == TIM_GROUP)
@@ -46,6 +47,11 @@
     
     
     return user ? [user showTitle] : ![NSString isEmpty:recerive] ? recerive : @"系统消息";
+}
+
+- (NSString *)userId{
+    
+    return [_conversation getReceiver];
 }
 
 - (UIImage *)defaultShowImage

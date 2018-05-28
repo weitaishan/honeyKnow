@@ -77,6 +77,7 @@ static NSString * const messageListCellId = @"messageListCellId";
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
     [self pinHeaderView];
+    [self getUsersProfile];
 }
 
 
@@ -96,6 +97,29 @@ static NSString * const messageListCellId = @"messageListCellId";
 {
 }
 
+- (void)getUsersProfile{
+    
+//    getUsersProfile
+//    [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[] succ:^(NSArray *data) {
+//
+//
+//
+//        for (TIMUserProfile * userProfile in data) {
+//            if ([userProfile.identifier isEqualToString:userid]) {
+//
+//                IMAUser *user = [[IMAUser alloc] initWithUserInfo:userProfile];
+//
+//                _conversationList.
+//
+//            }
+//        }
+//
+//
+//
+//    } fail:^(int code, NSString *err) {
+//
+//    }];
+}
 - (void)configOwnViews
 {
     IMAConversationManager *mgr = [IMAPlatform sharedInstance].conversationMgr;

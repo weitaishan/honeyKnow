@@ -47,7 +47,7 @@
  */
 @property (nonatomic, copy) NSString* certNo;
 /**
- 平衡
+ H币
  */
 @property (nonatomic, copy) NSString* balance;
 /**

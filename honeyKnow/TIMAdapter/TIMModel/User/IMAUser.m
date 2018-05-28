@@ -14,6 +14,10 @@
 {
     if (self = [super init])
     {
+        
+     
+        
+        
         self.userId = userid;
     }
     return self;

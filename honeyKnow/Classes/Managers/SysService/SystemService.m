@@ -267,7 +267,11 @@ static SystemService* _instance = nil;
             [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
             [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
             [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
-            
+            [[TIMManager sharedInstance] logout:^() {
+                NSLog(@"logout succ");
+            } fail:^(int code, NSString * err) {
+                NSLog(@"logout fail: code=%d err=%@", code, err);
+            }];
             
             LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
             

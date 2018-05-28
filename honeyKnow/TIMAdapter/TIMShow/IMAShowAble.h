@@ -17,4 +17,5 @@
 // 显示图像的地址
 - (NSURL *)showIconUrl;
 
+- (NSString *)userId;
 @end

@@ -24,7 +24,7 @@
 @property (nonatomic, copy) NSString *signName;
 /**身高*/
 @property (nonatomic, copy) NSString *tall;
-/** 是否在线*/
+/** 是否在线  1是在线  0 是离线  2是繁忙  3勿扰*/
 @property (nonatomic, copy) NSString *status;
 /** 星级*/
 @property (nonatomic, copy) NSString *star;

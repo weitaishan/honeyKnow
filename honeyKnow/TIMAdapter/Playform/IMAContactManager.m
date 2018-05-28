@@ -157,6 +157,7 @@
     {
         return nil;
     }
+   
     IMAUser *item = [[IMAUser alloc] initWith:userID];
     return [self isContainUser:item];
 }

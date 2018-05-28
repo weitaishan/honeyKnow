@@ -33,7 +33,9 @@
     [self.iconImgView sd_setImageWithURL:[NSURL URLWithString:infoModel.avator] placeholderImage:[UIImage imageNamed:@"pic_avatar"]];
     self.lbName.text = infoModel.nickName ?infoModel.nickName  : @"昵称";
     self.lbFocusNum.text = IntStr(infoModel.focusNum);
-    self.lbHCoinNum.text = infoModel.balance ?infoModel.balance  : @"0";;
+    self.lbHCoinNum.text = infoModel.balance ? infoModel.balance  : @"0";
+    
+    [self.levelBtn setTitle:[NSString stringWithFormat:@"LV.%@",infoModel.star.length ? infoModel.star : @"1"] forState:UIControlStateNormal];
     
 }
 @end

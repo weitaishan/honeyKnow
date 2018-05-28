@@ -28,7 +28,7 @@
 @property (nonatomic, copy) NSString *isDeleted;
 /**标题*/
 @property (nonatomic, copy) NSString *title;
-/**结束*/
+/**介绍*/
 @property (nonatomic, copy) NSString *introduct;
 /**喜欢量*/
 @property (nonatomic, assign) NSInteger loveNum;

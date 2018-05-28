@@ -26,7 +26,7 @@ typedef void (^RemoveMsgBlock)(NSArray *imamsgList, BOOL succ, CommonVoidBlock r
 
 @property (nonatomic, strong) IMAMsg   *lastMessage;
 @property (nonatomic, readonly) CLSafeMutableArray *msgList;
-
+@property (nonatomic, strong) IMAUser* user;
 @property (nonatomic, copy) HandleMsgBlock receiveMsg;
 
 - (instancetype)initWith:(TIMConversation *)conv;
