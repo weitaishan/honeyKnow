@@ -118,6 +118,7 @@
     _sendingTipRef = [self addSendingTips];
     if (_sendingTipRef)
     {
+        _sendingTipRef.hidden = NO;
         [self.contentView addSubview:_sendingTipRef];
     }
     
@@ -201,6 +202,8 @@
         
         if (_sendingTipRef)
         {
+            _sendingTipRef.hidden = YES;
+
             NSInteger width = [_msg sendingTipWidth];
             [_sendingTipRef sizeWith:CGSizeMake(width, rect.size.height)];
             [_sendingTipRef layoutToLeftOf:_contentBack margin:hor];
@@ -247,7 +250,7 @@
         
         if (_sendingTipRef)
         {
-            //            _sendingTipRef.hidden = YES;
+             _sendingTipRef.hidden = YES;
             NSInteger width = [_msg sendingTipWidth];
             [_sendingTipRef sizeWith:CGSizeMake(width, rect.size.height)];
             [_sendingTipRef layoutToRightOf:_contentBack margin:hor];
@@ -418,7 +421,9 @@
 }
 - (void)configSendingTips
 {
-    _sendingTipRef.hidden = ![_msg isMineMsg];
+//    _sendingTipRef.hidden = ![_msg isMineMsg];
+    _sendingTipRef.hidden = YES;
+
 }
 
 

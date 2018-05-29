@@ -86,6 +86,8 @@ static NSString * const messageListCellId = @"messageListCellId";
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
+    [self onUnReadMessag];
+//    [self configOwnViews];
     
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -141,6 +143,7 @@ static NSString * const messageListCellId = @"messageListCellId";
         [ws onUnReadMessag];
     }];
     [ws onUnReadMessag];
+    [self.tableView reloadData];
 }
 
 - (void)onUnReadMessag
@@ -173,6 +176,10 @@ static NSString * const messageListCellId = @"messageListCellId";
             break;
         case EIMAConversation_BecomeActiveTop:
         {
+            if (_conversationList.count < 2) {
+                
+                return;
+            }
             [self.tableView beginUpdates];
             [self.tableView moveRowAtIndexPath:[NSIndexPath indexPathForRow:item.index inSection:1] toIndexPath:[NSIndexPath indexPathForRow:item.toIndex inSection:1]];
             [self.tableView endUpdates];
