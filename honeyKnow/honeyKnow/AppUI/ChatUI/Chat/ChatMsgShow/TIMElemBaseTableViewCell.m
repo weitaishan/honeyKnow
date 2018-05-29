@@ -359,7 +359,27 @@
     {
         user = [_msg getSender];
     }
-    [_icon sd_setImageWithURL:[user showIconUrl] forState:UIControlStateNormal placeholderImage:kDefaultUserIcon];
+    
+
+    
+    [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[user.userId] succ:^(NSArray *data) {
+        
+        
+        for (TIMUserProfile * userProfile in data) {
+            if ([userProfile.identifier isEqualToString:user.userId]) {
+                
+                IMAUser *user2 = [[IMAUser alloc] initWithUserInfo:userProfile];
+                [_icon sd_setImageWithURL:[NSURL URLWithString:user2.icon] forState:UIControlStateNormal placeholderImage:kDefaultUserIcon];
+
+                
+                
+            }
+        }
+        
+    } fail:^(int code, NSString *err) {
+        
+    }];
+    
     
     if (_remarkTip)
     {

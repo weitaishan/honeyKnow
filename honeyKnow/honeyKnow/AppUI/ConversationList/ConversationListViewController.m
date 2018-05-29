@@ -77,6 +77,7 @@ static NSString * const messageListCellId = @"messageListCellId";
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
     [self pinHeaderView];
+    [self pinHeaderAndRefesh];
     [self getUsersProfile];
 }
 

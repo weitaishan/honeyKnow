@@ -180,12 +180,42 @@
 
 - (void)setChatTitle
 {
-    NSString *title = [_receiver showTitle];
-    if (title.length > 10)
-    {
-        title = [NSString stringWithFormat:@"%@...", [title substringToIndex:10]];
-    }
-    self.title = title;
+    
+    [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[_receiver.userId] succ:^(NSArray *data) {
+        
+        
+        for (TIMUserProfile * userProfile in data) {
+            if ([userProfile.identifier isEqualToString:_receiver.userId]) {
+                
+                IMAUser *user2 = [[IMAUser alloc] initWithUserInfo:userProfile];
+                NSString *title = user2.nickName;
+
+                if (title.length > 10)
+                {
+                    title = [NSString stringWithFormat:@"%@...", [title substringToIndex:10]];
+                }
+                self.title = title;
+                
+                
+            }
+        }
+        
+    } fail:^(int code, NSString *err) {
+        
+        
+        NSString *title = [_receiver showTitle];
+        
+        if (title.length > 10)
+        {
+            title = [NSString stringWithFormat:@"%@...", [title substringToIndex:10]];
+        }
+        self.title = title;
+        
+    }];
+    
+   
+    
+    
 }
 
 - (void)onReceiveNewMsg:(NSArray *)imamsgList succ:(BOOL)succ
