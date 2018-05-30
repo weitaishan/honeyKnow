@@ -304,11 +304,11 @@
 
 - (NSInteger)insertPosition
 {
-    IMAPlatform *mp = [IMAPlatform sharedInstance];
-    if (!mp.isConnected)
-    {
-        return 1;
-    }
+//    IMAPlatform *mp = [IMAPlatform sharedInstance];
+//    if (!mp.isConnected)
+//    {
+//        return 1;
+//    }
     return 0;
 }
 

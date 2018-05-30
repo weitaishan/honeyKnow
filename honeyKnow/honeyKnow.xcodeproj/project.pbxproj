@@ -500,6 +500,7 @@
 		0930BFDE20B59C88007AD501 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		0930BFDF20B59C88007AD501 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0930BFE020B59C88007AD501 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		0951DA5720BEF6C900DA193E /* honeyKnow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = honeyKnow.entitlements; sourceTree = "<group>"; };
 		0977173A20BAE0E200BD7841 /* HomeDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailsViewController.h; sourceTree = "<group>"; };
 		0977173B20BAE0E200BD7841 /* HomeDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailsViewController.m; sourceTree = "<group>"; };
 		09B6309220B31C95000C30B8 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
@@ -2588,6 +2589,7 @@
 		92A6D38F1C5B506A00065EB3 /* honeyKnow */ = {
 			isa = PBXGroup;
 			children = (
+				0951DA5720BEF6C900DA193E /* honeyKnow.entitlements */,
 				9B617A8A1CAE739D0051C24D /* DailyBuild-Info.plist */,
 				922B239C1C8464CE00C350C2 /* CustomUI */,
 				92E793D31C756F3100A03ADF /* AppUI */,
@@ -3225,9 +3227,12 @@
 				TargetAttributes = {
 					92A6D38C1C5B506A00065EB3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8W7NY9PTY5;
+						DevelopmentTeam = 97JMJFYTRR;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -3859,11 +3864,11 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = honeyKnow/honeyKnow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W7NY9PTY5;
+				DEVELOPMENT_TEAM = 97JMJFYTRR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3906,11 +3911,11 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = honeyKnow/honeyKnow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W7NY9PTY5;
+				DEVELOPMENT_TEAM = 97JMJFYTRR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4012,11 +4017,11 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = honeyKnow/honeyKnow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8W7NY9PTY5;
+				DEVELOPMENT_TEAM = 97JMJFYTRR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

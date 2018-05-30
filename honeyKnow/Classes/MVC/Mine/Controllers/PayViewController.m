@@ -202,7 +202,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 
     WeakSelf;
     [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"channel" : _isWeixin ? @"02" : @"01",
-                    @"amount" : cell.lbMoney.text}.mutableCopy success:^(id response) {
+                    @"amount" : @"0.01"}.mutableCopy success:^(id response) {
         
         
         if ([response[@"success"] integerValue]){
@@ -210,13 +210,13 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
             
             if (_isWeixin) {
 
-                [[MJPayApi sharedApi]wxPayWithPayParam:response[@"data"] success:^(PayCode code)
-                 {
-
-                 } failure:^(PayCode code) {
-
-
-                 }];
+//                [[MJPayApi sharedApi]wxPayWithPayParam:response[@"data"] success:^(PayCode code)
+//                 {
+//
+//                 } failure:^(PayCode code) {
+//
+//
+//                 }];
 
             }else{
 

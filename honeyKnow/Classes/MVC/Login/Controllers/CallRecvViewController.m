@@ -44,6 +44,14 @@
 @property (nonatomic, strong) UIView* switchView;
 
 
+/**
+ 通话提示View
+ */
+@property (weak, nonatomic) IBOutlet UIView *callShowView;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImgView;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UILabel *lbShow;
 @end
 
 @implementation CallRecvViewController{
@@ -64,8 +72,8 @@
 
     
     
-    [[ILiveRoomManager getInstance] setWhite:5];
-    [[ILiveRoomManager getInstance] setBeauty:5];
+    [[ILiveRoomManager getInstance] setWhite:8];
+    [[ILiveRoomManager getInstance] setBeauty:8];
 
     self.view.backgroundColor = [UIColor blackColor];
     [self setEnableButton];
@@ -100,6 +108,29 @@
     
     
     if (self.callType == WTSCallTypeSend) {
+        
+        
+        [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[_peerId] succ:^(NSArray *data) {
+            
+            
+            for (TIMUserProfile * userProfile in data) {
+                if ([userProfile.identifier isEqualToString:_peerId]) {
+                    
+                    IMAUser *user = [[IMAUser alloc] initWithUserInfo:userProfile];
+                    _callShowView.hidden = NO;
+                    _lbName.text = user.nickName ? user.nickName : @"美女";
+                    _lbShow.text = @"正在等待对方接受邀请.";
+                    [_iconImgView sd_setImageWithURL:[NSURL URLWithString:user.icon] placeholderImage:[UIImage imageNamed:@"btn_vatar"]];
+
+                }
+            }
+            
+            
+            
+        } fail:^(int code, NSString *err) {
+            
+        }];
+        
         
         TILCallConfig * config = [[TILCallConfig alloc] init];
         TILCallBaseConfig * baseConfig = [[TILCallBaseConfig alloc] init];
@@ -137,6 +168,7 @@
             }
             else{
                 [ws setText:@"呼叫成功"];
+
                 if ([SystemService shareInstance].isTeacher == 1) {
                     
                     [WTSHttpTool startVideoBillingWithRoomId:_peerId];
@@ -145,6 +177,27 @@
         }];
         
     }else if (self.callType == WTSCallTypeRecv){
+        
+        [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[_invite.sponsorId] succ:^(NSArray *data) {
+            
+            
+            for (TIMUserProfile * userProfile in data) {
+                if ([userProfile.identifier isEqualToString:_invite.sponsorId]) {
+                    
+                    IMAUser *user = [[IMAUser alloc] initWithUserInfo:userProfile];
+                    _callShowView.hidden = NO;
+                    _lbName.text = user.nickName ? user.nickName : @"美女";
+                    _lbShow.text = @"邀请你视频通话.";
+                    [_iconImgView sd_setImageWithURL:[NSURL URLWithString:user.icon] placeholderImage:[UIImage imageNamed:@"btn_vatar"]];
+                }
+            }
+            
+            
+            
+        } fail:^(int code, NSString *err) {
+            
+        }];
+        
         
         TILCallConfig * config = [[TILCallConfig alloc] init];
         TILCallBaseConfig * baseConfig = [[TILCallBaseConfig alloc] init];
@@ -232,6 +285,8 @@
         }
         else{
             [ws setText:@"通话建立成功"];
+            self.callShowView.hidden = YES;
+
             self.callType = WTSCallTypeBusying;
             [ws setEnableButton];
         }
@@ -360,6 +415,7 @@
 
 - (void)onMemberCameraVideoOn:(BOOL)isOn members:(NSArray *)members
 {
+
     if(isOn){
         for (TILCallMember *member in members) {
             NSString *identifier = member.identifier;
@@ -431,7 +487,8 @@
     switch (notifId) {
         case TILCALL_NOTIF_ACCEPTED:
             [self setText:@"通话建立成功"];
-            
+            self.callShowView.hidden = YES;
+
             self.callType = WTSCallTypeBusying;
             [self setEnableButton];
             break;

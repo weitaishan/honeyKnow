@@ -77,8 +77,7 @@ static NSString * const messageListCellId = @"messageListCellId";
     [super viewDidLoad];
     self.navigationItem.title = @"消息";
     [self pinHeaderView];
-    [self pinHeaderAndRefesh];
-    [self getUsersProfile];
+
 }
 
 
@@ -86,8 +85,8 @@ static NSString * const messageListCellId = @"messageListCellId";
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
-    [self onUnReadMessag];
-    [self configOwnViews];
+//    [self onUnReadMessag];
+//    [self configOwnViews];
     
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -100,29 +99,6 @@ static NSString * const messageListCellId = @"messageListCellId";
 {
 }
 
-- (void)getUsersProfile{
-    
-//    getUsersProfile
-//    [[TIMFriendshipManager sharedInstance] GetUsersProfile:@[] succ:^(NSArray *data) {
-//
-//
-//
-//        for (TIMUserProfile * userProfile in data) {
-//            if ([userProfile.identifier isEqualToString:userid]) {
-//
-//                IMAUser *user = [[IMAUser alloc] initWithUserInfo:userProfile];
-//
-//                _conversationList.
-//
-//            }
-//        }
-//
-//
-//
-//    } fail:^(int code, NSString *err) {
-//
-//    }];
-}
 - (void)configOwnViews
 {
     IMAConversationManager *mgr = [IMAPlatform sharedInstance].conversationMgr;
@@ -143,7 +119,6 @@ static NSString * const messageListCellId = @"messageListCellId";
         [ws onUnReadMessag];
     }];
     [ws onUnReadMessag];
-    [self.tableView reloadData];
 }
 
 - (void)onUnReadMessag
@@ -176,10 +151,7 @@ static NSString * const messageListCellId = @"messageListCellId";
             break;
         case EIMAConversation_BecomeActiveTop:
         {
-            if (_conversationList.count < 2) {
-                
-                return;
-            }
+            
             [self.tableView beginUpdates];
             [self.tableView moveRowAtIndexPath:[NSIndexPath indexPathForRow:item.index inSection:1] toIndexPath:[NSIndexPath indexPathForRow:item.toIndex inSection:1]];
             [self.tableView endUpdates];
@@ -299,6 +271,10 @@ static NSString * const messageListCellId = @"messageListCellId";
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.section == 0) {
+        NO;
+    }
     
     return YES;
 }

@@ -292,7 +292,6 @@ static SystemService* _instance = nil;
  */
 - (void)callVideoTelePhoneWithPeerId:(NSString *)peerId{
     
-    peerId = @"9";
 //    [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"actorId" : peerId}.mutableCopy success:^(id response) {
 //
 //       if ([response[@"success"] integerValue]){
