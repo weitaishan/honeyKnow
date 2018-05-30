@@ -40,8 +40,45 @@
         [WTSHttpTool shareWechat];
         
     }];
+    
+    
+    
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] init];
+    
+    [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+        
+        
+        NSLog(@"CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) = %lf,     CMTimeGetSeconds(self.avPlayer.currentItem.duration) = %lf",CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) ,CMTimeGetSeconds(self.myPlayer.currentItem.duration));
+        if(self.myPlayer.rate==0){ //说明时暂停
+            [self.myPlayer play];
+            self.playBtn.hidden = YES;
+            if (CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) == CMTimeGetSeconds(self.myPlayer.currentItem.duration)) {
+                
+                [_item seekToTime:kCMTimeZero]; // item 跳转到初始
+                [_myPlayer play];
+            }
+        }else if(self.myPlayer.rate==1){//正在播放
+            [self.myPlayer pause];
+            self.playBtn.hidden = NO;
+
+        }
+        
+    }];
+    [self.clickView addGestureRecognizer:tap2];
 
 }
+
+
+// 播放完成后
+- (void)playbackFinished:(NSNotification *)notification {
+    NSLog(@"视频播放完成通知");
+    _item = [notification object];
+    [_item seekToTime:kCMTimeZero]; // item 跳转到初始
+    [_myPlayer play]; // 循环播放
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:
 (NSDictionary<NSString *,id> *)change context:(void *)context{
@@ -66,11 +103,13 @@
     [object removeObserver:self forKeyPath:@"status"];
 }
 
-//-(void)dealloc{
-//
-//
-//}
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
 -(void)setListModel:(DiscoverList *)listModel{
+    
     
     _listModel = listModel;
     [self.bgImgView sd_setImageWithURL:[NSURL URLWithString:listModel.mainImgUrl] placeholderImage:[UIImage imageNamed:@"pic_anchor"]];
@@ -78,7 +117,6 @@
     _lbLikeNum.text = IntStr(listModel.loveNum);
     
     _lbLookNum.text = IntStr(listModel.viewNum);
-    
     
     
     [self getVideoData];
@@ -126,6 +164,20 @@
     self.playerLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     [self.myPlayer play];
     [self.item addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+
+    
+    
+    if(self.myPlayer.rate==0){ //说明时暂停
+        self.playBtn.hidden = NO;
+    }else if(self.myPlayer.rate==1){//正在播放
+        self.playBtn.hidden = YES;
+        
+    }
+    
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+
 }
 
 - (void)getVideoData{
@@ -163,11 +215,26 @@
         self.likeBtn.selected = NO;
 
     }
+    
+    //1是在线  0 是离线  2是繁忙  3勿扰icon_mode_red  icon_mode_green icon_rest
     if ([model.userInfo.status integerValue] == 1) {
         
+        self.lbState.text = @"在线";
+        self.stateImgView.image = [UIImage imageNamed:@"icon_mode_green"];
+    }else if ([model.userInfo.status integerValue] == 0){
+        
+        self.lbState.text = @"离线";
+        self.stateImgView.image = [UIImage imageNamed:@"icon_mode_red"];
+    }else if ([model.userInfo.status integerValue] == 2){
+        
+        self.lbState.text = @"繁忙";
+        self.stateImgView.image = [UIImage imageNamed:@"icon_rest"];
+    }else if ([model.userInfo.status integerValue] == 3){
+        
+        self.lbState.text = @"勿扰";
+        self.stateImgView.image = [UIImage imageNamed:@"icon_rest"];
     }
 }
-
 
 
 @end

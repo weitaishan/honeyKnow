@@ -12,7 +12,7 @@
 @interface VideoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView * collectionView;
-
+@property (nonatomic, strong) NSIndexPath* oldIndexPath;
 @end
 
 static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
@@ -76,6 +76,11 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     _collectionView.allowsMultipleSelection = YES;
     [self.view addSubview:_collectionView];
     
+    NSIndexPath *collecIndexPath = [NSIndexPath indexPathForRow:self.index inSection:0];//偏移到某行某组
+    self.oldIndexPath = collecIndexPath;
+    [_collectionView scrollToItemAtIndexPath:collecIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    
+    
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([VideoCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:videoCollectionViewCellId];
     
     UIButton* backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -138,9 +143,10 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     VideoCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:videoCollectionViewCellId forIndexPath:indexPath];
-    
+//    [[NSNotificationCenter defaultCenter] removeObserver:[collectionView dequeueReusableCellWithReuseIdentifier:videoCollectionViewCellId forIndexPath:self.oldIndexPath]];
+//    self.oldIndexPath = indexPath;
     cell.listModel = self.listArray[indexPath.row];
-    
+    cell.indexPath = indexPath;
     return cell;
 }
 

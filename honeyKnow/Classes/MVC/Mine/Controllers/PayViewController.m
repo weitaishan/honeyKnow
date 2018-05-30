@@ -57,7 +57,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
             
             
             self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
-                        
+            [self.tableView reloadData];
             
         }
         

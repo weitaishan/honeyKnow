@@ -32,17 +32,27 @@
     self.lbIntroduce.text = model.introduce ? model.introduce : @"";
     self.lbPrice.text = [NSString stringWithFormat:@"%@ V币/分钟",model.price ? model.price : @"0"];
     [self attriString:self.lbPrice.text label:self.lbPrice];
-
-    if ([model.status integerValue]) {
+    
+    //1是在线  0 是离线  2是繁忙  3勿扰icon_mode_red  icon_mode_green icon_rest
+    if ([model.status integerValue] == 1) {
         
-        self.statusImgView.image = [UIImage imageNamed:@"icon_mode_green"];
         self.lbStatus.text = @"在线";
-    }else{
+        self.statusImgView.image = [UIImage imageNamed:@"icon_mode_green"];
+    }else if ([model.status integerValue] == 0){
         
-        self.statusImgView.image = [UIImage imageNamed:@"icon_mode_red"];
         self.lbStatus.text = @"离线";
-
+        self.statusImgView.image = [UIImage imageNamed:@"icon_mode_red"];
+    }else if ([model.status integerValue] == 2){
+        
+        self.lbStatus.text = @"繁忙";
+        self.statusImgView.image = [UIImage imageNamed:@"icon_rest"];
+    }else if ([model.status integerValue] == 3){
+        
+        self.lbStatus.text = @"勿扰";
+        self.statusImgView.image = [UIImage imageNamed:@"icon_rest"];
     }
+    
+    
     
 }
 

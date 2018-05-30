@@ -13,6 +13,7 @@
 #import <AVKit/AVKit.h>
 
 @interface VideoCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
 @property (strong, nonatomic)AVPlayer *myPlayer;//播放器
 @property (strong, nonatomic)AVPlayerItem *item;//播放单元
@@ -31,9 +32,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbLikeNum;
 @property (weak, nonatomic) IBOutlet UIView *addFirendView;
 @property (weak, nonatomic) IBOutlet UIImageView *acatarImgView;
+@property (weak, nonatomic) IBOutlet UIView *clickView;
 
 @property (nonatomic, strong) VideoModel* videoModel;
 
 @property (nonatomic, strong) DiscoverList* listModel;
 
+@property (nonatomic, strong) NSIndexPath* indexPath;
+@property (nonatomic, strong) NSIndexPath* oldIndex;
 @end

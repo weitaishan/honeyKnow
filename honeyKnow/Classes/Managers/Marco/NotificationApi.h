@@ -20,5 +20,6 @@
 #define USER_USERSIG @"user_userSig"
 #define USER_TELPHONE @"user_telPhone"
 
+#define USER_IS_TEACHER @"isTeacher"
 
 #endif /* NotificationApi_h */

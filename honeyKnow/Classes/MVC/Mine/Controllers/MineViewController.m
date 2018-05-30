@@ -16,6 +16,7 @@
 #import "PayViewController.h"
 #import "AuthenMakeMoneyViewController.h"
 #import "WebViewController.h"
+#import "EditAuthenProfileViewController.h"
 @interface MineViewController ()
 
 @property (nonatomic, strong) MinePersonInfoModel* infoModel;
@@ -65,7 +66,8 @@ static NSString * const mineListCellId = @"mineListCellId";
             
             
             self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
-           
+            [NSUSERDEFAULTS setObject:@(self.infoModel.isTeacher) forKey:USER_IS_TEACHER];
+            [SystemService shareInstance].isTeacher = self.infoModel.isTeacher;
             [self.tableView reloadData];
             
             
@@ -276,11 +278,28 @@ static NSString * const mineListCellId = @"mineListCellId";
         
     }else if ([title isEqualToString:@"认证赚钱"]) {
         
+        if ([SystemService shareInstance].isTeacher == 1) {
+            EditAuthenProfileViewController* vc = [[EditAuthenProfileViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }else if ([SystemService shareInstance].isTeacher == 5){
+            
+            
+            
+            [[WTSAlertViewTools shareInstance] showAlert:@"认证中" message:@"正在认证中，请耐心等待" cancelTitle:@"确定" titleArray:nil viewController:self confirm:^(NSInteger buttonTag){
         
-        AuthenMakeMoneyViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"authenMakeMoneyViewController"];
-        vc.hidesBottomBarWhenPushed = YES;
+                
+            }];
+        }else{
+            
+            AuthenMakeMoneyViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"authenMakeMoneyViewController"];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         
-        [self.navigationController pushViewController:vc animated:YES];
+       
+        
     }else if ([title isEqualToString:@"在线客服"]){
         
         NSString *callPhone = @"telprompt://0571-28120452";

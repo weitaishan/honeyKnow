@@ -13,9 +13,6 @@
 #import "SetLabelViewController.h"
 #import "SetLabelModel.h"
 #import "WTSPickerHeaders.h"
-
-#define HEDER_HEIGHT ((SCREEN_WIDTH - 20) / 4.f)
-
 #define TEXTFIELD_TAG 500
 
 #define HEADER_HEIGHT ((SCREEN_WIDTH - 20) / 4.f)
@@ -367,9 +364,9 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (self.imgArr.count > 4) {
-        return HEDER_HEIGHT + 3*9;
+        return HEADER_HEIGHT * 2 + 3*9;
     }
-
+    
     return HEADER_HEIGHT + 9 * 2;
 }
 
@@ -556,7 +553,7 @@ static NSString * const editAuthenCellId = @"editAuthenCellId";
         [MBProgressHUD hideHUDForView:GET_WINDOW animated:YES];
 
         [self.jsonDic setObject:imageUrls ? imageUrls : @"" forKey:@"imgs"];
-        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_USER_UPDATE params:self.jsonDic success:^(id response) {
+        [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_ACTOR_PUT params:self.jsonDic success:^(id response) {
             
             if ([response[@"success"] integerValue]){
                 [self addToast:@"提交认证成功"];

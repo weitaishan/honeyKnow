@@ -11,8 +11,11 @@
 #import "MyWalletCell.h"
 #import "WithdrawAuthenViewController.h"
 #import "PayViewController.h"
+#import "MinePersonInfoModel.h"
+
 @interface MyWalletViewController ()
 @property (nonatomic, strong) NSMutableArray<NSArray *>* listArray;
+@property (nonatomic, strong) MinePersonInfoModel* infoModel;
 
 @end
 
@@ -32,7 +35,7 @@ static NSString * const myWalletCellId = @"myWalletCellId";
     
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
-    
+    [self getUserInfoData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,8 +51,30 @@ static NSString * const myWalletCellId = @"myWalletCellId";
     self.tableView.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyWalletCell class]) bundle:nil] forCellReuseIdentifier:myWalletCellId];
+    
+    
 }
 
+- (void)getUserInfoData{
+    
+    
+    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_USER_GET params:nil success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+            
+            self.infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
+            
+            [self.tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+    
+}
 
 #pragma mark - UITableViewDelegate/dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -101,7 +126,7 @@ static NSString * const myWalletCellId = @"myWalletCellId";
         
         
         UILabel* lbCoin = [[UILabel alloc] init];
-        NSString* string = [NSString stringWithFormat:@"%dH币",0];
+        NSString* string = [NSString stringWithFormat:@"%@H币",self.infoModel.balance];
         lbCoin.text = string;
         lbCoin.font = [UIFont systemFontOfSize:15];
         lbCoin.textColor = [UIColor whiteColor];

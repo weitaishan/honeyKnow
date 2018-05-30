@@ -70,7 +70,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_level" translatesAutoresizingMaskIntoConstraints="NO" id="hs3-UB-35S">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_level_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="hs3-UB-35S">
                         <rect key="frame" x="49" y="285.5" width="78" height="15"/>
                     </imageView>
                 </subviews>
@@ -112,7 +112,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_level" width="78" height="15"/>
+        <image name="icon_level_yellow" width="78" height="15"/>
         <image name="icon_mode_green" width="46" height="22"/>
         <image name="icon_videointeraction" width="30" height="30"/>
     </resources>

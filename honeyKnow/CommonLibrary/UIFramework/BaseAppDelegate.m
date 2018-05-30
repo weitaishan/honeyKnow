@@ -125,7 +125,7 @@
 - (void)configUSharePlatforms
 {
     /* 设置微信的appKey和appSecret */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx3473901b3c1ac999" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx3473901b3c1ac999" appSecret:@"69db6c7da088d0d48bc8f6a833901a3a" redirectURL:@"http://mobile.umeng.com/social"];
   
  
 }

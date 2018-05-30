@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmL-PC-bNs">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_anchor" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-9r-EEj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_anchor" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-9r-EEj">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
                             </imageView>
                         </subviews>
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_vedio" translatesAutoresizingMaskIntoConstraints="NO" id="V54-GG-oDp">
-                                <rect key="frame" x="260.5" y="472.5" width="35" height="35"/>
+                                <rect key="frame" x="279.5" y="482" width="16" height="16"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-b5-NAh">
                                 <rect key="frame" x="315" y="370" width="45" height="45"/>
@@ -151,10 +151,15 @@
                                     <constraint firstAttribute="height" constant="22" id="dWt-1v-EvH"/>
                                 </constraints>
                             </imageView>
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rY-qe-FGV">
+                                <rect key="frame" x="150" y="236" width="75" height="75"/>
+                                <state key="normal" image="record_playbutton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tfm-Bt-T9X" firstAttribute="centerY" secondItem="j62-yE-lY9" secondAttribute="centerY" id="0BY-zF-Xki"/>
+                            <constraint firstItem="8rY-qe-FGV" firstAttribute="centerY" secondItem="lXW-3O-r3C" secondAttribute="centerY" id="0hK-7k-SVj"/>
                             <constraint firstItem="V54-GG-oDp" firstAttribute="centerY" secondItem="tfm-Bt-T9X" secondAttribute="centerY" id="3xz-93-bEh"/>
                             <constraint firstItem="cij-dG-d64" firstAttribute="leading" secondItem="wia-B2-8W0" secondAttribute="trailing" constant="15" id="6q2-bS-UIC"/>
                             <constraint firstItem="Xuf-oN-Fzg" firstAttribute="centerY" secondItem="z2b-gM-hyg" secondAttribute="centerY" constant="19" id="6qc-83-69m"/>
@@ -175,6 +180,7 @@
                             <constraint firstItem="Ytj-pk-8uz" firstAttribute="centerX" secondItem="2e4-b5-NAh" secondAttribute="centerX" id="PcO-Uk-wPO"/>
                             <constraint firstItem="cij-dG-d64" firstAttribute="trailing" secondItem="dcE-TK-7Fh" secondAttribute="trailing" constant="-2" id="PrI-yw-anL"/>
                             <constraint firstItem="cij-dG-d64" firstAttribute="bottom" secondItem="dcE-TK-7Fh" secondAttribute="bottom" constant="-2" id="Q9Y-C7-wrz"/>
+                            <constraint firstItem="8rY-qe-FGV" firstAttribute="centerX" secondItem="lXW-3O-r3C" secondAttribute="centerX" id="Uch-n3-nlT"/>
                             <constraint firstItem="b5x-Oi-agE" firstAttribute="centerX" secondItem="cij-vv-MWT" secondAttribute="centerX" id="VFp-2f-EZv"/>
                             <constraint firstItem="BGq-HX-8Eo" firstAttribute="leading" secondItem="IWd-dL-OgG" secondAttribute="leading" constant="16" id="bBB-yk-Y5f"/>
                             <constraint firstItem="yrY-Sa-SiM" firstAttribute="top" secondItem="cij-vv-MWT" secondAttribute="bottom" constant="20" id="dnk-Do-aNp"/>
@@ -206,12 +212,14 @@
                 <outlet property="addFirendView" destination="kN9-81-n0N" id="xsv-5A-MDy"/>
                 <outlet property="bgImgView" destination="yhz-9r-EEj" id="594-BY-DIl"/>
                 <outlet property="bgView" destination="EmL-PC-bNs" id="9Kf-K3-EgA"/>
+                <outlet property="clickView" destination="lXW-3O-r3C" id="Lc1-eS-5eU"/>
                 <outlet property="lbLikeNum" destination="cij-vv-MWT" id="X4c-o8-CJf"/>
                 <outlet property="lbLookNum" destination="Ytj-pk-8uz" id="QeE-qb-euo"/>
                 <outlet property="lbName" destination="wia-B2-8W0" id="Tl1-Bu-FDe"/>
                 <outlet property="lbSignName" destination="BGq-HX-8Eo" id="XQT-kJ-VRs"/>
                 <outlet property="lbState" destination="qUF-HD-M4r" id="euJ-Xg-yda"/>
                 <outlet property="likeBtn" destination="b5x-Oi-agE" id="RNZ-ub-gAV"/>
+                <outlet property="playBtn" destination="8rY-qe-FGV" id="WaF-OY-8B4"/>
                 <outlet property="shareBtn" destination="2e4-b5-NAh" id="qvs-zN-ifO"/>
                 <outlet property="stateImgView" destination="dcE-TK-7Fh" id="7Zq-U7-wmR"/>
                 <outlet property="videoImgView" destination="j62-yE-lY9" id="0IT-IV-pdb"/>
@@ -221,14 +229,15 @@
     </objects>
     <resources>
         <image name="btn_Watching" width="45" height="45"/>
-        <image name="btn_follow" width="89" height="35"/>
+        <image name="btn_follow" width="25" height="25"/>
         <image name="btn_forwarding" width="45" height="45"/>
         <image name="btn_like" width="45" height="45"/>
         <image name="btn_like_highlighted" width="85" height="85"/>
         <image name="btn_vedio" width="131" height="49"/>
         <image name="icon_rest" width="46" height="21"/>
-        <image name="icon_vedio" width="35" height="35"/>
+        <image name="icon_vedio" width="16" height="16"/>
         <image name="pic_anchor" width="187" height="276"/>
         <image name="pic_avatar" width="65" height="65"/>
+        <image name="record_playbutton" width="75" height="75"/>
     </resources>
 </document>

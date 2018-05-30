@@ -87,7 +87,7 @@ static NSString * const messageListCellId = @"messageListCellId";
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
     [self onUnReadMessag];
-//    [self configOwnViews];
+    [self configOwnViews];
     
 }
 - (void)viewDidAppear:(BOOL)animated
