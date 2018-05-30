@@ -80,7 +80,7 @@
                     //创建分享消息对象
                     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
                     //创建网页内容对象
-                    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:response[@"data"][@"title"] descr:response[@"data"][@"content"] thumImage:[NSURL URLWithString:response[@"data"][@"inviteUrl"]]];
+                    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:response[@"data"][@"title"] descr:response[@"data"][@"content"] thumImage:[NSURL URLWithString:response[@"data"][@"imgUrl"]]];
                     //设置网页地址
                     shareObject.webpageUrl = response[@"data"][@"inviteUrl"];
                     //分享消息对象设置分享内容对象

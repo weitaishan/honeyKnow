@@ -97,7 +97,7 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     }];
     
     UIButton* moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+    moreBtn.hidden = YES;
     [moreBtn setImage:[UIImage imageNamed:@"nav_more"] forState:UIControlStateNormal];
     
     [self.view addSubview:moreBtn];
@@ -128,7 +128,7 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
 //元素大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake( SCREEN_WIDTH,  SCREEN_HEIGHT);
+    return CGSizeMake( SCREEN_WIDTH,  SCREEN_HEIGHT - NewStatusBarHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

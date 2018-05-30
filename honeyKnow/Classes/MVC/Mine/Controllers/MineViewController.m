@@ -186,7 +186,7 @@ static NSString * const mineListCellId = @"mineListCellId";
     
     if (indexPath.section == 0) {
 
-        return 242 + NewStatusBarHeight + 36;
+        return 242 + NewStatusBarHeight + 36 + (IS_IPHONE_6P ? 20 : 0);
         
     }else {
         
