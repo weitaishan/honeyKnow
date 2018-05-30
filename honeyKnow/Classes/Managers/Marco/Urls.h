@@ -36,7 +36,7 @@ static NSString * const URL_SEND_CODE = @"smn/send/code";
 static NSString * const URL_VERIFY_CODE = @"smn/verify/code";
 
 /** 用户信息更新*/
-static NSString * const URL_USER_UPDATE = @"/user/update";
+static NSString * const URL_USER_UPDATE = @"user/update";
 
 
 //==========================首页=============================
@@ -93,8 +93,11 @@ static NSString * const URL_VIDEO_BILLING_START= @"video/start";
 /** 结束通话 计费结束*/
 static NSString * const URL_VIDEO_BILLING_STOP = @"video/stop";
 
+/** 主播认证*/
+static NSString * const URL_ACTOR_PUT = @"actor/put";
 
-
+/** 分享*/
+static NSString * const URL_SHARE = @"spread/get";
 //==========================H5页面=============================
 
 /** 收入明细页面：*/

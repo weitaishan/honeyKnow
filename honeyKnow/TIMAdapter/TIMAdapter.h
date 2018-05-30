@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, IMAConType)
 #define QQ_APP_ID @"222222"
 #define QQ_OPEN_SCHEMA @"tencent222222"
 
-#define WX_APP_ID @"wx65f71c2ea2b122da"
+#define WX_APP_ID @"wx3473901b3c1ac999"
 #define WX_OPEN_KEY @"69aed8b3fd41ed72efcfbdbca1e99a27"
 
 #define ALI_PAY @"alipay"

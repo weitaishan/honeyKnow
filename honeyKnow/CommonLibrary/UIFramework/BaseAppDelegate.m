@@ -17,6 +17,8 @@
 #import "WXApi.h"
 #import <ILiveSDK/ILiveCoreHeader.h>
 #import "CallIncomingListener.h"
+#import <UMShare/UMShare.h>
+#import <UMCommon/UMCommon.h>
 @implementation BaseAppDelegate
 
 + (instancetype)sharedAppDelegate
@@ -101,7 +103,32 @@
 
     return YES;
 }
-
+- (void)confitUShareSettings
+{
+    /*
+     * 打开图片水印
+     */
+    //[UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+    /*
+     * 关闭强制验证https，可允许http图片分享，但需要在info.plist设置安全域名
+     <key>NSAppTransportSecurity</key>
+     <dict>
+     <key>NSAllowsArbitraryLoads</key>
+     <true/>
+     </dict>
+     */
+    //[UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
+    [UMConfigure setLogEnabled:YES];//设置打开日志
+    [UMConfigure initWithAppkey:@"5b0e20e8a40fa374890000da" channel:@"App Store"];
+    
+}
+- (void)configUSharePlatforms
+{
+    /* 设置微信的appKey和appSecret */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx3473901b3c1ac999" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
+  
+ 
+}
 -(void)baseInfo:(UIApplication *)application{
     
     //清空通知栏消息
@@ -116,7 +143,8 @@
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
     [WXApi registerApp:@"wxb4ba3c02aa476ea1" enableMTA:YES];
-
+    
+    
     //获取版本号
     NSLog(@"ILiveSDK version:%@",[[ILiveSDK getInstance] getVersion]);
     NSLog(@"AVSDK version:%@",[QAVContext getVersion]);
@@ -132,7 +160,9 @@
     
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
-    
+    // U-Share 平台设置
+    [self configUSharePlatforms];
+    [self confitUShareSettings];
     //    NSString *key = (NSString *)kCFBundleVersionKey;
     //
     //    // 1.从Info.plist中取出版本号

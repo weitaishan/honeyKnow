@@ -34,6 +34,12 @@
         
     }];
     [self.videoImgView addGestureRecognizer:tap];
+    
+    [[self.shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+       
+        [WTSHttpTool shareWechat];
+        
+    }];
 
 }
 

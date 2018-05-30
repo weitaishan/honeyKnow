@@ -10,6 +10,8 @@
 #import "PayViewController.h"
 #import "BaseTabBarController.h"
 #import "BaseNavigationViewController.h"
+#import <UShareUI/UShareUI.h>
+#import <UMShare/UMShare.h>
 @implementation WTSHttpTool
 static id _instance = nil;
 + (instancetype)sharedInstance {
@@ -555,5 +557,57 @@ static id _instance = nil;
 
     }];
     
+}
+
++ (void)shareWechat{
+    
+    
+    
+    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_SHARE params:nil success:^(id response) {
+        
+        
+        if ([response[@"success"] integerValue]){
+            
+            
+            [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine)]];
+//            [UMSocialUIManager setShareMenuViewDelegate:APP_DELEGATE().getCurrentVC];
+
+            //显示分享面板
+            [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+                // 根据获取的platformType确定所选平台进行下一步操作
+    
+                //调用分享接口
+                 //创建分享消息对象
+                 UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+                 //创建网页内容对象
+                 UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:response[@"data"][@"title"] descr:response[@"data"][@"content"] thumImage:[NSURL URLWithString:response[@"data"][@"inviteUrl"]]];
+                 //设置网页地址
+                 shareObject.webpageUrl = response[@"data"][@"inviteUrl"];
+                 //分享消息对象设置分享内容对象
+                 messageObject.shareObject = shareObject;
+                 //调用分享接口
+                 [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:APP_DELEGATE().getCurrentVC completion:^(id data, NSError *error) {
+                    if (error) {
+                        NSLog(@"************Share fail with error %@*********",error);
+                    }else{
+                        NSLog(@"response data is %@",data);
+                    }
+                }];
+            }];
+            
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        
+        
+    }];
+    
+}
+
+- (UIView*)UMSocialParentView:(UIView*)defaultSuperView
+{
+    return APP_DELEGATE().getCurrentVC.view;
 }
 @end

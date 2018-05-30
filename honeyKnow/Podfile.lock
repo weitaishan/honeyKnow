@@ -20,6 +20,15 @@ PODS:
   - ReactiveObjC (3.1.0)
   - Toast (4.0.0)
   - TZImagePickerController (2.1.3)
+  - UMCCommon (1.5.0)
+  - UMCShare/Core (6.9.2):
+    - UMCCommon
+  - UMCShare/Social/ReducedWeChat (6.9.2):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.9.2):
+    - UMCCommon
+    - UMCShare/Core
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -30,6 +39,9 @@ DEPENDENCIES:
   - ReactiveObjC
   - Toast
   - TZImagePickerController
+  - UMCCommon
+  - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI
   - YYModel
 
 SPEC CHECKSUMS:
@@ -40,8 +52,10 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TZImagePickerController: fde8400e08503c5334d8fa4c3c484ca5a7b3cc5b
+  UMCCommon: 82d21f4bb9532a5472cc533bbd8ed48aff376a14
+  UMCShare: 4d20cb77e085bcc9f8f2c81d24777d7dc6638b16
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 74896d6b6f746d81676331715756f69df1da0ec9
+PODFILE CHECKSUM: 927acd1fdd6de1678983f20bc9d37a65957d0e60
 
 COCOAPODS: 1.4.0

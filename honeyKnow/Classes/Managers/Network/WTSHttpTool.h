@@ -90,3 +90,5 @@ typedef void(^UploadFileTotalLenghtBlock)(double totalLength);
  */
 + (void)startSendMessageJudegeIsMoneyWithCompletion:(void(^)(BOOL isSend))completion;
 
++ (void)shareWechat;
+
