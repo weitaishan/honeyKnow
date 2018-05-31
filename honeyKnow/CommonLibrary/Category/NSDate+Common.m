@@ -1,6 +1,6 @@
 //
 //  NSDate+Common.m
-//  honeyKnow
+//  TIMChat
 //
 //  Created by AlexiChen on 16/3/16.
 //  Copyright © 2016年 AlexiChen. All rights reserved.

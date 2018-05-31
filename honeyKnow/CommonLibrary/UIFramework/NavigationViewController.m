@@ -122,14 +122,12 @@
 
 - (void)pushViewController:(UIViewController *)viewController withBackTitle:(NSString *)backTitle action:(CommonVoidBlock)backAction animated:(BOOL)animated
 {
-//    if (backTitle.length != 0 )
-//    {
-    
-    UIBarButtonItem* leftItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:nil];
-
-
-        self.topViewController.navigationItem.backBarButtonItem = leftItem;
-//    }
+    if (backTitle.length != 0 )
+    {
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+        backItem.title = backTitle;
+        self.topViewController.navigationItem.backBarButtonItem = backItem;
+    }
     
     if (animated)
     {

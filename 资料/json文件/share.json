@@ -1,0 +1,16 @@
+{
+    "code": "99",
+    "msg": "业务调用成功",
+    "success": true,
+    "data": {
+        "imgUrl": "http://miliao.xiangchaopai.com/invite.png",
+        "invitePayTotal": 0,
+        "inviteUrl": "http://miliao.xiangchaopai.com/invite.html?inviteCode=9",
+        "incomeAmount": 0,
+        "inviteActorNum": 0,
+        "title": "蜜识，一对一的高端聊天平台",
+        "inviteNum": 0,
+        "inviteActorIncomeAmount": 0,
+        "content": "来蜜识，让你获得不一样的交友体验"
+    }
+}

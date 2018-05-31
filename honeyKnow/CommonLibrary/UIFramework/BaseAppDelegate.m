@@ -48,11 +48,11 @@
                                                            NSFontAttributeName:kCommonLargeTextFont
                                                            }];
     
-//    [[UILabel appearance] setBackgroundColor:kClearColor];
-//    [[UILabel appearance] setTextColor:kMainTextColor];
-//
-//
-//    [[UIButton appearance] setTitleColor:kMainTextColor forState:UIControlStateNormal];
+    //    [[UILabel appearance] setBackgroundColor:kClearColor];
+    //    [[UILabel appearance] setTextColor:kMainTextColor];
+    //
+    //
+    //    [[UIButton appearance] setTitleColor:kMainTextColor forState:UIControlStateNormal];
     
     //    [[UITableViewCell appearance] setBackgroundColor:kClearColor];
     //
@@ -76,31 +76,31 @@
         [self redirectConsoleLog:[NSString stringWithFormat:@"%@.log", currentDateStr]];
     }
     
-//    // 用StoryBoard不需要自己创建
-//    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    _window.backgroundColor = [UIColor whiteColor];
-//
+    //    // 用StoryBoard不需要自己创建
+    //    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //    _window.backgroundColor = [UIColor whiteColor];
+    //
     [self configAppLaunch];
     
     // 进入登录界面
-//    [self enterLoginUI];
-//    [_window makeKeyAndVisible];
-
+    //    [self enterLoginUI];
+    //    [_window makeKeyAndVisible];
+    
     //注册通知消息已经移动到登录之后，必须在登录之后上传token
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-//    {
-//        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-//        [[UIApplication sharedApplication] registerForRemoteNotifications];
-//    }
-//    else
-//    {
-//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
-//    }
+    //    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    //    {
+    //        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    //        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    //    }
+    //    else
+    //    {
+    //        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    //    }
     
     [self baseInfo:application];
     [self setRootController];
     
-
+    
     return YES;
 }
 - (void)confitUShareSettings
@@ -126,8 +126,8 @@
 {
     /* 设置微信的appKey和appSecret */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx3473901b3c1ac999" appSecret:@"69db6c7da088d0d48bc8f6a833901a3a" redirectURL:@"http://mobile.umeng.com/social"];
-  
- 
+    
+    
 }
 -(void)baseInfo:(UIApplication *)application{
     
@@ -152,7 +152,7 @@
     // 初始化SDK
     [[ILiveSDK getInstance] initSdk:kSDKAppID accountType:kAccountType];
     [[TILCallManager sharedInstance] setIncomingCallListener:[[CallIncomingListener alloc] init]];
-
+    
     
 }
 
@@ -181,18 +181,18 @@
     
 #if TARGET_IPHONE_SIMULATOR //模拟器
     
-        NSString* userSig = @"eJxlj8FOg0AQQO98BeGqMbuzsohJD3RLTJtSpdVYToSwCywqILu0WOO-22ITMc71vTeT*TRM07Qel5urJE3rrtKx-miEZd6aFrIuf2HTSB4nOiYt-wdF38hWxEmmRTtAbNs2IDR2JBeVlpk8G*4IKf4SD-t-2utjeOPCn1rJfICBH7K530GkZkU-jaLFYXa-WdYBFMC4*9CXsArunsp5yLotzpO9Jz3neeekU0qpkyy2kGMW*mvM0sNrUO75*v1CNX5BVlngVd5kMjqp5Zs4PwMUKKEEj*hOtErW1SAAwjYGgk5jGV-GN6jbWmA_";
-        NSString* identifier = @"9";
-        userToken = @"12865228719696567037082488652515";
-        [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
-        [NSUSERDEFAULTS setValue:@"15528798998" forKey:USER_TELPHONE];
-        [NSUSERDEFAULTS setValue:identifier forKey:USER_IDENTIFIER];
-        [NSUSERDEFAULTS setValue:userSig forKey:USER_USERSIG];
-        [NSUSERDEFAULTS synchronize];
+    NSString* userSig = @"eJxlj8FOg0AQQO98BeGqMbuzsohJD3RLTJtSpdVYToSwCywqILu0WOO-22ITMc71vTeT*TRM07Qel5urJE3rrtKx-miEZd6aFrIuf2HTSB4nOiYt-wdF38hWxEmmRTtAbNs2IDR2JBeVlpk8G*4IKf4SD-t-2utjeOPCn1rJfICBH7K530GkZkU-jaLFYXa-WdYBFMC4*9CXsArunsp5yLotzpO9Jz3neeekU0qpkyy2kGMW*mvM0sNrUO75*v1CNX5BVlngVd5kMjqp5Zs4PwMUKKEEj*hOtErW1SAAwjYGgk5jGV-GN6jbWmA_";
+    NSString* identifier = @"9";
+    userToken = @"12865228719696567037082488652515";
+    [NSUSERDEFAULTS setObject:userToken forKey:USER_TOKEN];
+    [NSUSERDEFAULTS setValue:@"15528798998" forKey:USER_TELPHONE];
+    [NSUSERDEFAULTS setValue:identifier forKey:USER_IDENTIFIER];
+    [NSUSERDEFAULTS setValue:userSig forKey:USER_USERSIG];
+    [NSUSERDEFAULTS synchronize];
     
 #elif TARGET_OS_IPHONE //真机
-//
-//    //lili
+    //
+    //    //lili
     NSString* userSig = @"eJxlz11PgzAYBeB7fkXTW422hVYw8QI3nJubhknVeUMq7UjH*AjUObbsv6tkRozv7XNOTt69BQCA0fTxTCRJ*V6Y2LSVguASQARPf7GqtIyFie1a-kO1rXStYrE0qu4QU0oJQv2Mlqoweql-Ek7PGpnF3cCRvpquR-7UG512OAv4YBwORtc7vsqLmyF6c3S4CcRJ9kReppift2xxcS9Wu0C*Rncs98NxOr-9mLQT7a7LyFmscea7D2HAUJOPmL*dcxINEZ0lzxn30qvepNG5On5DGGE280hPN6pudFl0AYIwxcRG3wetg-UJ0bpaQQ__";
     NSString* identifier = @"14";
     userToken = @"91178697925515953557673154789568";
@@ -201,9 +201,9 @@
     [NSUSERDEFAULTS setValue:identifier forKey:USER_IDENTIFIER];
     [NSUSERDEFAULTS setValue:userSig forKey:USER_USERSIG];
     [NSUSERDEFAULTS synchronize];
-//
+    //
 #endif
-
+    
     
     
     
@@ -212,8 +212,8 @@
     
     
 #endif
-
-
+    
+    
     if (userToken.length > 0) {
         
         [[SystemService shareInstance] ILiveLogin];
@@ -253,7 +253,7 @@
 {
     // 作App配置
 #if kSupportNetReachablity
-     [[NetworkUtility sharedNetworkUtility] startCheckWifi];
+    [[NetworkUtility sharedNetworkUtility] startCheckWifi];
 #endif
 }
 
@@ -383,3 +383,4 @@
 }
 
 @end
+

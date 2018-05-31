@@ -14,7 +14,7 @@
 #define kAppModalBackgroundColor    [kBlackColor colorWithAlphaComponent:0.6]
 #define kAppModalDimbackgroundColor [RGB(16, 16, 16) colorWithAlphaComponent:0.3]
 
-// honeyKnow没有在此处设置
+// TIMChat没有在此处设置
 // 主色调
 // 导航按钮
 #define kNavBarThemeColor             RGB(128, 64, 122)

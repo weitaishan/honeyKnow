@@ -1,6 +1,6 @@
 //
 //  CLSafeMutableArray.m
-//  honeyKnow
+//  TIMChat
 //
 //  Created by AlexiChen on 16/2/29.
 //  Copyright © 2016年 AlexiChen. All rights reserved.
@@ -248,11 +248,6 @@
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index
 {
-
-    if (!_safeArray.count) {
-        return;
-    }
-    
     [self lock];
     
     NSUInteger idx = [_safeArray indexOfObject:anObject];
