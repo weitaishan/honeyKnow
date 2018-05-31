@@ -122,11 +122,16 @@
     
     UITapGestureRecognizer* tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyBoard)];
     [self.tableView addGestureRecognizer:tapAction];
+    self.navigationController.navigationBarHidden = NO;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    self.navigationController.navigationBarHidden = NO;
+
 }
 
 - (void)configWithUser:(IMAUser *)user

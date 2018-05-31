@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oac-3O-eRa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oac-3O-eRa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -432,6 +432,83 @@
             </objects>
             <point key="canvasLocation" x="-554" y="719"/>
         </scene>
+        <!--Home Details View Controller-->
+        <scene sceneID="UD8-JI-hO7">
+            <objects>
+                <viewController storyboardIdentifier="homeDetailsViewController" id="rjA-Wu-0Nb" customClass="HomeDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JK8-vw-rHr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCN-Cv-cPY">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-vd-IHz">
+                                        <rect key="frame" x="18" y="8" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NND-Ng-Q03">
+                                                <rect key="frame" x="3" y="-8" width="35" height="35"/>
+                                                <state key="normal" image="btn_letter"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="私信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QF6-7U-Vl3">
+                                                <rect key="frame" x="8" y="25.5" width="25" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="NND-Ng-Q03" firstAttribute="centerX" secondItem="c5V-vd-IHz" secondAttribute="centerX" id="96k-UP-1bk"/>
+                                            <constraint firstAttribute="width" constant="40" id="Bkx-Lf-DHX"/>
+                                            <constraint firstAttribute="bottom" secondItem="QF6-7U-Vl3" secondAttribute="bottom" id="KhJ-ZH-DJ2"/>
+                                            <constraint firstItem="NND-Ng-Q03" firstAttribute="top" secondItem="c5V-vd-IHz" secondAttribute="top" constant="-8" id="nuS-mm-H77"/>
+                                            <constraint firstItem="QF6-7U-Vl3" firstAttribute="centerX" secondItem="NND-Ng-Q03" secondAttribute="centerX" id="qaz-RK-l8k"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-aE-mT3">
+                                        <rect key="frame" x="148.5" y="8" width="215.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dN8-YJ-gAm"/>
+                                        </constraints>
+                                        <state key="normal" title="与TA视频" image="icon_videointeraction" backgroundImage="btn_no_radius_bg"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eeW-aE-mT3" firstAttribute="centerY" secondItem="wCN-Cv-cPY" secondAttribute="centerY" id="4Z5-fW-I9i"/>
+                                    <constraint firstAttribute="height" constant="56" id="5GO-0E-JHj"/>
+                                    <constraint firstItem="eeW-aE-mT3" firstAttribute="width" secondItem="wCN-Cv-cPY" secondAttribute="width" multiplier="0.5" constant="28" id="H2A-7b-L6T"/>
+                                    <constraint firstAttribute="trailing" secondItem="eeW-aE-mT3" secondAttribute="trailing" constant="11" id="It2-EX-cWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5V-vd-IHz" secondAttribute="bottom" constant="8" id="PVr-1b-l2M"/>
+                                    <constraint firstItem="c5V-vd-IHz" firstAttribute="leading" secondItem="wCN-Cv-cPY" secondAttribute="leading" constant="18" id="Rtv-pU-iAL"/>
+                                    <constraint firstItem="c5V-vd-IHz" firstAttribute="top" secondItem="wCN-Cv-cPY" secondAttribute="top" constant="8" id="qmj-l8-70t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wCN-Cv-cPY" firstAttribute="leading" secondItem="z1x-vA-DG9" secondAttribute="leading" id="MvE-Xy-s5u"/>
+                            <constraint firstItem="z1x-vA-DG9" firstAttribute="bottom" secondItem="wCN-Cv-cPY" secondAttribute="bottom" id="vHl-g3-jOP"/>
+                            <constraint firstItem="z1x-vA-DG9" firstAttribute="trailing" secondItem="wCN-Cv-cPY" secondAttribute="trailing" id="vRN-mA-heU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z1x-vA-DG9"/>
+                    </view>
+                    <connections>
+                        <outlet property="callBtn" destination="eeW-aE-mT3" id="raV-5j-7qm"/>
+                        <outlet property="messgeView" destination="c5V-vd-IHz" id="MJD-bb-6vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osg-Ay-hab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554.39999999999998" y="1388.4557721139431"/>
+        </scene>
         <!--Withdraw Authen View Controller-->
         <scene sceneID="Oli-cb-vda">
             <objects>
@@ -850,15 +927,18 @@
     </scenes>
     <resources>
         <image name="btn_avatar" width="54" height="54"/>
+        <image name="btn_letter" width="35" height="35"/>
+        <image name="btn_no_radius_bg" width="180" height="40"/>
         <image name="btn_phone" width="65" height="65"/>
         <image name="icon_logo" width="110" height="110"/>
+        <image name="icon_videointeraction" width="30" height="30"/>
         <image name="idcard_back" width="326" height="187"/>
         <image name="idcard_front" width="326" height="187"/>
         <image name="im_icon_mute_normal" width="75" height="75"/>
         <image name="im_icon_mute_on" width="75" height="75"/>
         <image name="im_icon_speaker_normal" width="75" height="75"/>
         <image name="im_icon_speaker_on" width="75" height="75"/>
-        <image name="pic_avatar" width="36" height="36"/>
+        <image name="pic_avatar" width="65" height="65"/>
         <image name="pic_bg" width="375" height="667"/>
         <image name="pic_money" width="150" height="150"/>
     </resources>

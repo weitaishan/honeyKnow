@@ -92,7 +92,8 @@
     [_webView loadRequest:request];
     self.webView.navigationDelegate = self;
     self.webView.scrollView.delegate = self;
-
+    self.webView.scrollView.showsVerticalScrollIndicator =NO;
+    self.webView.scrollView.showsHorizontalScrollIndicator =NO;
     
     self.allowZoom = YES;
 

@@ -55,7 +55,6 @@ static NSString * const homeListCellId = @"homeListCellId";
     [self addTableViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT - NewStatusBarHeight - 44)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
-;
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([HomeListCell class]) bundle:nil] forCellReuseIdentifier:homeListCellId];
     
@@ -266,16 +265,20 @@ static NSString * const homeListCellId = @"homeListCellId";
     
     UIView* view = [[UIView alloc] init];
     view.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
-
+    
     
     return view;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    HomeDetailsViewController* vc = [[HomeDetailsViewController alloc] init];
+    HomeList* model = self.listArray[indexPath.section];
+
+    HomeDetailsViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"homeDetailsViewController"];
     vc.hidesBottomBarWhenPushed = YES;
+    vc.userId = model.Id;
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - 懒加载
