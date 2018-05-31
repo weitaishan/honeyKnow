@@ -97,33 +97,40 @@ static BOOL kIsAlertingForceOffline = NO;
         kIsAlertingForceOffline = YES;
         DebugLog(@"踢下线通知");
         __weak typeof(self) ws = self;
-        UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"下线通知" message:@"您的帐号于另一台手机上登录。" cancelButtonTitle:@"退出" otherButtonTitles:@[@"重新登录"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-            if (buttonIndex == 0)
-            {
-                // 退出
-//                [self logout:^{
-//                    [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-//                } fail:^(int code, NSString *msg) {
-//                    [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-//                }];
-            }
-            else
-            {
-                [self offlineLogin];
-                // 重新登录
-                [self login:self.host.loginParm succ:^{
-
-//                    [[IMAAppDelegate sharedAppDelegate] enterMainUI];
-
-                    IMALoginParam *wp = [IMALoginParam loadFromLocal];
-                    [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
-                    
-                    [ws registNotification];
-                } fail:^(int code, NSString *msg) {
-//                    [[HUDHelper sharedInstance] tipMessage:IMALocalizedError(code, msg) delay:1.0];
-//                    [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
-                }];
-            }
+        UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"下线通知" message:@"您的帐号于另一台手机上登录。" cancelButtonTitle:nil otherButtonTitles:@[@"重新登录"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
+          
+            
+#ifdef DEBUG
+            [self offlineLogin];
+            // 重新登录
+            [self login:self.host.loginParm succ:^{
+                
+                //                    [[IMAAppDelegate sharedAppDelegate] enterMainUI];
+                
+                IMALoginParam *wp = [IMALoginParam loadFromLocal];
+                [[IMAPlatform sharedInstance] configOnLoginSucc:wp];
+                
+                [ws registNotification];
+            } fail:^(int code, NSString *msg) {
+                //                    [[HUDHelper sharedInstance] tipMessage:IMALocalizedError(code, msg) delay:1.0];
+                //                    [[IMAAppDelegate sharedAppDelegate] enterLoginUI];
+            }];
+#else
+            [self offlineLogin];
+            [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
+            [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
+            [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+            
+            
+            LoginSelectViewController* loginVC = [MAIN_SB instantiateViewControllerWithIdentifier:@"loginSelectViewController"];
+            
+            BaseNavigationViewController* navVC = [[BaseNavigationViewController alloc] initWithRootViewController:loginVC];
+            APP_DELEGATE().window.rootViewController = navVC;
+            
+#endif
+            
+            
+            
             
             kIsAlertingForceOffline = NO;
         }];

@@ -502,36 +502,44 @@ static id _instance = nil;
             if ([response[@"code"] integerValue] == 5001){
                 
                 NSLog(@"余额不足");
-//                [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发送消息，无法发送消息！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
-//                    
-//                    if (buttonTag == cancelIndex) {
-//                        
-//                        
-//                    }else{
-//                        
-//                        PayViewController* vc = [[PayViewController alloc] init];
-//                        vc.hidesBottomBarWhenPushed = YES;
-//                        if ([APP_DELEGATE().getCurrentVC isKindOfClass:[BaseTabBarController class]]) {
-//                            
-//                            
-//                            BaseTabBarController* tab = (BaseTabBarController *)APP_DELEGATE().getCurrentVC;
-//                            
-//                            
-//                            BaseNavigationViewController *curNav = (BaseNavigationViewController *)[[tab viewControllers] objectAtIndex:tab.selectedIndex];
-//
-//                            [curNav pushViewController:vc animated:YES];
-//
-//                            
-//                        }else{
-//                            
-//                            [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
-//
-//                        }
-//                    }
-//                    
-//                }];
                 
+#ifdef DEBUG
                 completion(YES);
+#else
+                [[WTSAlertViewTools shareInstance] showAlert:@"余额不足" message:@"您的账号余额不足以发送消息，无法发送消息！\n是否立即充值？" cancelTitle:@"取消" titleArray:@[@"立即充值"] viewController:APP_DELEGATE().getCurrentVC confirm:^(NSInteger buttonTag){
+                    
+                    if (buttonTag == cancelIndex) {
+                        
+                        
+                    }else{
+                        
+                        PayViewController* vc = [[PayViewController alloc] init];
+                        vc.hidesBottomBarWhenPushed = YES;
+                        if ([APP_DELEGATE().getCurrentVC isKindOfClass:[BaseTabBarController class]]) {
+                            
+                            
+                            BaseTabBarController* tab = (BaseTabBarController *)APP_DELEGATE().getCurrentVC;
+                            
+                            
+                            BaseNavigationViewController *curNav = (BaseNavigationViewController *)[[tab viewControllers] objectAtIndex:tab.selectedIndex];
+                            
+                            [curNav pushViewController:vc animated:YES];
+                            
+                            
+                        }else{
+                            
+                            [APP_DELEGATE().getCurrentVC.navigationController pushViewController:vc animated:YES];
+                            
+                        }
+                    }
+                    
+                }];
+                completion(NO);
+
+#endif
+                
+
+                
                 
             }else if ([response[@"code"] integerValue] == 99){
                 
@@ -570,7 +578,6 @@ static id _instance = nil;
             
             
             [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine)]];
-//            [UMSocialUIManager setShareMenuViewDelegate:APP_DELEGATE().getCurrentVC];
 
             //显示分享面板
             [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
@@ -606,8 +613,4 @@ static id _instance = nil;
     
 }
 
-- (UIView*)UMSocialParentView:(UIView*)defaultSuperView
-{
-    return APP_DELEGATE().getCurrentVC.view;
-}
 @end

@@ -80,10 +80,14 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PayMoneyCell class]) bundle:nil] forCellReuseIdentifier:payMoneyCellId];
 
     
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"payRefresh" object:nil] subscribeNext:^(NSNotification *notification) {
+       
+        [self getUserInfoData];
+
+    }];
     
+
 }
-
-
 #pragma mark - UITableViewDelegate/dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -202,7 +206,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 
     WeakSelf;
     [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"channel" : _isWeixin ? @"02" : @"01",
-                    @"amount" : @"0.01"}.mutableCopy success:^(id response) {
+                    @"amount" : cell.lbMoney.text}.mutableCopy success:^(id response) {
         
         
         if ([response[@"success"] integerValue]){
@@ -222,6 +226,7 @@ static NSString * const payMoneyCellId = @"payMoneyCellId";
 
                 [[MJPayApi sharedApi]aliPayWithPayParam:response[@"data"] success:^(PayCode code)
                  {
+                     [self getUserInfoData];
                  } failure:^(PayCode code) {
                  }];
 

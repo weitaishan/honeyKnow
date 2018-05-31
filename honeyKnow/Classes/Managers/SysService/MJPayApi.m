@@ -164,7 +164,7 @@ static id _instance;
 {
     self.PaySuccess = successBlock;
     self.PayError = failBlock;
-    NSString * appScheme =  @"aliPay";
+    NSString * appScheme =  @"honey";
     
     //注：若公司服务器返回的json串可以直接使用，就不用下面的json解析了
 //    NSData *jsonData = [pay_param dataUsingEncoding:NSUTF8StringEncoding];

@@ -67,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/Managers/Network/WTSHttpTool.m"
-            timestampString = "549363315.265118"
+            filePath = "TIMAdapter/IMAAppDelegate.m"
+            timestampString = "549430216.525775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "603"
-            endingLineNumber = "603"
-            landmarkName = "+shareWechat"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-application:handleOpenURL:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,13 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/Managers/Network/WTSHttpTool.m"
-            timestampString = "549363315.265178"
+            filePath = "TIMAdapter/IMAAppDelegate.m"
+            timestampString = "549430216.525824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "578"
-            endingLineNumber = "578"
-            landmarkName = "+shareWechat"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-application:openURL:options:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,13 +99,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/Managers/Network/WTSHttpTool.m"
-            timestampString = "549363315.26522"
+            filePath = "TIMAdapter/IMAAppDelegate.m"
+            timestampString = "549430216.525867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "572"
-            endingLineNumber = "572"
-            landmarkName = "+shareWechat"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-application:openURL:sourceApplication:annotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TIMAdapter/IMAAppDelegate.m"
+            timestampString = "549430216.525916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "-application:openURL:options:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TIMAdapter/IMAAppDelegate.m"
+            timestampString = "549430216.525957"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-application:openURL:sourceApplication:annotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/Managers/SysService/MJPayApi.m"
+            timestampString = "549430216.526003"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "-aliPayWithPayParam:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

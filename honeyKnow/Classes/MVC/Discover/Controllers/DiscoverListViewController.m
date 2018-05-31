@@ -72,11 +72,6 @@ static NSString* discoverListCellId = @"discoverListCellId";
             DiscoverListModel* listModel = [DiscoverListModel yy_modelWithJSON:response];
             [weakSelf.listArray removeAllObjects];
             [weakSelf.listArray addObjectsFromArray:listModel.data];
-            [weakSelf.listArray addObjectsFromArray:listModel.data];
-            [weakSelf.listArray addObjectsFromArray:listModel.data];
-            [weakSelf.listArray addObjectsFromArray:listModel.data];
-            [weakSelf.listArray addObjectsFromArray:listModel.data];
-            [weakSelf.listArray addObjectsFromArray:listModel.data];
 
             
         }

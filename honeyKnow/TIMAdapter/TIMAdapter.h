@@ -55,6 +55,7 @@ typedef NS_ENUM(NSInteger, IMAConType)
 
 #define ALI_PAY @"alipay"
 
+#define MY_APP @"honey"
 
 // 最大昵称UTF8字符串长度
 #define kNicknameMaxLength  64

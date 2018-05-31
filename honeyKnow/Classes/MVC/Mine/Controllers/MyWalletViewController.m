@@ -199,11 +199,11 @@ static NSString * const myWalletCellId = @"myWalletCellId";
                 case 1:
                 {
                     NSLog(@"提现");
-                    WithdrawAuthenViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"withdrawAuthenViewController"];
-                    vc.hidesBottomBarWhenPushed = YES;
-                    
-                    
-                    [self.navigationController pushViewController:vc animated:YES];
+//                    WithdrawAuthenViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"withdrawAuthenViewController"];
+//                    vc.hidesBottomBarWhenPushed = YES;
+//
+//
+//                    [self.navigationController pushViewController:vc animated:YES];
                     
                 }
                     break;

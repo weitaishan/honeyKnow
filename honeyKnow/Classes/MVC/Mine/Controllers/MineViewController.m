@@ -287,7 +287,7 @@ static NSString * const mineListCellId = @"mineListCellId";
             
             
             
-            [[WTSAlertViewTools shareInstance] showAlert:@"认证中" message:@"正在认证中，请耐心等待" cancelTitle:@"确定" titleArray:nil viewController:self confirm:^(NSInteger buttonTag){
+            [[WTSAlertViewTools shareInstance] showAlert:@"认证中" message:@"正在认证中，请耐心等待" cancelTitle:nil titleArray:nil viewController:self confirm:^(NSInteger buttonTag){
         
                 
             }];
