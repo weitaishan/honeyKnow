@@ -18,51 +18,51 @@
   
 //    [self playWithUrl:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
     
-    
+    WeakSelf;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
-    
+
     [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
-        
-        if (self.listModel.Id > 0) {
-            
-            [[SystemService shareInstance] callVideoTelePhoneWithPeerId:IntStr(self.listModel.Id)];
-            
+
+        if (weakSelf.listModel.Id > 0) {
+
+            [[SystemService shareInstance] callVideoTelePhoneWithPeerId:IntStr(weakSelf.listModel.Id)];
+
         }else{
-            
-            
-        }
-        
-    }];
-    [self.videoImgView addGestureRecognizer:tap];
-    
-    [[self.shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-       
-        [WTSHttpTool shareWechat];
-        
-    }];
-    
-    
-    
-    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] init];
-    
-    [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
-        
-        
-        NSLog(@"CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) = %lf,     CMTimeGetSeconds(self.avPlayer.currentItem.duration) = %lf",CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) ,CMTimeGetSeconds(self.myPlayer.currentItem.duration));
-        if(self.myPlayer.rate==0){ //说明时暂停
-            [self.myPlayer play];
-            self.playBtn.hidden = YES;
-            if (CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) == CMTimeGetSeconds(self.myPlayer.currentItem.duration)) {
-                
-                [_item seekToTime:kCMTimeZero]; // item 跳转到初始
-                [_myPlayer play];
-            }
-        }else if(self.myPlayer.rate==1){//正在播放
-            [self.myPlayer pause];
-            self.playBtn.hidden = NO;
+
 
         }
-        
+
+    }];
+    [self.videoImgView addGestureRecognizer:tap];
+
+    [[self.shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+
+        [WTSHttpTool shareWechat];
+
+    }];
+
+
+
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] init];
+
+    [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+
+
+        NSLog(@"CMTimeGetSeconds(self.myPlayer.currentItem.currentTime) = %lf,     CMTimeGetSeconds(self.avPlayer.currentItem.duration) = %lf",CMTimeGetSeconds(weakSelf.myPlayer.currentItem.currentTime) ,CMTimeGetSeconds(weakSelf.myPlayer.currentItem.duration));
+        if(weakSelf.myPlayer.rate==0){ //说明时暂停
+            [weakSelf.myPlayer play];
+            weakSelf.playBtn.hidden = YES;
+            if (CMTimeGetSeconds(weakSelf.myPlayer.currentItem.currentTime) == CMTimeGetSeconds(weakSelf.myPlayer.currentItem.duration)) {
+
+                [weakSelf.item seekToTime:kCMTimeZero]; // item 跳转到初始
+                [weakSelf.myPlayer play];
+            }
+        }else if(weakSelf.myPlayer.rate==1){//正在播放
+            [weakSelf.myPlayer pause];
+            weakSelf.playBtn.hidden = NO;
+
+        }
+
     }];
     [self.clickView addGestureRecognizer:tap2];
 
@@ -106,6 +106,7 @@
 -(void)dealloc{
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.myPlayer pause];
 
 }
 -(void)setListModel:(DiscoverList *)listModel{
@@ -126,16 +127,16 @@
     
     WeakSelf;
     [[_likeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
-       
+
         x.selected = !x.selected;
-        _lbLikeNum.text = IntStr(_lbLikeNum.text.integerValue + ( x.isSelected ? 1 : -1));
-        
-        
+        weakSelf.lbLikeNum.text = IntStr(weakSelf.lbLikeNum.text.integerValue + ( x.isSelected ? 1 : -1));
+
+
         [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_VIDEO_LIKE_UPDATE params:@{@"videoId" : IntStr(weakSelf.listModel.Id)}.mutableCopy success:^(id response) {
 
             if ([response[@"success"] integerValue]){
 
-                
+
 
             }
 

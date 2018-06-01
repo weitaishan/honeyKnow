@@ -135,7 +135,7 @@
 
 - (void)configConversation
 {
-    [self.conversationMgr asyncConversationList];
+//    [self.conversationMgr asyncConversationList];
 }
 
 - (void)configContact

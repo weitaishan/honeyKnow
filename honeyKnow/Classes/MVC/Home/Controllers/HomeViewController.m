@@ -81,26 +81,7 @@
     // 初始化
     [self setupSegmentView];
     [self setupContentView];
-    
-    
-    [WTSHttpTool requestWihtMethod:RequestMethodTypeGet url:URL_USER_GET params:nil success:^(id response) {
-        
-        
-        if ([response[@"success"] integerValue]){
-            
-            
-            MinePersonInfoModel* infoModel = [MinePersonInfoModel yy_modelWithJSON:response[@"data"]];
-            [NSUSERDEFAULTS setObject:@(infoModel.isTeacher) forKey:USER_IS_TEACHER];
-            [SystemService shareInstance].isTeacher = infoModel.isTeacher;
-            [self.tableView reloadData];
-            
-            
-        }
-        
-    } failure:^(NSError *error) {
-        
-        
-    }];
+
     
     
 }

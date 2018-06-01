@@ -70,13 +70,13 @@
 {
     NSInteger unRead = 0;
     
-//    NSMutableArray *conversationList = [NSMutableArray array];
+    //    NSMutableArray *conversationList = [NSMutableArray array];
     
     
-//2.0之前的版本不支持 getConversationList 接口
+    //2.0之前的版本不支持 getConversationList 接口
     NSArray *conversationList = [[TIMManager sharedInstance] getConversationList];
-
-
+    
+    
     for (TIMConversation *conversation in conversationList)
     {
         IMAConversation *conv = nil;
@@ -202,7 +202,7 @@
     }
     
     self.unReadMessageCount -= [conv getUnReadMessageNum];
-
+    
     [conv setReadMessage];
     
     if (conv)
@@ -242,14 +242,14 @@
 {
     if (user)
     {
-    for (NSInteger i = 0; i < [_conversationList count]; i++)
-    {
-        IMAConversation *conv = [_conversationList objectAtIndex:i];
-        if ([conv isChatWith:user])
+        for (NSInteger i = 0; i < [_conversationList count]; i++)
         {
-            return conv;
+            IMAConversation *conv = [_conversationList objectAtIndex:i];
+            if ([conv isChatWith:user])
+            {
+                return conv;
+            }
         }
-    }
     }
     return nil;
 }
@@ -304,11 +304,11 @@
 
 - (NSInteger)insertPosition
 {
-//    IMAPlatform *mp = [IMAPlatform sharedInstance];
-//    if (!mp.isConnected)
-//    {
-//        return 1;
-//    }
+    IMAPlatform *mp = [IMAPlatform sharedInstance];
+    if (!mp.isConnected)
+    {
+        return 1;
+    }
     return 0;
 }
 
@@ -398,7 +398,7 @@
                         
                         if (!isInputStatus)
                         {
-//                            [conv setReadMessage];
+                            //                            [conv setReadMessage];
                             imaconv.lastMessage = imamsg;
                             [_chattingConversation onReceiveNewMessage:imamsg];
                         }
@@ -485,25 +485,25 @@
 //申请加群请求
 - (void)onAddGroupRequest:(TIMGroupSystemElem *)item
 {
-//    IMAGroup *tempGroup = [[IMAGroup alloc] initWith:item.group];
-//    IMAGroup *group = (IMAGroup *)[[IMAPlatform sharedInstance].contactMgr isContainUser:tempGroup];
-//    NSString *message = [NSString stringWithFormat:@"%@申请加入群:%@\n申请理由:%@", item.user, group.groupInfo.groupName, item.msg];
-//    
-//    UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"加群申请" message:message cancelButtonTitle:@"忽略" otherButtonTitles:@[@"同意",@"拒绝"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-//        if (buttonIndex == 1)//同意
-//        {
-//            [[IMAPlatform sharedInstance] asyncAcceptAddGroup:item succ:^{
-//                
-//            } fail:nil];
-//        }
-//        else if (buttonIndex == 2)//拒绝
-//        {
-//            [[IMAPlatform sharedInstance] asyncRefuseAddGroup:item succ:^{
-//                
-//            } fail:nil];
-//        }
-//    }];
-//    [alert show];
+    //    IMAGroup *tempGroup = [[IMAGroup alloc] initWith:item.group];
+    //    IMAGroup *group = (IMAGroup *)[[IMAPlatform sharedInstance].contactMgr isContainUser:tempGroup];
+    //    NSString *message = [NSString stringWithFormat:@"%@申请加入群:%@\n申请理由:%@", item.user, group.groupInfo.groupName, item.msg];
+    //
+    //    UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"加群申请" message:message cancelButtonTitle:@"忽略" otherButtonTitles:@[@"同意",@"拒绝"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
+    //        if (buttonIndex == 1)//同意
+    //        {
+    //            [[IMAPlatform sharedInstance] asyncAcceptAddGroup:item succ:^{
+    //
+    //            } fail:nil];
+    //        }
+    //        else if (buttonIndex == 2)//拒绝
+    //        {
+    //            [[IMAPlatform sharedInstance] asyncRefuseAddGroup:item succ:^{
+    //
+    //            } fail:nil];
+    //        }
+    //    }];
+    //    [alert show];
 }
 
 - (void)onAddFreindRequest:(TIMSNSSystemElem *)elem
@@ -673,3 +673,4 @@
 }
 
 @end
+

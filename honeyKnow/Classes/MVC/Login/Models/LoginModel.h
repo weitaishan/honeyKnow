@@ -18,4 +18,6 @@
 @property (nonatomic, copy) NSString *identifier;
 
 @property (nonatomic, copy) NSString *token;
+
+@property (nonatomic, assign) NSInteger isTeacher;
 @end

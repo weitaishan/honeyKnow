@@ -233,24 +233,12 @@ static SystemService* _instance = nil;
  */
 - (void)ILiveLogin{
     
-    NSString* identifier = [NSUSERDEFAULTS objectForKey:USER_IDENTIFIER];
     
-    NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
+
+    [[[IMALoginViewController alloc] init] loging];
 
 //    //登录sdk
-    [[ILiveLoginManager getInstance] iLiveLogin:identifier sig:userSig succ:^{
-        NSLog(@"iLive 登录成功！");
-        [[[IMALoginViewController alloc] init] loging];
-
-    } failed:^(NSString *module, int errId, NSString *errMsg) {
-        NSLog(@"errId:%d, errMsg:%@",errId, errMsg);
-        [[[IMALoginViewController alloc] init] loging];
-
-        if (errId == ERR_EXPIRE) {
-            
-            [self exitLoginWithTitle:@"登录信息过期" message:@"请重新登录"];
-        }
-    }];
+    
 }
 
 /**
@@ -267,6 +255,9 @@ static SystemService* _instance = nil;
             [NSUSERDEFAULTS removeObjectForKey:USER_TOKEN];
             [NSUSERDEFAULTS removeObjectForKey:USER_IDENTIFIER];
             [NSUSERDEFAULTS removeObjectForKey:USER_USERSIG];
+            [NSUSERDEFAULTS removeObjectForKey:USER_IS_TEACHER];
+
+            [[IMAPlatform sharedInstance] offlineLogin];
             [[TIMManager sharedInstance] logout:^() {
                 NSLog(@"logout succ");
             } fail:^(int code, NSString * err) {

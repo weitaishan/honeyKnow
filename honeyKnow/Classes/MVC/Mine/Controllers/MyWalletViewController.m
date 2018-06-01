@@ -126,7 +126,7 @@ static NSString * const myWalletCellId = @"myWalletCellId";
         
         
         UILabel* lbCoin = [[UILabel alloc] init];
-        NSString* string = [NSString stringWithFormat:@"%@H币",self.infoModel.balance];
+        NSString* string = [NSString stringWithFormat:@"%@H币",self.infoModel.balance.length ? self.infoModel.balance : @"0.00"];
         lbCoin.text = string;
         lbCoin.font = [UIFont systemFontOfSize:15];
         lbCoin.textColor = [UIColor whiteColor];

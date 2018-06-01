@@ -45,7 +45,10 @@
     
     self.view.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
     _webView = [[WKWebView alloc]init];
+    _webView.opaque = NO; //不设置这个值 页面背景始终是白色
+
     _webView.multipleTouchEnabled = NO;
+    _webView.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
     [self.view addSubview:_webView];
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {

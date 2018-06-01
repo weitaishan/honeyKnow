@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="313" height="329"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_anchor" translatesAutoresizingMaskIntoConstraints="NO" id="4pn-sh-j1g">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_anchor" translatesAutoresizingMaskIntoConstraints="NO" id="4pn-sh-j1g">
                         <rect key="frame" x="0.0" y="0.0" width="313" height="329"/>
                     </imageView>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ1-bb-zR9">
@@ -105,6 +105,6 @@
     <resources>
         <image name="icon_like" width="20" height="20"/>
         <image name="pic_anchor" width="187" height="276"/>
-        <image name="pic_avatar" width="65" height="65"/>
+        <image name="pic_avatar" width="36" height="36"/>
     </resources>
 </document>

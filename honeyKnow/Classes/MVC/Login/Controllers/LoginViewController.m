@@ -58,7 +58,18 @@
     [self.vCodeTF addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 
     
+    if (userTelPhone.length){
+        
+        [self normalVcode:self.cCodeBtn];
+
+
+    }else{
+        
+        [self selectVcode:self.cCodeBtn];
+
+    }
     self.loginBtn.userInteractionEnabled = NO;
+    
 }
 
 -(void)textFieldDidChange :(UITextField *)textField{
@@ -183,10 +194,9 @@
                 [NSUSERDEFAULTS setValue:loginModel.token forKey:USER_TOKEN];
                 [NSUSERDEFAULTS setValue:loginModel.userSig forKey:USER_USERSIG];
                 [NSUSERDEFAULTS setValue:self.phoneTF.text forKey:USER_TELPHONE];
-
+                [NSUSERDEFAULTS setObject:@(loginModel.isTeacher) forKey:USER_IS_TEACHER];
+                [SystemService shareInstance].isTeacher = loginModel.isTeacher;
                 [NSUSERDEFAULTS synchronize];
-                
-                [[[IMALoginViewController alloc] init] loging];
                 
                 if (loginModel.isNew){
 //
@@ -195,7 +205,7 @@
                     [self.navigationController pushViewController:vc animated:YES];
                     
                 }else{
-
+                    
                     [[SystemService shareInstance] ILiveLogin];
 
                     //创建标签栏控制器

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StarView.h"
 @class HomeList;
 @interface HomeListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbPrice;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UIImageView *starImgView;
+@property (weak, nonatomic) IBOutlet StarView *starView;
 
 @property (nonatomic, strong) HomeList* model;
 @end

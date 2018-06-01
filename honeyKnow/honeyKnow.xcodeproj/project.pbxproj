@@ -104,6 +104,7 @@
 		09B631F720B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		09B631F920B44666000C30B8 /* TLSUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09B631EA20B44666000C30B8 /* TLSUI.bundle */; };
 		09B631FA20B44666000C30B8 /* TLSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B631EB20B44666000C30B8 /* TLSUI.framework */; };
+		09C8392F20C05B7A000275E9 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8392D20C05B7A000275E9 /* StarView.m */; };
 		3D87A65B251D1917267EF03C /* Pods_honeyKnow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7169EA7945E8C161F6B6F2 /* Pods_honeyKnow.framework */; };
 		92068EFA1C858AAA00414FF4 /* IMAPlatform+FriendShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 92068EF91C858AAA00414FF4 /* IMAPlatform+FriendShip.m */; };
 		92068EFD1C858EED00414FF4 /* IMSDK+ShowAble.m in Sources */ = {isa = PBXBuildFile; fileRef = 92068EFC1C858EED00414FF4 /* IMSDK+ShowAble.m */; };
@@ -638,6 +639,8 @@
 		09B631E820B44666000C30B8 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		09B631EA20B44666000C30B8 /* TLSUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TLSUI.bundle; sourceTree = "<group>"; };
 		09B631EB20B44666000C30B8 /* TLSUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSUI.framework; sourceTree = "<group>"; };
+		09C8392D20C05B7A000275E9 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		09C8392E20C05B7A000275E9 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
 		1D8BC696FBC6AA171B2433D7 /* Pods-honeyKnow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.release.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.release.xcconfig"; sourceTree = "<group>"; };
 		4CDAFAAE2154820FF14FF47F /* Pods-honeyKnow.dailybuild.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-honeyKnow.dailybuild.xcconfig"; path = "Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow.dailybuild.xcconfig"; sourceTree = "<group>"; };
 		6D7169EA7945E8C161F6B6F2 /* Pods_honeyKnow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_honeyKnow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1670,6 +1673,8 @@
 		09B630EF20B31C95000C30B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09C8392E20C05B7A000275E9 /* StarView.h */,
+				09C8392D20C05B7A000275E9 /* StarView.m */,
 				09B630F020B31C95000C30B8 /* HomeListCell.h */,
 				09B630F120B31C95000C30B8 /* HomeListCell.m */,
 				09B630F220B31C95000C30B8 /* HomeListCell.xib */,
@@ -3551,6 +3556,7 @@
 				FD49473720BF9291009EBB20 /* UIViewController+Layout.m in Sources */,
 				FD49471620BF9290009EBB20 /* SDWebImageManager.m in Sources */,
 				FD49471B20BF9290009EBB20 /* UIImage+WebP.m in Sources */,
+				09C8392F20C05B7A000275E9 /* StarView.m in Sources */,
 				FD49471320BF9290009EBB20 /* SDWebImageDecoder.m in Sources */,
 				09B631C720B31C95000C30B8 /* MessageListModel.m in Sources */,
 				FD4946F320BF9290009EBB20 /* UIViewController+ChildViewController.m in Sources */,

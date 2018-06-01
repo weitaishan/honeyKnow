@@ -152,14 +152,39 @@
 //    [[HUDHelper sharedInstance] syncLoading:@"正在登录"];
     [[IMAPlatform sharedInstance] login:_loginParam succ:^{
 //        [[HUDHelper sharedInstance] syncStopLoadingMessage:@"登录成功"];
+        [self loginILive];
         [weakSelf registNotification];
         [[IMAPlatform sharedInstance] configOnLoginSucc:_loginParam];
+        
+        
 
 //        [weakSelf enterMainUI];
     } fail:^(int code, NSString *msg) {
+        
+        [self loginILive];
+
 //        [[HUDHelper sharedInstance] syncStopLoadingMessage:IMALocalizedError(code, msg) delay:2 completion:^{
 //            [weakSelf pullLoginUI];
 //        }];
+    }];
+}
+
+- (void)loginILive{
+    
+    NSString* identifier = [NSUSERDEFAULTS objectForKey:USER_IDENTIFIER];
+    
+    NSString* userSig = [NSUSERDEFAULTS objectForKey:USER_USERSIG];
+    
+    [[ILiveLoginManager getInstance] iLiveLogin:identifier sig:userSig succ:^{
+        NSLog(@"iLive 登录成功！");
+        
+    } failed:^(NSString *module, int errId, NSString *errMsg) {
+        NSLog(@"errId:%d, errMsg:%@",errId, errMsg);
+        
+        if (errId == ERR_EXPIRE) {
+            
+            [[SystemService shareInstance] exitLoginWithTitle:@"登录信息过期" message:@"请重新登录"];
+        }
     }];
 }
 

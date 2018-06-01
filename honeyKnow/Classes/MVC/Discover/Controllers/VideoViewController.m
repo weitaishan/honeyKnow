@@ -89,16 +89,17 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     
     [self.view addSubview:backBtn];
     
+    WeakSelf;
     [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view).offset(14 + NewStatusBarHeight);
+        make.top.equalTo(weakSelf.view).offset(14 + NewStatusBarHeight);
 
-        make.left.equalTo(self.view).offset(19);
+        make.left.equalTo(weakSelf.view).offset(19);
     }];
     
     [[backBtn rac_signalForControlEvents:UIControlEventTouchUpInside ]subscribeNext:^(__kindof UIControl * _Nullable x) {
        
-        [self.navigationController popViewControllerAnimated:YES];
+        [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     
     UIButton* moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -107,11 +108,12 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     
     [self.view addSubview:moreBtn];
     
+    
     [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerY.equalTo(backBtn);
         
-        make.right.equalTo(self.view).offset(-19);
+        make.right.equalTo(weakSelf.view).offset(-19);
     }];
     
     
@@ -156,7 +158,10 @@ static NSString* videoCollectionViewCellId = @"videoCollectionViewCellId";
     
 }
 
-
+-(void)dealloc{
+    
+    
+}
 #pragma mark - 懒加载
 -(NSMutableArray<DiscoverList *> *)listArray{
     

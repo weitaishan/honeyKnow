@@ -10,7 +10,7 @@
 #import "HomeListModel.h"
 #import "HomeListSerachCell.h"
 #import "SearchTextField.h"
-
+#import "HomeDetailsViewController.h"
 
 @interface HomeListSearchViewController ()
 
@@ -130,7 +130,12 @@ static NSString * const homeListSerachCellId = @"homeListSerachCellId";
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-   
+    HomeList* model = self.listArray[indexPath.section];
+    
+    HomeDetailsViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"homeDetailsViewController"];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.userId = model.Id;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - textField Delegate

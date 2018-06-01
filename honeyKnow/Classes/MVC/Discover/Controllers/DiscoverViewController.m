@@ -109,7 +109,7 @@
     
     [self.segmentView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.size.mas_equalTo(CGSizeMake(148, 44));
+        make.size.mas_equalTo(CGSizeMake(170, 44));
         make.top.equalTo(weakSelf.view).offset(NewStatusBarHeight);
         make.centerX.equalTo(weakSelf.view).offset(-22);
     }];

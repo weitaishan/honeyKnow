@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,7 @@
                             <constraint firstAttribute="bottom" secondItem="yhz-9r-EEj" secondAttribute="bottom" id="vI2-0t-wxG"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXW-3O-r3C">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXW-3O-r3C">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="547"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGq-HX-8Eo">
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_vedio" translatesAutoresizingMaskIntoConstraints="NO" id="V54-GG-oDp">
-                                <rect key="frame" x="279.5" y="482" width="16" height="16"/>
+                                <rect key="frame" x="260.5" y="472.5" width="35" height="35"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-b5-NAh">
                                 <rect key="frame" x="315" y="370" width="45" height="45"/>
@@ -229,15 +229,15 @@
     </objects>
     <resources>
         <image name="btn_Watching" width="45" height="45"/>
-        <image name="btn_follow" width="25" height="25"/>
+        <image name="btn_follow" width="89" height="35"/>
         <image name="btn_forwarding" width="45" height="45"/>
         <image name="btn_like" width="45" height="45"/>
         <image name="btn_like_highlighted" width="85" height="85"/>
         <image name="btn_vedio" width="131" height="49"/>
         <image name="icon_rest" width="46" height="21"/>
-        <image name="icon_vedio" width="16" height="16"/>
+        <image name="icon_vedio" width="35" height="35"/>
         <image name="pic_anchor" width="187" height="276"/>
-        <image name="pic_avatar" width="65" height="65"/>
+        <image name="pic_avatar" width="36" height="36"/>
         <image name="record_playbutton" width="75" height="75"/>
     </resources>
 </document>

@@ -23,7 +23,9 @@
     // Configure the view for the selected state
 }
 
-
+-(void)dealloc{
+    
+}
 -(void)setModel:(HomeList *)model{
     
     _model = model;
@@ -52,7 +54,8 @@
         self.statusImgView.image = [UIImage imageNamed:@"icon_rest"];
     }
     
-    
+    //设置星标的值
+    self.starView.starValue = [_model.star floatValue];
     
 }
 
