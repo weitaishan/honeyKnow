@@ -15,7 +15,6 @@
 		0914A8A620B85F710085DF55 /* CallRecvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BA4E120B7FA870060ABDC /* CallRecvViewController.m */; };
 		0930BFE120B59C88007AD501 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0930BFDD20B59C88007AD501 /* libWeChatSDK.a */; };
 		0977173C20BAE0E200BD7841 /* HomeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0977173B20BAE0E200BD7841 /* HomeDetailsViewController.m */; };
-		09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
 		09B6319A20B31C95000C30B8 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309520B31C95000C30B8 /* UIView+ZJFrame.m */; };
 		09B6319B20B31C95000C30B8 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309720B31C95000C30B8 /* UIViewController+ZJScrollPageController.m */; };
 		09B6319C20B31C95000C30B8 /* ZJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6309920B31C95000C30B8 /* ZJCollectionView.m */; };
@@ -80,8 +79,7 @@
 		09B631D720B31C95000C30B8 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6313020B31C95000C30B8 /* TencentOpenAPI.framework */; };
 		09B631D820B31C95000C30B8 /* WTSAlertViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6313420B31C95000C30B8 /* WTSAlertViewTools.m */; };
 		09B631D920B31C95000C30B8 /* WTSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6313620B31C95000C30B8 /* WTSLog.m */; };
-		09B631DA20B32101000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; };
-		09B631DB20B32101000C30B8 /* RevealServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09B631DA20B32101000C30B8 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6309220B31C95000C30B8 /* RevealServer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		09B631DF20B32298000C30B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B631DD20B32297000C30B8 /* Main.storyboard */; };
 		09B631E020B32298000C30B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B631DE20B32298000C30B8 /* LaunchScreen.storyboard */; };
 		09B631F520B44666000C30B8 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 09B631E620B44666000C30B8 /* readme */; };
@@ -446,20 +444,6 @@
 		FD49473920BF9291009EBB20 /* UILabel+InitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4946CB20BF9290009EBB20 /* UILabel+InitMethod.m */; };
 		FDAC2C1620BB9CA8005F415C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAC2C1520BB9CA8005F415C /* WebViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		09B631DC20B32102000C30B8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				09B631DB20B32101000C30B8 /* RevealServer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0914A89820B5C8040085DF55 /* AuthenMakeMoneyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenMakeMoneyViewController.h; sourceTree = "<group>"; };
@@ -1383,7 +1367,6 @@
 				926623BA1C80405F005D26CF /* libz.tbd in Frameworks */,
 				FD1BA36C20B50EAD0060ABDC /* ILiveLogReport.framework in Frameworks */,
 				FD1BA47B20B53C5C0060ABDC /* TLSSDK.framework in Frameworks */,
-				09B6319920B31C95000C30B8 /* RevealServer.framework in Frameworks */,
 				FD1BA37420B50EAD0060ABDC /* TILCallSDK.framework in Frameworks */,
 				FD1BA47E20B53C5C0060ABDC /* ImSDK.framework in Frameworks */,
 				926623B71C804057005D26CF /* CoreTelephony.framework in Frameworks */,
@@ -3181,7 +3164,6 @@
 				92A6D38A1C5B506A00065EB3 /* Frameworks */,
 				92A6D38B1C5B506A00065EB3 /* Resources */,
 				E6A0A0864C7303405F7EADF5 /* [CP] Embed Pods Frameworks */,
-				09B631DC20B32102000C30B8 /* Embed Frameworks */,
 				826F46959667140A07070046 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
