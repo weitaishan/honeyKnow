@@ -14,7 +14,35 @@
     [super awakeFromNib];
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    
+    
+//    UIView *theView = [[UIView alloc] initWithFrame:CGRectMake(0, self.contentView.height - 70, SCREEN_WIDTH, 70)];
+//    [self.contentView addSubview:theView];
+//    [self.contentView insertSubview:theView atIndex:1];
+//    [theView mas_makeConstraints:^(MASConstraintMaker *make) {
+//
+//        make.left.right.bottom.equalTo(self.contentView);
+//        make.height.mas_equalTo(70);
+//    }];
+//    //初始化CAGradientlayer对象，使它的大小为UIView的大小
+//    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+////    gradientLayer.frame = CGRectMake(0, self.contentView.height - 70, SCREEN_WIDTH, 70);
+//    gradientLayer.frame = theView.bounds;
+//
+//    //将CAGradientlayer对象添加在我们要设置背景色的视图的layer层
+//    [theView.layer addSublayer:gradientLayer];
+//    theView.alpha = .2;
+//    //设置渐变区域的起始和终止位置（范围为0-1）
+//    gradientLayer.startPoint = CGPointMake(0, 0);
+//    gradientLayer.endPoint = CGPointMake(0, 1);
+//
+//    //设置颜色数组
+//    gradientLayer.colors = @[(__bridge id)[UIColor whiteColor].CGColor,
+//                             (__bridge id)[UIColor blackColor].CGColor];
+//
+//    //设置颜色分割点（范围：0-1）
+//    gradientLayer.locations = @[@(0.5f), @(1.0f)];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

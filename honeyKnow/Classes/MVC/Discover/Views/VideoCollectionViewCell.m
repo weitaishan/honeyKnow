@@ -9,6 +9,7 @@
 #import "VideoCollectionViewCell.h"
 #import "VideoModel.h"
 #import "DiscoverListModel.h"
+#import "HomeDetailsViewController.h"
 @implementation VideoCollectionViewCell
 
 - (void)awakeFromNib {
@@ -147,6 +148,23 @@
         }];
 
     }];
+    
+    
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] init];
+    
+    [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        [self.myPlayer pause];
+        HomeDetailsViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"homeDetailsViewController"];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.userId = listModel.userId;
+        [APP_DELEGATE().navigationViewController pushViewController:vc animated:YES];
+        
+    }];
+    [self.addFirendView addGestureRecognizer:tap2];
+    
+    
     
     
     

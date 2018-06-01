@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UIImageView *starImgView;
 @property (weak, nonatomic) IBOutlet StarView *starView;
+@property (weak, nonatomic) IBOutlet UIView *shaView;
 
 @property (nonatomic, strong) HomeList* model;
 @end

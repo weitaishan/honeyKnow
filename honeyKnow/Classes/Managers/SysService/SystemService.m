@@ -283,14 +283,14 @@ static SystemService* _instance = nil;
  */
 - (void)callVideoTelePhoneWithPeerId:(NSString *)peerId{
     
-#ifdef DEBUG
-
-    CallRecvViewController *make = [MAIN_SB instantiateViewControllerWithIdentifier:@"callRecvViewController"];
-    make.peerId = peerId;
-    make.callType = WTSCallTypeSend;
-    [APP_DELEGATE().getCurrentVC presentViewController:make animated:YES completion:nil];
-#else
-    
+//#ifdef DEBUG
+//
+//    CallRecvViewController *make = [MAIN_SB instantiateViewControllerWithIdentifier:@"callRecvViewController"];
+//    make.peerId = peerId;
+//    make.callType = WTSCallTypeSend;
+//    [APP_DELEGATE().getCurrentVC presentViewController:make animated:YES completion:nil];
+//#else
+//
     [WTSHttpTool requestWihtMethod:RequestMethodTypePost url:URL_PAYMENT_PAY params:@{@"actorId" : peerId}.mutableCopy success:^(id response) {
         
         if ([response[@"success"] integerValue]){
@@ -319,6 +319,9 @@ static SystemService* _instance = nil;
                 make.peerId = peerId;
                 make.callType = WTSCallTypeSend;
                 [APP_DELEGATE().getCurrentVC presentViewController:make animated:YES completion:nil];
+            }else{
+                
+                [self addToast:response[@"msg"]];
             }
         }
         
@@ -328,11 +331,19 @@ static SystemService* _instance = nil;
     }];
 
     
-#endif
+//#endif
 
     
    
     
 }
 
+
+-(void)addToast:(NSString *)toastStr{
+    
+    CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
+    style.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+    [GET_WINDOW makeToast:toastStr duration:1 position:CSToastPositionCenter style:style];
+    
+}
 @end

@@ -19,22 +19,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/MVC/Home/Views/HomeListCell.m"
-            timestampString = "549480448.889936"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-dealloc"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
             timestampString = "549479591.307148"
             startingColumnNumber = "9223372036854775807"
@@ -52,12 +36,12 @@
                   moduleName = "honeyKnow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
-                  timestampString = "549480449.213434"
+                  timestampString = "549557726.957853"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
                   endingLineNumber = "133"
-                  offsetFromSymbolStart = "72">
+                  offsetFromSymbolStart = "37">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -67,12 +51,12 @@
                   moduleName = "honeyKnow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
-                  timestampString = "549480449.215297"
+                  timestampString = "549557726.962069"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "136"
                   endingLineNumber = "136"
-                  offsetFromSymbolStart = "96">
+                  offsetFromSymbolStart = "93">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -115,93 +99,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TIMAdapter/IMAUI/IMALoginViewController.m"
-            timestampString = "549480642.017664"
+            filePath = "Classes/MVC/Home/Controllers/HomeDetailsViewController.m"
+            timestampString = "549554729.549292"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-loging"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TIMAdapter/Playform/IMAPlatform.m"
-            timestampString = "549480652.794781"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "+configWith:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[IMAPlatform configWith:]"
-                  moduleName = "honeyKnow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/TIMAdapter/Playform/IMAPlatform.m"
-                  timestampString = "549480652.808012"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__26+[IMAPlatform configWith:]_block_invoke"
-                  moduleName = "honeyKnow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/TIMAdapter/Playform/IMAPlatform.m"
-                  timestampString = "549480652.809732"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ConversationList/ConversationListViewController.m"
-            timestampString = "549480716.81611"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ConversationList/ConversationListViewController.m"
-            timestampString = "549480728.6861269"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-configOwnViews"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-setBaseInfo"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

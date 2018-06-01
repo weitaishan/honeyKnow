@@ -22,6 +22,13 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-CW-s3q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="341.5"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75R-GN-4ub">
+                        <rect key="frame" x="0.0" y="271.5" width="320" height="70"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="U4l-MO-Qgn"/>
+                        </constraints>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mode_green" translatesAutoresizingMaskIntoConstraints="NO" id="NBI-HJ-LNf">
                         <rect key="frame" x="262" y="9" width="46" height="21"/>
                     </imageView>
@@ -65,13 +72,13 @@
                         <rect key="frame" x="265" y="308.5" width="30" height="30"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-x0-MQV">
-                        <rect key="frame" x="29" y="284" width="7" height="18"/>
+                        <rect key="frame" x="16" y="284" width="7" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-GF-wQZ" customClass="StarView">
-                        <rect key="frame" x="49" y="285.5" width="78" height="15"/>
+                        <rect key="frame" x="36" y="285.5" width="78" height="15"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="78" id="Egl-jF-s2d"/>
@@ -84,15 +91,18 @@
                     <constraint firstItem="FQw-Dy-7cJ" firstAttribute="centerY" secondItem="oOk-Ma-4mj" secondAttribute="centerY" id="2fm-7b-NUN"/>
                     <constraint firstItem="mJk-CW-s3q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6My-Yd-HBt"/>
                     <constraint firstItem="mJk-CW-s3q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8UB-s3-A1S"/>
+                    <constraint firstItem="75R-GN-4ub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8vZ-hJ-unC"/>
                     <constraint firstItem="ZUg-GF-wQZ" firstAttribute="centerY" secondItem="Rkx-x0-MQV" secondAttribute="centerY" id="BJ1-Ld-vMU"/>
-                    <constraint firstItem="Rkx-x0-MQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="29" id="HvF-It-9DU"/>
+                    <constraint firstItem="Rkx-x0-MQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HvF-It-9DU"/>
                     <constraint firstItem="NBI-HJ-LNf" firstAttribute="trailing" secondItem="CCv-sh-2pz" secondAttribute="trailing" constant="2" id="IuB-ry-KeM"/>
                     <constraint firstAttribute="trailing" secondItem="mJk-CW-s3q" secondAttribute="trailing" id="Jwb-Nv-Ema"/>
                     <constraint firstAttribute="trailing" secondItem="oOk-Ma-4mj" secondAttribute="trailing" constant="14" id="Jxr-a7-ZYi"/>
                     <constraint firstItem="NBI-HJ-LNf" firstAttribute="bottom" secondItem="CCv-sh-2pz" secondAttribute="bottom" constant="2" id="KAk-vK-oyQ"/>
                     <constraint firstItem="ZUg-GF-wQZ" firstAttribute="leading" secondItem="Rkx-x0-MQV" secondAttribute="trailing" constant="13" id="OIK-lw-CI5"/>
+                    <constraint firstAttribute="bottom" secondItem="75R-GN-4ub" secondAttribute="bottom" id="PO2-Ji-iF8"/>
                     <constraint firstItem="Paj-9Q-Ujb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Pbu-Ok-9NZ"/>
                     <constraint firstItem="Paj-9Q-Ujb" firstAttribute="top" secondItem="Rkx-x0-MQV" secondAttribute="bottom" constant="14" id="Uuy-Mi-nvH"/>
+                    <constraint firstAttribute="trailing" secondItem="75R-GN-4ub" secondAttribute="trailing" id="V4D-1y-Ay3"/>
                     <constraint firstAttribute="bottom" secondItem="oOk-Ma-4mj" secondAttribute="bottom" constant="11" id="YUj-c0-oiI"/>
                     <constraint firstAttribute="trailing" secondItem="Paj-9Q-Ujb" secondAttribute="trailing" constant="118" id="YYr-ic-ZdA"/>
                     <constraint firstItem="oOk-Ma-4mj" firstAttribute="leading" secondItem="FQw-Dy-7cJ" secondAttribute="trailing" constant="5" id="dnt-Jx-Wj2"/>
@@ -110,6 +120,7 @@
                 <outlet property="lbName" destination="Rkx-x0-MQV" id="E8B-E5-zKQ"/>
                 <outlet property="lbPrice" destination="oOk-Ma-4mj" id="nJh-S7-WoZ"/>
                 <outlet property="lbStatus" destination="Otf-Vi-LDA" id="Akc-mZ-THn"/>
+                <outlet property="shaView" destination="75R-GN-4ub" id="bhr-kn-PyX"/>
                 <outlet property="starView" destination="ZUg-GF-wQZ" id="wJh-Nj-kWj"/>
                 <outlet property="statusImgView" destination="NBI-HJ-LNf" id="v2n-AU-rgo"/>
             </connections>
