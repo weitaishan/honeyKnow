@@ -6,21 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9B617A7C1CAE71920051C24D /* dailybuild */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9B617A801CAE71920051C24D /* Build configuration list for PBXAggregateTarget "dailybuild" */;
-			buildPhases = (
-				9B617A831CAE71E30051C24D /* ShellScript */,
-			);
-			dependencies = (
-				9B617A821CAE71AB0051C24D /* PBXTargetDependency */,
-			);
-			name = dailybuild;
-			productName = dailybuild;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		0914A89A20B5C8040085DF55 /* AuthenMakeMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89920B5C8040085DF55 /* AuthenMakeMoneyViewController.m */; };
 		0914A89D20B6F4FA0085DF55 /* SetLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A89C20B6F4FA0085DF55 /* SetLabelViewController.m */; };
@@ -291,7 +276,6 @@
 		9B0D73751D2108A200F8C822 /* CustomChatUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D73741D2108A200F8C822 /* CustomChatUIViewController.m */; };
 		9B46C2101CA511B3004BB537 /* IMAGroup+MemberList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C20F1CA511B3004BB537 /* IMAGroup+MemberList.m */; };
 		9B511E001CABDDD3000FD7F2 /* IMAGroup+Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B511DFF1CABDDD3000FD7F2 /* IMAGroup+Admin.m */; };
-		9B617A8B1CAE739D0051C24D /* DailyBuild-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B617A8A1CAE739D0051C24D /* DailyBuild-Info.plist */; };
 		9B6204D51CED980B005409F0 /* NotifySetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6204D41CED980B005409F0 /* NotifySetupController.m */; };
 		9B6204DB1CEDC72D005409F0 /* 00.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6204D71CEDC72D005409F0 /* 00.caf */; };
 		9B6204DC1CEDC72D005409F0 /* 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6204D81CEDC72D005409F0 /* 01.caf */; };
@@ -462,16 +446,6 @@
 		FD49473920BF9291009EBB20 /* UILabel+InitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4946CB20BF9290009EBB20 /* UILabel+InitMethod.m */; };
 		FDAC2C1620BB9CA8005F415C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAC2C1520BB9CA8005F415C /* WebViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9B617A811CAE71AB0051C24D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 92A6D3851C5B506A00065EB3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92A6D38C1C5B506A00065EB3;
-			remoteInfo = honeyKnow;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		09B631DC20B32102000C30B8 /* Embed Frameworks */ = {
@@ -988,7 +962,6 @@
 		9B46C20F1CA511B3004BB537 /* IMAGroup+MemberList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMAGroup+MemberList.m"; sourceTree = "<group>"; };
 		9B511DFE1CABDDD3000FD7F2 /* IMAGroup+Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMAGroup+Admin.h"; sourceTree = "<group>"; };
 		9B511DFF1CABDDD3000FD7F2 /* IMAGroup+Admin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMAGroup+Admin.m"; sourceTree = "<group>"; };
-		9B617A8A1CAE739D0051C24D /* DailyBuild-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DailyBuild-Info.plist"; sourceTree = "<group>"; };
 		9B6204D31CED980B005409F0 /* NotifySetupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifySetupController.h; sourceTree = "<group>"; };
 		9B6204D41CED980B005409F0 /* NotifySetupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifySetupController.m; sourceTree = "<group>"; };
 		9B6204D71CEDC72D005409F0 /* 00.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 00.caf; sourceTree = "<group>"; };
@@ -2169,7 +2142,6 @@
 			isa = PBXGroup;
 			children = (
 				0951DA5720BEF6C900DA193E /* honeyKnow.entitlements */,
-				9B617A8A1CAE739D0051C24D /* DailyBuild-Info.plist */,
 				922B239C1C8464CE00C350C2 /* CustomUI */,
 				92E793D31C756F3100A03ADF /* AppUI */,
 				92A6D3931C5B506A00065EB3 /* AppDelegate.h */,
@@ -3243,9 +3215,6 @@
 							};
 						};
 					};
-					9B617A7C1CAE71920051C24D = {
-						CreatedOnToolsVersion = 7.2;
-					};
 				};
 			};
 			buildConfigurationList = 92A6D3881C5B506A00065EB3 /* Build configuration list for PBXProject "honeyKnow" */;
@@ -3262,7 +3231,6 @@
 			projectRoot = "";
 			targets = (
 				92A6D38C1C5B506A00065EB3 /* honeyKnow */,
-				9B617A7C1CAE71920051C24D /* dailybuild */,
 			);
 		};
 /* End PBXProject section */
@@ -3330,7 +3298,6 @@
 				FD1BA4B020B6934F0060ABDC /* EditAuthenImageCell.xib in Resources */,
 				9B0D733B1D2107C900F8C822 /* 2.gif in Resources */,
 				09B631D320B31C95000C30B8 /* MinePersonInfoCell.xib in Resources */,
-				9B617A8B1CAE739D0051C24D /* DailyBuild-Info.plist in Resources */,
 				9B0D73331D2107C900F8C822 /* 12.gif in Resources */,
 				FD1BA4C320B6C9C70060ABDC /* CityData.plist in Resources */,
 				09B631DF20B32298000C30B8 /* Main.storyboard in Resources */,
@@ -3362,19 +3329,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-honeyKnow/Pods-honeyKnow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		9B617A831CAE71E30051C24D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# compress application.\n\nPROJ_NAME=\"honeyKnow\"\n\n/bin/rm -R $CONFIGURATION_BUILD_DIR/Payload\n\n/bin/mkdir $CONFIGURATION_BUILD_DIR/Payload\n\n/bin/cp -R $CONFIGURATION_BUILD_DIR/$PROJ_NAME\".app\" $CONFIGURATION_BUILD_DIR/Payload\n\ncd $CONFIGURATION_BUILD_DIR\n\n# zip up the SNSBee directory\n\n/usr/bin/zip -r $PROJ_NAME\".ipa\" Payload";
 		};
 		E6A0A0864C7303405F7EADF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3763,14 +3717,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9B617A821CAE71AB0051C24D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92A6D38C1C5B506A00065EB3 /* honeyKnow */;
-			targetProxy = 9B617A811CAE71AB0051C24D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		920873011C8D2E12006646B1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -3936,7 +3882,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/CommonLibrary/BlocksKit/include";
-				INFOPLIST_FILE = "honeyKnow/DailyBuild-Info.plist";
+				INFOPLIST_FILE = honeyKnow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -3954,28 +3900,6 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Release;
-		};
-		9B617A7D1CAE71920051C24D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
-				INFOPLIST_FILE = honeyKnow/Info.plist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9B617A7E1CAE71920051C24D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
-				INFOPLIST_FILE = "honeyKnow/DailyBuild-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d92b36b2-ea28-4f21-924a-17da505db0a3";
 			};
 			name = Release;
 		};
@@ -4042,7 +3966,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/CommonLibrary/BlocksKit/include";
-				INFOPLIST_FILE = "honeyKnow/DailyBuild-Info.plist";
+				INFOPLIST_FILE = honeyKnow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -4060,19 +3984,6 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = DailyBuild;
-		};
-		9B617A891CAE72820051C24D /* DailyBuild */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "honeyKnow/honeyKnow-Prefix.pch";
-				INFOPLIST_FILE = "honeyKnow/DailyBuild-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d92b36b2-ea28-4f21-924a-17da505db0a3";
 			};
 			name = DailyBuild;
 		};
@@ -4095,16 +4006,6 @@
 				92A6D3A51C5B506A00065EB3 /* Debug */,
 				92A6D3A61C5B506A00065EB3 /* Release */,
 				9B617A881CAE72820051C24D /* DailyBuild */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9B617A801CAE71920051C24D /* Build configuration list for PBXAggregateTarget "dailybuild" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B617A7D1CAE71920051C24D /* Debug */,
-				9B617A7E1CAE71920051C24D /* Release */,
-				9B617A891CAE72820051C24D /* DailyBuild */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
