@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,9 +24,18 @@
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75R-GN-4ub">
                         <rect key="frame" x="0.0" y="271.5" width="320" height="70"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_shaw_black" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-t5-3dG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OWC-t5-3dG" secondAttribute="bottom" id="0ud-v1-sgw"/>
+                            <constraint firstItem="OWC-t5-3dG" firstAttribute="leading" secondItem="75R-GN-4ub" secondAttribute="leading" id="Q38-gv-fiA"/>
                             <constraint firstAttribute="height" constant="70" id="U4l-MO-Qgn"/>
+                            <constraint firstItem="OWC-t5-3dG" firstAttribute="top" secondItem="75R-GN-4ub" secondAttribute="top" id="W0P-iW-Mme"/>
+                            <constraint firstAttribute="trailing" secondItem="OWC-t5-3dG" secondAttribute="trailing" id="d7E-8L-LRa"/>
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mode_green" translatesAutoresizingMaskIntoConstraints="NO" id="NBI-HJ-LNf">
@@ -128,6 +137,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bg_shaw_black" width="375" height="70"/>
         <image name="icon_mode_green" width="46" height="22"/>
         <image name="icon_videointeraction" width="30" height="30"/>
     </resources>
