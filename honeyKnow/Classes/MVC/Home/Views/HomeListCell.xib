@@ -81,13 +81,13 @@
                         <rect key="frame" x="265" y="308.5" width="30" height="30"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-x0-MQV">
-                        <rect key="frame" x="16" y="284" width="7" height="18"/>
+                        <rect key="frame" x="16" y="292" width="7" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-GF-wQZ" customClass="StarView">
-                        <rect key="frame" x="36" y="285.5" width="78" height="15"/>
+                        <rect key="frame" x="36" y="293.5" width="78" height="15"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="78" id="Egl-jF-s2d"/>
@@ -110,7 +110,7 @@
                     <constraint firstItem="ZUg-GF-wQZ" firstAttribute="leading" secondItem="Rkx-x0-MQV" secondAttribute="trailing" constant="13" id="OIK-lw-CI5"/>
                     <constraint firstAttribute="bottom" secondItem="75R-GN-4ub" secondAttribute="bottom" id="PO2-Ji-iF8"/>
                     <constraint firstItem="Paj-9Q-Ujb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Pbu-Ok-9NZ"/>
-                    <constraint firstItem="Paj-9Q-Ujb" firstAttribute="top" secondItem="Rkx-x0-MQV" secondAttribute="bottom" constant="14" id="Uuy-Mi-nvH"/>
+                    <constraint firstItem="Paj-9Q-Ujb" firstAttribute="top" secondItem="Rkx-x0-MQV" secondAttribute="bottom" constant="6" id="Uuy-Mi-nvH"/>
                     <constraint firstAttribute="trailing" secondItem="75R-GN-4ub" secondAttribute="trailing" id="V4D-1y-Ay3"/>
                     <constraint firstAttribute="bottom" secondItem="oOk-Ma-4mj" secondAttribute="bottom" constant="11" id="YUj-c0-oiI"/>
                     <constraint firstAttribute="trailing" secondItem="Paj-9Q-Ujb" secondAttribute="trailing" constant="118" id="YYr-ic-ZdA"/>
@@ -137,7 +137,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bg_shaw_black" width="375" height="70"/>
+        <image name="bg_shaw_black" width="375" height="92"/>
         <image name="icon_mode_green" width="46" height="22"/>
         <image name="icon_videointeraction" width="30" height="30"/>
     </resources>
