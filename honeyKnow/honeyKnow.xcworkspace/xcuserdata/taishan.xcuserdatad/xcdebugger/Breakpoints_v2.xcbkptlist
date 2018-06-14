@@ -19,93 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
-            timestampString = "549479591.307148"
+            filePath = "Classes/MVC/Discover/Views/VideoCollectionViewCell.m"
+            timestampString = "550161403.76621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-updateCellOnNewMessage"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ConversationListTableViewCell updateCellOnNewMessage]"
-                  moduleName = "honeyKnow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
-                  timestampString = "549557726.957853"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__55-[ConversationListTableViewCell updateCellOnNewMessage]_block_invoke"
-                  moduleName = "honeyKnow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/taishan/Desktop/%E6%88%91%E7%9A%84/honeyKnow/honeyKnow/honeyKnow/AppUI/ConversationList/ConversationListTableViewCell.m"
-                  timestampString = "549557726.962069"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "93">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ConversationList/ConversationListViewController.m"
-            timestampString = "549480050.4125119"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "honeyKnow/AppUI/ConversationList/ConversationListViewController.m"
-            timestampString = "549480598.015826"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "-onConversationChanged:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Classes/MVC/Home/Controllers/HomeDetailsViewController.m"
-            timestampString = "549554729.549292"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-setBaseInfo"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

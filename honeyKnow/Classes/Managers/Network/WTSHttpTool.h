@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 
-#define ErrorMsg @"网络好像开了点小差哦~"
+#define ErrorMsg @"服务器报错~"
 typedef NS_ENUM(NSInteger, RequestMethodType){
     RequestMethodTypePost = 1,
     RequestMethodTypeGet = 2,

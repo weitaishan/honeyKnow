@@ -154,8 +154,8 @@
     
     [[tap2 rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
         
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [self.myPlayer pause];
+        [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
+        [weakSelf.myPlayer pause];
         HomeDetailsViewController* vc = [MAIN_SB instantiateViewControllerWithIdentifier:@"homeDetailsViewController"];
         vc.hidesBottomBarWhenPushed = YES;
         vc.userId = listModel.userId;

@@ -65,7 +65,7 @@
 //
 //    }
     
-    NSURL * url = [NSURL URLWithString:@"http://127.0.0.1/LiaoKaiFa/html/ta/index.html"];
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"http://miliao.xiangchaopai.com/actorDetail.html?actorId=%ld",self.userId]];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
     self.webView.navigationDelegate = self;

@@ -561,7 +561,11 @@ static id _instance = nil;
         
     } failure:^(NSError *error) {
         
+#ifdef DEBUG
+        completion(YES);
+#else
         completion(NO);
+#endif
 
     }];
     

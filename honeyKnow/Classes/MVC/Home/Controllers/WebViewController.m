@@ -58,6 +58,9 @@
     }else if ([self.urlStr isEqualToString:URL_H5_FUNDOUT_DETAILS]) {
         
         self.title = @"提现明细";
+    }else if ([self.urlStr isEqualToString:URL_H5_SPREAD]) {
+        
+        self.title = @"我要推广";
     }
     
     

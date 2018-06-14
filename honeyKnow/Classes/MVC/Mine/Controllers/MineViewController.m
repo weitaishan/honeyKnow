@@ -318,6 +318,10 @@ static NSString * const mineListCellId = @"mineListCellId";
         
         [self loadingWebViewWithUrl:URL_H5_HELP];
 
+    }else if ([title isEqualToString:@"我要推广"]){
+        
+        [self loadingWebViewWithUrl:URL_H5_SPREAD];
+        
     }
     
 }
