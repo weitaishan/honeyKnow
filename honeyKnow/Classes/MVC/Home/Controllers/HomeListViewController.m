@@ -52,7 +52,7 @@ static NSString * const homeListCellId = @"homeListCellId";
     
     self.navigationController.navigationBarHidden = YES;
     
-    [self addTableViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT - NewStatusBarHeight - 44)];
+    [self addTableViewWithFrame:CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT - NewStatusBarHeight - 44 )];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorFromHexString:@"#eeeeee"];
     self.tableView.showsVerticalScrollIndicator = NO;

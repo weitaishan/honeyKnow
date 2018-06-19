@@ -99,7 +99,7 @@ static NSString* discoverListCellId = @"discoverListCellId";
     flowLayout.minimumLineSpacing = 1;
     
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - StatusBarAndNavigationBarHeight) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - StatusBarAndNavigationBarHeight - TabbarHeight) collectionViewLayout:flowLayout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.delegate = self;
